@@ -170,11 +170,112 @@ export const industryData = [
   {
     slug: "estadios",
     route: "/industria/estadios",
-    title: "Estaciones | Estadios",
+    title: "Estadios y Centros de Eventos",
     description:
       "Diseñado para velocidad y volumen: grab&go, cocción acelerada y servicio continuo en alto tráfico.",
     heroImage: IMAGE.bnr2,
     keyStations: ["Grab&Go", "Cocción acelerada", "Holding", "Despacho"],
+    stationImages: [IMAGE.galleryPic13, IMAGE.galleryPic14, IMAGE.galleryPic15, IMAGE.galleryPic16],
+    sections: [
+      {
+        title: "Definición",
+        paragraphs: [
+          "Los estadios, arenas y centros de eventos representan uno de los entornos más desafiantes para la operación de alimentos: miles de personas deben ser atendidas en ventanas de tiempo muy cortas (entretiempos, pausas, pre-show), exigiendo velocidad extrema sin sacrificar calidad ni seguridad alimentaria.",
+          "A diferencia de un restaurante convencional, aquí el flujo es masivo, simultáneo e impredecible. Cada punto de venta opera como una mini-cocina independiente que necesita autonomía, rapidez y consistencia.",
+        ],
+      },
+      {
+        title: "Retos operativos clave",
+        bullets: [
+          {
+            title: "Picos de demanda extremos",
+            text: "Miles de órdenes en minutos; la infraestructura debe sostener producción continua sin cuellos de botella.",
+          },
+          {
+            title: "Múltiples puntos de venta simultáneos",
+            text: "Concesiones, suites VIP, catering interno y grab&go, cada uno con necesidades diferentes.",
+          },
+          {
+            title: "Seguridad alimentaria a escala",
+            text: "Control de temperaturas en holding, transporte y exhibición para volúmenes masivos.",
+          },
+          {
+            title: "Rotación de personal alta",
+            text: "Equipos sencillos de operar, con controles programables y mínima curva de aprendizaje.",
+          },
+        ],
+      },
+      {
+        title: "Equipamiento por zona",
+        groups: [
+          {
+            title: "Zona de producción central",
+            items: [
+              {
+                title: "Hornos de convección / combinados",
+                text: "Volumen y versatilidad para preparar múltiples productos simultáneamente.",
+              },
+              {
+                title: "Freidoras de alto rendimiento",
+                text: "Recuperación rápida de temperatura para servicio continuo.",
+              },
+              {
+                title: "Parrillas y planchas industriales",
+                text: "Hamburguesas, hot dogs y sándwiches a alta velocidad.",
+              },
+            ],
+          },
+          {
+            title: "Zona de holding y despacho",
+            items: [
+              {
+                title: "Gabinetes de mantenimiento caliente",
+                text: "Temperatura estable para productos listos, accesibles para servicio rápido.",
+              },
+              {
+                title: "Mesas frías con insertos GN",
+                text: "Toppings, salsas y complementos al alcance del operador.",
+              },
+            ],
+          },
+          {
+            title: "Puntos de venta (concesiones)",
+            items: [
+              {
+                title: "Equipos grab&go",
+                text: "Vitrinas refrigeradas y calientes para autoservicio rápido.",
+              },
+              {
+                title: "Exhibidores de bebidas",
+                text: "Refrigeración bajo barra y dispensadores de alto flujo.",
+              },
+            ],
+          },
+          {
+            title: "Refrigeración y almacenamiento",
+            items: [
+              {
+                title: "Cámaras frigoríficas de alto volumen",
+                text: "Recepción y almacenamiento de materia prima para eventos masivos.",
+              },
+              {
+                title: "Refrigeradores verticales",
+                text: "Acceso rápido para reposición durante el servicio.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Buenas prácticas",
+        bullets: [
+          "Pre-producción y mise en place completa antes de la apertura de puertas.",
+          "HACCP simplificado con controles de temperatura documentados en cada zona.",
+          "Menú limitado y estandarizado para maximizar velocidad y minimizar errores.",
+          "Equipos con controles programables para reducir dependencia del operador.",
+        ],
+      },
+    ],
   },
   {
     slug: "panaderia",
@@ -1000,12 +1101,90 @@ export const industryData = [
   {
     slug: "otros",
     route: "/industria/otros",
-    title: "Otros",
+    title: "Otros Sectores",
     description:
       "Soluciones transversales y proyectos especiales para requerimientos únicos.",
     heroImage: IMAGE.bannerImg1,
     keyStations: ["Diagnóstico", "Diseño", "Implementación", "Soporte"],
     stationImages: [IMAGE.bannerImg1, IMAGE.home4Ourwork1, IMAGE.home4Ourwork2, IMAGE.home4Ourwork3],
+    sections: [
+      {
+        title: "Más allá de las categorías tradicionales",
+        paragraphs: [
+          "En B&P Tech entendemos que no todos los proyectos encajan en una categoría estándar. Clínicas, comedores institucionales, plantas de producción, centros educativos, cruceros, aeropuertos o cualquier operación con necesidades específicas de refrigeración, cocción o procesamiento de alimentos merece una solución a medida.",
+          "Nuestro enfoque consultivo nos permite analizar cada caso individualmente: entendemos tu operación, volúmenes, restricciones de espacio, energía y flujo para diseñar la solución óptima.",
+        ],
+      },
+      {
+        title: "Sectores que atendemos",
+        groups: [
+          {
+            title: "Institucional",
+            items: [
+              {
+                title: "Comedores empresariales",
+                text: "Alimentación masiva con eficiencia energética y menús rotativos.",
+              },
+              {
+                title: "Centros educativos",
+                text: "Cocinas escolares y universitarias con normativa sanitaria estricta.",
+              },
+              {
+                title: "Hospitales y clínicas",
+                text: "Dietas específicas, control nutricional y cadena de frío crítica.",
+              },
+            ],
+          },
+          {
+            title: "Transporte y logística",
+            items: [
+              {
+                title: "Aeropuertos y terminales",
+                text: "Alto tráfico, múltiples concesiones y exigencia de velocidad.",
+              },
+              {
+                title: "Cruceros y embarcaciones",
+                text: "Espacios reducidos, múltiples restaurantes y operación 24/7.",
+              },
+            ],
+          },
+          {
+            title: "Producción especializada",
+            items: [
+              {
+                title: "Plantas de procesamiento",
+                text: "Líneas industriales de producción continua con estándares HACCP.",
+              },
+              {
+                title: "Dark kitchens / cocinas fantasma",
+                text: "Optimización de espacio y flujo para delivery exclusivo.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Nuestro proceso",
+        bullets: [
+          {
+            title: "Diagnóstico",
+            text: "Evaluamos tu operación actual, volúmenes, restricciones y objetivos.",
+          },
+          {
+            title: "Diseño",
+            text: "Proponemos la solución óptima en equipamiento, layout y flujo operativo.",
+          },
+          {
+            title: "Implementación",
+            text: "Coordinamos entrega, instalación y puesta en marcha de todos los equipos.",
+          },
+          {
+            title: "Soporte continuo",
+            text: "Mantenimiento preventivo, capacitación y respaldo técnico post-venta.",
+          },
+        ],
+      },
+    ],
   },
 ];
 

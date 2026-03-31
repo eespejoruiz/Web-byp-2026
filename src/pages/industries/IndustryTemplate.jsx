@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import CarlistingBanner from "../../element/CarlistingBanner";
 import { getIndustryBySlug } from "../../data/industryData";
+import { getBrandsByIndustry } from "../../data/brandsData";
 import { IMAGE } from "../../constent/theme";
 
 const renderBullet = (bullet) => {
@@ -33,6 +34,7 @@ const renderGroupItem = (item) => {
 
 const IndustryTemplate = ({ slug }) => {
   const industry = getIndustryBySlug(slug);
+  const relatedBrands = getBrandsByIndustry(slug);
 
   if (!industry) {
     return (
@@ -160,7 +162,7 @@ const IndustryTemplate = ({ slug }) => {
             </div>
 
             <div className="col-lg-4">
-              <div className="widget bg-white p-a30 shadow-sm">
+              <div className="widget bg-white p-a30 shadow-sm m-b30">
                 <h4 className="widget-title">¿Hablamos de tu operación?</h4>
                 <p className="m-b20">
                   Cuéntame tu industria, volumen y restricciones (espacio, energía, flujo).
@@ -169,6 +171,33 @@ const IndustryTemplate = ({ slug }) => {
                   Contactar
                 </Link>
               </div>
+
+              {relatedBrands.length > 0 && (
+                <div className="widget bg-white p-a30 shadow-sm m-b30">
+                  <h4 className="widget-title">Marcas para esta industria</h4>
+                  <ul className="list-unstyled m-b0">
+                    {relatedBrands.map((brand) => (
+                      <li key={brand.slug} className="m-b15">
+                        <Link
+                          to={brand.route}
+                          style={{ textDecoration: "none" }}
+                          className="d-flex align-items-start"
+                        >
+                          <i className="fa fa-angle-right text-primary m-r10 m-t5"></i>
+                          <div>
+                            <strong className="text-dark">{brand.name}</strong>
+                            <br />
+                            <small className="text-muted">{brand.productType}</small>
+                          </div>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link to="/marcas" className="btn btn-outline-primary w-100 m-t10">
+                    Ver todas las marcas
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
         </div>

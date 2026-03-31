@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { industryData } from "../data/industryData";
+import { brandsData } from "../data/brandsData";
 
 export const MenusItem = [
   {
@@ -17,6 +18,11 @@ export const MenusItem = [
     menu: "Soluciones por Industria",
     link: "/industria/restaurantes",
     subMenu: industryData.map((i) => ({ childe: i.title, link: i.route })),
+  },
+  {
+    menu: "Nuestras Marcas",
+    link: "/marcas",
+    subMenu: brandsData.map((b) => ({ childe: b.name, link: b.route })),
   },
   {
     menu: "Casos de Éxito",
@@ -134,6 +140,38 @@ const Menus = ({ setOpen }) => {
                   </li>
                 ))}
               </ul>
+            </li>
+          ))}
+        </ul>
+      </li>
+
+      <li
+        className={`sub-menu-down ${
+          location.pathname.startsWith("/marcas") ? "active" : ""
+        } ${open === "marcas" ? "open" : ""}`}
+      >
+        <Link
+          to="/marcas"
+          onClick={() => {
+            setOpenMenu(null);
+            setOpen?.(false);
+          }}
+        >
+          Nuestras Marcas
+          <i className="fa fa-angle-down"></i>
+        </Link>
+        <ul className="sub-menu">
+          {brandsData.map((brand) => (
+            <li key={brand.slug}>
+              <Link
+                to={brand.route}
+                onClick={() => {
+                  setOpenMenu(null);
+                  setOpen?.(false);
+                }}
+              >
+                {brand.name}
+              </Link>
             </li>
           ))}
         </ul>

@@ -23,6 +23,12 @@ import ScrollTop from "./constent/ScrollTop";
 import CasosDeExito from "./pages/CasosDeExito";
 import CaseStudyTemplate from "./pages/cases/CaseStudyTemplate";
 import IndustriesIndex from "./pages/IndustriesIndex";
+import BrandsIndex from "./pages/BrandsIndex";
+import Rondo from "./pages/brands/Rondo";
+import Diosna from "./pages/brands/Diosna";
+import Winterhalter from "./pages/brands/Winterhalter";
+import TrueBrand from "./pages/brands/True";
+import Pietroberto from "./pages/brands/Pietroberto";
 import Restaurantes from "./pages/industries/Restaurantes";
 import Estadios from "./pages/industries/Estadios";
 import Panaderia from "./pages/industries/Panaderia";
@@ -73,6 +79,13 @@ function App() {
             <Route path='/industria/carnicerias' element={<Carnicerias />} />
             <Route path='/industria/bares-cafeterias' element={<BaresCafeterias />} />
             <Route path='/industria/otros' element={<Otros />} />
+
+            <Route path='/marcas' element={<BrandsIndex />} />
+            <Route path='/marcas/rondo' element={<Rondo />} />
+            <Route path='/marcas/diosna' element={<Diosna />} />
+            <Route path='/marcas/winterhalter' element={<Winterhalter />} />
+            <Route path='/marcas/true' element={<TrueBrand />} />
+            <Route path='/marcas/pietroberto' element={<Pietroberto />} />
 
             <Route path='*' element={<Error404 />} />
           </Route>
