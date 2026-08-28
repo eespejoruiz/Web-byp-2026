@@ -89,6 +89,24 @@ footer{padding:36px 0 44px;font-family:"IBM Plex Mono";font-size:12px;color:var(
  .cta-f{flex-direction:column;align-items:flex-start;padding:36px 28px}
  .nav ul{display:none}
 }
+
+/* hero full-screen */
+.hero{position:relative;min-height:100dvh;display:flex;flex-direction:column;padding:0;background:var(--navy)}
+.hero::before{content:"";position:absolute;inset:0;background:url("img/hero-produccion.webp") center/cover no-repeat}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(13,30,54,.93) 0%,rgba(13,30,54,.78) 45%,rgba(13,30,54,.35) 100%)}
+.hero .wrap{position:relative;z-index:2}
+.hero-inner{flex:1;display:flex;align-items:center;padding:40px 0 90px}
+.hero-inner>div{max-width:640px}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;font-family:"IBM Plex Mono";font-size:11px;letter-spacing:.2em;color:#8fa6c2}
+.scroll-hint::after{content:"";display:block;width:1px;height:34px;background:var(--orange);margin:8px auto 0}
+/* ticker de marcas */
+.ticker{background:#fff;border-bottom:1px solid var(--line);padding:20px 0;overflow:hidden}
+.ticker .row{display:flex;gap:76px;align-items:center;width:max-content;animation:slide 30s linear infinite}
+.ticker img{height:26px;width:auto;filter:grayscale(1);opacity:.7}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.ticker .row{animation:none;flex-wrap:wrap;width:auto;justify-content:center}}
+@media(max-width:960px){.hero-inner{padding:110px 0 80px}}
+
 </style>
 </head>
 <body>
@@ -102,19 +120,22 @@ footer{padding:36px 0 44px;font-family:"IBM Plex Mono";font-size:12px;color:var(
 </header>
 
 <main>
-<section class="hero"><div class="wrap hero-grid">
+<section class="hero"><div class="wrap hero-inner">
   <div>
     <p class="code">// PROYECTOS LLAVE EN MANO · SERVICIO CERTIFICADO DE FÁBRICA</p>
     <h1>Especificamos, instalamos y mantenemos tu línea de producción.</h1>
     <p>Ocho marcas líderes mundiales en panificación, refrigeración y lavado profesional. Un solo responsable técnico: B&P TECH.</p>
     <a class="btn" href="#">Ver catálogo técnico</a><a class="btn alt" href="#">Descargar fichas</a>
   </div>
-  <div class="blue-frame">
-    <span class="dim t">← 1.740 mm →</span>
-    <img src="img/diosna-wendel.webp" alt="Amasadora DIOSNA WENDEL W240A">
-    <span class="tag">REF: DIOSNA-W240A</span>
-  </div>
-</div></section>
+</div>
+<span class="scroll-hint">EXPLORAR</span>
+</section>
+
+
+<div class="ticker" aria-label="Marcas representadas"><div class="row">
+  <img src="img/rondo-logo.svg" alt="RONDO"><img src="img/diosna-logo.svg" alt="DIOSNA"><img src="img/winterhalter-logo.png" alt="Winterhalter"><img src="img/true-logo.png" alt="True"><img src="img/pietroberto-logo.png" alt="Pietroberto"><img src="img/vitamix-logo.svg" alt="Vitamix"><img src="img/cainco-logo.png" alt="Cainco"><img src="img/jbtmarel-logo.svg" alt="JBT Marel">
+  <img src="img/rondo-logo.svg" alt=""><img src="img/diosna-logo.svg" alt=""><img src="img/winterhalter-logo.png" alt=""><img src="img/true-logo.png" alt=""><img src="img/pietroberto-logo.png" alt=""><img src="img/vitamix-logo.svg" alt=""><img src="img/cainco-logo.png" alt=""><img src="img/jbtmarel-logo.svg" alt="">
+</div></div>
 
 <div class="specs"><div class="wrap">
   <div class="cell"><div class="n">08</div><div class="l">MARCAS REPRESENTADAS</div></div>
