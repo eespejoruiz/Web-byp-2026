@@ -1,4 +1,17 @@
 import { IMAGE } from "../constent/theme";
+import rondoLogo from "../assets/images/brands/rondo-logo.svg";
+import rondoHero from "../assets/images/brands/rondo-automat-2000.webp";
+import diosnaLogo from "../assets/images/brands/diosna-logo.svg";
+import diosnaHero from "../assets/images/brands/diosna-wendel.webp";
+import winterhalterLogo from "../assets/images/brands/winterhalter-logo.png";
+import winterhalterHero from "../assets/images/brands/winterhalter-u50-hero.webp";
+import trueLogo from "../assets/images/brands/true-logo.png";
+import trueHero from "../assets/images/brands/true-gdm-49.webp";
+import pietrobertoLogo from "../assets/images/brands/pietroberto-logo.png";
+import pietrobertoHero from "../assets/images/brands/pietroberto-mix.webp";
+import pietrobertoMix from "../assets/images/brands/pietroberto-mix.webp";
+import pietrobertoOmega from "../assets/images/brands/pietroberto-omega.webp";
+
 
 export const brandsData = [
   {
@@ -7,8 +20,8 @@ export const brandsData = [
     name: "RONDO",
     origin: "Suiza",
     tagline: "Precisión suiza para la excelencia en panificación y pastelería",
-    logo: IMAGE.aboutPic1,
-    heroImage: IMAGE.bnr3,
+    logo: rondoLogo,
+    heroImage: rondoHero,
     shortDescription:
       "Laminadoras de clase mundial diseñadas para profesionales exigentes. Ingeniería suiza de precisión, innovación constante y robustez excepcional.",
     industries: ["panaderia", "cocinas-industriales", "hoteles-catering"],
@@ -97,8 +110,8 @@ export const brandsData = [
     name: "DIOSNA",
     origin: "Alemania",
     tagline: "Ingeniería alemana para masas perfectas",
-    logo: IMAGE.aboutPic1,
-    heroImage: IMAGE.bnr3,
+    logo: diosnaLogo,
+    heroImage: diosnaHero,
     shortDescription:
       "Amasadoras WENDEL de alta potencia, precisión y confiabilidad para panaderías, pastelerías e industrias que buscan consistencia y calidad superior.",
     industries: ["panaderia", "cocinas-industriales", "hoteles-catering"],
@@ -142,8 +155,8 @@ export const brandsData = [
     name: "WINTERHALTER",
     origin: "Alemania",
     tagline: "Excelencia alemana en higiene profesional",
-    logo: IMAGE.aboutPic1,
-    heroImage: IMAGE.bnr4,
+    logo: winterhalterLogo,
+    heroImage: winterhalterHero,
     shortDescription:
       "Sistema integral de lavado que combina máquina, detergentes y tratamiento de agua para una limpieza perfecta, brillo superior y desinfección confiable.",
     industries: [
@@ -187,8 +200,8 @@ export const brandsData = [
     name: "TRUE",
     origin: "Estados Unidos",
     tagline: "Liderazgo americano en frío profesional",
-    logo: IMAGE.aboutPic1,
-    heroImage: IMAGE.bnr1,
+    logo: trueLogo,
+    heroImage: trueHero,
     shortDescription:
       "Equipos de refrigeración reconocidos mundialmente por su confiabilidad, eficiencia y rendimiento superior en entornos profesionales.",
     industries: [
@@ -235,8 +248,8 @@ export const brandsData = [
     name: "PIETROBERTO",
     origin: "Italia",
     tagline: "Potencia, precisión y tradición italiana",
-    logo: IMAGE.aboutPic1,
-    heroImage: IMAGE.bnr3,
+    logo: pietrobertoLogo,
+    heroImage: pietrobertoHero,
     shortDescription:
       "Más de 100 años de experiencia en panificación y pastelería. Ingeniería de precisión, potencia industrial y versatilidad total.",
     industries: ["panaderia", "cocinas-industriales", "hoteles-catering"],

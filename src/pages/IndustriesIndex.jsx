@@ -22,7 +22,7 @@ const IndustriesIndex = () => {
         <div className="section-full content-inner" id="industries-index">
           <div className="container">
             <div className="section-head text-center">
-              <h2 className="title">Soluciones por Industria</h2>
+              <h1 className="title">Soluciones por Industria</h1>
               <p>Explora nuestras verticales y descubre la tecnología adecuada para tu operación.</p>
             </div>
             <div className="row align-items-stretch">

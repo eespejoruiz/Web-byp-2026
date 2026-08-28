@@ -1,0 +1,6 @@
+/* Fixes QA 2026-08-22 */
+/* El mega-menu desborda ~40px entre 992-1199px y provoca scroll horizontal */
+html, body { overflow-x: clip; }
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .mega-menu { max-width: calc(100vw - 40px); }
+}
