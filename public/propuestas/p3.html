@@ -17,10 +17,10 @@ a{color:inherit;text-decoration:none}
 /* fina retícula de fondo */
 body::before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;opacity:.35;z-index:0}
 main,header,footer{position:relative;z-index:1}
-header{background:var(--navy);color:#fff}
+header{color:#fff}
 .topbar{font-family:"IBM Plex Mono";font-size:11.5px;letter-spacing:.08em;color:#9db3cc;border-bottom:1px solid rgba(255,255,255,.12);padding:8px 0;display:flex;justify-content:space-between}
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-.nav .logo{background:#fff;padding:6px 12px;display:flex;border-radius:4px}
+.nav .logo{display:flex}
 .nav .logo img{height:30px}
 .nav ul{display:flex;gap:32px;list-style:none;font-size:14px;font-weight:500}
 .nav ul a{color:#c9d6e5}.nav ul a:hover{color:#fff}
@@ -107,6 +107,14 @@ footer{padding:36px 0 44px;font-family:"IBM Plex Mono";font-size:12px;color:var(
 @media(prefers-reduced-motion:reduce){.ticker .row{animation:none;flex-wrap:wrap;width:auto;justify-content:center}}
 @media(max-width:960px){.hero-inner{padding:110px 0 80px}}
 
+
+/* header transparente sobre el hero */
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:transparent;transition:background .25s ease,box-shadow .25s ease}
+header.scrolled{background:rgba(13,30,54,.94);backdrop-filter:blur(8px);box-shadow:0 6px 24px rgba(0,0,0,.25)}
+header .topbar{border-bottom:1px solid rgba(255,255,255,.14)}
+.nav .logo{background:transparent;padding:0;border-radius:0}
+.nav .logo img{height:34px;filter:brightness(0) invert(1) drop-shadow(0 2px 6px rgba(0,0,0,.35))}
+
 </style>
 </head>
 <body>
@@ -170,5 +178,14 @@ footer{padding:36px 0 44px;font-family:"IBM Plex Mono";font-size:12px;color:var(
 </main>
 
 <footer class="wrap"><span>© 2026 B&P TECH S.A.C.</span><span>BYPTECH.COM · LIMA, PERÚ</span></footer>
+
+<script>
+(function(){
+  var h=document.querySelector("header");
+  var onS=function(){ h.classList.toggle("scrolled", window.scrollY>40); };
+  window.addEventListener("scroll", onS, {passive:true}); onS();
+})();
+</script>
+
 </body>
 </html>
