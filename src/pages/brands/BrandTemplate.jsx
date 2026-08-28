@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import CarlistingBanner from "../../element/CarlistingBanner";
+import BrandHero from "../../element/BrandHero";
 import { getBrandBySlug } from "../../data/brandsData";
 import { industryData } from "../../data/industryData";
 
@@ -31,22 +31,12 @@ const BrandTemplate = ({ slug }) => {
 
   return (
     <div className="page-content bg-white">
-      <CarlistingBanner img={brand.heroImage} title={brand.name} />
+      <BrandHero brand={brand} />
       <section className="content-inner">
         <div className="container">
           <div className="row">
             {/* Main content */}
             <div className="col-lg-8">
-              <div className="section-head">
-                <h6 className="text-primary sub-title">
-                  {brand.origin ? `TECNOLOGÍA DE ${brand.origin.toUpperCase()}` : "NUESTRAS MARCAS"}
-                </h6>
-                <h2 className="title">{brand.name}</h2>
-                <p className="m-b0 font-18" style={{ fontSize: "18px", fontStyle: "italic" }}>
-                  {brand.tagline}
-                </p>
-              </div>
-
               {/* Tipo de producto */}
               <div className="m-b30">
                 <span

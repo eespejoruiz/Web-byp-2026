@@ -4,6 +4,7 @@ import Ourproject from '../element/Ourproject'
 import Testimonial from '../components/Testimonial';
 import { Link } from 'react-router-dom';
 import Homeslide from '../element/Homeslide';
+import BrandStrip from '../element/BrandStrip';
 
 
 const cards = [
@@ -106,6 +107,9 @@ const Home4 = () => {
             </div>
           </div>
         </div>
+
+        <BrandStrip />
+
         {/* =======Casos de Éxito >>>>>> */}
         <div className="section-full content-inner overlay-white-dark" id="choose-us">
           <div className="container">

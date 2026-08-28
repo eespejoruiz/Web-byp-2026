@@ -36,44 +36,21 @@ const BrandsIndex = () => {
                   className="service-box industries-card w-100 d-flex flex-column"
                   style={{ border: "1px solid #eee", borderRadius: "8px" }}
                 >
-                  <div
-                    className="dlab-media"
-                    style={{
-                      background: "linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      minHeight: "180px",
-                      padding: "30px",
-                    }}
-                  >
-                    <Link to={brand.route}>
-                      <h2
-                        style={{
-                          color: "#fff",
-                          fontWeight: "800",
-                          fontSize: "32px",
-                          letterSpacing: "3px",
-                          margin: 0,
-                          textAlign: "center",
-                        }}
-                      >
-                        {brand.name}
-                      </h2>
-                      {brand.origin && (
-                        <p
-                          style={{
-                            color: "rgba(255,255,255,0.7)",
-                            margin: "8px 0 0",
-                            textAlign: "center",
-                            fontSize: "14px",
-                          }}
-                        >
-                          {originFlags[brand.origin] || ""} {brand.origin}
-                        </p>
-                      )}
-                    </Link>
-                  </div>
+                  <Link to={brand.route} className="brand-card__media" aria-label={`Ver marca ${brand.name}`}>
+                    <img
+                      className="brand-card__photo"
+                      src={brand.heroImage}
+                      alt={`${brand.productType || "Equipo"} ${brand.name}`}
+                      loading="lazy"
+                      width="400"
+                      height="210"
+                    />
+                    {brand.logo ? (
+                      <span className="brand-card__logo">
+                        <img src={brand.logo} alt={`Logo ${brand.name}`} loading="lazy" />
+                      </span>
+                    ) : null}
+                  </Link>
                   <div className="dlab-info d-flex flex-column p-a20">
                     <span
                       className="badge m-b10"
