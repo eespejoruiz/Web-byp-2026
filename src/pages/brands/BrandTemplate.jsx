@@ -1,272 +1,298 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import BrandHero from "../../element/BrandHero";
 import { getBrandBySlug } from "../../data/brandsData";
 import { industryData } from "../../data/industryData";
+
+const Check = () => (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <path
+      d="M2.5 8.5L6.2 12.2L13.5 4.5"
+      stroke="#f04e23"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const idx = (n) => String(n).padStart(2, "0") + "/";
+
+const renderItem = (item, key) => {
+  if (item == null) return null;
+  if (typeof item === "string") return <li key={key}>{item}</li>;
+  return (
+    <li key={key}>
+      {item.title ? <strong>{item.title}:</strong> : null} {item.text}
+    </li>
+  );
+};
 
 const BrandTemplate = ({ slug }) => {
   const brand = getBrandBySlug(slug);
 
   if (!brand) {
     return (
-      <div className="page-content bg-white">
-        <div className="content-inner">
-          <div className="container">
-            <div className="section-head text-center">
-              <h2 className="title">Marca no encontrada</h2>
-              <p>La ruta solicitada no existe o aún no está configurada.</p>
-              <Link to="/marcas" className="btn btn-primary">
-                Ver todas las marcas
-              </Link>
-            </div>
+      <div className="byp-page">
+        <section className="byp-phero">
+          <div className="byp-wrap">
+            <p className="byp-code">// ERROR 404</p>
+            <h1 className="byp-h1">Marca no encontrada</h1>
+            <p className="byp-lead">
+              La ruta solicitada no existe o aún no está configurada.
+            </p>
           </div>
-        </div>
+        </section>
+        <section className="byp-section">
+          <div className="byp-wrap">
+            <Link className="byp-btn" to="/marcas">
+              Ver todas las marcas
+            </Link>
+          </div>
+        </section>
       </div>
     );
   }
 
   const relatedIndustries = (brand.industries || [])
-    .map((slug) => industryData.find((i) => i.slug === slug))
+    .map((s) => industryData.find((i) => i.slug === s))
     .filter(Boolean);
 
+  let sectionCount = 0;
+
   return (
-    <div className="page-content bg-white">
-      <BrandHero brand={brand} />
-      <section className="content-inner">
-        <div className="container">
-          <div className="row">
-            {/* Main content */}
-            <div className="col-lg-8">
+    <div className="byp-page">
+      {/* Hero navy con blue-frame */}
+      <section className="byp-bhero">
+        <div className="byp-wrap byp-bhero__grid">
+          <div>
+            <p className="byp-code">
+              // {brand.name} · {(brand.origin || "").toUpperCase()} ·{" "}
+              {(brand.productType || "").toUpperCase()}
+            </p>
+            <h1 className="byp-h1">{brand.name}</h1>
+            <p className="byp-lead">{brand.tagline}</p>
+            <Link className="byp-btn" to="/contacto">
+              Solicitar cotización
+            </Link>
+          </div>
+          <div className="byp-blueframe">
+            <span className="byp-blueframe__dim byp-blueframe__dim--t">
+              ← ANCHO ÚTIL →
+            </span>
+            <span className="byp-blueframe__dim byp-blueframe__dim--l">
+              ← ALTURA →
+            </span>
+            <img
+              src={brand.heroImage}
+              alt={`${brand.productType || "Equipo"} ${brand.name}`}
+              loading="eager"
+            />
+            <span className="byp-blueframe__tag">REF: {brand.name}</span>
+          </div>
+        </div>
+      </section>
 
-              {/* Sections */}
-              {Array.isArray(brand.sections) &&
-                brand.sections.map((section, sIdx) => (
-                  <div key={`section-${sIdx}`} className="m-b40">
-                    <h4 className="m-b15">{section.title}</h4>
-
+      {/* Contenido */}
+      <section className="byp-section">
+        <div className="byp-wrap">
+          <div className="byp-article">
+            {Array.isArray(brand.sections) &&
+              brand.sections.map((section, sIdx) => {
+                sectionCount += 1;
+                return (
+                  <div className="byp-article__section" key={`s-${sIdx}`}>
+                    <div className="byp-article__head">
+                      <span className="byp-head__idx">{idx(sectionCount)}</span>
+                      <h2>{section.title}</h2>
+                    </div>
                     {Array.isArray(section.paragraphs) &&
                       section.paragraphs.map((p, pIdx) => (
                         <p key={`p-${sIdx}-${pIdx}`}>{p}</p>
                       ))}
-
                     {Array.isArray(section.bullets) &&
                       section.bullets.length > 0 && (
-                        <ul className="list-check m-b0">
-                          {section.bullets.map((b, bIdx) => (
-                            <li key={`b-${sIdx}-${bIdx}`}>
-                              {typeof b === "string" ? (
-                                b
-                              ) : (
-                                <>
-                                  {b.title && <strong>{b.title}:</strong>} {b.text}
-                                </>
-                              )}
-                            </li>
-                          ))}
-                        </ul>
+                        <div className="byp-group">
+                          <ul>
+                            {section.bullets.map((b, bIdx) =>
+                              renderItem(b, `b-${sIdx}-${bIdx}`)
+                            )}
+                          </ul>
+                        </div>
                       )}
-
                     {Array.isArray(section.groups) &&
                       section.groups.map((group, gIdx) => (
-                        <div key={`g-${sIdx}-${gIdx}`} className="m-b20 m-t20">
-                          <h5 className="m-b10">{group.title}</h5>
-                          {Array.isArray(group.items) && (
-                            <ul className="list-check m-b0">
-                              {group.items.map((item, iIdx) => (
-                                <li key={`gi-${sIdx}-${gIdx}-${iIdx}`}>
-                                  {item.title && <strong>{item.title}:</strong>}{" "}
-                                  {item.text}
-                                </li>
-                              ))}
-                            </ul>
-                          )}
+                        <div className="byp-group" key={`g-${sIdx}-${gIdx}`}>
+                          <h4>{group.title}</h4>
+                          <ul>
+                            {(group.items || []).map((item, iIdx) =>
+                              renderItem(item, `gi-${sIdx}-${gIdx}-${iIdx}`)
+                            )}
+                          </ul>
                         </div>
                       ))}
                   </div>
-                ))}
+                );
+              })}
 
-              {/* Products (for multi-product brands like Pietroberto) */}
-              {Array.isArray(brand.products) &&
-                brand.products.map((product, pIdx) => (
-                  <div
-                    key={`product-${pIdx}`}
-                    className="m-b40 p-a30"
-                    style={{
-                      backgroundColor: "#f9f9f9",
-                      borderLeft: "4px solid var(--primary)",
-                      borderRadius: "4px",
-                    }}
-                  >
-                    <h4 className="m-b5">{product.name}</h4>
-                    <p
-                      className="m-b15"
-                      style={{ fontStyle: "italic", color: "var(--primary)" }}
-                    >
-                      {product.tagline}
-                    </p>
-                    <p>{product.description}</p>
+            {/* Productos (marcas multi-producto, ej. Pietroberto) */}
+            {Array.isArray(brand.products) &&
+              brand.products.map((product, pIdx) => {
+                sectionCount += 1;
+                return (
+                  <div className="byp-article__section" key={`prod-${pIdx}`}>
+                    <div className="byp-article__head">
+                      <span className="byp-head__idx">{idx(sectionCount)}</span>
+                      <h2>{product.name}</h2>
+                    </div>
+                    {product.tagline && (
+                      <p className="byp-mono" style={{ fontSize: 12.5, letterSpacing: ".08em", color: "var(--byp-orange)" }}>
+                        {product.tagline.toUpperCase()}
+                      </p>
+                    )}
+                    {product.description && <p>{product.description}</p>}
 
-                    {/* Features */}
                     {Array.isArray(product.features) && (
-                      <div className="m-b20">
-                        <h5 className="m-b10">Tecnología que marca la diferencia</h5>
-                        <ul className="list-check m-b0">
-                          {product.features.map((f, fIdx) => (
-                            <li key={`feat-${pIdx}-${fIdx}`}>
-                              <strong>{f.title}:</strong> {f.text}
-                            </li>
-                          ))}
+                      <div className="byp-group">
+                        <h4>Tecnología que marca la diferencia</h4>
+                        <ul>
+                          {product.features.map((f, fIdx) =>
+                            renderItem(f, `f-${pIdx}-${fIdx}`)
+                          )}
                         </ul>
                       </div>
                     )}
 
-                    {/* Applications */}
                     {Array.isArray(product.applications) && (
-                      <div className="m-b20">
-                        <h5 className="m-b10">Versatilidad total</h5>
-                        <ul className="list-check m-b0">
-                          {product.applications.map((a, aIdx) => (
-                            <li key={`app-${pIdx}-${aIdx}`}>{a}</li>
-                          ))}
+                      <div className="byp-group">
+                        <h4>Versatilidad total</h4>
+                        <ul>
+                          {product.applications.map((a, aIdx) =>
+                            renderItem(a, `a-${pIdx}-${aIdx}`)
+                          )}
                         </ul>
                       </div>
                     )}
 
-                    {/* Tools */}
                     {Array.isArray(product.tools) && (
-                      <div className="m-b20">
-                        <h5 className="m-b10">Herramientas incluidas</h5>
-                        <ul className="list-check m-b0">
-                          {product.tools.map((t, tIdx) => (
-                            <li key={`tool-${pIdx}-${tIdx}`}>{t}</li>
-                          ))}
+                      <div className="byp-group">
+                        <h4>Herramientas incluidas</h4>
+                        <ul>
+                          {product.tools.map((t, tIdx) =>
+                            renderItem(t, `t-${pIdx}-${tIdx}`)
+                          )}
                         </ul>
                       </div>
                     )}
 
-                    {/* Specs */}
                     {product.specs && (
-                      <div className="m-b20">
-                        <h5 className="m-b10">Especificaciones destacadas</h5>
-                        <div className="table-responsive">
-                          <table className="table table-bordered">
-                            <tbody>
-                              {Object.entries(product.specs).map(([key, val]) => (
-                                <tr key={key}>
-                                  <td style={{ fontWeight: "bold", textTransform: "capitalize", width: "40%" }}>
-                                    {key.replace(/([A-Z])/g, " $1").trim()}
-                                  </td>
-                                  <td>{val}</td>
-                                </tr>
-                              ))}
-                            </tbody>
-                          </table>
-                        </div>
+                      <div className="byp-group">
+                        <h4>Especificaciones destacadas</h4>
+                        <table className="byp-spec-table">
+                          <tbody>
+                            {Object.entries(product.specs).map(([key, val]) => (
+                              <tr key={key}>
+                                <td style={{ textTransform: "capitalize" }}>
+                                  {key.replace(/([A-Z])/g, " $1").trim()}
+                                </td>
+                                <td>{val}</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
                       </div>
                     )}
 
-                    {/* Benefits */}
                     {Array.isArray(product.benefits) && (
-                      <div className="m-b20">
-                        <h5 className="m-b10">Beneficios clave para tu negocio</h5>
-                        <ul className="list-check m-b0">
-                          {product.benefits.map((b, bIdx) => (
-                            <li key={`ben-${pIdx}-${bIdx}`}>{b}</li>
-                          ))}
-                        </ul>
-                      </div>
+                      <ul className="byp-checklist" style={{ marginTop: 18 }}>
+                        {product.benefits.map((b, bIdx) => (
+                          <li key={`pb-${pIdx}-${bIdx}`}>
+                            <Check />
+                            <span>{b}</span>
+                          </li>
+                        ))}
+                      </ul>
                     )}
 
-                    {/* Closing */}
                     {product.closingStatement && (
-                      <blockquote
-                        className="m-t20 m-b0 p-a20"
-                        style={{
-                          borderLeft: "4px solid var(--primary)",
-                          backgroundColor: "#fff",
-                          fontStyle: "italic",
-                          fontSize: "16px",
-                        }}
-                      >
-                        "{product.closingStatement}"
+                      <blockquote className="byp-quote" style={{ marginTop: 22 }}>
+                        {product.closingStatement}
                       </blockquote>
                     )}
                   </div>
-                ))}
+                );
+              })}
 
-              {/* Advantages */}
-              {Array.isArray(brand.advantages) && brand.advantages.length > 0 && (
-                <div className="m-b40">
-                  <h4 className="m-b15">Ventajas clave</h4>
-                  <ul className="list-check primary m-b0">
-                    {brand.advantages.map((adv, idx) => (
-                      <li key={`adv-${idx}`}>{adv}</li>
-                    ))}
-                  </ul>
+            {/* Ventajas */}
+            {Array.isArray(brand.advantages) && brand.advantages.length > 0 && (
+              <div className="byp-article__section">
+                <div className="byp-article__head">
+                  <span className="byp-head__idx">{idx(sectionCount + 1)}</span>
+                  <h2>Ventajas clave</h2>
                 </div>
-              )}
-
-              {/* Closing statement */}
-              {brand.closingStatement && (
-                <div
-                  className="m-b40 p-a30"
-                  style={{
-                    backgroundColor: "var(--primary)",
-                    color: "#fff",
-                    borderRadius: "4px",
-                  }}
-                >
-                  <p className="m-b0" style={{ fontSize: "16px", lineHeight: "1.7" }}>
-                    {brand.closingStatement}
-                  </p>
-                </div>
-              )}
-            </div>
-
-            {/* Sidebar */}
-            <div className="col-lg-4">
-              {/* CTA */}
-              <div className="widget bg-white p-a30 shadow-sm m-b30">
-                <h4 className="widget-title">
-                  ¿Interesado en {brand.name}?
-                </h4>
-                <p className="m-b20">
-                  Solicita una cotización, demostración o asesoría personalizada para tu operación.
-                </p>
-                <Link to="/contacto" className="btn btn-primary w-100">
-                  Solicitar información
-                </Link>
+                <ul className="byp-checklist">
+                  {brand.advantages.map((adv, aIdx) => (
+                    <li key={`adv-${aIdx}`}>
+                      <Check />
+                      <span>{adv}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
+            )}
 
-              {/* Related industries */}
-              {relatedIndustries.length > 0 && (
-                <div className="widget bg-white p-a30 shadow-sm m-b30">
-                  <h4 className="widget-title">Industrias que atiende</h4>
-                  <ul className="list-unstyled m-b0">
-                    {relatedIndustries.map((ind) => (
-                      <li key={ind.slug} className="m-b10">
-                        <Link
-                          to={ind.route}
-                          className="text-dark"
-                          style={{ textDecoration: "none" }}
-                        >
-                          <i className="fa fa-angle-right text-primary m-r10"></i>
-                          {ind.title}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {/* Back to brands */}
-              <div className="widget bg-white p-a30 shadow-sm">
-                <Link to="/marcas" className="btn btn-outline-primary w-100">
-                  Ver todas las marcas
-                </Link>
+            {/* Cierre */}
+            {brand.closingStatement && (
+              <div className="byp-article__section">
+                <blockquote className="byp-quote">
+                  {brand.closingStatement}
+                </blockquote>
               </div>
-            </div>
+            )}
+
+            {/* Industrias relacionadas */}
+            {relatedIndustries.length > 0 && (
+              <div className="byp-article__section">
+                <div className="byp-article__head">
+                  <span className="byp-head__idx">IND/</span>
+                  <h2>Industrias que atiende</h2>
+                </div>
+                <div className="byp-chips">
+                  {relatedIndustries.map((ind) => (
+                    <Link
+                      className="byp-chip"
+                      to={`/industrias/${ind.slug}`}
+                      key={ind.slug}
+                    >
+                      {ind.title.toUpperCase()}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
+        </div>
+      </section>
+
+      {/* CTA final */}
+      <section className="byp-wrap" style={{ paddingBottom: 84 }}>
+        <div className="byp-ctaf">
+          <div>
+            <h2 className="byp-h2">¿Interesado en {brand.name}?</h2>
+            <p>
+              Solicita una cotización, demostración o asesoría personalizada
+              para tu operación. Respondemos con la especificación completa.
+            </p>
+          </div>
+          <Link className="byp-btn" to="/contacto">
+            Solicitar información
+          </Link>
         </div>
       </section>
     </div>

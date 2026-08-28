@@ -9,8 +9,8 @@ import "./assets/css/selectoptin.css";
 import '../src/assets/css/style.css'
 import "./assets/css/byp-overrides.css";
 // import components >>
-import Header from './components/Header';
-import Footer from "./components/Footer";
+import BypHeader from "./components/byp/BypHeader";
+import BypFooter from "./components/byp/BypFooter";
 // import pages >>>
 import Home4 from "./pages/Home4";
 import About from "./pages/About";
@@ -99,9 +99,9 @@ function App() {
 const Layout = () => {
   return (
     <>
-      <Header />
+      <BypHeader />
       <Outlet />
-      <Footer />
+      <BypFooter />
 
     </>
   )
