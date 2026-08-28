@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Propuesta 2 · Showroom Acero — B&P TECH</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#141619;--panel:#1d2025;--edge:#2b2f36;--txt:#eceef1;--dim:#9aa1ab;--amber:#e8a020;--amber-dark:#c9820a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Manrope",sans-serif;background:var(--bg);color:var(--txt);line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.dsp{font-family:"Space Grotesk",sans-serif}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;z-index:50;background:rgba(20,22,25,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--edge)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.nav .logo{background:#fff;border-radius:8px;padding:6px 12px;display:flex}
+.nav .logo img{height:30px}
+.nav ul{display:flex;gap:34px;list-style:none;font-size:14px;font-weight:500}
+.nav ul a{color:var(--dim);transition:.2s}.nav ul a:hover{color:var(--txt)}
+.nav .cta{background:var(--amber);color:#141619;padding:11px 22px;border-radius:8px;font-weight:700;font-size:14px}
+.nav .cta:hover{background:#f5b53f}
+/* hero */
+.hero{padding:76px 0 64px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.tag{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--edge);border-radius:999px;padding:7px 16px;font-size:12.5px;letter-spacing:.14em;color:var(--dim);margin-bottom:26px}
+.tag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--amber)}
+h1{font-size:clamp(2.5rem,4.8vw,3.9rem);font-weight:700;line-height:1.05;letter-spacing:-.02em}
+h1 em{font-style:normal;color:var(--amber)}
+.hero p{color:var(--dim);font-size:17px;margin:24px 0 34px;max-width:46ch}
+.btn{display:inline-block;background:var(--amber);color:#141619;padding:15px 30px;border-radius:10px;font-weight:700;font-size:15px;transition:.2s}
+.btn:hover{background:#f5b53f;transform:translateY(-1px)}
+.btn.line{background:transparent;color:var(--txt);border:1px solid var(--edge);margin-left:10px}
+.btn.line:hover{border-color:var(--dim);background:transparent}
+.stage{background:linear-gradient(165deg,#f5f6f8,#d8dce2);border-radius:20px;padding:36px;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 40px 80px rgba(0,0,0,.5)}
+.stage img{max-width:88%;max-height:88%;object-fit:contain;filter:drop-shadow(0 24px 30px rgba(0,0,0,.28))}
+.stage .chip{position:absolute;bottom:22px;left:22px;background:#141619;color:var(--txt);border-radius:10px;padding:10px 16px;font-size:12px;letter-spacing:.06em}
+.stage .chip b{color:var(--amber);display:block;font-size:13.5px}
+/* ticker de marcas */
+.ticker{border-top:1px solid var(--edge);border-bottom:1px solid var(--edge);padding:22px 0;overflow:hidden}
+.ticker .row{display:flex;gap:72px;align-items:center;width:max-content;animation:slide 28s linear infinite}
+.ticker img{height:26px;filter:grayscale(1) brightness(3.2);opacity:.55}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.ticker .row{animation:none;flex-wrap:wrap;width:auto;justify-content:center}}
+/* productos destacados */
+.section{padding:88px 0}
+.sec-top{display:flex;justify-content:space-between;align-items:end;margin-bottom:40px;gap:20px;flex-wrap:wrap}
+h2{font-size:clamp(1.8rem,3.2vw,2.5rem);font-weight:700;letter-spacing:-.01em}
+.sec-top p{color:var(--dim);max-width:52ch;margin-top:8px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.p-card{background:var(--panel);border:1px solid var(--edge);border-radius:16px;overflow:hidden;transition:.25s}
+.p-card:hover{border-color:var(--amber-dark);transform:translateY(-4px)}
+.p-card .ph{background:linear-gradient(180deg,#f3f4f6,#dcdfe4);height:230px;display:flex;align-items:center;justify-content:center;padding:22px;position:relative}
+.p-card .ph img{max-height:100%;max-width:86%;object-fit:contain}
+.p-card .ph .lg{position:absolute;top:14px;left:14px;background:#fff;border-radius:6px;padding:5px 9px}
+.p-card .ph .lg img{height:16px;position:static;max-width:88px}
+.p-card .body{padding:22px 24px 26px}
+.p-card h3{font-size:18px;font-weight:600}
+.p-card p{font-size:14px;color:var(--dim);margin:8px 0 14px}
+.p-card .go{font-size:13.5px;font-weight:700;color:var(--amber)}
+/* industrias */
+.ind-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ind-c{border:1px solid var(--edge);border-radius:14px;padding:26px 22px;transition:.2s;background:transparent}
+.ind-c:hover{background:var(--panel);border-color:var(--dim)}
+.ind-c .no{font-family:"Space Grotesk";color:var(--amber);font-size:13px;letter-spacing:.1em}
+.ind-c h3{font-size:17px;margin:10px 0 6px}
+.ind-c p{font-size:13.5px;color:var(--dim)}
+/* cta */
+.cta-final{background:linear-gradient(135deg,#1d2025,#23272e);border:1px solid var(--edge);border-radius:24px;padding:64px;display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:center}
+.cta-final p{color:var(--dim);margin-top:14px;max-width:50ch}
+footer{padding:40px 0;color:var(--dim);font-size:13px;display:flex;justify-content:space-between;border-top:1px solid var(--edge);margin-top:88px}
+@media(max-width:960px){
+ .hero{grid-template-columns:1fr;padding:48px 0}
+ .stage{order:-1;aspect-ratio:16/10}
+ .grid3{grid-template-columns:1fr}
+ .ind-grid{grid-template-columns:repeat(2,1fr)}
+ .cta-final{grid-template-columns:1fr;padding:40px 28px}
+ .nav ul{display:none}
+}
+@media(max-width:560px){.ind-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="logo" href="#"><img src="img/byp-logo.webp" alt="B&P TECH"></a>
+  <ul><li><a href="#">Marcas</a></li><li><a href="#">Industrias</a></li><li><a href="#">Casos</a></li><li><a href="#">Nosotros</a></li></ul>
+  <a class="cta" href="#">Cotizar equipo</a>
+</div></header>
+
+<section class="hero wrap">
+  <div>
+    <span class="tag">DISTRIBUIDOR OFICIAL · 8 MARCAS GLOBALES</span>
+    <h1>Equipos que no se detienen.<br><em>Operaciones que no fallan.</em></h1>
+    <p>Panificación, refrigeración y lavado profesional de las marcas líderes del mundo, con instalación y servicio técnico propio en el Perú.</p>
+    <a class="btn" href="#">Explorar el showroom</a><a class="btn line" href="#">Hablar con ingeniería</a>
+  </div>
+  <div class="stage">
+    <img src="img/true-gdm-49.webp" alt="Refrigerador TRUE GDM-49">
+    <div class="chip"><b>TRUE · GDM-49</b>Refrigeración comercial · 2 puertas</div>
+  </div>
+</section>
+
+<div class="ticker"><div class="row">
+  <img src="img/rondo-logo.svg" alt="RONDO"><img src="img/diosna-logo.svg" alt="DIOSNA"><img src="img/winterhalter-logo.png" alt="Winterhalter"><img src="img/true-logo.png" alt="True"><img src="img/pietroberto-logo.png" alt="Pietroberto"><img src="img/vitamix-logo.svg" alt="Vitamix"><img src="img/cainco-logo.png" alt="Cainco"><img src="img/jbtmarel-logo.svg" alt="JBT Marel">
+  <img src="img/rondo-logo.svg" alt=""><img src="img/diosna-logo.svg" alt=""><img src="img/winterhalter-logo.png" alt=""><img src="img/true-logo.png" alt=""><img src="img/pietroberto-logo.png" alt=""><img src="img/vitamix-logo.svg" alt=""><img src="img/cainco-logo.png" alt=""><img src="img/jbtmarel-logo.svg" alt="">
+</div></div>
+
+<section class="section wrap">
+  <div class="sec-top"><div><h2>Equipos destacados</h2><p>Cada máquina del showroom está respaldada por stock de repuestos y técnicos certificados por fábrica.</p></div><a class="btn line" style="margin-left:0" href="#">Ver todas las marcas</a></div>
+  <div class="grid3">
+    <a class="p-card" href="#"><div class="ph"><span class="lg"><img src="img/rondo-logo.svg" alt="RONDO"></span><img src="img/rondo-automat-2000.webp" alt="Laminadora AUTOMAT 2000"></div><div class="body"><h3>Laminadora AUTOMAT 2000</h3><p>El estándar suizo del laminado. Masa uniforme, turno tras turno.</p><span class="go">Ver ficha →</span></div></a>
+    <a class="p-card" href="#"><div class="ph"><span class="lg"><img src="img/diosna-logo.svg" alt="DIOSNA"></span><img src="img/diosna-wendel.webp" alt="Amasadora WENDEL"></div><div class="body"><h3>Amasadora WENDEL W240A</h3><p>Oxigenación perfecta y desarrollo ideal del gluten, a escala industrial.</p><span class="go">Ver ficha →</span></div></a>
+    <a class="p-card" href="#"><div class="ph"><span class="lg"><img src="img/winterhalter-logo.png" alt="Winterhalter"></span><img src="img/winterhalter-u50.webp" alt="Lavavajillas U50"></div><div class="body"><h3>Lavavajillas UC/U50</h3><p>Brillo perfecto con el menor consumo de agua y químicos del mercado.</p><span class="go">Ver ficha →</span></div></a>
+  </div>
+</section>
+
+<section class="section wrap" style="padding-top:0">
+  <div class="sec-top"><div><h2>Una solución para cada operación</h2></div></div>
+  <div class="ind-grid">
+    <a class="ind-c" href="#"><span class="no">/01</span><h3>Panaderías</h3><p>De la masa al horno, sin cuellos de botella.</p></a>
+    <a class="ind-c" href="#"><span class="no">/02</span><h3>Restaurantes</h3><p>Frío, lavado y preparación de alto tráfico.</p></a>
+    <a class="ind-c" href="#"><span class="no">/03</span><h3>Supermercados</h3><p>Exhibición y producción in-store.</p></a>
+    <a class="ind-c" href="#"><span class="no">/04</span><h3>Hoteles & catering</h3><p>Volumen y continuidad 24/7.</p></a>
+  </div>
+</section>
+
+<section class="wrap"><div class="cta-final">
+  <div><h2>¿Qué produce tu operación? Nosotros ponemos las máquinas.</h2><p>Un ingeniero de B&P TECH revisa tu flujo de producción y te propone la configuración exacta — sin sobredimensionar tu inversión.</p></div>
+  <div style="text-align:right"><a class="btn" href="#">Agendar visita técnica</a></div>
+</div></section>
+
+<footer class="wrap"><span>© 2026 B&P TECH — Bakery & Pastry Technology</span><span>Lima, Perú · byptech.com</span></footer>
+</body>
+</html>

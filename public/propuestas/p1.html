@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Propuesta 1 · Catálogo Editorial — B&P TECH</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1c1917;--muted:#6b6560;--paper:#faf8f4;--line:#e2ddd5;--accent:#a03d1e;--accent-soft:#f4e8e2}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Archivo",sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+.serif{font-family:"Fraunces",serif}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+a{color:inherit;text-decoration:none}
+/* header */
+header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(250,248,244,.94);backdrop-filter:blur(6px);z-index:50}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.nav img{height:38px}
+.nav ul{display:flex;gap:36px;list-style:none;font-size:14px;font-weight:500;letter-spacing:.04em}
+.nav ul a:hover{color:var(--accent)}
+.nav .cta{border:1.5px solid var(--ink);padding:10px 22px;border-radius:999px;font-size:14px;font-weight:600;transition:.2s}
+.nav .cta:hover{background:var(--ink);color:var(--paper)}
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:84px 0 72px}
+.kicker{font-size:13px;letter-spacing:.22em;font-weight:600;color:var(--accent);margin-bottom:20px}
+h1{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(2.6rem,5vw,4.2rem);line-height:1.06;letter-spacing:-.01em}
+.hero p.lead{margin:26px 0 34px;font-size:18px;color:var(--muted);max-width:46ch}
+.btn{display:inline-block;background:var(--ink);color:var(--paper);padding:15px 32px;border-radius:999px;font-weight:600;font-size:15px;transition:.2s}
+.btn:hover{background:var(--accent)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line);margin-left:12px}
+.btn.ghost:hover{border-color:var(--ink);background:transparent}
+.hero-media{position:relative}
+.hero-media .frame{background:#fff;border:1px solid var(--line);padding:40px;display:flex;align-items:center;justify-content:center;aspect-ratio:4/3.4}
+.hero-media img{max-width:100%;max-height:100%;object-fit:contain}
+.hero-media .spec{position:absolute;left:-18px;bottom:26px;background:var(--ink);color:var(--paper);padding:14px 20px;font-size:12px;letter-spacing:.08em;line-height:1.9}
+.hero-media .spec b{font-size:15px;letter-spacing:.02em;display:block;font-weight:600}
+/* stats rule */
+.rule{display:flex;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rule div{flex:1;padding:26px 0;text-align:center}
+.rule div+div{border-left:1px solid var(--line)}
+.rule .n{font-family:"Fraunces",serif;font-size:34px;font-weight:600}
+.rule .l{font-size:13px;color:var(--muted);letter-spacing:.06em;margin-top:2px}
+/* marcas */
+.section{padding:88px 0}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:44px;gap:24px;flex-wrap:wrap}
+h2{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(1.9rem,3.4vw,2.7rem);letter-spacing:-.01em}
+.sec-head a{font-size:14px;font-weight:600;color:var(--accent);white-space:nowrap}
+.brand-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.b-card{background:#fff;padding:34px;transition:.25s;position:relative}
+.b-card:hover{background:var(--accent-soft)}
+.b-card .ph{height:190px;display:flex;align-items:center;justify-content:center;margin-bottom:22px}
+.b-card .ph img{max-height:100%;max-width:82%;object-fit:contain}
+.b-card .lg{height:26px;margin-bottom:12px;display:block}
+.b-card h3{font-size:17px;font-weight:600;letter-spacing:.02em}
+.b-card p{font-size:14px;color:var(--muted);margin-top:6px}
+.b-card .idx{position:absolute;top:20px;right:24px;font-family:"Fraunces",serif;font-size:14px;color:var(--muted)}
+/* industrias — lista editorial */
+.ind{border-top:1px solid var(--line)}
+.ind-row{display:grid;grid-template-columns:70px 1fr auto;align-items:center;gap:28px;padding:26px 8px;border-bottom:1px solid var(--line);transition:.2s}
+.ind-row:hover{background:#fff;padding-left:20px}
+.ind-row .no{font-family:"Fraunces",serif;font-size:15px;color:var(--muted)}
+.ind-row h3{font-family:"Fraunces",serif;font-size:24px;font-weight:600}
+.ind-row span{font-size:13px;color:var(--muted)}
+.ind-row .arrow{font-size:22px;color:var(--accent)}
+/* cta */
+.cta-band{background:var(--ink);color:var(--paper);padding:88px 0}
+.cta-band .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+.cta-band h2{color:var(--paper)}
+.cta-band p{color:#a8a29e;margin-top:16px;max-width:50ch}
+.cta-band .btn{background:var(--paper);color:var(--ink)}
+.cta-band .btn:hover{background:var(--accent);color:var(--paper)}
+footer{padding:44px 0;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:gap:16px}
+@media(max-width:900px){
+ .hero{grid-template-columns:1fr;padding:52px 0 44px}
+ .hero-media{order:-1}.hero-media .frame{padding:24px;aspect-ratio:16/10}
+ .brand-grid{grid-template-columns:1fr}
+ .rule{flex-wrap:wrap}.rule div{flex-basis:50%}.rule div:nth-child(3){border-left:none;border-top:1px solid var(--line)}.rule div:nth-child(4){border-top:1px solid var(--line)}
+ .cta-band .wrap{grid-template-columns:1fr}
+ .nav ul{display:none}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <img src="img/byp-logo.webp" alt="B&P TECH">
+  <ul><li><a href="#">Marcas</a></li><li><a href="#">Industrias</a></li><li><a href="#">Casos de éxito</a></li><li><a href="#">Nosotros</a></li></ul>
+  <a class="cta" href="#">Hablar con un asesor</a>
+</div></header>
+
+<section class="hero wrap">
+  <div>
+    <p class="kicker">EQUIPAMIENTO PROFESIONAL · LIMA, PERÚ</p>
+    <h1>La ingeniería detrás de cada horneada perfecta.</h1>
+    <p class="lead">Representamos en el Perú a los fabricantes más exigentes del mundo en panificación, refrigeración y lavado profesional. Proyectos llave en mano, servicio técnico propio.</p>
+    <a class="btn" href="#">Ver marcas</a><a class="btn ghost" href="#">Nuestros proyectos</a>
+  </div>
+  <div class="hero-media">
+    <div class="frame"><img src="img/rondo-automat-2000.webp" alt="Laminadora RONDO AUTOMAT 2000"></div>
+    <div class="spec"><b>RONDO · AUTOMAT 2000</b>Laminadora suiza · banda 640 mm</div>
+  </div>
+</section>
+
+<div class="wrap"><div class="rule">
+  <div><div class="n">8</div><div class="l">MARCAS GLOBALES</div></div>
+  <div><div class="n">+15</div><div class="l">AÑOS DE EXPERIENCIA</div></div>
+  <div><div class="n">+200</div><div class="l">PROYECTOS INSTALADOS</div></div>
+  <div><div class="n">24/7</div><div class="l">SOPORTE TÉCNICO</div></div>
+</div></div>
+
+<section class="section wrap">
+  <div class="sec-head"><h2>Marcas que representamos</h2><a href="#">Ver las 8 marcas →</a></div>
+  <div class="brand-grid">
+    <div class="b-card"><span class="idx">01</span><div class="ph"><img src="img/rondo-automat-2000.webp" alt="RONDO"></div><img class="lg" src="img/rondo-logo.svg" alt=""><h3>Laminadoras</h3><p>Precisión suiza para hojaldres y croissants perfectos.</p></div>
+    <div class="b-card"><span class="idx">02</span><div class="ph"><img src="img/diosna-wendel.webp" alt="DIOSNA"></div><img class="lg" src="img/diosna-logo.svg" alt=""><h3>Amasadoras</h3><p>Ingeniería alemana para el desarrollo ideal del gluten.</p></div>
+    <div class="b-card"><span class="idx">03</span><div class="ph"><img src="img/true-gdm-49.webp" alt="TRUE"></div><img class="lg" src="img/true-logo.png" alt=""><h3>Refrigeración</h3><p>Frío comercial americano, líder mundial en confiabilidad.</p></div>
+    <div class="b-card"><span class="idx">04</span><div class="ph"><img src="img/winterhalter-u50.webp" alt="Winterhalter"></div><img class="lg" src="img/winterhalter-logo.png" alt=""><h3>Lavado profesional</h3><p>Resultados impecables con el menor consumo de agua.</p></div>
+    <div class="b-card"><span class="idx">05</span><div class="ph"><img src="img/pietroberto-mix.webp" alt="Pietroberto"></div><img class="lg" src="img/pietroberto-logo.png" alt=""><h3>Batido y división</h3><p>Tradición italiana en batidoras y divisoras volumétricas.</p></div>
+    <div class="b-card"><span class="idx">06</span><div class="ph"><img src="img/vitamix-quiet-one.webp" alt="Vitamix"></div><img class="lg" src="img/vitamix-logo.svg" alt=""><h3>Licuado comercial</h3><p>El estándar de las cadenas de café más grandes del mundo.</p></div>
+  </div>
+</section>
+
+<section class="section wrap" style="padding-top:0">
+  <div class="sec-head"><h2>Soluciones por industria</h2><a href="#">Todas las industrias →</a></div>
+  <div class="ind">
+    <a class="ind-row" href="#"><span class="no">01</span><div><h3>Panadería y pastelería</h3><span>Laminado · amasado · fermentación · horneado</span></div><span class="arrow">→</span></a>
+    <a class="ind-row" href="#"><span class="no">02</span><div><h3>Restaurantes y cocinas industriales</h3><span>Refrigeración · lavado · preparación</span></div><span class="arrow">→</span></a>
+    <a class="ind-row" href="#"><span class="no">03</span><div><h3>Supermercados y retail</h3><span>Exhibición refrigerada · panificación in-store</span></div><span class="arrow">→</span></a>
+    <a class="ind-row" href="#"><span class="no">04</span><div><h3>Hoteles y catering</h3><span>Volumen, continuidad y servicio 24/7</span></div><span class="arrow">→</span></a>
+  </div>
+</section>
+
+<section class="cta-band"><div class="wrap">
+  <div><h2>Tu próxima línea de producción empieza con una conversación.</h2><p>Cuéntanos qué produces y a qué volumen. Diseñamos la solución, la instalamos y la mantenemos funcionando.</p></div>
+  <div style="text-align:right"><a class="btn" href="#">Agendar asesoría técnica</a></div>
+</div></section>
+
+<footer class="wrap"><span>© 2026 B&P TECH · Bakery & Pastry Technology</span><span>Lima, Perú</span></footer>
+</body>
+</html>

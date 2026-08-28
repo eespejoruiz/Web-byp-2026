@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Propuesta 3 · Precisión Técnica — B&P TECH</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#10294a;--navy-2:#1b3a63;--bg:#f2f4f6;--card:#ffffff;--line:#d7dde3;--txt:#182430;--dim:#5b6773;--orange:#f04e23}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"IBM Plex Sans",sans-serif;background:var(--bg);color:var(--txt);line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Archivo",sans-serif}
+.mono{font-family:"IBM Plex Mono",monospace}
+.wrap{max-width:1220px;margin:0 auto;padding:0 32px}
+a{color:inherit;text-decoration:none}
+/* fina retícula de fondo */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;opacity:.35;z-index:0}
+main,header,footer{position:relative;z-index:1}
+header{background:var(--navy);color:#fff}
+.topbar{font-family:"IBM Plex Mono";font-size:11.5px;letter-spacing:.08em;color:#9db3cc;border-bottom:1px solid rgba(255,255,255,.12);padding:8px 0;display:flex;justify-content:space-between}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav .logo{background:#fff;padding:6px 12px;display:flex;border-radius:4px}
+.nav .logo img{height:30px}
+.nav ul{display:flex;gap:32px;list-style:none;font-size:14px;font-weight:500}
+.nav ul a{color:#c9d6e5}.nav ul a:hover{color:#fff}
+.nav .cta{background:var(--orange);color:#fff;padding:11px 22px;font-weight:700;font-size:14px;border-radius:4px}
+/* hero técnico */
+.hero{background:var(--navy);color:#fff;padding:72px 0 0}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;padding-bottom:76px}
+.code{font-family:"IBM Plex Mono";font-size:12.5px;letter-spacing:.12em;color:var(--orange);margin-bottom:18px}
+h1{font-size:clamp(2.4rem,4.6vw,3.7rem);font-weight:800;line-height:1.07;letter-spacing:-.015em}
+.hero p{color:#a9bcd2;font-size:17px;margin:22px 0 32px;max-width:47ch}
+.btn{display:inline-block;background:var(--orange);color:#fff;padding:15px 30px;font-weight:700;font-size:15px;border-radius:4px;transition:.15s}
+.btn:hover{background:#d84418}
+.btn.alt{background:transparent;border:1px solid #3a557b;margin-left:10px}
+.btn.alt:hover{background:#1b3a63}
+.blue-frame{background:#fff;border-radius:6px;padding:30px;aspect-ratio:4/3.2;display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 30px 60px rgba(0,0,0,.35)}
+.blue-frame img{max-width:90%;max-height:90%;object-fit:contain}
+.blue-frame .dim{position:absolute;font-family:"IBM Plex Mono";font-size:11px;color:var(--dim);letter-spacing:.06em}
+.blue-frame .dim.t{top:10px;left:50%;transform:translateX(-50%)}
+.blue-frame .dim.l{left:-2px;top:50%;transform:rotate(-90deg) translateX(50%);transform-origin:left}
+.blue-frame .tag{position:absolute;bottom:-16px;left:26px;background:var(--orange);color:#fff;font-family:"IBM Plex Mono";font-size:12px;padding:8px 14px;border-radius:3px}
+/* specs bar */
+.specs{background:var(--navy-2);color:#fff}
+.specs .wrap{display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
+.specs div.cell{padding:22px 10px;border-left:1px solid rgba(255,255,255,.1)}
+.specs div.cell:first-child{border-left:none}
+.specs .n{font-family:"Archivo";font-weight:800;font-size:28px}
+.specs .l{font-family:"IBM Plex Mono";font-size:10.5px;letter-spacing:.14em;color:#8fa6c2;margin-top:2px}
+/* catálogo tipo ficha */
+.section{padding:84px 0}
+.head{display:flex;align-items:baseline;gap:18px;margin-bottom:38px}
+.head .idx{font-family:"IBM Plex Mono";color:var(--orange);font-size:14px}
+h2{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;letter-spacing:-.01em}
+.sheet{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.f-card{background:var(--card);border:1px solid var(--line);border-radius:6px;overflow:hidden;transition:.2s;display:flex;flex-direction:column}
+.f-card:hover{border-color:var(--navy);box-shadow:0 12px 32px rgba(16,41,74,.12)}
+.f-card .ph{height:215px;display:flex;align-items:center;justify-content:center;padding:20px;border-bottom:1px dashed var(--line)}
+.f-card .ph img{max-height:100%;max-width:84%;object-fit:contain}
+.f-card .meta{padding:18px 22px 22px}
+.f-card .ref{font-family:"IBM Plex Mono";font-size:11px;color:var(--dim);letter-spacing:.1em}
+.f-card h3{font-size:17px;margin:6px 0 4px;font-weight:700}
+.f-card p{font-size:14px;color:var(--dim)}
+.f-card table{width:100%;font-size:12.5px;margin-top:12px;border-collapse:collapse}
+.f-card td{padding:6px 0;border-top:1px solid var(--line);color:var(--dim)}
+.f-card td:last-child{text-align:right;color:var(--txt);font-family:"IBM Plex Mono";font-size:12px}
+/* industrias tabla */
+.tbl{background:var(--card);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.t-row{display:grid;grid-template-columns:110px 1fr 1fr auto;gap:20px;align-items:center;padding:20px 26px;border-top:1px solid var(--line);transition:.15s}
+.t-row:first-child{border-top:none}
+.t-row:hover{background:#f8fafb}
+.t-row .ref{font-family:"IBM Plex Mono";font-size:12px;color:var(--orange)}
+.t-row h3{font-size:16.5px;font-weight:700}
+.t-row .eq{font-size:13.5px;color:var(--dim)}
+.t-row .go{font-family:"IBM Plex Mono";font-size:13px;color:var(--navy)}
+/* cta */
+.cta-f{background:var(--navy);color:#fff;border-radius:8px;padding:56px;display:flex;justify-content:space-between;align-items:center;gap:36px}
+.cta-f p{color:#a9bcd2;margin-top:10px;max-width:52ch}
+footer{padding:36px 0 44px;font-family:"IBM Plex Mono";font-size:12px;color:var(--dim);display:flex;justify-content:space-between}
+@media(max-width:960px){
+ .hero-grid{grid-template-columns:1fr;padding-bottom:56px}
+ .blue-frame{order:-1;aspect-ratio:16/10}
+ .sheet{grid-template-columns:1fr}
+ .specs .wrap{grid-template-columns:repeat(2,1fr)}
+ .specs div.cell:nth-child(3){border-left:none;border-top:1px solid rgba(255,255,255,.1)}
+ .specs div.cell:nth-child(4){border-top:1px solid rgba(255,255,255,.1)}
+ .t-row{grid-template-columns:1fr;gap:6px}
+ .cta-f{flex-direction:column;align-items:flex-start;padding:36px 28px}
+ .nav ul{display:none}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap topbar"><span>B&P TECH · EQUIPAMIENTO PARA LA INDUSTRIA ALIMENTARIA</span><span>LIMA — PE · GMT-5</span></div>
+  <div class="wrap nav">
+    <a class="logo" href="#"><img src="img/byp-logo.webp" alt="B&P TECH"></a>
+    <ul><li><a href="#">Marcas</a></li><li><a href="#">Industrias</a></li><li><a href="#">Servicio técnico</a></li><li><a href="#">Nosotros</a></li></ul>
+    <a class="cta" href="#">Solicitar cotización</a>
+  </div>
+</header>
+
+<main>
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <p class="code">// PROYECTOS LLAVE EN MANO · SERVICIO CERTIFICADO DE FÁBRICA</p>
+    <h1>Especificamos, instalamos y mantenemos tu línea de producción.</h1>
+    <p>Ocho marcas líderes mundiales en panificación, refrigeración y lavado profesional. Un solo responsable técnico: B&P TECH.</p>
+    <a class="btn" href="#">Ver catálogo técnico</a><a class="btn alt" href="#">Descargar fichas</a>
+  </div>
+  <div class="blue-frame">
+    <span class="dim t">← 1.740 mm →</span>
+    <img src="img/diosna-wendel.webp" alt="Amasadora DIOSNA WENDEL W240A">
+    <span class="tag">REF: DIOSNA-W240A</span>
+  </div>
+</div></section>
+
+<div class="specs"><div class="wrap">
+  <div class="cell"><div class="n">08</div><div class="l">MARCAS REPRESENTADAS</div></div>
+  <div class="cell"><div class="n">200+</div><div class="l">PROYECTOS INSTALADOS</div></div>
+  <div class="cell"><div class="n">48 h</div><div class="l">RESPUESTA TÉCNICA</div></div>
+  <div class="cell"><div class="n">100%</div><div class="l">REPUESTOS ORIGINALES</div></div>
+</div></div>
+
+<section class="section wrap">
+  <div class="head"><span class="idx">01/</span><h2>Catálogo por especialidad</h2></div>
+  <div class="sheet">
+    <a class="f-card" href="#"><div class="ph"><img src="img/rondo-automat-2000.webp" alt="RONDO AUTOMAT 2000"></div><div class="meta"><span class="ref">RONDO · SUIZA</span><h3>Laminadora AUTOMAT 2000</h3><p>Laminado mecánico de precisión.</p><table><tr><td>Banda</td><td>640 mm</td></tr><tr><td>Operación</td><td>Multi-turno</td></tr></table></div></a>
+    <a class="f-card" href="#"><div class="ph"><img src="img/true-gdm-49.webp" alt="TRUE GDM-49"></div><div class="meta"><span class="ref">TRUE · EE.UU.</span><h3>Refrigerador GDM-49</h3><p>Exhibición con puertas de vidrio.</p><table><tr><td>Capacidad</td><td>1.388 L</td></tr><tr><td>Refrigerante</td><td>R290 HC</td></tr></table></div></a>
+    <a class="f-card" href="#"><div class="ph"><img src="img/winterhalter-u50.webp" alt="Winterhalter U50"></div><div class="meta"><span class="ref">WINTERHALTER · ALEMANIA</span><h3>Lavavajillas U50</h3><p>Bajo mostrador, ciclo inteligente.</p><table><tr><td>Consumo</td><td>2,4 L/ciclo</td></tr><tr><td>Ciclos</td><td>hasta 77/h</td></tr></table></div></a>
+  </div>
+</section>
+
+<section class="section wrap" style="padding-top:0">
+  <div class="head"><span class="idx">02/</span><h2>Soluciones por industria</h2></div>
+  <div class="tbl">
+    <a class="t-row" href="#"><span class="ref">IND-001</span><h3>Panadería y pastelería</h3><span class="eq">Laminado · amasado · división · frío</span><span class="go">ABRIR →</span></a>
+    <a class="t-row" href="#"><span class="ref">IND-002</span><h3>Cocinas industriales</h3><span class="eq">Preparación · lavado · refrigeración</span><span class="go">ABRIR →</span></a>
+    <a class="t-row" href="#"><span class="ref">IND-003</span><h3>Supermercados</h3><span class="eq">Exhibición · panificación in-store</span><span class="go">ABRIR →</span></a>
+    <a class="t-row" href="#"><span class="ref">IND-004</span><h3>Hoteles y catering</h3><span class="eq">Volumen · continuidad · 24/7</span><span class="go">ABRIR →</span></a>
+  </div>
+</section>
+
+<section class="wrap" style="padding-bottom:84px"><div class="cta-f">
+  <div><h2>Envíanos tu plano o tu carta. Volvemos con la especificación completa.</h2><p>Dimensionamiento, fichas técnicas, cronograma de instalación y plan de mantenimiento — en una sola propuesta.</p></div>
+  <a class="btn" href="#">Iniciar proyecto</a>
+</div></section>
+</main>
+
+<footer class="wrap"><span>© 2026 B&P TECH S.A.C.</span><span>BYPTECH.COM · LIMA, PERÚ</span></footer>
+</body>
+</html>
