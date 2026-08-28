@@ -37,36 +37,6 @@ const BrandTemplate = ({ slug }) => {
           <div className="row">
             {/* Main content */}
             <div className="col-lg-8">
-              {/* Tipo de producto */}
-              <div className="m-b30">
-                <span
-                  className="badge"
-                  style={{
-                    backgroundColor: "var(--primary)",
-                    color: "#fff",
-                    fontSize: "14px",
-                    padding: "6px 16px",
-                    borderRadius: "4px",
-                  }}
-                >
-                  {brand.productType}
-                </span>
-                {brand.origin && (
-                  <span
-                    className="badge m-l10"
-                    style={{
-                      backgroundColor: "#f5f5f5",
-                      color: "#333",
-                      fontSize: "14px",
-                      padding: "6px 16px",
-                      borderRadius: "4px",
-                      marginLeft: "8px",
-                    }}
-                  >
-                    Origen: {brand.origin}
-                  </span>
-                )}
-              </div>
 
               {/* Sections */}
               {Array.isArray(brand.sections) &&
