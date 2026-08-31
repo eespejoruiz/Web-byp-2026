@@ -23,7 +23,7 @@ import pietrobertoMix from "../assets/images/brands/pietroberto-mix.webp";
 import pietrobertoOmega from "../assets/images/brands/pietroberto-omega.webp";
 import pietrobertoFenice from "../assets/images/products/pietroberto-fenice.webp";
 import pietrobertoForm from "../assets/images/products/pietroberto-form-4cff.webp";
-import pietrobertoOmegaAb from "../assets/images/products/pietroberto-omega-ab.webp";
+import pietrobertoSart from "../assets/images/products/pietroberto-sart.webp";
 
 import vitamixQuietOne from "../assets/images/brands/vitamix-quiet-one.webp";
 import vitamixVitaPrep from "../assets/images/products/vitamix-vita-prep-3.webp";
@@ -305,14 +305,14 @@ export const productsData = [
     featured: false,
   },
   {
-    id: "pietroberto-omega-ab",
+    id: "pietroberto-sart",
     brand: "pietroberto",
-    name: "Divisora volumétrica hidráulica OMEGA A/B",
-    category: "Divisora volumétrica con tolva",
+    name: "Divisora-boleadora automática SART",
+    category: "Divisora-boleadora automática",
     description: "",
-    image: pietrobertoOmegaAb,
+    image: pietrobertoSart,
     industries: ["panaderia", "cocinas-industriales"],
-    source: "https://www.youtube.com/watch?v=AwCHEE4LqnM",
+    source: "http://pietroberto.com/detalle-productos/3/112",
     featured: false,
   },
 
