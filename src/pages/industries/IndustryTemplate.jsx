@@ -1,4 +1,5 @@
 import React from "react";
+import BypBreadcrumbs from "../../components/byp/BypBreadcrumbs";
 import { Link } from "react-router-dom";
 import { getIndustryBySlug, industryData } from "../../data/industryData";
 import { getBrandsByIndustry } from "../../data/brandsData";
@@ -47,6 +48,7 @@ const IndustryTemplate = ({ slug }) => {
       <section className="byp-phero">
         <div className="byp-wrap">
           <p className="byp-code">// {ref} · SOLUCIONES POR INDUSTRIA</p>
+          <BypBreadcrumbs variant=\"dark\" items={[{ label: \"Industrias\", to: \"/industrias\" }, { label: industry.title }]} />
           <h1 className="byp-h1">{industry.title}</h1>
           <p className="byp-lead">{industry.description}</p>
           {Array.isArray(industry.keyStations) &&

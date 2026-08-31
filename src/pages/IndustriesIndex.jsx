@@ -1,4 +1,5 @@
 import React from "react";
+import BypBreadcrumbs from "../components/byp/BypBreadcrumbs";
 import { Link } from "react-router-dom";
 import { industryData } from "./../data/industryData";
 
@@ -10,6 +11,7 @@ const IndustriesIndex = () => (
           // SOLUCIONES POR INDUSTRIA ·{" "}
           {String(industryData.length).padStart(2, "0")} VERTICALES
         </p>
+        <BypBreadcrumbs variant="dark" items={[{ label: "Industrias" }]} />
         <h1 className="byp-h1">Soluciones por Industria</h1>
         <p className="byp-lead">
           Explora nuestras verticales y descubre la tecnología adecuada para

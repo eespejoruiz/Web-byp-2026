@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { getBrandBySlug } from "../../data/brandsData";
+import BypBreadcrumbs from "../../components/byp/BypBreadcrumbs";
 import { industryData } from "../../data/industryData";
 
 const Check = () => (
@@ -69,6 +70,7 @@ const BrandTemplate = ({ slug }) => {
       <section className="byp-bhero">
         <div className="byp-wrap byp-bhero__grid">
           <div>
+            <BypBreadcrumbs variant=\"dark\" items={[{ label: \"Marcas\", to: \"/marcas\" }, { label: brand.name }]} />
             <p className="byp-code">
               // {brand.name} · {(brand.origin || "").toUpperCase()} ·{" "}
               {(brand.productType || "").toUpperCase()}

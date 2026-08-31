@@ -1,4 +1,5 @@
 import React from "react";
+import BypBreadcrumbs from "../components/byp/BypBreadcrumbs";
 import { Link } from "react-router-dom";
 import { brandsData } from "../data/brandsData";
 
@@ -17,6 +18,7 @@ const BrandsIndex = () => (
     <section className="byp-phero">
       <div className="byp-wrap">
         <p className="byp-code">// EQUIPAMIENTO PROFESIONAL</p>
+        <BypBreadcrumbs variant="dark" items={[{ label: "Marcas" }]} />
         <h1 className="byp-h1">Marcas que respaldan tu operación</h1>
         <p className="byp-lead">
           Trabajamos con las marcas líderes a nivel mundial en equipamiento

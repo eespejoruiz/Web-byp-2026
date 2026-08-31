@@ -1,4 +1,5 @@
 import React from "react";
+import BypBreadcrumbs from "../components/byp/BypBreadcrumbs";
 
 const WHATSAPP_URL = "https://wa.me/51985362946";
 
@@ -7,6 +8,7 @@ const Contect = () => (
     <section className="byp-phero">
       <div className="byp-wrap">
         <p className="byp-code">// CONTACTO</p>
+        <BypBreadcrumbs variant="dark" items={[{ label: "Contacto" }]} />
         <h1 className="byp-h1">Conversemos</h1>
         <p className="byp-lead">
           Cuéntanos tu industria, volumen y restricciones (espacio, energía,
@@ -27,7 +29,7 @@ const Contect = () => (
             </div>
             <div className="byp-contact-item">
               <span className="byp-mono">UBICACIÓN</span>
-              <span className="byp-contact-val">Lima, Perú</span>
+              <span className="byp-contact-val">Calle Cristóbal de Peralta Sur 395, Urb. Valle Hermoso de Monterrico, Surco, Lima – Perú</span>
             </div>
             <div className="byp-contact-item">
               <span className="byp-mono">EMAIL</span>
