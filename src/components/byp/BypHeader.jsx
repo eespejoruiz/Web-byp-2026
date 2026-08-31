@@ -156,7 +156,7 @@ const BypHeader = () => {
             </ul>
             <div className="byp-mmenu__ctas">
               <a className="byp-btn" href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noopener noreferrer">WhatsApp +51 985 362 946</a>
-              <Link className="byp-btn byp-btn--line" to="/contacto">Solicitar cotización</Link>
+              <Link className="byp-btn byp-btn--line" to="/contacto">Contactar</Link>
             </div>
           </div>
         </div>

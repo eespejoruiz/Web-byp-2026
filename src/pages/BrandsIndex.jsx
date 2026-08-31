@@ -16,7 +16,7 @@ const BrandsIndex = () => (
   <div className="byp-page">
     <section className="byp-phero">
       <div className="byp-wrap">
-        <p className="byp-code">// MARCAS REPRESENTADAS · CATÁLOGO TÉCNICO</p>
+        <p className="byp-code">// EQUIPAMIENTO PROFESIONAL</p>
         <h1 className="byp-h1">Marcas que respaldan tu operación</h1>
         <p className="byp-lead">
           Trabajamos con las marcas líderes a nivel mundial en equipamiento
@@ -28,10 +28,6 @@ const BrandsIndex = () => (
 
     <section className="byp-section">
       <div className="byp-wrap">
-        <div className="byp-head">
-          <span className="byp-head__idx">01/</span>
-          <h2 className="byp-h2">Representación oficial</h2>
-        </div>
         <div className="byp-sheet">
           {brandsData.map((brand) => (
             <Link className="byp-fcard" to={brand.route} key={brand.slug}>
@@ -66,15 +62,13 @@ const BrandsIndex = () => (
 
     <section className="byp-section byp-section--flush-top">
       <div className="byp-wrap">
-        <div className="byp-head">
-          <span className="byp-head__idx">02/</span>
-          <h2 className="byp-h2">En representación</h2>
-        </div>
+        <p className="byp-code" style={{ marginBottom: 24 }}>
+          // VITAMIX · CAINCO · JBT MAREL
+        </p>
         <div className="byp-sheet">
           {REPRESENTED.map((b) => (
             <div className="byp-repcard" key={b.name}>
               <img src={b.logo} alt={`Logo ${b.name}`} loading="lazy" />
-              <span className="byp-fcard__ref">EN REPRESENTACIÓN</span>
               <h3>{b.name}</h3>
             </div>
           ))}
@@ -83,16 +77,9 @@ const BrandsIndex = () => (
     </section>
 
     <section className="byp-wrap" style={{ paddingBottom: 84 }}>
-      <div className="byp-ctaf">
-        <div>
-          <h2 className="byp-h2">¿No encuentras el equipo que necesitas?</h2>
-          <p>
-            Cuéntanos tu operación y te proponemos la especificación adecuada
-            dentro de nuestro portafolio de marcas.
-          </p>
-        </div>
+      <div className="byp-ctaf" style={{ justifyContent: "center" }}>
         <Link className="byp-btn" to="/contacto">
-          Solicitar cotización
+          Contactar
         </Link>
       </div>
     </section>

@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { IMAGE } from "../constent/theme";
+import Testimonial from "../components/Testimonial";
+import { brandsData } from "../data/brandsData";
 import { industryData } from "../data/industryData";
 
 import heroImg from "../assets/images/brands/hero-produccion.webp";
@@ -13,13 +16,6 @@ import vitamixLogo from "../assets/images/brands/vitamix-logo.svg";
 import caincoLogo from "../assets/images/brands/cainco-logo.png";
 import jbtmarelLogo from "../assets/images/brands/jbtmarel-logo.svg";
 
-import rondoAutomat from "../assets/images/brands/rondo-automat-2000.webp";
-import diosnaWendel from "../assets/images/brands/diosna-wendel.webp";
-import trueGdm49 from "../assets/images/brands/true-gdm-49.webp";
-import winterhalterU50 from "../assets/images/brands/winterhalter-u50.webp";
-import pietrobertoMix from "../assets/images/brands/pietroberto-mix.webp";
-import vitamixQuietOne from "../assets/images/brands/vitamix-quiet-one.webp";
-
 const TICKER_LOGOS = [
   { name: "RONDO", logo: rondoLogo },
   { name: "DIOSNA", logo: diosnaLogo },
@@ -31,81 +27,85 @@ const TICKER_LOGOS = [
   { name: "JBT Marel", logo: jbtmarelLogo },
 ];
 
-const SPECS = [
-  { n: "08", l: "MARCAS REPRESENTADAS" },
-  { n: "200+", l: "PROYECTOS INSTALADOS" },
-  { n: "48 h", l: "RESPUESTA TÉCNICA" },
-  { n: "100%", l: "REPUESTOS ORIGINALES" },
+const cards = [
+  {
+    img: IMAGE.teamPic1,
+    title: "La precisión del frío en la Alta Cocina",
+    text: "Cómo Virgilio Martínez y su equipo optimizan sus ecosistemas con True Refrigeration.",
+    to: "/casos-de-exito/alta-cocina",
+  },
+  {
+    img: IMAGE.testimonialPic2,
+    title: "Eficiencia en cada servicio de Banquete",
+    text: "La implementación de sistemas Winterhalter para manejar el alto volumen sin perder higiene.",
+    to: "/casos-de-exito/hotel",
+  },
+  {
+    img: IMAGE.galleryPic13,
+    title: "La ciencia de la masa perfecta",
+    text: "Automatización y estandarización de procesos con amasadoras Diosna y laminadoras Rondo.",
+    to: "/casos-de-exito/panaderia",
+  },
 ];
 
-const CATALOG = [
+const ourService = [
   {
-    ref: "RONDO · SUIZA",
-    title: "Laminadora AUTOMAT 2000",
-    text: "Laminado mecánico de precisión.",
-    img: rondoAutomat,
-    to: "/marcas/rondo",
-    rows: [
-      ["Banda", "640 mm"],
-      ["Operación", "Multi-turno"],
-    ],
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 24 24" fill="#fff">
+        <path d="M2 3h20v14H6l-4 4V3zm4 4h12v2H6V7zm0 4h8v2H6v-2z" />
+      </svg>
+    ),
+    text: "Asesoría Especializada",
+    desc: "Diseño de proyectos y selección de equipos basados en el flujo operativo de tu cocina.",
   },
   {
-    ref: "DIOSNA · ALEMANIA",
-    title: "Amasadora WENDEL",
-    text: "Amasado intensivo con desarrollo óptimo del gluten.",
-    img: diosnaWendel,
-    to: "/marcas/diosna",
-    rows: [
-      ["Sistema", "Wendel"],
-      ["Herramientas", "Contrarrotativas"],
-    ],
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 24 24" fill="#fff">
+        <path d="M12 2l9 4v6c0 5-3.5 9.74-9 10-5.5-.26-9-5-9-10V6l9-4zm0 4.18L6 7.73V12c0 3.87 2.69 7.16 6 7.46 3.31-.3 6-3.59 6-7.46V7.73l-6-1.55z" />
+      </svg>
+    ),
+    text: "Garantía Sólida",
+    desc: "Respaldo directo de fábrica con hasta 5 años de garantía en marcas seleccionadas.",
   },
   {
-    ref: "TRUE · EE.UU.",
-    title: "Refrigerador GDM-49",
-    text: "Exhibición con puertas de vidrio.",
-    img: trueGdm49,
-    to: "/marcas/true",
-    rows: [
-      ["Capacidad", "1.388 L"],
-      ["Refrigerante", "R290 HC"],
-    ],
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 24 24" fill="#fff">
+        <path d="M3 13h2l3 7h11l3-9H8l-2-5H1v2h4l3.6 8H18l-1 3H9l-3-6H3v-2z" />
+      </svg>
+    ),
+    text: "Entrega en Puerta",
+    desc: "Logística segura e instalación profesional con puesta en marcha en tu local.",
   },
   {
-    ref: "WINTERHALTER · ALEMANIA",
-    title: "Lavavajillas U50",
-    text: "Bajo mostrador, ciclo inteligente.",
-    img: winterhalterU50,
-    to: "/marcas/winterhalter",
-    rows: [
-      ["Consumo", "2,4 L/ciclo"],
-      ["Ciclos", "hasta 77/h"],
-    ],
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 24 24" fill="#fff">
+        <path d="M20 8h-3V5h-2v3H9V5H7v3H4v2h3v3h2v-3h6v3h2v-3h3zM4 18h16v2H4z" />
+      </svg>
+    ),
+    text: "Stock Real en Perú",
+    desc: "Disponibilidad inmediata de equipos clave para que tu proyecto no sufra demoras.",
   },
   {
-    ref: "PIETROBERTO · ITALIA",
-    title: "Batidora Planetaria Serie MIX",
-    text: "Batido planetario para producción profesional.",
-    img: pietrobertoMix,
-    to: "/marcas/pietroberto",
-    rows: [
-      ["Capacidades", "20–60 L"],
-      ["Potencia", "hasta 2 kW"],
-    ],
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 24 24" fill="#fff">
+        <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm1 5h-2v6l5 3 .9-1.45-3.9-2.3z" />
+      </svg>
+    ),
+    text: "Repuestos Originales",
+    desc: "Inventario permanente de piezas y consumibles para asegurar la vida útil de tu inversión.",
   },
   {
-    ref: "VITAMIX · EE.UU.",
-    title: "Licuadora The Quiet One",
-    text: "Alto rendimiento con baja sonoridad.",
-    img: vitamixQuietOne,
-    to: "/marcas",
-    rows: [
-      ["Aplicación", "Barras y bebidas"],
-      ["Operación", "Alto volumen"],
-    ],
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 24 24" fill="#fff">
+        <path d="M12 8a4 4 0 1 1-4 4 4 4 0 0 1 4-4zm0-6a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2z" />
+      </svg>
+    ),
+    text: "Soporte 24/7",
+    desc: "Servicio técnico preventivo y correctivo de respuesta rápida para operaciones críticas.",
   },
 ];
+
+const WHATSAPP_URL = "https://wa.me/51985362946";
 
 const Home4 = () => {
   const industries = industryData.slice(0, 6);
@@ -122,21 +122,19 @@ const Home4 = () => {
         />
         <div className="byp-wrap byp-hero__inner">
           <div>
-            <p className="byp-code">
-              // PROYECTOS LLAVE EN MANO · SERVICIO CERTIFICADO DE FÁBRICA
-            </p>
+            <p className="byp-code">// B&amp;P TECH</p>
             <h1 className="byp-h1">
-              Especificamos, instalamos y mantenemos tu línea de producción.
+              Ingeniería alimentaria para operaciones de alto rendimiento
             </h1>
             <p className="byp-lead">
-              Ocho marcas líderes mundiales en panificación, refrigeración y
-              lavado profesional. Un solo responsable técnico: B&amp;P TECH.
+              Diseñamos, equipamos y acompañamos unidades productivas con foco
+              en eficiencia, higiene, seguridad y continuidad operativa.
             </p>
-            <Link className="byp-btn" to="/marcas">
-              Ver catálogo técnico
+            <Link className="byp-btn" to="/industrias">
+              Ver industrias
             </Link>
-            <Link className="byp-btn byp-btn--alt" to="/industrias">
-              Soluciones por industria
+            <Link className="byp-btn byp-btn--alt" to="/contacto">
+              Contactar
             </Link>
           </div>
         </div>
@@ -155,43 +153,95 @@ const Home4 = () => {
         </div>
       </div>
 
-      {/* Barra specs */}
-      <div className="byp-specs">
-        <div className="byp-wrap">
-          {SPECS.map((s) => (
-            <div className="byp-specs__cell" key={s.l}>
-              <div className="byp-specs__n">{s.n}</div>
-              <div className="byp-specs__l">{s.l}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* 01/ Catálogo por especialidad */}
+      {/* 01/ Casos de éxito */}
       <section className="byp-section">
         <div className="byp-wrap">
           <div className="byp-head">
             <span className="byp-head__idx">01/</span>
-            <h2 className="byp-h2">Catálogo por especialidad</h2>
+            <h2 className="byp-h2">El Respaldo de los Grandes</h2>
           </div>
+          <p className="byp-sechead-p">
+            En B&amp;P TECH no solo entregamos equipos, construimos relaciones
+            a largo plazo basadas en la confianza y la eficiencia operativa.
+            Descubre cómo los líderes de la industria transformaron sus
+            cocinas con nosotros.
+          </p>
           <div className="byp-sheet">
-            {CATALOG.map((c) => (
-              <Link className="byp-fcard" to={c.to} key={c.title}>
+            {cards.map((card) => (
+              <Link className="byp-fcard" to={card.to} key={card.to}>
                 <div className="byp-fcard__ph">
-                  <img src={c.img} alt={c.title} loading="lazy" />
+                  <img src={card.img} alt={card.title} loading="lazy" />
                 </div>
                 <div className="byp-fcard__meta">
-                  <span className="byp-fcard__ref">{c.ref}</span>
-                  <h3>{c.title}</h3>
-                  <p>{c.text}</p>
+                  <h3>{card.title}</h3>
+                  <p>{card.text}</p>
+                  <span className="byp-fcard__cta">Ver Caso de Éxito →</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 02/ Servicios — valor agregado */}
+      <section className="byp-section byp-section--flush-top">
+        <div className="byp-wrap">
+          <div className="byp-head">
+            <span className="byp-head__idx">02/</span>
+            <h2 className="byp-h2">Agregamos valor a tu inversión</h2>
+          </div>
+          <p className="byp-sechead-p">
+            Valor agregado B2B para maximizar resultados y continuidad
+            operativa.
+          </p>
+          <div className="byp-svcgrid">
+            {ourService.map((item, ind) => (
+              <div className="byp-svc" key={item.text}>
+                <span className="byp-svc__idx">
+                  S-{String(ind + 1).padStart(2, "0")}
+                </span>
+                <div className="byp-svc__icon">{item.icon}</div>
+                <h3>{item.text}</h3>
+                <p>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 03/ Marcas */}
+      <section className="byp-section byp-section--flush-top">
+        <div className="byp-wrap">
+          <div className="byp-head">
+            <span className="byp-head__idx">03/</span>
+            <h2 className="byp-h2">Marcas que respaldan tu operación</h2>
+          </div>
+          <div className="byp-sheet">
+            {brandsData.map((brand) => (
+              <Link className="byp-fcard" to={brand.route} key={brand.slug}>
+                <div className="byp-fcard__ph">
+                  <img
+                    src={brand.heroImage}
+                    alt={`${brand.productType || "Equipo"} ${brand.name}`}
+                    loading="lazy"
+                  />
+                </div>
+                <div className="byp-fcard__meta">
+                  <span className="byp-fcard__ref">
+                    {brand.name} · {(brand.origin || "").toUpperCase()}
+                  </span>
+                  <h3>{brand.name}</h3>
+                  <p>{brand.shortDescription}</p>
                   <table>
                     <tbody>
-                      {c.rows.map(([k, v]) => (
-                        <tr key={k}>
-                          <td>{k}</td>
-                          <td>{v}</td>
-                        </tr>
-                      ))}
+                      <tr>
+                        <td>Tipo</td>
+                        <td>{brand.productType}</td>
+                      </tr>
+                      <tr>
+                        <td>Origen</td>
+                        <td>{brand.origin}</td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
@@ -201,12 +251,12 @@ const Home4 = () => {
         </div>
       </section>
 
-      {/* 02/ Soluciones por industria */}
+      {/* 04/ Soluciones por Industria */}
       <section className="byp-section byp-section--flush-top">
         <div className="byp-wrap">
           <div className="byp-head">
-            <span className="byp-head__idx">02/</span>
-            <h2 className="byp-h2">Soluciones por industria</h2>
+            <span className="byp-head__idx">04/</span>
+            <h2 className="byp-h2">Soluciones por Industria</h2>
           </div>
           <div className="byp-tbl">
             {industries.map((ind, idx) => (
@@ -226,25 +276,42 @@ const Home4 = () => {
               </Link>
             ))}
           </div>
+          <div style={{ marginTop: 26 }}>
+            <Link className="byp-btn" to="/industrias">
+              Ver industrias
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 05/ Testimoniales */}
+      <section className="byp-section byp-section--flush-top">
+        <div className="byp-wrap">
+          <div className="byp-head">
+            <span className="byp-head__idx">05/</span>
+            <h2 className="byp-h2">Nuestros clientes ya lo saben</h2>
+          </div>
+          <p className="byp-sechead-p">Testimoniales</p>
+          <Testimonial />
         </div>
       </section>
 
       {/* CTA final */}
       <section className="byp-wrap" style={{ paddingBottom: 84 }}>
-        <div className="byp-ctaf">
-          <div>
-            <h2 className="byp-h2">
-              Envíanos tu plano o tu carta. Volvemos con la especificación
-              completa.
-            </h2>
-            <p>
-              Dimensionamiento, fichas técnicas, cronograma de instalación y
-              plan de mantenimiento — en una sola propuesta.
-            </p>
+        <div className="byp-ctaf" style={{ justifyContent: "center" }}>
+          <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
+            <Link className="byp-btn" to="/contacto">
+              Contactar
+            </Link>
+            <a
+              className="byp-btn byp-btn--alt"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
+            >
+              WhatsApp +51 985 362 946
+            </a>
           </div>
-          <Link className="byp-btn" to="/contacto">
-            Iniciar proyecto
-          </Link>
         </div>
       </section>
     </div>

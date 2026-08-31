@@ -6,12 +6,12 @@ const Contect = () => (
   <div className="byp-page">
     <section className="byp-phero">
       <div className="byp-wrap">
-        <p className="byp-code">// CONTACTO · RESPUESTA EN 24 H HÁBILES</p>
+        <p className="byp-code">// CONTACTO</p>
         <h1 className="byp-h1">Conversemos</h1>
         <p className="byp-lead">
           Cuéntanos tu industria, volumen y restricciones (espacio, energía,
           flujo). Te proponemos una solución clara, fiable y alineada a
-          resultados.
+          resultados. Respondemos dentro de 24 horas hábiles.
         </p>
       </div>
     </section>
@@ -39,12 +39,6 @@ const Contect = () => (
                 +51 985 362 946
               </a>
             </div>
-            <div className="byp-contact-item">
-              <span className="byp-mono">HORARIO</span>
-              <span className="byp-contact-val">
-                Lun — Vie · 9:00 a 18:00 (GMT-5)
-              </span>
-            </div>
           </div>
 
           {/* Placeholder del formulario (se reemplazará por iframe del CRM) */}
@@ -59,7 +53,7 @@ const Contect = () => (
               target="_blank"
               rel="noreferrer"
             >
-              Escribir por WhatsApp
+              WhatsApp +51 985 362 946
             </a>
           </div>
         </div>

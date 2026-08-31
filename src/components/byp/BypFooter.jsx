@@ -9,11 +9,6 @@ const BypFooter = () => (
         <div className="byp-footer__logo">
           <img src={IMAGE.logo1} alt="B&P TECH" />
         </div>
-        <p>
-          Especificamos, instalamos y mantenemos líneas de producción para la
-          industria alimentaria. Ocho marcas líderes mundiales, un solo
-          responsable técnico.
-        </p>
       </div>
       <div>
         <div className="byp-footer__title">NAVEGACIÓN</div>

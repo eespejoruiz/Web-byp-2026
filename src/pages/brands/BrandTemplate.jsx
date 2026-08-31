@@ -44,9 +44,6 @@ const BrandTemplate = ({ slug }) => {
           <div className="byp-wrap">
             <p className="byp-code">// ERROR 404</p>
             <h1 className="byp-h1">Marca no encontrada</h1>
-            <p className="byp-lead">
-              La ruta solicitada no existe o aún no está configurada.
-            </p>
           </div>
         </section>
         <section className="byp-section">
@@ -79,7 +76,7 @@ const BrandTemplate = ({ slug }) => {
             <h1 className="byp-h1">{brand.name}</h1>
             <p className="byp-lead">{brand.tagline}</p>
             <Link className="byp-btn" to="/contacto">
-              Solicitar cotización
+              Contactar
             </Link>
           </div>
           <div className="byp-blueframe">
@@ -287,7 +284,7 @@ const BrandTemplate = ({ slug }) => {
             <h2 className="byp-h2">¿Interesado en {brand.name}?</h2>
             <p>
               Solicita una cotización, demostración o asesoría personalizada
-              para tu operación. Respondemos con la especificación completa.
+              para tu operación.
             </p>
           </div>
           <Link className="byp-btn" to="/contacto">

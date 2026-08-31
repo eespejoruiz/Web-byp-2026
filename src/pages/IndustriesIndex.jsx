@@ -6,8 +6,11 @@ const IndustriesIndex = () => (
   <div className="byp-page">
     <section className="byp-phero">
       <div className="byp-wrap">
-        <p className="byp-code">// SOLUCIONES POR INDUSTRIA · {String(industryData.length).padStart(2, "0")} VERTICALES</p>
-        <h1 className="byp-h1">Soluciones por industria</h1>
+        <p className="byp-code">
+          // SOLUCIONES POR INDUSTRIA ·{" "}
+          {String(industryData.length).padStart(2, "0")} VERTICALES
+        </p>
+        <h1 className="byp-h1">Soluciones por Industria</h1>
         <p className="byp-lead">
           Explora nuestras verticales y descubre la tecnología adecuada para
           tu operación.
@@ -39,16 +42,9 @@ const IndustriesIndex = () => (
     </section>
 
     <section className="byp-wrap" style={{ paddingBottom: 84 }}>
-      <div className="byp-ctaf">
-        <div>
-          <h2 className="byp-h2">¿Tu operación no calza en ninguna vertical?</h2>
-          <p>
-            Diseñamos soluciones a medida: diagnóstico, especificación e
-            instalación con un solo responsable técnico.
-          </p>
-        </div>
+      <div className="byp-ctaf" style={{ justifyContent: "center" }}>
         <Link className="byp-btn" to="/contacto">
-          Iniciar proyecto
+          Contactar
         </Link>
       </div>
     </section>

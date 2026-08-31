@@ -28,15 +28,12 @@ const IndustryTemplate = ({ slug }) => {
           <div className="byp-wrap">
             <p className="byp-code">// ERROR 404</p>
             <h1 className="byp-h1">Industria no encontrada</h1>
-            <p className="byp-lead">
-              La ruta solicitada no existe o aún no está configurada.
-            </p>
           </div>
         </section>
         <section className="byp-section">
           <div className="byp-wrap">
             <Link className="byp-btn" to="/industrias">
-              Ver todas las industrias
+              Ver industrias
             </Link>
           </div>
         </section>
@@ -134,12 +131,12 @@ const IndustryTemplate = ({ slug }) => {
           <div>
             <h2 className="byp-h2">¿Hablamos de tu operación?</h2>
             <p>
-              Cuéntanos tu industria, volumen y restricciones (espacio,
-              energía, flujo). Volvemos con la especificación completa.
+              Cuéntame tu industria, volumen y restricciones (espacio,
+              energía, flujo).
             </p>
           </div>
           <Link className="byp-btn" to="/contacto">
-            Iniciar proyecto
+            Contactar
           </Link>
         </div>
       </section>
