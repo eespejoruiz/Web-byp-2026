@@ -15,6 +15,8 @@ import pietrobertoLogo from "../assets/images/brands/pietroberto-logo.png";
 import vitamixLogo from "../assets/images/brands/vitamix-logo.svg";
 import caincoLogo from "../assets/images/brands/cainco-logo.png";
 import jbtmarelLogo from "../assets/images/brands/jbtmarel-logo.svg";
+import americanpanLogo from "../assets/images/brands/americanpan-logo.png";
+import pomatiLogo from "../assets/images/brands/pomati-logo.png";
 
 const TICKER_LOGOS = [
   { name: "RONDO", logo: rondoLogo },
@@ -25,6 +27,8 @@ const TICKER_LOGOS = [
   { name: "Vitamix", logo: vitamixLogo },
   { name: "Cainco", logo: caincoLogo },
   { name: "JBT Marel", logo: jbtmarelLogo },
+  { name: "American Pan", logo: americanpanLogo },
+  { name: "Pomati", logo: pomatiLogo },
 ];
 
 const cards = [

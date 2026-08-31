@@ -6,11 +6,15 @@ import { brandsData } from "../data/brandsData";
 import vitamixLogo from "../assets/images/brands/vitamix-logo.svg";
 import caincoLogo from "../assets/images/brands/cainco-logo.png";
 import jbtmarelLogo from "../assets/images/brands/jbtmarel-logo.svg";
+import americanpanLogo from "../assets/images/brands/americanpan-logo.png";
+import pomatiLogo from "../assets/images/brands/pomati-logo.png";
 
 const REPRESENTED = [
   { name: "Vitamix", logo: vitamixLogo },
   { name: "Cainco", logo: caincoLogo },
   { name: "JBT Marel", logo: jbtmarelLogo },
+  { name: "American Pan", logo: americanpanLogo },
+  { name: "Pomati", logo: pomatiLogo },
 ];
 
 const BrandsIndex = () => (
@@ -65,7 +69,7 @@ const BrandsIndex = () => (
     <section className="byp-section byp-section--flush-top">
       <div className="byp-wrap">
         <p className="byp-code" style={{ marginBottom: 24 }}>
-          // VITAMIX · CAINCO · JBT MAREL
+          // VITAMIX · CAINCO · JBT MAREL · AMERICAN PAN · POMATI
         </p>
         <div className="byp-sheet">
           {REPRESENTED.map((b) => (

@@ -254,6 +254,28 @@ export const brandsData = [
       "Más de 100 años de experiencia en panificación y pastelería. Ingeniería de precisión, potencia industrial y versatilidad total.",
     industries: ["panaderia", "cocinas-industriales", "hoteles-catering"],
     productType: "Batidoras planetarias y divisoras",
+    videos: [
+      {
+        id: "wPKF4m0wgh8",
+        title:
+          "Formatrice Professionale con 2 o 4 Cilindri in Acciaio Inox per Pane | Pietroberto FORM 2C / 4C",
+      },
+      {
+        id: "AwCHEE4LqnM",
+        title:
+          "Volumetric Divider NEW OMEGA A-B-C oil-free - Spezzatrice Volumetrica senza olio - PIETROBERTO",
+      },
+      {
+        id: "CZBfZQsgERY",
+        title:
+          "Twin Arm Mixer FENICE PIETROBERTO - Impastatrice a bracci tuffanti PIETROBERTO - 160 200 300 400",
+      },
+      {
+        id: "h7TYiKlO4HU",
+        title:
+          "Fenice 45-60-80 kg Impastatrice a Bracci Tuffanti - Twin Arms Mixer - Pietroberto - Italia",
+      },
+    ],
     products: [
       {
         name: "Batidora Planetaria (Serie MIX)",

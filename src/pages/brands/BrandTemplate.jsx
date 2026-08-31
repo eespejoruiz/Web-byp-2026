@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { getBrandBySlug } from "../../data/brandsData";
+import { getProductsByBrand } from "../../data/productsData";
+import BypProductGrid from "../../components/byp/BypProductGrid";
 import BypBreadcrumbs from "../../components/byp/BypBreadcrumbs";
 import { industryData } from "../../data/industryData";
 
@@ -57,6 +59,8 @@ const BrandTemplate = ({ slug }) => {
       </div>
     );
   }
+
+  const brandProducts = getProductsByBrand(slug);
 
   const relatedIndustries = (brand.industries || [])
     .map((s) => industryData.find((i) => i.slug === s))
@@ -278,6 +282,64 @@ const BrandTemplate = ({ slug }) => {
           </div>
         </div>
       </section>
+
+      {/* Catálogo: equipos más comerciales de la marca */}
+      {brandProducts.length > 0 && (
+        <section className="byp-section byp-section--flush-top">
+          <div className="byp-wrap">
+            <BypProductGrid
+              products={brandProducts}
+              title={`EQUIPOS \u00b7 ${brand.name}`}
+            />
+          </div>
+        </section>
+      )}
+
+      {/* Videos oficiales (YouTube) */}
+      {Array.isArray(brand.videos) && brand.videos.length > 0 && (
+        <section className="byp-section byp-section--flush-top">
+          <div className="byp-wrap">
+            <p className="byp-code" style={{ marginBottom: 20 }}>
+              // VIDEOS OFICIALES
+            </p>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                gap: 18,
+              }}
+            >
+              {brand.videos.map((v) => (
+                <div key={v.id}>
+                  <iframe
+                    src={`https://www.youtube-nocookie.com/embed/${v.id}`}
+                    title={v.title}
+                    loading="lazy"
+                    style={{
+                      width: "100%",
+                      aspectRatio: "16 / 9",
+                      border: 0,
+                      background: "#000",
+                    }}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                  <p
+                    className="byp-mono"
+                    style={{
+                      fontSize: 12,
+                      marginTop: 8,
+                      color: "var(--byp-dim)",
+                    }}
+                  >
+                    {v.title}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA final */}
       <section className="byp-wrap" style={{ paddingBottom: 84 }}>

@@ -3,6 +3,8 @@ import BypBreadcrumbs from "../../components/byp/BypBreadcrumbs";
 import { Link } from "react-router-dom";
 import { getIndustryBySlug, industryData } from "../../data/industryData";
 import { getBrandsByIndustry } from "../../data/brandsData";
+import { getProductsByIndustry } from "../../data/productsData";
+import BypProductGrid from "../../components/byp/BypProductGrid";
 
 const idx = (n) => String(n).padStart(2, "0") + "/";
 
@@ -19,6 +21,7 @@ const renderItem = (item, key) => {
 const IndustryTemplate = ({ slug }) => {
   const industry = getIndustryBySlug(slug);
   const relatedBrands = getBrandsByIndustry(slug);
+  const industryProducts = getProductsByIndustry(slug);
   const indNumber = industryData.findIndex((i) => i.slug === slug) + 1;
   const ref = `IND-${String(indNumber > 0 ? indNumber : 0).padStart(3, "0")}`;
 
@@ -126,6 +129,18 @@ const IndustryTemplate = ({ slug }) => {
           </div>
         </div>
       </section>
+
+      {/* Equipos para esta industria */}
+      {industryProducts.length > 0 && (
+        <section className="byp-section byp-section--flush-top">
+          <div className="byp-wrap">
+            <BypProductGrid
+              products={industryProducts}
+              title="EQUIPOS PARA ESTA INDUSTRIA"
+            />
+          </div>
+        </section>
+      )}
 
       {/* CTA final */}
       <section className="byp-wrap" style={{ paddingBottom: 84 }}>
