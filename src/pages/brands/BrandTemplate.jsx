@@ -1,3 +1,4 @@
+import { waQuoteBrand } from "../../utils/whatsapp";
 import React from "react";
 import { Link } from "react-router-dom";
 import { getBrandBySlug } from "../../data/brandsData";
@@ -351,9 +352,10 @@ const BrandTemplate = ({ slug }) => {
               para tu operación.
             </p>
           </div>
-          <Link className="byp-btn" to="/contacto">
-            Solicitar información
-          </Link>
+          <div className="byp-ctaf__btns">
+            <a className="byp-btn" href={waQuoteBrand(brand.name)} target="_blank" rel="noopener noreferrer">Cotizar {brand.name} por WhatsApp</a>
+            <Link className="byp-btn byp-btn--line" to="/contacto">Contactar</Link>
+          </div>
         </div>
       </section>
     </div>

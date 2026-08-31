@@ -1,5 +1,6 @@
 import React from "react";
 import { productBrandNames } from "../../data/productsData";
+import { waQuoteProduct } from "../../utils/whatsapp";
 
 /**
  * Grid de cards de producto estilo P3:
@@ -45,6 +46,14 @@ const BypProductGrid = ({ products, title }) => {
                   </tbody>
                 </table>
               ) : null}
+              <a
+                className="byp-fcard__quote"
+                href={waQuoteProduct(p.name, productBrandNames[p.brand])}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Cotizar por WhatsApp
+              </a>
             </div>
           </article>
         ))}

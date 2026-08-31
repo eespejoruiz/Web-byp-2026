@@ -835,3 +835,8 @@ a.byp-chip:hover { border-color: var(--byp-navy); color: var(--byp-navy); }
 .byp-crumbs--light a{color:var(--byp-dim)}
 .byp-crumbs--light .byp-crumbs__last{color:var(--byp-txt)}
 .byp-crumbs--light{margin:18px 0 6px}
+
+/* CTA cotizar */
+.byp-ctaf__btns{display:flex;gap:12px;flex-wrap:wrap}
+.byp-fcard__quote{display:inline-flex;align-items:center;margin-top:14px;font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.06em;color:var(--byp-orange);border:1px solid var(--byp-orange);border-radius:4px;padding:9px 14px;min-height:40px;transition:.15s}
+.byp-fcard__quote:hover{background:var(--byp-orange);color:#fff}

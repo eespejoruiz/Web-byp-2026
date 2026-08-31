@@ -1,4 +1,5 @@
 import React from "react";
+import { waQuoteIndustry } from "../../utils/whatsapp";
 import BypBreadcrumbs from "../../components/byp/BypBreadcrumbs";
 import { Link } from "react-router-dom";
 import { getIndustryBySlug, industryData } from "../../data/industryData";
@@ -152,9 +153,10 @@ const IndustryTemplate = ({ slug }) => {
               energía, flujo).
             </p>
           </div>
-          <Link className="byp-btn" to="/contacto">
-            Contactar
-          </Link>
+          <div className="byp-ctaf__btns">
+            <a className="byp-btn" href={waQuoteIndustry(industry.title)} target="_blank" rel="noopener noreferrer">Cotizar por WhatsApp</a>
+            <Link className="byp-btn byp-btn--line" to="/contacto">Contactar</Link>
+          </div>
         </div>
       </section>
     </div>
