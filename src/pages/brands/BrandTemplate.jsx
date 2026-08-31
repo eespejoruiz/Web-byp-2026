@@ -70,7 +70,7 @@ const BrandTemplate = ({ slug }) => {
       <section className="byp-bhero">
         <div className="byp-wrap byp-bhero__grid">
           <div>
-            <BypBreadcrumbs variant=\"dark\" items={[{ label: \"Marcas\", to: \"/marcas\" }, { label: brand.name }]} />
+            <BypBreadcrumbs variant="dark" items={[{ label: "Marcas", to: "/marcas" }, { label: brand.name }]} />
             <p className="byp-code">
               // {brand.name} · {(brand.origin || "").toUpperCase()} ·{" "}
               {(brand.productType || "").toUpperCase()}
