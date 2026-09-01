@@ -1,11 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { IMAGE } from "../constent/theme";
 import Testimonial from "../components/Testimonial";
 import { brandsData } from "../data/brandsData";
 import { industryData } from "../data/industryData";
 
 import heroImg from "../assets/images/brands/hero-produccion.webp";
+import heroAlt from "../assets/images/gen/home-hero-alt.webp";
+import svcImg from "../assets/images/gen/home-servicios.webp";
+import ctaBg from "../assets/images/gen/home-cta.webp";
+import bannerImg from "../assets/images/gen/home-banner.webp";
+import testiBg from "../assets/images/gen/testimonios-bg.webp";
+import casoFrio from "../assets/images/gen/caso-frio.webp";
+import casoBanquetes from "../assets/images/gen/caso-banquetes.webp";
+import casoMasa from "../assets/images/gen/caso-masa.webp";
 
 import rondoLogo from "../assets/images/brands/rondo-logo.svg";
 import diosnaLogo from "../assets/images/brands/diosna-logo.svg";
@@ -33,19 +40,19 @@ const TICKER_LOGOS = [
 
 const cards = [
   {
-    img: IMAGE.teamPic1,
+    img: casoFrio,
     title: "La precisión del frío en la Alta Cocina",
     text: "Cómo Virgilio Martínez y su equipo optimizan sus ecosistemas con True Refrigeration.",
     to: "/casos-de-exito/alta-cocina",
   },
   {
-    img: IMAGE.testimonialPic2,
+    img: casoBanquetes,
     title: "Eficiencia en cada servicio de Banquete",
     text: "La implementación de sistemas Winterhalter para manejar el alto volumen sin perder higiene.",
     to: "/casos-de-exito/hotel",
   },
   {
-    img: IMAGE.galleryPic13,
+    img: casoMasa,
     title: "La ciencia de la masa perfecta",
     text: "Automatización y estandarización de procesos con amasadoras Diosna y laminadoras Rondo.",
     to: "/casos-de-exito/panaderia",
@@ -124,6 +131,13 @@ const Home4 = () => {
           alt="Línea de producción de la industria alimentaria"
           loading="eager"
         />
+        <img
+          className="byp-hero__img byp-hero__img--alt"
+          src={heroAlt}
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+        />
         <div className="byp-wrap byp-hero__inner">
           <div>
             <p className="byp-code">// B&amp;P TECH</p>
@@ -198,6 +212,7 @@ const Home4 = () => {
             Valor agregado B2B para maximizar resultados y continuidad
             operativa.
           </p>
+          <div className="byp-svcwrap">
           <div className="byp-svcgrid">
             {ourService.map((item, ind) => (
               <div className="byp-svc" key={item.text}>
@@ -209,6 +224,8 @@ const Home4 = () => {
                 <p>{item.desc}</p>
               </div>
             ))}
+          </div>
+          <img className="byp-svcwrap__img" src={svcImg} alt="Servicio y soporte técnico" loading="lazy" />
           </div>
         </div>
       </section>
@@ -255,6 +272,11 @@ const Home4 = () => {
         </div>
       </section>
 
+      {/* Banner intermedio */}
+      <div className="byp-band">
+        <img src={bannerImg} alt="Equipamiento en operación" loading="lazy" />
+      </div>
+
       {/* 04/ Soluciones por Industria */}
       <section className="byp-section byp-section--flush-top">
         <div className="byp-wrap">
@@ -289,7 +311,7 @@ const Home4 = () => {
       </section>
 
       {/* 05/ Testimoniales */}
-      <section className="byp-section byp-section--flush-top">
+      <section className="byp-section byp-section--flush-top byp-section--testi" style={{ backgroundImage: `linear-gradient(rgba(16,41,74,.9), rgba(16,41,74,.94)), url(${testiBg})`, backgroundSize: "cover", backgroundPosition: "center" }}>
         <div className="byp-wrap">
           <div className="byp-head">
             <span className="byp-head__idx">05/</span>
@@ -302,7 +324,7 @@ const Home4 = () => {
 
       {/* CTA final */}
       <section className="byp-wrap" style={{ paddingBottom: 84 }}>
-        <div className="byp-ctaf" style={{ justifyContent: "center" }}>
+        <div className="byp-ctaf byp-ctaf--img" style={{ justifyContent: "center", backgroundImage: `linear-gradient(rgba(16,41,74,.78), rgba(16,41,74,.86)), url(${ctaBg})`, backgroundSize: "cover", backgroundPosition: "center" }}>
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
             <Link className="byp-btn" to="/contacto">
               Contactar

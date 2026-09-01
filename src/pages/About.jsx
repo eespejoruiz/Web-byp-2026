@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { IMAGE } from '../constent/theme'
+import nosotrosHero from '../assets/images/gen/nosotros-hero.webp'
 import CarlistingBanner from '../element/CarlistingBanner'
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -109,7 +110,7 @@ const About = () => {
     return (
         <>
             <div className="page-content bg-white">
-                <CarlistingBanner img={IMAGE.bnr1} title={'Nosotros'} />
+                <CarlistingBanner img={nosotrosHero} title={'Nosotros'} />
                 {/* Content */}
                 <section className="content-inner-2">
                     <div className="container">

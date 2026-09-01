@@ -1,6 +1,6 @@
 import React from 'react'
 import CarlistingBanner from '../element/CarlistingBanner'
-import { IMAGE } from '../constent/theme'
+import notFoundImg from '../assets/images/gen/notfound.webp'
 import { Link } from 'react-router-dom'
 
 const Error404 = () => {
@@ -8,7 +8,7 @@ const Error404 = () => {
         <>
 
             <div className="page-content bg-white">
-                <CarlistingBanner img={IMAGE.bnr1} title={'404'} />
+                <CarlistingBanner img={notFoundImg} title={'404'} />
                 <section className="content-inner-1">
                     <div className="container">
                         <div className="error-page text-center" data-text="ERROR">

@@ -1,5 +1,6 @@
 import React from "react";
 import BypBreadcrumbs from "../components/byp/BypBreadcrumbs";
+import contactoImg from "../assets/images/gen/contacto-lateral.webp";
 
 const WHATSAPP_URL = "https://wa.me/51985362946";
 
@@ -41,6 +42,7 @@ const Contect = () => (
                 +51 985 362 946
               </a>
             </div>
+            <img className="byp-contact-photo" src={contactoImg} alt="Visita técnica a cliente" loading="lazy" />
           </div>
 
           {/* Placeholder del formulario (se reemplazará por iframe del CRM) */}

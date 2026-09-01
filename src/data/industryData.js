@@ -1,4 +1,15 @@
 import { IMAGE } from "../constent/theme";
+import indRestaurantes from "../assets/images/gen/ind-restaurantes.webp";
+import indBares from "../assets/images/gen/ind-bares-cafeterias.webp";
+import indComidaRapida from "../assets/images/gen/ind-comida-rapida.webp";
+import indEstadios from "../assets/images/gen/ind-estadios.webp";
+import indHoteles from "../assets/images/gen/ind-hoteles-catering.webp";
+import indPanaderia from "../assets/images/gen/ind-panaderia.webp";
+import indCocinas from "../assets/images/gen/ind-cocinas-industriales.webp";
+import indCarnicerias from "../assets/images/gen/ind-carnicerias.webp";
+import indSupermercados from "../assets/images/gen/ind-supermercados.webp";
+import indLaboratorios from "../assets/images/gen/ind-laboratorios.webp";
+import indOtros from "../assets/images/gen/ind-otros.webp";
 
 export const industryData = [
   {
@@ -7,7 +18,7 @@ export const industryData = [
     title: "Restaurantes",
     description:
       "Optimiza el flujo operativo de tu cocina con estaciones claras: recepción, preparación, cocción y lavado.",
-    heroImage: IMAGE.bnr1,
+    heroImage: indRestaurantes,
     keyStations: ["Recepción", "Prep", "Cocción", "Lavado"],
     stationImages: [IMAGE.galleryPic1, IMAGE.galleryPic2, IMAGE.galleryPic3, IMAGE.galleryPic4],
     sections: [
@@ -173,7 +184,7 @@ export const industryData = [
     title: "Estadios y Centros de Eventos",
     description:
       "Diseñado para velocidad y volumen: grab&go, cocción acelerada y servicio continuo en alto tráfico.",
-    heroImage: IMAGE.bnr2,
+    heroImage: indEstadios,
     keyStations: ["Grab&Go", "Cocción acelerada", "Holding", "Despacho"],
     stationImages: [IMAGE.galleryPic13, IMAGE.galleryPic14, IMAGE.galleryPic15, IMAGE.galleryPic16],
     sections: [
@@ -283,7 +294,7 @@ export const industryData = [
     title: "Panadería y Pastelería",
     description:
       "Control total de la masa: amasado, laminado y fermentación para consistencia diaria y escalabilidad.",
-    heroImage: IMAGE.bnr3,
+    heroImage: indPanaderia,
     keyStations: ["Amasado", "Laminado", "Fermentación", "Horneado"],
     stationImages: [IMAGE.galleryPic5, IMAGE.galleryPic6, IMAGE.galleryPic7, IMAGE.galleryPic8],
     sections: [
@@ -555,7 +566,7 @@ export const industryData = [
     title: "Cocinas Industriales",
     description:
       "Producción masiva con enfoque de ingeniería: cocción a gran escala, seguridad y repetibilidad.",
-    heroImage: IMAGE.bnr4,
+    heroImage: indCocinas,
     keyStations: ["Preparación", "Cocción masiva", "Regeneración", "Lavado"],
     stationImages: [IMAGE.galleryPic9, IMAGE.galleryPic10, IMAGE.galleryPic11, IMAGE.galleryPic12],
     sections: [
@@ -708,7 +719,7 @@ export const industryData = [
     title: "Hoteles & Catering",
     description:
       "Logística y banquetes con control térmico: abatimiento, regeneración y transporte seguro.",
-    heroImage: IMAGE.aboutPic2,
+    heroImage: indHoteles,
     keyStations: ["Abatimiento", "Regeneración", "Transporte", "Servicio"],
     stationImages: [IMAGE.galleryPic13, IMAGE.galleryPic14, IMAGE.galleryPic15, IMAGE.galleryPic16],
     sections: [
@@ -787,7 +798,7 @@ export const industryData = [
     title: "Supermercados (Retail)",
     description:
       "Cadena de frío y exhibición: murales, islas y backroom para operación continua y venta.",
-    heroImage: IMAGE.home3backgroundbg,
+    heroImage: indSupermercados,
     keyStations: ["Backroom", "Exhibición", "Reposición", "Cadena de frío"],
     stationImages: [IMAGE.productPic1, IMAGE.productPic2, IMAGE.productPic3, IMAGE.productPic4],
     sections: [
@@ -883,7 +894,7 @@ export const industryData = [
     title: "Comida Rápida (QSR)",
     description:
       "Estandarización para alto rendimiento: equipos rápidos, repetibles y fáciles de mantener.",
-    heroImage: IMAGE.home2BackgrounImg,
+    heroImage: indComidaRapida,
     keyStations: ["Producción", "Holding", "Línea", "Entrega"],
     stationImages: [IMAGE.slideItem1, IMAGE.slideItem2, IMAGE.slideItem3, IMAGE.slideItem4],
     sections: [
@@ -937,7 +948,7 @@ export const industryData = [
     title: "Laboratorios",
     description:
       "Precisión científica con estabilidad térmica: refrigeración biomédica y control crítico.",
-    heroImage: IMAGE.aboutPic3,
+    heroImage: indLaboratorios,
     keyStations: ["Almacenamiento", "Monitoreo", "Contingencia", "Trazabilidad"],
     stationImages: [IMAGE.aboutPic3, IMAGE.galleryPic10, IMAGE.galleryPic11, IMAGE.galleryPic12],
     sections: [
@@ -988,7 +999,7 @@ export const industryData = [
     title: "Carnicerías",
     description:
       "Procesamiento y corte con higiene: sierras, rebanadoras y maduración controlada.",
-    heroImage: IMAGE.aboutPic4,
+    heroImage: indCarnicerias,
     keyStations: ["Procesamiento", "Corte", "Maduración", "Exhibición"],
     stationImages: [IMAGE.galleryPic2, IMAGE.galleryPic1, IMAGE.galleryPic9, IMAGE.productPic5],
     sections: [
@@ -1043,7 +1054,7 @@ export const industryData = [
     title: "Bares & Cafeterías",
     description:
       "Bebidas, hielo y servicio: consistencia, velocidad y experiencia del cliente.",
-    heroImage: IMAGE.aboutPic5,
+    heroImage: indBares,
     keyStations: ["Café", "Barras", "Hielo", "Servicio"],
     stationImages: [IMAGE.aboutPic5, IMAGE.productPic2, IMAGE.galleryPic6, IMAGE.galleryPic5],
     sections: [
@@ -1104,7 +1115,7 @@ export const industryData = [
     title: "Otros Sectores",
     description:
       "Soluciones transversales y proyectos especiales para requerimientos únicos.",
-    heroImage: IMAGE.bannerImg1,
+    heroImage: indOtros,
     keyStations: ["Diagnóstico", "Diseño", "Implementación", "Soporte"],
     stationImages: [IMAGE.bannerImg1, IMAGE.home4Ourwork1, IMAGE.home4Ourwork2, IMAGE.home4Ourwork3],
     sections: [

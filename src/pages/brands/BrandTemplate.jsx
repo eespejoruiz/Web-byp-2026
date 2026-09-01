@@ -103,6 +103,12 @@ const BrandTemplate = ({ slug }) => {
         </div>
       </section>
 
+      {brand.ambientImage ? (
+        <div className="byp-band">
+          <img src={brand.ambientImage} alt={`${brand.name} en operación`} loading="lazy" />
+        </div>
+      ) : null}
+
       {/* Contenido */}
       <section className="byp-section">
         <div className="byp-wrap">

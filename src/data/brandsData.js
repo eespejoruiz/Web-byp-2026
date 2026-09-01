@@ -11,6 +11,11 @@ import pietrobertoLogo from "../assets/images/brands/pietroberto-logo.png";
 import pietrobertoHero from "../assets/images/brands/pietroberto-mix.webp";
 import pietrobertoMix from "../assets/images/brands/pietroberto-mix.webp";
 import pietrobertoOmega from "../assets/images/brands/pietroberto-omega.webp";
+import rondoAmbient from "../assets/images/gen/brand-rondo.webp";
+import diosnaAmbient from "../assets/images/gen/brand-diosna.webp";
+import winterhalterAmbient from "../assets/images/gen/brand-winterhalter.webp";
+import trueAmbient from "../assets/images/gen/brand-true.webp";
+import pietrobertoAmbient from "../assets/images/gen/brand-pietroberto.webp";
 
 
 export const brandsData = [
@@ -22,6 +27,7 @@ export const brandsData = [
     tagline: "Precisión suiza para la excelencia en panificación y pastelería",
     logo: rondoLogo,
     heroImage: rondoHero,
+    ambientImage: rondoAmbient,
     shortDescription:
       "Laminadoras de clase mundial diseñadas para profesionales exigentes. Ingeniería suiza de precisión, innovación constante y robustez excepcional.",
     industries: ["panaderia", "cocinas-industriales", "hoteles-catering"],
@@ -112,6 +118,7 @@ export const brandsData = [
     tagline: "Ingeniería alemana para masas perfectas",
     logo: diosnaLogo,
     heroImage: diosnaHero,
+    ambientImage: diosnaAmbient,
     shortDescription:
       "Amasadoras WENDEL de alta potencia, precisión y confiabilidad para panaderías, pastelerías e industrias que buscan consistencia y calidad superior.",
     industries: ["panaderia", "cocinas-industriales", "hoteles-catering"],
@@ -157,6 +164,7 @@ export const brandsData = [
     tagline: "Excelencia alemana en higiene profesional",
     logo: winterhalterLogo,
     heroImage: winterhalterHero,
+    ambientImage: winterhalterAmbient,
     shortDescription:
       "Sistema integral de lavado que combina máquina, detergentes y tratamiento de agua para una limpieza perfecta, brillo superior y desinfección confiable.",
     industries: [
@@ -202,6 +210,7 @@ export const brandsData = [
     tagline: "Liderazgo americano en frío profesional",
     logo: trueLogo,
     heroImage: trueHero,
+    ambientImage: trueAmbient,
     shortDescription:
       "Equipos de refrigeración reconocidos mundialmente por su confiabilidad, eficiencia y rendimiento superior en entornos profesionales.",
     industries: [
@@ -250,6 +259,7 @@ export const brandsData = [
     tagline: "Potencia, precisión y tradición italiana",
     logo: pietrobertoLogo,
     heroImage: pietrobertoHero,
+    ambientImage: pietrobertoAmbient,
     shortDescription:
       "Más de 100 años de experiencia en panificación y pastelería. Ingeniería de precisión, potencia industrial y versatilidad total.",
     industries: ["panaderia", "cocinas-industriales", "hoteles-catering"],

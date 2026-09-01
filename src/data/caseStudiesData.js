@@ -1,11 +1,14 @@
 import { IMAGE } from "../constent/theme";
+import casoRestaurante from "../assets/images/gen/blog-restaurantes.webp";
+import casoRetail from "../assets/images/gen/blog-retail.webp";
+import casoBanquetes from "../assets/images/gen/caso-banquetes.webp";
 
 export const caseStudiesData = [
   {
     slug: "restaurante-ritmo-alto",
     title: "Restaurante de alto ritmo",
     company: "Grupo Gastronómico (CDMX)",
-    heroImage: IMAGE.bnr2,
+    heroImage: casoRestaurante,
     headline: "Reducimos tiempos de servicio sin sacrificar calidad",
     videoId: "PkkV1vLHUvQ",
     gallery: [IMAGE.galleryPic1, IMAGE.galleryPic2, IMAGE.galleryPic3, IMAGE.galleryPic4],
@@ -34,7 +37,7 @@ export const caseStudiesData = [
     slug: "retail-supermercado",
     title: "Retail Supermercado",
     company: "Cadena de Supermercados",
-    heroImage: IMAGE.home3backgroundbg,
+    heroImage: casoRetail,
     headline: "Cadena de frío estable, exhibición impecable",
     videoId: "PkkV1vLHUvQ",
     gallery: [IMAGE.productPic1, IMAGE.productPic2, IMAGE.productPic3, IMAGE.productPic4],
@@ -63,7 +66,7 @@ export const caseStudiesData = [
     slug: "hotel-banquetes",
     title: "Hotel & Banquetes",
     company: "Operador hotelero",
-    heroImage: IMAGE.aboutPic2,
+    heroImage: casoBanquetes,
     headline: "Lavado industrial con consistencia y ahorro operativo",
     videoId: "PkkV1vLHUvQ",
     gallery: [IMAGE.galleryPic5, IMAGE.galleryPic6, IMAGE.galleryPic7, IMAGE.galleryPic8],

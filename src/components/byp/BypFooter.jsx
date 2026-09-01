@@ -1,8 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { IMAGE } from "../../constent/theme";
+import prectaBg from "../../assets/images/gen/cta-prefooter.webp";
 
-const BypFooter = () => (
+const BypFooter = () => {
+  const { pathname } = useLocation();
+  return (
+  <>
+  {pathname !== "/" ? (
+    <section className="byp-precta" style={{ backgroundImage: `linear-gradient(rgba(16,41,74,.74), rgba(16,41,74,.84)), url(${prectaBg})` }}>
+      <div className="byp-wrap">
+        <p className="byp-code">// CONTACTO</p>
+        <div className="byp-precta__btns">
+          <Link className="byp-btn" to="/contacto">Contactar</Link>
+          <a className="byp-btn byp-btn--alt" href="https://wa.me/51985362946" target="_blank" rel="noreferrer">
+            WhatsApp +51 985 362 946
+          </a>
+        </div>
+      </div>
+    </section>
+  ) : null}
   <footer className="byp-footer">
     <div className="byp-wrap byp-footer__grid">
       <div>
@@ -46,6 +63,8 @@ const BypFooter = () => (
       <span>BYPTECH.COM · LIMA, PERÚ</span>
     </div>
   </footer>
-);
+  </>
+  );
+};
 
 export default BypFooter;

@@ -6,12 +6,16 @@ import ModalVideo from 'react-modal-video'
 import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { blogPosts } from '../data/blogPostsData'
+import blogHero from '../assets/images/gen/blog-hero.webp'
+import sliderEstadios from '../assets/images/gen/ind-estadios.webp'
+import sliderHoteles from '../assets/images/gen/ind-hoteles-catering.webp'
+import sliderCocinas from '../assets/images/gen/ind-cocinas-industriales.webp'
 
 
 const blogSlider = [
-    { img: IMAGE.blogGridpic9 },
-    { img: IMAGE.blogGridpic10 },
-    { img: IMAGE.blogGridpic11 },
+    { img: sliderEstadios },
+    { img: sliderHoteles },
+    { img: sliderCocinas },
 ]
 const BlogGrid = () => {
     const [open, setOpen] = useState(false);
@@ -22,7 +26,7 @@ const BlogGrid = () => {
                 isOpen={open} videoId="PkkV1vLHUvQ" onClose={() => setOpen(false)} />
 
             <div className="page-content bg-white">
-                <CarlistingBanner img={IMAGE.bnr1} title={'Blog'} />
+                <CarlistingBanner img={blogHero} title={'Blog'} />
 
                 <section className="content-inner">
                     <div className="container">

@@ -2,10 +2,11 @@ import React from "react";
 import BypBreadcrumbs from "../components/byp/BypBreadcrumbs";
 import { Link } from "react-router-dom";
 import { industryData } from "./../data/industryData";
+import industriasHero from "../assets/images/gen/industrias-hero.webp";
 
 const IndustriesIndex = () => (
   <div className="byp-page">
-    <section className="byp-phero">
+    <section className="byp-phero byp-phero--img" style={{ backgroundImage: `linear-gradient(rgba(16,41,74,.88), rgba(16,41,74,.93)), url(${industriasHero})` }}>
       <div className="byp-wrap">
         <p className="byp-code">
           // SOLUCIONES POR INDUSTRIA ·{" "}

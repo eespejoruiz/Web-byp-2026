@@ -1,11 +1,19 @@
-import { IMAGE } from "../constent/theme";
+import blogRetail from "../assets/images/gen/blog-retail.webp";
+import blogQsr from "../assets/images/gen/blog-qsr.webp";
+import blogPanaderia from "../assets/images/gen/blog-panaderia.webp";
+import blogBares from "../assets/images/gen/blog-bares.webp";
+import blogLaboratorios from "../assets/images/gen/blog-laboratorios.webp";
+import blogCarnicerias from "../assets/images/gen/blog-carnicerias.webp";
+import blogRestaurantes from "../assets/images/gen/blog-restaurantes.webp";
+import blogEnergia from "../assets/images/gen/blog-energia.webp";
+import blogRoi from "../assets/images/gen/blog-roi.webp";
 
 export const blogPosts = [
   {
     slug: "cadena-de-frio-retail-puertas-vs-abiertos",
     title: "Cadena de frío en retail: murales con puertas vs abiertos",
     date: "Feb 2026",
-    img: IMAGE.blogGridpic1,
+    img: blogRetail,
     excerpt: "Cómo estabilizar temperatura, reducir mermas y mejorar confort del cliente en supermercados.",
     sections: [
       { h: "Dolores del negocio", p: "Fluctuaciones de temperatura, mermas, pasillos fríos y visibilidad irregular del producto." },
@@ -17,7 +25,7 @@ export const blogPosts = [
     slug: "diseno-de-linea-qsr-velocidad-y-consistencia",
     title: "Diseño de línea para QSR: velocidad y consistencia",
     date: "Feb 2026",
-    img: IMAGE.blogGridpic2,
+    img: blogQsr,
     excerpt: "Líneas de ensamblaje, KDS y separación expo/delivery para tiempos de ticket predecibles.",
     sections: [
       { h: "Contexto", p: "Los picos de demanda requieren un flujo sin cruces y roles claros." },
@@ -29,7 +37,7 @@ export const blogPosts = [
     slug: "panaderia-hornos-y-fermentacion-consistente",
     title: "Panadería: hornos y fermentación consistente",
     date: "Feb 2026",
-    img: IMAGE.blogGridpic3,
+    img: blogPanaderia,
     excerpt: "Elegir el horno y controlar fermentación para calidad diaria repetible.",
     sections: [
       { h: "Hornos", p: "Piso, carro rotativo o convección según producto, volumen y versatilidad." },
@@ -41,7 +49,7 @@ export const blogPosts = [
     slug: "bares-y-cafeterias-estaciones-eficientes",
     title: "Bares & cafeterías: estaciones eficientes y repetibles",
     date: "Feb 2026",
-    img: IMAGE.blogGridpic4,
+    img: blogBares,
     excerpt: "Underbar/backbar, refrigeración de insumos y flujo en poco espacio.",
     sections: [
       { h: "Dolores", p: "Volumen alto en espacio limitado y consistencia de bebidas." },
@@ -53,7 +61,7 @@ export const blogPosts = [
     slug: "laboratorios-cumplimiento-y-monitoreo-ddl",
     title: "Laboratorios: cumplimiento y monitoreo DDL",
     date: "Feb 2026",
-    img: IMAGE.blogGridpic5,
+    img: blogLaboratorios,
     excerpt: "Rangos CDC, data loggers con sonda amortiguada y SOP de emergencia.",
     sections: [
       { h: "Rangos", p: "Refrigerados 2–8°C; congelados -50 a -15°C." },
@@ -65,7 +73,7 @@ export const blogPosts = [
     slug: "carnicerias-higiene-y-cadena-de-frio",
     title: "Carnicerías: higiene y cadena de frío",
     date: "Feb 2026",
-    img: IMAGE.blogGridpic6,
+    img: blogCarnicerias,
     excerpt: "Sanitización, separación de zonas y materiales adecuados para operación segura.",
     sections: [
       { h: "Higiene", p: "Desarme de equipos, químicos food-safe y lavado a presión de superficies." },
@@ -77,7 +85,7 @@ export const blogPosts = [
     slug: "restaurantes-refrigeracion-por-estacion",
     title: "Restaurantes: refrigeración por estación",
     date: "Feb 2026",
-    img: IMAGE.blogGridpic7,
+    img: blogRestaurantes,
     excerpt: "Recepción, prep, línea y bar con equipos de frío en el punto correcto.",
     sections: [
       { h: "Mapa de frío", p: "Almacén, mesas frías de prep, bases bajo cocción y bar." },
@@ -89,7 +97,7 @@ export const blogPosts = [
     slug: "energia-y-eficiencia-en-retail",
     title: "Energía y eficiencia en retail",
     date: "Feb 2026",
-    img: IMAGE.blogGridpic8,
+    img: blogEnergia,
     excerpt: "Reducción de consumo en casos refrigerados y monitoreo proactivo.",
     sections: [
       { h: "Consumo en supermercados", p: "Refrigeración puede superar 60% del uso eléctrico." },
@@ -101,7 +109,7 @@ export const blogPosts = [
     slug: "roi-de-equipamiento-confiable",
     title: "ROI del equipamiento confiable",
     date: "Feb 2026",
-    img: IMAGE.blogGridpic9,
+    img: blogRoi,
     excerpt: "Menos downtime, calidad repetible y soporte que protege ingresos.",
     sections: [
       { h: "Costo oculto del barato", p: "Fallas y variabilidad que erosionan margen y reputación." },

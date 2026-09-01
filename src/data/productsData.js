@@ -4,7 +4,7 @@
 
 import rondoAutomat from "../assets/images/brands/rondo-automat-2000.webp";
 import rondoRondostar from "../assets/images/products/rondo-rondostar-5000.webp";
-import rondoCompas from "../assets/images/products/rondo-compas-40.webp";
+import rondoCompas from "../assets/images/gen/card-rondo-compas.webp";
 import rondoCroissomat from "../assets/images/products/rondo-croissomat-40.webp";
 
 import diosnaWendel from "../assets/images/brands/diosna-wendel.webp";
@@ -20,20 +20,20 @@ import trueT49 from "../assets/images/products/true-t-49.webp";
 import trueTuc48 from "../assets/images/products/true-tuc-48.webp";
 
 import pietrobertoMix from "../assets/images/brands/pietroberto-mix.webp";
-import pietrobertoOmega from "../assets/images/brands/pietroberto-omega.webp";
+import pietrobertoOmega from "../assets/images/gen/card-pietroberto-omega3.webp";
 import pietrobertoFenice from "../assets/images/products/pietroberto-fenice.webp";
 import pietrobertoForm from "../assets/images/products/pietroberto-form-4cff.webp";
-import pietrobertoSart from "../assets/images/products/pietroberto-sart.webp";
+import pietrobertoSart from "../assets/images/gen/card-pietroberto-sart.webp";
 
 import vitamixQuietOne from "../assets/images/brands/vitamix-quiet-one.webp";
-import vitamixVitaPrep from "../assets/images/products/vitamix-vita-prep-3.webp";
+import vitamixVitaPrep from "../assets/images/gen/card-vitamix-vitaprep.webp";
 
 import caincoEstufa from "../assets/images/brands/cainco-estufa.webp";
 import caincoAssadeira from "../assets/images/products/cainco-assadeira.webp";
 import caincoEsqueleto from "../assets/images/products/cainco-esqueleto.webp";
 
 import treifDivider660 from "../assets/images/products/jbtmarel-treif-divider-660.webp";
-import treifDividerLineup from "../assets/images/products/jbtmarel-treif-divider-lineup.webp";
+import treifDividerLineup from "../assets/images/gen/card-treif-lineup.webp";
 
 import americanpanBreadTins from "../assets/images/products/americanpan-bread-tins.webp";
 import americanpanBaguette from "../assets/images/products/americanpan-baguette-trays.webp";

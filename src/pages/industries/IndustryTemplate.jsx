@@ -49,7 +49,7 @@ const IndustryTemplate = ({ slug }) => {
   return (
     <div className="byp-page">
       {/* Hero compacto navy */}
-      <section className="byp-phero">
+      <section className="byp-phero byp-phero--img" style={{ backgroundImage: `linear-gradient(rgba(16,41,74,.88), rgba(16,41,74,.93)), url(${industry.heroImage})` }}>
         <div className="byp-wrap">
           <p className="byp-code">// {ref} · SOLUCIONES POR INDUSTRIA</p>
           <BypBreadcrumbs variant="dark" items={[{ label: "Industrias", to: "/industrias" }, { label: industry.title }]} />
