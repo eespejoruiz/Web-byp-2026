@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { seoDeRuta } from '../../data/seoData';
+import { jsonLdDeRuta } from '../../data/schemaData';
 
 /**
  * Escribe titulo, descripcion, canonical y etiquetas sociales del <head>
@@ -73,6 +74,19 @@ export default function Seo() {
     if (canonical) {
       fijaEtiqueta(...propiedad('og:url'), canonical);
       fijaEtiqueta(...propiedad('twitter:url'), canonical);
+    }
+
+    // Datos estructurados. Se reemplaza el bloque entero en cada cambio de ruta
+    // para que nunca queden mezclados los de dos páginas distintas.
+    const previo = document.getElementById('byp-jsonld');
+    if (previo) previo.remove();
+    const ld = noindex ? null : jsonLdDeRuta(pathname);
+    if (ld) {
+      const s = document.createElement('script');
+      s.id = 'byp-jsonld';
+      s.type = 'application/ld+json';
+      s.textContent = ld;
+      document.head.appendChild(s);
     }
   }, [pathname]);
 
