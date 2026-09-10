@@ -30,7 +30,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sass": "sass --watch src/assets/scss/main.scss:src/assets/css/style.css --source-map"
+    "sass": "sass --watch src/assets/scss/main.scss:src/assets/css/style.css --source-map",
+    "prerender": "node prerender.mjs",
+    "build:seo": "react-scripts build && node prerender.mjs && node comprobar-build.mjs"
   },
   "eslintConfig": {
     "extends": [
@@ -49,5 +51,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0"
   }
 }

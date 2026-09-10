@@ -9,14 +9,42 @@ permissions:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Instalar dependencias
+        run: npm ci --legacy-peer-deps
+
+      - name: Instalar Chromium para el prerenderizado
+        run: npx playwright install --with-deps chromium
+
+      # Compila la aplicacion y despues guarda un index.html por ruta con el
+      # contenido ya pintado. Sin este paso el sitio le entrega a Google un
+      # <div id="root"> vacio, que es lo que tenia hasta ahora.
+      - name: Compilar y prerenderizar
+        run: npm run build:seo
+        env:
+          CI: false
+          GENERATE_SOURCEMAP: false
+
+      # Si el prerenderizado fallara en silencio, el despliegue se para aqui
+      # en vez de publicar un sitio vacio.
+      - name: Comprobar que el HTML lleva contenido
+        run: node comprobar-build.mjs
+
       - uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - run: |
+
+      - name: Construir y publicar la imagen
+        run: |
           docker build -t ghcr.io/eespejoruiz/web-byp-2026:latest .
           docker push ghcr.io/eespejoruiz/web-byp-2026:latest

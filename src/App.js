@@ -19,6 +19,7 @@ import BlogGrid from "./pages/BlogGrid";
 import BlogArticle from "./pages/blog/BlogArticle";
 import Error404 from './pages/Error404'
 import ScrollTop from "./constent/ScrollTop";
+import Seo from "./components/byp/Seo";
 
 import CasosDeExito from "./pages/CasosDeExito";
 import CaseStudyTemplate from "./pages/cases/CaseStudyTemplate";
@@ -99,6 +100,7 @@ function App() {
 const Layout = () => {
   return (
     <>
+      <Seo />
       <BypHeader />
       <Outlet />
       <BypFooter />
