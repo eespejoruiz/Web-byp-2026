@@ -71,6 +71,21 @@ for (const ruta of todasLasRutas()) {
   }
 }
 
+// El sitemap tiene que declarar exactamente las paginas que existen: ni una de
+// menos (Google no la descubre) ni una de mas (le mandamos a un 404).
+{
+  const p = path.join(BUILD, 'sitemap.xml');
+  if (!fs.existsSync(p)) fallos.push('no se genero sitemap.xml');
+  else {
+    const xml = fs.readFileSync(p, 'utf8');
+    const declaradas = new Set([...xml.matchAll(/<loc>([^<]+)<\/loc>/g)]
+      .map((m) => m[1].replace(SITIO, '').replace(/^$/, '/')));
+    const reales = new Set(todasLasRutas());
+    for (const r of reales) if (!declaradas.has(r)) fallos.push(`sitemap: falta ${r}`);
+    for (const d of declaradas) if (!reales.has(d)) fallos.push(`sitemap: declara ${d}, que no existe`);
+  }
+}
+
 if (fallos.length) {
   console.error('El build NO esta listo para publicar:\n');
   fallos.forEach((f) => console.error(' -', f));

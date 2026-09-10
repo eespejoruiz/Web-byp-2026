@@ -136,6 +136,25 @@ for (const ruta of RUTAS) {
 await navegador.close();
 servidor.close();
 
+// El sitemap se genera aquí, de la misma lista de rutas que se acaba de
+// prerenderizar. Antes era un archivo escrito a mano en public/ y ya se había
+// quedado corto: declaraba 23 direcciones de las 35 que tiene el sitio, sin los
+// artículos ni los casos. Generándolo aquí no puede volver a desincronizarse.
+{
+  const hoy = new Date().toISOString().slice(0, 10);
+  const prioridad = (r) => (r === '/' ? '1.0'
+    : r.split('/').filter(Boolean).length === 1 ? '0.9' : '0.8');
+  const filas = RUTAS
+    .filter((r) => !informe.find((x) => x.ruta === r && x.error))
+    .map((r) => `  <url><loc>https://byptech.com${r === '/' ? '/' : r}</loc>`
+      + `<lastmod>${hoy}</lastmod><priority>${prioridad(r)}</priority></url>`);
+  fs.writeFileSync(path.join(BUILD, 'sitemap.xml'),
+    '<?xml version="1.0" encoding="UTF-8"?>\n'
+    + '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    + filas.join('\n') + '\n</urlset>\n');
+  console.log(`\nsitemap.xml generado con ${filas.length} direcciones`);
+}
+
 console.log('ruta'.padEnd(52), 'palabras', ' KB');
 for (const r of informe) {
   console.log(r.ruta.padEnd(52),
