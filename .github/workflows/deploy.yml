@@ -38,6 +38,10 @@ jobs:
       - name: Comprobar que el HTML lleva contenido
         run: node comprobar-build.mjs
 
+      # Y que el marcado no declara nada que la pagina no tenga.
+      - name: Comprobar los datos estructurados
+        run: node comprobar-schema.mjs
+
       - uses: docker/login-action@v3
         with:
           registry: ghcr.io
