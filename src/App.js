@@ -30,6 +30,17 @@ import Diosna from "./pages/brands/Diosna";
 import Winterhalter from "./pages/brands/Winterhalter";
 import TrueBrand from "./pages/brands/True";
 import Pietroberto from "./pages/brands/Pietroberto";
+import EquiposIndex from './pages/equipos/EquiposIndex';
+import Licuadoras from './pages/equipos/Licuadoras';
+import Refrigeracion from './pages/equipos/Refrigeracion';
+import Amasadoras from './pages/equipos/Amasadoras';
+import Laminadoras from './pages/equipos/Laminadoras';
+import Batidoras from './pages/equipos/Batidoras';
+import Divisoras from './pages/equipos/Divisoras';
+import MoldesYBandejas from './pages/equipos/MoldesYBandejas';
+import Lavavajillas from './pages/equipos/Lavavajillas';
+import Cortadoras from './pages/equipos/Cortadoras';
+import Chocolate from './pages/equipos/Chocolate';
 import Vitamix from './pages/brands/Vitamix';
 import Cainco from './pages/brands/Cainco';
 import Pomati from './pages/brands/Pomati';
@@ -86,6 +97,17 @@ function App() {
             <Route path='/industria/bares-cafeterias' element={<BaresCafeterias />} />
             <Route path='/industria/otros' element={<Otros />} />
 
+            <Route path='/equipos' element={<EquiposIndex />} />
+            <Route path='/equipos/licuadoras' element={<Licuadoras />} />
+            <Route path='/equipos/refrigeracion' element={<Refrigeracion />} />
+            <Route path='/equipos/amasadoras' element={<Amasadoras />} />
+            <Route path='/equipos/laminadoras' element={<Laminadoras />} />
+            <Route path='/equipos/batidoras' element={<Batidoras />} />
+            <Route path='/equipos/divisoras' element={<Divisoras />} />
+            <Route path='/equipos/moldes-y-bandejas' element={<MoldesYBandejas />} />
+            <Route path='/equipos/lavavajillas' element={<Lavavajillas />} />
+            <Route path='/equipos/cortadoras' element={<Cortadoras />} />
+            <Route path='/equipos/chocolate' element={<Chocolate />} />
             <Route path='/marcas' element={<BrandsIndex />} />
             <Route path='/marcas/rondo' element={<Rondo />} />
             <Route path='/marcas/diosna' element={<Diosna />} />

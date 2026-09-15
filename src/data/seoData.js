@@ -78,6 +78,51 @@ const PAGINAS = {
     description: 'Soluciones transversales para operaciones que no encajan en una vertical estándar. Cuéntanos el requerimiento y lo diseñamos a medida.',
   },
 
+  '/equipos': {
+    title: 'Equipos por tipo de máquina | B&P Tech Perú',
+    description: 'Amasadoras, laminadoras, batidoras, refrigeración, lavavajillas, licuadoras y más: diez familias de equipo con las marcas que representamos en Perú.',
+  },
+  '/equipos/licuadoras': {
+    title: 'Licuadoras profesionales en Perú | B&P Tech',
+    description: 'Licuadoras comerciales Vitamix para barra y cocina profesional: motores de hasta 3 HP y jarras de alto impacto, con representación y servicio técnico en Perú.',
+  },
+  '/equipos/refrigeracion': {
+    title: 'Refrigeración comercial en Perú | B&P Tech',
+    description: 'Exhibidores, refrigeradores verticales y bajo mesada TRUE para cocinas y retail: conservación y cadena de frío con respaldo técnico en Perú.',
+  },
+  '/equipos/amasadoras': {
+    title: 'Amasadoras industriales en Perú | B&P Tech',
+    description: 'Amasadoras de espiral, sistema WENDEL de DIOSNA y de brazos Pietroberto. Cada masa pide un amasado distinto: te decimos cuál encaja con tu producción.',
+  },
+  '/equipos/laminadoras': {
+    title: 'Laminadoras de masa en Perú | B&P Tech',
+    description: 'Laminadoras RONDO mecánicas, electrónicas y líneas automáticas de croissant: espesor constante de la primera bandeja a la última, con soporte en Perú.',
+  },
+  '/equipos/batidoras': {
+    title: 'Batidoras industriales en Perú | B&P Tech',
+    description: 'Batidoras planetarias Pietroberto para pastelería y panificación: el equipo más versátil del obrador, construido para uso industrial continuo.',
+  },
+  '/equipos/divisoras': {
+    title: 'Divisoras y formadoras de masa en Perú | B&P Tech',
+    description: 'Divisoras volumétricas, divisoras-boleadoras y formadoras de barras Pietroberto: peso exacto por pieza, sin pesar a mano.',
+  },
+  '/equipos/moldes-y-bandejas': {
+    title: 'Moldes, bandejas y carros de panadería en Perú | B&P Tech',
+    description: 'Moldes con recubrimiento de grado industrial de American Pan y estufas, carros y canaletas Cainco en Aluminol, en las medidas estándar del mercado.',
+  },
+  '/equipos/lavavajillas': {
+    title: 'Lavavajillas industriales en Perú | B&P Tech',
+    description: 'Winterhalter vende máquina, detergente y tratamiento de agua como un solo sistema, que es lo que hace la diferencia visible en el vaso con agua dura.',
+  },
+  '/equipos/cortadoras': {
+    title: 'Cortadoras y porcionadoras en Perú | B&P Tech',
+    description: 'Porcionadoras TREIF del grupo JBT Marel: control de grosor desde medio milímetro y ECO SLICING para cortar a mayor temperatura y gastar menos en frío.',
+  },
+  '/equipos/chocolate': {
+    title: 'Temperadoras de chocolate en Perú | B&P Tech',
+    description: 'Temperadoras Pomati de fabricación italiana: la curva sostenida turno tras turno, que es lo que decide el brillo y el chasquido del producto terminado.',
+  },
+
   '/marcas': {
     title: 'Marcas que representamos en Perú | B&P Tech',
     description: 'RONDO, DIOSNA, WINTERHALTER, TRUE, Pietroberto, Vitamix, Cainco, Pomati, American Pan y JBT Marel, con representación y respaldo técnico en Perú.',

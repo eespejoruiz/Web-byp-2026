@@ -12,6 +12,7 @@
  * productos atados a su marca.
  */
 
+import { equiposData, getProductsByEquipo } from './equiposData';
 import { brandsData } from './brandsData';
 import { productsData, productBrandNames } from './productsData';
 import { blogPosts } from './blogPostsData';
@@ -95,6 +96,7 @@ function sitioWeb() {
  * «Marcas que representamos en Perú › RONDO en Perú: laminado y formado de masa».
  */
 const RAICES = {
+  '/equipos': 'Equipos',
   '/marcas': 'Marcas',
   '/industrias': 'Industrias',
   '/blog': 'Blog',
@@ -105,6 +107,11 @@ const RAICES = {
 
 function nombreCorto(ruta) {
   if (RAICES[ruta]) return RAICES[ruta];
+
+  if (ruta.startsWith('/equipos/')) {
+    const f = equiposData.find((x) => x.slug === ruta.slice('/equipos/'.length));
+    if (f) return f.name;
+  }
 
   if (ruta.startsWith('/marcas/')) {
     const m = brandsData.find((b) => b.slug === ruta.slice('/marcas/'.length));
@@ -226,6 +233,17 @@ export function schemaDeRuta(pathname) {
 
       const suyos = productsData.filter((p) => p.brand === slug);
       const lista = listaDeProductos(suyos, `Equipos ${marca.name} disponibles en Perú`, ruta);
+      if (lista) nodos.push(lista);
+    }
+    return nodos;
+  }
+
+  // --- equipos por tipo de maquina ---
+  if (ruta.startsWith('/equipos/')) {
+    const slug = ruta.slice('/equipos/'.length);
+    const f = equiposData.find((x) => x.slug === slug);
+    if (f) {
+      const lista = listaDeProductos(getProductsByEquipo(slug), f.name + ' disponibles en Perú', ruta);
       if (lista) nodos.push(lista);
     }
     return nodos;

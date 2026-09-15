@@ -5,9 +5,6 @@ import { brandsData } from "../data/brandsData";
 import marcasHero from "../assets/images/gen/marcas-hero.webp";
 
 
-// Las cinco que estaban aqui ya tienen pagina propia y salen de brandsData.
-// Esta lista queda para las marcas representadas que aun no tienen ficha.
-const REPRESENTED = [];
 
 const BrandsIndex = () => (
   <div className="byp-page">
@@ -58,21 +55,7 @@ const BrandsIndex = () => (
       </div>
     </section>
 
-    <section className="byp-section byp-section--flush-top">
-      <div className="byp-wrap">
-        <p className="byp-code" style={{ marginBottom: 24 }}>
-          // VITAMIX · CAINCO · JBT MAREL · AMERICAN PAN · POMATI
-        </p>
-        <div className="byp-sheet">
-          {REPRESENTED.map((b) => (
-            <div className="byp-repcard" key={b.name}>
-              <img src={b.logo} alt={`Logo ${b.name}`} loading="lazy" />
-              <h3>{b.name}</h3>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+    
 
     <section className="byp-wrap" style={{ paddingBottom: 84 }}>
       <div className="byp-ctaf" style={{ justifyContent: "center" }}>
