@@ -16,9 +16,9 @@ const LOGOS = [
   { name: "Winterhalter", logo: winterhalterLogo, to: "/marcas/winterhalter" },
   { name: "True", logo: trueLogo, to: "/marcas/true" },
   { name: "Pietroberto", logo: pietrobertoLogo, to: "/marcas/pietroberto" },
-  { name: "Vitamix", logo: vitamixLogo, to: "/marcas" },
-  { name: "Cainco", logo: caincoLogo, to: "/marcas" },
-  { name: "JBT Marel", logo: jbtmarelLogo, to: "/marcas" },
+  { name: "Vitamix", logo: vitamixLogo, to: "/marcas/vitamix" },
+  { name: "Cainco", logo: caincoLogo, to: "/marcas/cainco" },
+  { name: "JBT Marel", logo: jbtmarelLogo, to: "/marcas/jbt-marel" },
 ];
 
 /** Franja de logos de marcas representadas (social proof B2B). */

@@ -80,7 +80,7 @@ const PAGINAS = {
 
   '/marcas': {
     title: 'Marcas que representamos en Perú | B&P Tech',
-    description: 'RONDO, DIOSNA, WINTERHALTER, TRUE y Pietroberto: marcas líderes en panificación, lavado y refrigeración comercial, con respaldo técnico local.',
+    description: 'RONDO, DIOSNA, WINTERHALTER, TRUE, Pietroberto, Vitamix, Cainco, Pomati, American Pan y JBT Marel, con representación y respaldo técnico en Perú.',
   },
   '/marcas/rondo': {
     title: 'RONDO en Perú: laminado y formado de masa | B&P Tech',
@@ -101,6 +101,27 @@ const PAGINAS = {
   '/marcas/pietroberto': {
     title: 'Pietroberto Perú: maquinaria de panificación | B&P Tech',
     description: 'Más de cien años de ingeniería italiana en amasado y panificación. Equipos Pietroberto con representación y soporte técnico en Perú.',
+  },
+
+  '/marcas/vitamix': {
+    title: 'Vitamix en Perú: licuadoras comerciales | B&P Tech',
+    description: 'Licuadoras comerciales Vitamix para barras y cocinas de alto tránsito: The Quiet One y Vita-Prep 3, con representación y soporte técnico en Perú.',
+  },
+  '/marcas/cainco': {
+    title: 'Cainco en Perú: bandejas, estufas y carros | B&P Tech',
+    description: 'Bandejas de horneo, estufas y carros esqueleto en Aluminol para panaderías y supermercados, en las medidas estándar del mercado peruano.',
+  },
+  '/marcas/pomati': {
+    title: 'Pomati en Perú: temperadoras de chocolate | B&P Tech',
+    description: 'Temperado de chocolate con control preciso de la curva. Temperadoras Pomati de fabricación italiana con representación y servicio técnico en Perú.',
+  },
+  '/marcas/american-pan': {
+    title: 'American Pan en Perú: moldes y bandejas | B&P Tech',
+    description: 'Moldes de pan, bandejas para baguette y racks con recubrimiento antiadherente de grado industrial para panificación, disponibles en Perú.',
+  },
+  '/marcas/jbt-marel': {
+    title: 'JBT Marel en Perú: cortadoras TREIF | B&P Tech',
+    description: 'Porcionadoras y cortadoras TREIF para carnicerías, supermercados y salas de despiece, con control de grosor al medio milímetro y ECO SLICING.',
   },
 
   '/blog': {

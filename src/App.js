@@ -30,6 +30,11 @@ import Diosna from "./pages/brands/Diosna";
 import Winterhalter from "./pages/brands/Winterhalter";
 import TrueBrand from "./pages/brands/True";
 import Pietroberto from "./pages/brands/Pietroberto";
+import Vitamix from './pages/brands/Vitamix';
+import Cainco from './pages/brands/Cainco';
+import Pomati from './pages/brands/Pomati';
+import AmericanPan from './pages/brands/AmericanPan';
+import JbtMarel from './pages/brands/JbtMarel';
 import Restaurantes from "./pages/industries/Restaurantes";
 import Estadios from "./pages/industries/Estadios";
 import Panaderia from "./pages/industries/Panaderia";
@@ -87,6 +92,11 @@ function App() {
             <Route path='/marcas/winterhalter' element={<Winterhalter />} />
             <Route path='/marcas/true' element={<TrueBrand />} />
             <Route path='/marcas/pietroberto' element={<Pietroberto />} />
+            <Route path='/marcas/vitamix' element={<Vitamix />} />
+            <Route path='/marcas/cainco' element={<Cainco />} />
+            <Route path='/marcas/pomati' element={<Pomati />} />
+            <Route path='/marcas/american-pan' element={<AmericanPan />} />
+            <Route path='/marcas/jbt-marel' element={<JbtMarel />} />
 
             <Route path='*' element={<Error404 />} />
           </Route>

@@ -16,9 +16,154 @@ import diosnaAmbient from "../assets/images/gen/brand-diosna.webp";
 import winterhalterAmbient from "../assets/images/gen/brand-winterhalter.webp";
 import trueAmbient from "../assets/images/gen/brand-true.webp";
 import pietrobertoAmbient from "../assets/images/gen/brand-pietroberto.webp";
+// Marcas que hasta hoy solo tenian logo en el indice. El hero de cada una es la
+// foto del equipo que ya estaba verificada en productsData; no hay ambientImage
+// generada para ellas y la plantilla la salta sin romperse.
+import vitamixLogo from "../assets/images/brands/vitamix-logo.svg";
+import vitamixHero from "../assets/images/brands/vitamix-quiet-one.webp";
+import caincoLogo from "../assets/images/brands/cainco-logo.png";
+import caincoHero from "../assets/images/brands/cainco-estufa.webp";
+import pomatiLogo from "../assets/images/brands/pomati-logo.png";
+import pomatiHero from "../assets/images/products/pomati-t35.webp";
+import americanpanLogo from "../assets/images/brands/americanpan-logo.png";
+import americanpanHero from "../assets/images/products/americanpan-bread-tins.webp";
+import jbtmarelLogo from "../assets/images/brands/jbtmarel-logo.svg";
+import jbtmarelHero from "../assets/images/products/jbtmarel-treif-divider-660.webp";
 
 
 export const brandsData = [
+
+  {
+    slug: "vitamix",
+    route: "/marcas/vitamix",
+    name: "VITAMIX",
+    origin: "Estados Unidos",
+    tagline: "Licuadoras comerciales para barras y cocinas de alto tránsito",
+    logo: vitamixLogo,
+    heroImage: vitamixHero,
+    shortDescription:
+      "Licuadoras comerciales de uso intensivo, con motores de hasta 3 HP y jarras diseñadas para resistir el ritmo de una barra profesional.",
+    industries: ["bares-cafeterias", "restaurantes", "comida-rapida", "hoteles-catering"],
+    productType: "Licuadoras comerciales",
+    sections: [
+      {
+        title: "Potencia pensada para el servicio, no para la vitrina",
+        paragraphs: [
+          "Vitamix fabrica en Estados Unidos equipos de mezclado para uso comercial continuo. La diferencia frente a una licuadora doméstica no está en la potencia nominal sino en para cuántos ciclos al día está construida: motores de hasta 3 HP de salida máxima, control de velocidad variable y jarras de alto impacto pensadas para que el vaso no sea la pieza que se rompe primero.",
+          "En una barra de café o en una cocina de alto tránsito, el equipo de mezclado es de los que más veces se enciende en el día. Ahí la fiabilidad deja de ser una ficha técnica y se vuelve una cuestión de servicio.",
+        ],
+      },
+      {
+        title: "Dos equipos para dos problemas distintos",
+        paragraphs: [
+          "The Quiet One está diseñada específicamente para barras donde el ruido es parte de la experiencia del cliente: incorpora reducción de sonido y una jarra Advance que además alarga la vida útil del vaso.",
+          "Vita-Prep 3 está pensada para la cocina, no para la barra: mezclas espesas, purés y preparaciones congeladas, con tamper para empujar el producto y jarra de 2 litros libre de BPA.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "cainco",
+    route: "/marcas/cainco",
+    name: "CAINCO",
+    origin: "Brasil",
+    tagline: "Bandejas, estufas y carros para el flujo diario de una panadería",
+    logo: caincoLogo,
+    heroImage: caincoHero,
+    shortDescription:
+      "Bandejas de horneo, estufas y carros esqueleto en Aluminol para panaderías, supermercados e industria de panificación.",
+    industries: ["panaderia", "supermercados"],
+    productType: "Bandejas, estufas y carros",
+    sections: [
+      {
+        title: "Lo que sostiene el producto entre el amasado y el horno",
+        paragraphs: [
+          "Entre que la masa sale de la amasadora y entra al horno hay un recorrido que casi nunca se planifica y que decide buena parte de la merma: en qué bandeja se posa el pan, en qué carro se transporta, en qué estufa fermenta. Cainco fabrica en Brasil esa parte del flujo.",
+          "Las bandejas, estufas y carros se construyen en Aluminol y se fabrican en las medidas estándar de bandeja del mercado (58×70, 40×80, 60×80, 62×36 y 60×40 cm), que es lo que permite que el equipamiento nuevo entre en la línea que ya existe sin rehacerla.",
+        ],
+      },
+      {
+        title: "Pan francés: una canaleta, no una bandeja plana",
+        paragraphs: [
+          "El pan francés no se hornea bien sobre una superficie plana. Cainco fabrica canaletas de perfil de aluminio, con construcción soldada o remachada, en configuraciones de 5, 6 y 7 ondas según la medida de bandeja.",
+          "Es una pieza de bajo costo unitario que se compra por decenas y que se cambia cada pocos años: conviene que las medidas coincidan con los carros y las estufas que ya están en planta.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "pomati",
+    route: "/marcas/pomati",
+    name: "POMATI",
+    origin: "Italia",
+    tagline: "Temperado de chocolate con control real de la curva",
+    logo: pomatiLogo,
+    heroImage: pomatiHero,
+    shortDescription:
+      "Temperadoras de chocolate de fabricación italiana para pastelería, chocolatería y hotelería, con control preciso del ciclo de temperado.",
+    industries: ["panaderia", "restaurantes", "hoteles-catering"],
+    productType: "Temperadoras de chocolate",
+    sections: [
+      {
+        title: "El temperado no se improvisa",
+        paragraphs: [
+          "Un chocolate mal temperado se reconoce a simple vista: pierde brillo, se marca de blanco y no rompe con ese chasquido que el cliente asocia con calidad. Todo eso depende de una curva de temperatura que hay que sostener con precisión y de forma repetible, turno tras turno.",
+          "Pomati fabrica en Italia equipos dedicados exactamente a ese control. No es un accesorio de la cocina: es el equipo que decide si el producto terminado se puede vender al precio que se quiere vender.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "american-pan",
+    route: "/marcas/american-pan",
+    name: "AMERICAN PAN",
+    origin: "Estados Unidos",
+    tagline: "Moldes y bandejas con recubrimiento de grado industrial",
+    logo: americanpanLogo,
+    heroImage: americanpanHero,
+    shortDescription:
+      "Moldes de pan, bandejas para baguette y racks de horno con recubrimientos antiadherentes de larga duración para panificación industrial.",
+    industries: ["panaderia", "cocinas-industriales"],
+    productType: "Moldes, bandejas y racks",
+    sections: [
+      {
+        title: "El recubrimiento es el consumible real",
+        paragraphs: [
+          "En panificación industrial el molde no se compra una vez: se compra, se desgasta y se vuelve a comprar. Lo que determina cada cuánto ocurre eso no es el metal, es el recubrimiento antiadherente y cuántos ciclos de horno aguanta antes de empezar a pegar.",
+          "American Pan fabrica en Estados Unidos moldes, bandejas y racks con recubrimientos de grado industrial, en configuraciones individuales, en línea y en bloque, pensados para líneas donde el molde entra y sale del horno varias veces al día.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "jbt-marel",
+    route: "/marcas/jbt-marel",
+    name: "JBT MAREL",
+    origin: "Alemania",
+    tagline: "Porcionado y corte de precisión con tecnología TREIF",
+    logo: jbtmarelLogo,
+    heroImage: jbtmarelHero,
+    shortDescription:
+      "Cortadoras y porcionadoras TREIF para carnicerías, supermercados y cocinas de producción, con control de grosor al medio milímetro.",
+    industries: ["carnicerias", "supermercados", "cocinas-industriales"],
+    productType: "Cortadoras y porcionadoras",
+    sections: [
+      {
+        title: "TREIF, la ingeniería de corte del grupo",
+        paragraphs: [
+          "TREIF es la marca alemana de tecnología de corte dentro del grupo JBT Marel. Sus equipos porcionan fiambres, carnes y quesos con control de grosor desde medio milímetro y velocidades de cuchilla de hasta 660 rpm, apilando o intercalando el producto según lo que pida el envase final.",
+          "En un mostrador de supermercado o en una sala de despiece, el porcionado es donde se gana o se pierde margen: cada gramo de más por bandeja, multiplicado por la producción del día, es dinero que no vuelve.",
+        ],
+      },
+      {
+        title: "ECO SLICING: cortar más caliente cuesta menos",
+        paragraphs: [
+          "Los equipos DIVIDER incorporan ECO SLICING, una tecnología que permite cortar el producto a temperaturas más altas de lo habitual. Eso reduce lo que hay que gastar en enfriar la materia prima antes de procesarla, que en una sala de corte es una de las partidas energéticas más grandes.",
+          "El DIVIDER 660+ está pensado para procesadores pequeños y medianos; el DIVIDER Lineup, para capacidad media con software de recetas y pantalla táctil.",
+        ],
+      },
+    ],
+  },
   {
     slug: "rondo",
     route: "/marcas/rondo",

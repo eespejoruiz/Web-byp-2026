@@ -4,19 +4,10 @@ import { Link } from "react-router-dom";
 import { brandsData } from "../data/brandsData";
 import marcasHero from "../assets/images/gen/marcas-hero.webp";
 
-import vitamixLogo from "../assets/images/brands/vitamix-logo.svg";
-import caincoLogo from "../assets/images/brands/cainco-logo.png";
-import jbtmarelLogo from "../assets/images/brands/jbtmarel-logo.svg";
-import americanpanLogo from "../assets/images/brands/americanpan-logo.png";
-import pomatiLogo from "../assets/images/brands/pomati-logo.png";
 
-const REPRESENTED = [
-  { name: "Vitamix", logo: vitamixLogo },
-  { name: "Cainco", logo: caincoLogo },
-  { name: "JBT Marel", logo: jbtmarelLogo },
-  { name: "American Pan", logo: americanpanLogo },
-  { name: "Pomati", logo: pomatiLogo },
-];
+// Las cinco que estaban aqui ya tienen pagina propia y salen de brandsData.
+// Esta lista queda para las marcas representadas que aun no tienen ficha.
+const REPRESENTED = [];
 
 const BrandsIndex = () => (
   <div className="byp-page">
