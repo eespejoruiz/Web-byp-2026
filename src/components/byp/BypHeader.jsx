@@ -22,15 +22,17 @@ const MAIN_LINKS = [
   { n: "01", label: "Home", to: "/" },
   { n: "02", label: "Nosotros", to: "/nosotros" },
   { n: "03", label: "Soluciones por Industria", to: "/industrias", sub: "ind" },
-  { n: "04", label: "Nuestras Marcas", to: "/marcas", sub: "marcas" },
-  { n: "05", label: "Casos de Éxito", to: "/casos-de-exito" },
-  { n: "06", label: "Blog", to: "/blog" },
-  { n: "07", label: "Contacto", to: "/contacto" },
+  { n: "04", label: "Equipos", to: "/equipos", sub: "equipos" },
+  { n: "05", label: "Nuestras Marcas", to: "/marcas", sub: "marcas" },
+  { n: "06", label: "Casos de Éxito", to: "/casos-de-exito" },
+  { n: "07", label: "Blog", to: "/blog" },
+  { n: "08", label: "Contacto", to: "/contacto" },
 ];
 
 const hasNavyHero = (pathname) =>
   pathname === "/" ||
   pathname === "/contacto" ||
+  pathname.startsWith("/equipos") ||
   pathname.startsWith("/marcas") ||
   pathname.startsWith("/industrias") ||
   pathname.startsWith("/industria");

@@ -32,6 +32,7 @@ const BypFooter = () => {
         <ul>
           <li><Link to="/marcas">Marcas</Link></li>
           <li><Link to="/industrias">Industrias</Link></li>
+          <li><Link to="/equipos">Equipos</Link></li>
           <li><Link to="/casos-de-exito">Casos de éxito</Link></li>
           <li><Link to="/nosotros">Nosotros</Link></li>
           <li><Link to="/blog">Blog</Link></li>
