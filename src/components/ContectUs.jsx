@@ -11,7 +11,7 @@ const ContectUs = () => {
                     <div className="section-head">
                         <h2 className="title text-white">¿Tienes alguna pregunta sobre nosotros?</h2>
                     </div>
-                    <Link to="tel:224000221133" className="btn btn-white me-3 mb-2"><i className="fas fa-phone-volume me-sm-3 me-0 shake"></i><span className="d-sm-inline-block d-none">224 000 22 11 33</span></Link>
+                    <a href="tel:+51985362946" className="btn btn-white me-3 mb-2"><i className="fas fa-phone-volume me-sm-3 me-0 shake"></i><span className="d-sm-inline-block d-none">+51 985 362 946</span></a>
                     <Link to="/contacto" className="btn btn-outline-white effect-1  mb-2"><span>Contáctanos</span></Link>
                 </div>
                 <div className="col-lg-6">

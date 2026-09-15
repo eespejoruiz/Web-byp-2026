@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Testimonial from "../components/Testimonial";
 import { brandsData } from "../data/brandsData";
 import { industryData } from "../data/industryData";
 
@@ -9,7 +8,6 @@ import heroAlt from "../assets/images/gen/home-hero-alt.webp";
 import svcImg from "../assets/images/gen/home-servicios.webp";
 import ctaBg from "../assets/images/gen/home-cta.webp";
 import bannerImg from "../assets/images/gen/home-banner.webp";
-import testiBg from "../assets/images/gen/testimonios-bg.webp";
 import casoFrio from "../assets/images/gen/caso-frio.webp";
 import casoBanquetes from "../assets/images/gen/caso-banquetes.webp";
 import casoMasa from "../assets/images/gen/caso-masa.webp";
@@ -310,17 +308,7 @@ const Home4 = () => {
         </div>
       </section>
 
-      {/* 05/ Testimoniales */}
-      <section className="byp-section byp-section--flush-top byp-section--testi" style={{ backgroundImage: `linear-gradient(rgba(16,41,74,.9), rgba(16,41,74,.94)), url(${testiBg})`, backgroundSize: "cover", backgroundPosition: "center" }}>
-        <div className="byp-wrap">
-          <div className="byp-head">
-            <span className="byp-head__idx">05/</span>
-            <h2 className="byp-h2">Nuestros clientes ya lo saben</h2>
-          </div>
-          <p className="byp-sechead-p">Testimoniales</p>
-          <Testimonial />
-        </div>
-      </section>
+
 
       {/* CTA final */}
       <section className="byp-wrap" style={{ paddingBottom: 84 }}>
