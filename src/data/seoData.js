@@ -115,11 +115,11 @@ const PAGINAS = {
     title: 'Pomati en Perú: temperadoras de chocolate | B&P Tech',
     description: 'Temperado de chocolate con control preciso de la curva. Temperadoras Pomati de fabricación italiana con representación y servicio técnico en Perú.',
   },
-  '/marcas/american-pan': {
+  '/marcas/americanpan': {
     title: 'American Pan en Perú: moldes y bandejas | B&P Tech',
     description: 'Moldes de pan, bandejas para baguette y racks con recubrimiento antiadherente de grado industrial para panificación, disponibles en Perú.',
   },
-  '/marcas/jbt-marel': {
+  '/marcas/jbtmarel': {
     title: 'JBT Marel en Perú: cortadoras TREIF | B&P Tech',
     description: 'Porcionadoras y cortadoras TREIF para carnicerías, supermercados y salas de despiece, con control de grosor al medio milímetro y ECO SLICING.',
   },

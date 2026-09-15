@@ -95,8 +95,8 @@ function App() {
             <Route path='/marcas/vitamix' element={<Vitamix />} />
             <Route path='/marcas/cainco' element={<Cainco />} />
             <Route path='/marcas/pomati' element={<Pomati />} />
-            <Route path='/marcas/american-pan' element={<AmericanPan />} />
-            <Route path='/marcas/jbt-marel' element={<JbtMarel />} />
+            <Route path='/marcas/americanpan' element={<AmericanPan />} />
+            <Route path='/marcas/jbtmarel' element={<JbtMarel />} />
 
             <Route path='*' element={<Error404 />} />
           </Route>

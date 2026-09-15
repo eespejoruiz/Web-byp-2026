@@ -18,7 +18,7 @@ const LOGOS = [
   { name: "Pietroberto", logo: pietrobertoLogo, to: "/marcas/pietroberto" },
   { name: "Vitamix", logo: vitamixLogo, to: "/marcas/vitamix" },
   { name: "Cainco", logo: caincoLogo, to: "/marcas/cainco" },
-  { name: "JBT Marel", logo: jbtmarelLogo, to: "/marcas/jbt-marel" },
+  { name: "JBT Marel", logo: jbtmarelLogo, to: "/marcas/jbtmarel" },
 ];
 
 /** Franja de logos de marcas representadas (social proof B2B). */

@@ -114,8 +114,8 @@ export const brandsData = [
     ],
   },
   {
-    slug: "american-pan",
-    route: "/marcas/american-pan",
+    slug: "americanpan",
+    route: "/marcas/americanpan",
     name: "AMERICAN PAN",
     origin: "Estados Unidos",
     tagline: "Moldes y bandejas con recubrimiento de grado industrial",
@@ -136,8 +136,8 @@ export const brandsData = [
     ],
   },
   {
-    slug: "jbt-marel",
-    route: "/marcas/jbt-marel",
+    slug: "jbtmarel",
+    route: "/marcas/jbtmarel",
     name: "JBT MAREL",
     origin: "Alemania",
     tagline: "Porcionado y corte de precisión con tecnología TREIF",
