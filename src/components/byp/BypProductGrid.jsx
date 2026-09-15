@@ -20,13 +20,18 @@ const BypProductGrid = ({ products, title }) => {
       <div className="byp-sheet">
         {products.map((p) => (
           <article className="byp-fcard" key={p.id}>
-            <div className="byp-fcard__ph">
-              {p.image ? <img
-                src={p.image}
-                alt={`${p.name} — ${productBrandNames[p.brand] || p.brand}`}
-                loading="lazy"
-              /> : null}
-            </div>
+            {/* Sin foto no se pinta el panel: un recuadro blanco vacio se lee
+                como imagen que no cargo, y hay marcas cuyo material todavia
+                no tenemos. */}
+            {p.image ? (
+              <div className="byp-fcard__ph">
+                <img
+                  src={p.image}
+                  alt={`${p.name} — ${productBrandNames[p.brand] || p.brand}`}
+                  loading="lazy"
+                />
+              </div>
+            ) : null}
             <div className="byp-fcard__meta">
               <span className="byp-fcard__ref">
                 {productBrandNames[p.brand] || p.brand} ·{" "}
