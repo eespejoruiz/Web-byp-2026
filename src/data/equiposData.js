@@ -24,6 +24,22 @@ import chocolateHero from "../assets/images/products/pomati-t35.webp";
  */
 export const equiposData = [
   {
+    slug: "hornos",
+    route: "/equipos/hornos",
+    name: "Hornos",
+    tagline: "Tubos de vapor, eléctricos de pisos y rotativos de carro",
+    categorias: [
+      "Horno de pisos de tubos de vapor",
+      "Horno eléctrico de pisos",
+      "Horno rotativo",
+    ],
+    industries: ["panaderia", "supermercados", "cocinas-industriales", "hoteles-catering"],
+    parrafos: [
+      "Es la familia con más demanda de todo el sector en el Perú: entre «horno industrial», «horno convector», «horno para pan», «hornos para panadería», «horno eléctrico industrial» y «horno rotativo» suman del orden de 3.320 búsquedas al mes. Y es también la inversión que más condiciona qué se puede producir.",
+      "Mondial Forni fabrica en Italia las tres familias. Los de tubos de vapor cuecen por inercia térmica, con el calor entrando desde la solera, que es lo que pide el pan de gran formato. Los eléctricos de pisos dan control independiente piso a piso, así que se hornea a la vez a temperaturas distintas. Y los rotativos de carro son los de mayor rotación por hora. Los ocho modelos llevan el mismo control MFTouch, que guarda la curva de cada producto en la máquina y no en la cabeza de quien esté ese turno.",
+    ],
+  },
+  {
     slug: "licuadoras",
     route: "/equipos/licuadoras",
     name: "Licuadoras profesionales",

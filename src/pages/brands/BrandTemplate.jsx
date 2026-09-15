@@ -93,11 +93,13 @@ const BrandTemplate = ({ slug }) => {
             <span className="byp-blueframe__dim byp-blueframe__dim--l">
               ← ALTURA →
             </span>
-            <img
+            {brand.heroImage ? (
+              <img
               src={brand.heroImage}
               alt={`${brand.productType || "Equipo"} ${brand.name}`}
               loading="eager"
             />
+            ) : null}
             <span className="byp-blueframe__tag">REF: {brand.name}</span>
           </div>
         </div>

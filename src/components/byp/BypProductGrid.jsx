@@ -21,11 +21,11 @@ const BypProductGrid = ({ products, title }) => {
         {products.map((p) => (
           <article className="byp-fcard" key={p.id}>
             <div className="byp-fcard__ph">
-              <img
+              {p.image ? <img
                 src={p.image}
                 alt={`${p.name} — ${productBrandNames[p.brand] || p.brand}`}
                 loading="lazy"
-              />
+              /> : null}
             </div>
             <div className="byp-fcard__meta">
               <span className="byp-fcard__ref">

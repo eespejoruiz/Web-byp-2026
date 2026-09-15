@@ -26,13 +26,15 @@ const BrandsIndex = () => (
         <div className="byp-sheet">
           {brandsData.map((brand) => (
             <Link className="byp-fcard" to={brand.route} key={brand.slug}>
-              <div className="byp-fcard__ph">
-                <img
-                  src={brand.heroImage}
-                  alt={`${brand.productType || "Equipo"} ${brand.name}`}
-                  loading="lazy"
-                />
-              </div>
+              {brand.heroImage ? (
+                <div className="byp-fcard__ph">
+                  <img
+                    src={brand.heroImage}
+                    alt={`${brand.productType || "Equipo"} ${brand.name}`}
+                    loading="lazy"
+                  />
+                </div>
+              ) : null}
               <div className="byp-fcard__meta">
                 <span className="byp-fcard__ref">
                   {brand.name} · {(brand.origin || "").toUpperCase()}

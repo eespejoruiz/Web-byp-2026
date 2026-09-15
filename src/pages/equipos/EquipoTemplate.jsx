@@ -84,12 +84,14 @@ const EquipoTemplate = ({ slug }) => {
             </div>
 
             <div>
-              <img
-                src={familia.heroImage}
-                alt={familia.name}
-                loading="lazy"
-                style={{ width: "100%", height: "auto", objectFit: "contain" }}
-              />
+              {familia.heroImage ? (
+                <img
+                  src={familia.heroImage}
+                  alt={familia.name}
+                  loading="lazy"
+                  style={{ width: "100%", height: "auto", objectFit: "contain" }}
+                />
+              ) : null}
             </div>
           </div>
         </div>

@@ -82,6 +82,10 @@ const PAGINAS = {
     title: 'Equipos por tipo de máquina | B&P Tech Perú',
     description: 'Amasadoras, laminadoras, batidoras, refrigeración, lavavajillas, licuadoras y más: diez familias de equipo con las marcas que representamos en Perú.',
   },
+  '/equipos/hornos': {
+    title: 'Hornos industriales para panadería en Perú | B&P Tech',
+    description: 'Hornos Mondial Forni de tubos de vapor, eléctricos de pisos y rotativos de carro, con control MFTouch. Ocho modelos con representación y servicio técnico en Perú.',
+  },
   '/equipos/licuadoras': {
     title: 'Licuadoras profesionales en Perú | B&P Tech',
     description: 'Licuadoras comerciales Vitamix para barra y cocina profesional: motores de hasta 3 HP y jarras de alto impacto, con representación y servicio técnico en Perú.',
@@ -126,6 +130,10 @@ const PAGINAS = {
   '/marcas': {
     title: 'Marcas que representamos en Perú | B&P Tech',
     description: 'RONDO, DIOSNA, WINTERHALTER, TRUE, Pietroberto, Vitamix, Cainco, Pomati, American Pan y JBT Marel, con representación y respaldo técnico en Perú.',
+  },
+  '/marcas/mondialforni': {
+    title: 'Mondial Forni en Perú: hornos de panificación | B&P Tech',
+    description: 'Hornos italianos Mondial Forni: tubos de vapor, eléctricos de pisos y rotativos de carro, todos con pantalla MFTouch, con representación y soporte en Perú.',
   },
   '/marcas/rondo': {
     title: 'RONDO en Perú: laminado y formado de masa | B&P Tech',

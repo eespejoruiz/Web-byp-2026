@@ -32,6 +32,33 @@ import jbtmarelHero from "../assets/images/products/jbtmarel-treif-divider-660.w
 
 
 export const brandsData = [
+  {
+    slug: "mondialforni",
+    route: "/marcas/mondialforni",
+    name: "MONDIAL FORNI",
+    origin: "Italia",
+    tagline: "Hornos de pisos y rotativos con control MFTouch",
+    shortDescription:
+      "Hornos de tubos de vapor, eléctricos de pisos y rotativos de carro para panificación y pastelería, todos con pantalla táctil MFTouch.",
+    industries: ["panaderia", "supermercados", "cocinas-industriales", "hoteles-catering"],
+    productType: "Hornos de panificación",
+    sections: [
+      {
+        title: "Tres formas de hornear, y hay que elegir bien",
+        paragraphs: [
+          "El horno es la inversión más grande de una panadería y la que más condiciona qué se puede producir. Mondial Forni fabrica en Italia las tres familias, y cada una responde a una pregunta distinta.",
+          "Los de tubos de vapor —Mondial, Ecomondial y LEM— cuecen por inercia térmica: el calor entra desde la solera y aguanta, que es lo que pide el pan de gran formato. Los eléctricos de pisos —Dekomondial y Domino— dan control independiente por piso, así que se hornea a la vez a temperaturas distintas. Y los rotativos de carro —Techno, Basic y Slim— son los de mayor rotación por hora, porque entra un carro entero y el producto gira dentro.",
+        ],
+      },
+      {
+        title: "MFTouch: la receta deja de estar en la cabeza del maestro",
+        paragraphs: [
+          "Los ocho modelos llevan el control MFTouch, una pantalla táctil a color que guarda hasta ochenta recetas de nueve fases cada una, con encendido y apagado programados y acceso por contraseña.",
+          "En la práctica eso significa que la curva de horneo de cada producto queda escrita en la máquina y no depende de quién esté ese turno. Para una panadería que crece, o que abre un segundo local, es la diferencia entre repetir la calidad y volver a aprenderla.",
+        ],
+      },
+    ],
+  },
 
   {
     slug: "vitamix",

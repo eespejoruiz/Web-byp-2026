@@ -35,9 +35,11 @@ const EquiposIndex = () => (
               .map((m) => m.name);
             return (
               <Link className="byp-fcard" to={f.route} key={f.slug}>
-                <div className="byp-fcard__ph">
-                  <img src={f.heroImage} alt={f.name} loading="lazy" />
-                </div>
+                {f.heroImage ? (
+                  <div className="byp-fcard__ph">
+                    <img src={f.heroImage} alt={f.name} loading="lazy" />
+                  </div>
+                ) : null}
                 <div className="byp-fcard__meta">
                   <span className="byp-fcard__ref">
                     {n} {n === 1 ? "EQUIPO" : "EQUIPOS"} · {marcas.join(" · ").toUpperCase()}
