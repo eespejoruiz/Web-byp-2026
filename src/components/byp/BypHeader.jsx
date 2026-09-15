@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { IMAGE } from "../../constent/theme";
 import { industryData } from "../../data/industryData";
 import { brandsData } from "../../data/brandsData";
+import { equiposData } from "../../data/equiposData";
 import { blogPosts } from "../../data/blogPostsData";
 import { caseStudiesData } from "../../data/caseStudiesData";
 
@@ -44,7 +45,7 @@ const BypHeader = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [query, setQuery] = useState("");
-  const [expand, setExpand] = useState(null); // sub-panel del menú: "ind" | "marcas"
+  const [expand, setExpand] = useState(null); // sub-panel del menú: "ind" | "equipos" | "marcas"
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const searchRef = useRef(null);
@@ -148,6 +149,13 @@ const BypHeader = () => {
                             <Link key={ind.slug} to={`/industrias/${ind.slug}`} onClick={closeAll}>{ind.title}</Link>
                           ))}
                         </div>
+                      ))}
+                    </div>
+                  )}
+                  {l.sub === "equipos" && expand === "equipos" && (
+                    <div className="byp-menu__sub byp-menu__sub--brands">
+                      {equiposData.map((f) => (
+                        <Link key={f.slug} to={f.route} onClick={closeAll}>{f.name}</Link>
                       ))}
                     </div>
                   )}
