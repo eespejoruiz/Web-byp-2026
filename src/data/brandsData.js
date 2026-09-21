@@ -90,6 +90,65 @@ export const brandsData = [
         { model: "X10", to: null, values: ["Hasta 100", "92", "35, con Cold Brew", "5 l", "500 g a 1 kg", "Oficinas grandes, comedores, autoservicio y centros de salud"] },
       ],
     },
+    // Consumibles y accesorios por modelo. Solo lo que JURA lista para cada cafetera
+    // en las pestanas "Accesorios" y "Productos de conservacion" de pe.jura.com, mas
+    // el filtro y la salida de leche que figuran en sus datos tecnicos. Frecuencias
+    // y rendimientos, los que publica JURA en la ficha de cada producto (21-09-2026).
+    // El Wireless Transmitter aparece en la pestana de la X10, pero su propia lista
+    // de compatibilidad no incluye la X10: aqui no se le asigna.
+    consumables: {
+      title: "Consumibles y accesorios para cada cafetera",
+      intro:
+        "Una JURA se limpia sola con un botón, pero necesita sus consumibles originales para mantener la higiene y el sabor: pastillas de limpieza, limpiador del sistema de leche, filtro de agua y las piezas del circuito de leche, que se cambian cada pocos meses. Estos son los que corresponden a cada modelo, con su número de artículo JURA para pedirlos sin confusión. Cotízalos junto con la cafetera.",
+      note: "Frecuencias y rendimientos según JURA, con un uso normal. Números de artículo de JURA Perú.",
+      models: [
+        {
+          model: "E8",
+          care: [
+            { name: "Pastillas de limpieza de 3 fases", code: "24225", detail: "Pack de 6" },
+            { name: "Pastillas de descalcificación de 2 fases", code: "61848", detail: "Pack de 3 × 3" },
+            { name: "Limpiador del sistema de leche (mini pastillas)", code: "24158 · 24157", detail: "90 g para 30 limpiezas · recarga de 90 g" },
+            { name: "Juego de accesorios para sistemas de leche HP3", code: "24117", detail: "Cambio cada 3 meses" },
+            { name: "Boquilla de leche intercambiable CX3", code: "72228", detail: "Juego de 10 · cambio cada 2 meses" },
+            { name: "Filtro de agua CLARIS Smart+", code: null, detail: "El que indica su ficha técnica" },
+          ],
+          extras: [
+            { name: "Tubo de leche con revestimiento de acero inoxidable", code: "24114", detail: "Protege la leche de la luz" },
+            { name: "Calentador de tazas S", code: "24176", detail: "Mantiene las tazas a unos 55 °C" },
+            { name: "Wireless Transmitter", code: "24031", detail: "Conexión inalámbrica con el Cool Control" },
+          ],
+        },
+        {
+          model: "W8",
+          care: [
+            { name: "Pastillas de limpieza de 3 fases", code: "24225", detail: "Pack de 6" },
+            { name: "Pastillas de descalcificación de 2 fases", code: "61848", detail: "Pack de 3 × 3" },
+            { name: "Limpiador del sistema de leche (mini pastillas)", code: "24212", detail: "Recarga de 180 g para 60 limpiezas" },
+            { name: "Juego de accesorios para sistemas de leche HP3", code: "24117", detail: "Cambio cada 3 meses" },
+            { name: "Filtro de agua CLARIS Pro Smart+", code: null, detail: "El que indica su ficha técnica" },
+          ],
+          extras: [
+            { name: "Cool Control 1,0 l", code: "24261", detail: "Mantiene la leche a 4 °C" },
+            { name: "Calentador de tazas", code: "72229", detail: "Mantiene las tazas a unos 55 °C" },
+            { name: "Wireless Transmitter", code: "24031", detail: "Conexión inalámbrica con el Cool Control" },
+          ],
+        },
+        {
+          model: "X10",
+          care: [
+            { name: "Limpiador del sistema de leche (mini pastillas)", code: "24212", detail: "Recarga de 180 g para 60 limpiezas" },
+            { name: "Juego de accesorios para sistemas de leche HP3", code: "24117", detail: "Cambio cada 3 meses" },
+            { name: "Salida de leche intercambiable CX2", code: "24064", detail: "Juego de 10 × 2 · cambio cada 2 meses" },
+            { name: "Filtro de agua CLARIS Pro Smart maxi o Pro Smart+", code: null, detail: "Los que indica su ficha técnica" },
+          ],
+          extras: [
+            { name: "Cool Control 2,5 l", code: "24246", detail: "Leche a 4 °C, con cierre de serie para uso profesional" },
+            { name: "Tubo de leche con revestimiento de acero inoxidable", code: "24114", detail: "Protege la leche de la luz" },
+            { name: "Calentador de tazas", code: "72229", detail: "Mantiene las tazas a unos 55 °C" },
+          ],
+        },
+      ],
+    },
     advantages: [
       "Café en grano recién molido para cada taza, sin cápsulas.",
       "Limpieza del sistema de leche automática, con un botón, en los tres modelos.",
@@ -105,6 +164,10 @@ export const brandsData = [
       {
         q: "¿La instalación está incluida?",
         a: "Sí. La instalación y la capacitación del personal van incluidas con la compra: dejamos la cafetera funcionando en tu local y enseñamos a tu equipo a usarla, limpiarla y mantenerla.",
+      },
+      {
+        q: "¿Qué mantenimiento necesita y qué consumibles lleva?",
+        a: "La unidad de infusión se limpia sola con un botón. Lo que hay que reponer son los consumibles originales: pastillas de limpieza, limpiador del sistema de leche y filtro de agua, y cambiar las piezas del circuito de leche cada dos o tres meses. En esta página está la lista de cada modelo con su número de artículo JURA, y te los cotizamos junto con la cafetera.",
       },
       {
         q: "¿Qué pasa si la cafetera falla?",

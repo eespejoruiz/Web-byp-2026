@@ -907,3 +907,18 @@ a.byp-chip:hover { border-color: var(--byp-navy); color: var(--byp-navy); }
 .byp-faq__a{padding:0 2px 18px}
 .byp-faq__a p{margin:0!important;font-size:15.5px;line-height:1.6;color:var(--byp-txt)}
 @media (prefers-reduced-motion:reduce){.byp-faq__chev{transition:none}}
+
+/* Consumibles y accesorios por modelo: tres tarjetas en escritorio, apiladas en movil */
+.byp-cons{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.byp-cons__card{background:var(--byp-card);border:1px solid var(--byp-line);display:flex;flex-direction:column}
+/* Especificidad alta a proposito: .byp-page h3 pinta los h3 en color de texto y aqui van sobre navy */
+.byp-page .byp-cons .byp-cons__modelo{margin:0;padding:12px 16px;background:var(--byp-navy);color:#fff;font-size:15px;font-weight:600;letter-spacing:.01em}
+.byp-cons__grupo{padding:14px 16px 4px}
+.byp-cons__grupo + .byp-cons__grupo{border-top:1px solid var(--byp-line)}
+.byp-cons__grupo h4{margin:0 0 8px;font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--byp-dim)}
+.byp-cons__grupo li{padding:9px 0;border-top:1px solid var(--byp-line)}
+.byp-cons__grupo li:first-child{border-top:0;padding-top:0}
+.byp-cons__nombre{display:block;font-size:14px;font-weight:600;line-height:1.35;color:var(--byp-txt)}
+.byp-cons__meta{display:block;margin-top:3px;font-size:13px;line-height:1.45;color:var(--byp-dim)}
+.byp-cons__code{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--byp-navy);margin-right:8px;font-variant-numeric:tabular-nums}
+@media (max-width:991px){.byp-cons{grid-template-columns:1fr}}

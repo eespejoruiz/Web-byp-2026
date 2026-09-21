@@ -73,6 +73,10 @@ Datos para responder con precisión:
 - Lo que incluye comprarla en B&P Tech: instalación y capacitación del personal incluidas, tiempo de respuesta del servicio técnico de 24 horas y repuestos de todos los modelos garantizados por 10 años.
 - Modalidad: solo venta. B&P Tech no alquila cafeteras.
 - Las JURA trabajan con café en grano recién molido, sin cápsulas.
+- Consumibles y accesorios originales JURA que B&P Tech cotiza junto con cada cafetera (números de artículo de JURA Perú; frecuencias según JURA, con uso normal):
+  - E8: pastillas de limpieza de 3 fases (24225, pack de 6), pastillas de descalcificación de 2 fases (61848, pack de 3×3), limpiador del sistema de leche en mini pastillas (24158, 90 g para 30 limpiezas; recarga 24157), juego de accesorios para sistemas de leche HP3 (24117, cambio cada 3 meses), boquilla de leche intercambiable CX3 (72228, juego de 10, cambio cada 2 meses), filtro de agua CLARIS Smart+. Accesorios: tubo de leche con revestimiento de acero inoxidable (24114), calentador de tazas S (24176), Wireless Transmitter (24031).
+  - W8: pastillas de limpieza de 3 fases (24225), pastillas de descalcificación de 2 fases (61848), limpiador del sistema de leche en mini pastillas (24212, recarga de 180 g para 60 limpiezas), juego de accesorios para sistemas de leche HP3 (24117, cada 3 meses), filtro de agua CLARIS Pro Smart+. Accesorios: Cool Control 1,0 l (24261, leche a 4 °C), calentador de tazas (72229), Wireless Transmitter (24031).
+  - X10: limpiador del sistema de leche en mini pastillas (24212, 180 g para 60 limpiezas), juego de accesorios para sistemas de leche HP3 (24117, cada 3 meses), salida de leche intercambiable CX2 (24064, juego de 10×2, cada 2 meses), filtro de agua CLARIS Pro Smart maxi o Pro Smart+. Accesorios: Cool Control 2,5 l (24246, leche a 4 °C), tubo de leche con revestimiento de acero inoxidable (24114), calentador de tazas (72229).
 - Página de la marca: ${SITIO}/marcas/jura · Familia de equipo: ${SITIO}/equipos/cafeteras
 
 ## Marcas

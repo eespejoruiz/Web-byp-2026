@@ -229,6 +229,47 @@ const BrandTemplate = ({ slug }) => {
               );
             })()}
 
+            {/* Consumibles y accesorios por modelo (opcional, desde brandsData) */}
+            {brand.consumables && Array.isArray(brand.consumables.models) && (() => {
+              sectionCount += 1;
+              const c = brand.consumables;
+              const Lista = ({ titulo, items }) => (
+                <div className="byp-cons__grupo">
+                  <h4>{titulo}</h4>
+                  <ul>
+                    {items.map((it) => (
+                      <li key={it.name}>
+                        <span className="byp-cons__nombre">{it.name}</span>
+                        <span className="byp-cons__meta">
+                          {it.code && <span className="byp-cons__code">Art. {it.code}</span>}
+                          {it.detail}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+              return (
+                <div className="byp-article__section">
+                  <div className="byp-article__head">
+                    <span className="byp-head__idx">{idx(sectionCount)}</span>
+                    <h2>{c.title}</h2>
+                  </div>
+                  {c.intro && <p>{c.intro}</p>}
+                  <div className="byp-cons">
+                    {c.models.map((m) => (
+                      <section className="byp-cons__card" key={m.model} aria-label={`Consumibles y accesorios ${brand.name} ${m.model}`}>
+                        <h3 className="byp-cons__modelo">{brand.name} {m.model}</h3>
+                        {Array.isArray(m.care) && m.care.length > 0 && <Lista titulo="Mantenimiento" items={m.care} />}
+                        {Array.isArray(m.extras) && m.extras.length > 0 && <Lista titulo="Accesorios" items={m.extras} />}
+                      </section>
+                    ))}
+                  </div>
+                  {c.note && <p className="byp-selector__note">{c.note}</p>}
+                </div>
+              );
+            })()}
+
             {/* Productos (marcas multi-producto, ej. Pietroberto) */}
             {Array.isArray(brand.products) &&
               brand.products.map((product, pIdx) => {
