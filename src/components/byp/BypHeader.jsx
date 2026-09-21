@@ -173,7 +173,7 @@ const BypHeader = () => {
           <aside className="byp-menu__aside">
             <p className="byp-menu__tag">B&amp;P TECH · BAKERY &amp; PASTRY TECHNOLOGY</p>
             <a className="byp-menu__contact" href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noopener noreferrer">+51 985 362 946</a>
-            <a className="byp-menu__contact" href="mailto:proyectos@byptech.com">proyectos@byptech.com</a>
+            <a className="byp-menu__contact" href="mailto:contacto@byptech.com">contacto@byptech.com</a>
             <p className="byp-menu__loc">Lima, Perú</p>
           </aside>
         </div>

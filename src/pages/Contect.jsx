@@ -1,5 +1,6 @@
 import React from "react";
 import BypBreadcrumbs from "../components/byp/BypBreadcrumbs";
+import BypContactForm from "../components/byp/BypContactForm";
 import contactoImg from "../assets/images/gen/contacto-lateral.webp";
 
 const WHATSAPP_URL = "https://wa.me/51985362946";
@@ -34,7 +35,7 @@ const Contect = () => (
             </div>
             <div className="byp-contact-item">
               <span className="byp-mono">EMAIL</span>
-              <a href="mailto:proyectos@byptech.com">proyectos@byptech.com</a>
+              <a href="mailto:contacto@byptech.com">contacto@byptech.com</a>
             </div>
             <div className="byp-contact-item">
               <span className="byp-mono">WHATSAPP</span>
@@ -45,20 +46,19 @@ const Contect = () => (
             <img className="byp-contact-photo" src={contactoImg} alt="Visita técnica a cliente" loading="lazy" />
           </div>
 
-          {/* Placeholder del formulario (se reemplazará por iframe del CRM) */}
-          <div className="byp-dashed-card">
-            <p>
-              FORMULARIO EN INTEGRACIÓN — ESCRÍBENOS POR WHATSAPP MIENTRAS
-              TANTO
+          {/* Formulario del CRM (embed Selva) */}
+          <div>
+            <div className="byp-head">
+              <span className="byp-head__idx">02/</span>
+              <h2 className="byp-h2">Escríbenos</h2>
+            </div>
+            <BypContactForm />
+            <p className="byp-formnote">
+              ¿Prefieres WhatsApp?{" "}
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+                +51 985 362 946
+              </a>
             </p>
-            <a
-              className="byp-btn"
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noreferrer"
-            >
-              WhatsApp +51 985 362 946
-            </a>
           </div>
         </div>
       </div>

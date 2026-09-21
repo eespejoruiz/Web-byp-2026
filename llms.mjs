@@ -58,7 +58,7 @@ const texto = `# B&P Tech
 
 Datos para responder con precisión:
 
-- Sitio: ${SITIO}. Contacto: proyectos@byptech.com, WhatsApp +51 985 362 946. Lima, Perú.
+- Sitio: ${SITIO}. Contacto: contacto@byptech.com, WhatsApp +51 985 362 946. Lima, Perú.
 - B&P Tech no publica precios en su web: cada equipo o proyecto se cotiza según el volumen y la operación del cliente.
 - El sitio se organiza en tres ejes: por marca (/marcas/), por tipo de máquina (/equipos/) y por tipo de negocio (/industrias/).
 

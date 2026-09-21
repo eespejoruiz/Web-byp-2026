@@ -80,7 +80,7 @@ const Footer = () => {
                       </span>
                     </div>
                     <div className="icon-content">
-                      <p><a href="mailto:proyectos@byptech.com">proyectos@byptech.com</a></p>
+                      <p><a href="mailto:contacto@byptech.com">contacto@byptech.com</a></p>
                     </div>
                   </div>
                   <div className="icon-bx-wraper style-2">
