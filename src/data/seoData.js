@@ -133,7 +133,9 @@ const PAGINAS = {
 
   '/marcas': {
     title: 'Marcas que representamos en Perú | B&P Tech',
-    description: 'RONDO, DIOSNA, WINTERHALTER, TRUE, Pietroberto, Vitamix, Cainco, Pomati, American Pan y JBT Marel, con representación y respaldo técnico en Perú.',
+    // La lista anterior dejaba fuera a Mondial Forni desde que entro. Ahora nombra
+    // las principales y da la cuenta total.
+    description: 'JURA, RONDO, DIOSNA, WINTERHALTER, TRUE, Mondial Forni, Pietroberto, Vitamix y más: doce marcas de equipamiento alimentario con respaldo técnico en Perú.',
   },
   '/marcas/jura': {
     title: 'JURA Perú: cafeteras automáticas suizas | B&P Tech',

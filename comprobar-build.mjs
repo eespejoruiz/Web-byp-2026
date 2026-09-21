@@ -86,6 +86,22 @@ for (const ruta of todasLasRutas()) {
   }
 }
 
+// llms.txt: lo que leen los asistentes de IA. Tiene que existir, enlazar todas
+// las paginas reales y no enlazar ninguna que no exista.
+{
+  const p = path.join(BUILD, 'llms.txt');
+  if (!fs.existsSync(p)) fallos.push('no se genero llms.txt (node llms.mjs)');
+  else {
+    const txt = fs.readFileSync(p, 'utf8');
+    const enlazadas = new Set([...txt.matchAll(/\]\((https:\/\/byptech\.com[^)]*)\)/g)]
+      .map((m) => m[1].replace(SITIO, '').replace(/^$/, '/')));
+    const reales = new Set(todasLasRutas());
+    for (const e of enlazadas) if (!reales.has(e)) fallos.push(`llms.txt: enlaza ${e}, que no existe`);
+    const sinEnlace = [...reales].filter((r) => r !== '/' && !enlazadas.has(r));
+    if (sinEnlace.length) fallos.push(`llms.txt: faltan ${sinEnlace.join(', ')}`);
+  }
+}
+
 if (fallos.length) {
   console.error('El build NO esta listo para publicar:\n');
   fallos.forEach((f) => console.error(' -', f));

@@ -53,7 +53,7 @@ export const equiposData = [
     industries: ["hoteles-catering", "restaurantes", "cocinas-industriales", "otros"],
     parrafos: [
       "Una cafetera automática profesional resuelve el café de un negocio sin dedicarle una persona: muele el grano, extrae y espuma la leche con un botón, y el resultado no depende de quién la use. Es la solución de las oficinas, hoteles, comedores y restaurantes que sirven café todo el día.",
-      "Trabajamos con JURA, el fabricante suizo especializado en cafeteras automáticas, del que somos codistribuidores autorizados en el Perú. Su gama cubre tres volúmenes: la E8 para la gerencia o una oficina pequeña, la W8 para hasta 50 tazas al día y la X10 para hasta 100. Con técnico en 24 horas y repuestos garantizados por diez años.",
+      "Trabajamos con JURA, el fabricante suizo especializado en cafeteras automáticas, del que somos codistribuidores autorizados en el Perú. Su gama cubre tres volúmenes: la E8 para la gerencia o una oficina pequeña, la W8 para hasta 50 tazas al día y la X10 para hasta 100. Con instalación y capacitación incluidas, técnico en 24 horas y repuestos garantizados por diez años.",
     ],
   },
   {

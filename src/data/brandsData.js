@@ -60,7 +60,7 @@ export const brandsData = [
       { title: "Técnico en 24 horas", text: "Ese es nuestro tiempo de respuesta cuando una máquina necesita atención." },
       { title: "Repuestos por 10 años", text: "Garantizados para todos los modelos que vendemos." },
       { title: "Codistribuidor autorizado", text: "JURA nos eligió para vender sus cafeteras en el Perú." },
-      { title: "Café en grano, sin cápsulas", text: "Cada taza se muele en el momento de prepararla." },
+      { title: "Instalación y capacitación", text: "Incluidas: la dejamos funcionando y enseñamos a tu equipo a usarla." },
     ],
     sections: [
       {
@@ -73,7 +73,7 @@ export const brandsData = [
       {
         title: "Lo que añade comprarla con B&P Tech",
         paragraphs: [
-          "Una cafetera automática vale lo que vale su servicio. Por eso nos comprometemos a responder en 24 horas cuando una máquina necesita atención, y garantizamos repuestos para todos los modelos durante diez años.",
+          "Una cafetera automática vale lo que vale su servicio. Por eso la instalación y la capacitación de tu personal van incluidas: la dejamos funcionando en tu local y enseñamos a quienes la van a usar a preparar, limpiar y cuidar la máquina. Después, nos comprometemos a responder en 24 horas cuando necesite atención, y garantizamos repuestos para todos los modelos durante diez años.",
           "Y si tu negocio ya trabaja con nosotros por el lavavajillas Winterhalter, la refrigeración True o la línea de panadería, la cafetera entra en la misma relación: un solo proveedor, un solo interlocutor técnico, una sola factura.",
         ],
       },
@@ -103,6 +103,10 @@ export const brandsData = [
         a: "Depende de cuántas tazas sirves al día. Hasta 50, la W8. Hasta 100, la X10, que además prepara Cold Brew. Para la gerencia, una sala de reuniones o una oficina pequeña, la E8. Son los rendimientos máximos que recomienda JURA para cada modelo.",
       },
       {
+        q: "¿La instalación está incluida?",
+        a: "Sí. La instalación y la capacitación del personal van incluidas con la compra: dejamos la cafetera funcionando en tu local y enseñamos a tu equipo a usarla, limpiarla y mantenerla.",
+      },
+      {
         q: "¿Qué pasa si la cafetera falla?",
         a: "Nuestro tiempo de respuesta es de 24 horas. Una cafetera parada en una oficina o en un hotel se nota enseguida, y por eso es el compromiso que ponemos por delante.",
       },
@@ -124,11 +128,11 @@ export const brandsData = [
       },
       {
         q: "¿Se pueden alquilar?",
-        a: "No: trabajamos solo con venta. La máquina es de tu empresa, con su garantía y con repuestos asegurados por diez años.",
+        a: "No: trabajamos solo con venta. La máquina es de tu empresa, con instalación y capacitación incluidas y con repuestos asegurados por diez años.",
       },
     ],
     closingStatement:
-      "Una cafetera automática vale lo que vale su servicio. La nuestra viene con técnico en 24 horas y repuestos asegurados por diez años.",
+      "Una cafetera automática vale lo que vale su servicio. La nuestra llega instalada, con tu equipo capacitado, técnico en 24 horas y repuestos asegurados por diez años.",
   },
 
   {
