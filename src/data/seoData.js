@@ -80,11 +80,15 @@ const PAGINAS = {
 
   '/equipos': {
     title: 'Equipos por tipo de máquina | B&P Tech Perú',
-    description: 'Amasadoras, laminadoras, batidoras, refrigeración, lavavajillas, licuadoras y más: diez familias de equipo con las marcas que representamos en Perú.',
+    description: 'Amasadoras, laminadoras, batidoras, refrigeración, lavavajillas, licuadoras y más: doce familias de equipo con las marcas que representamos en Perú.',
   },
   '/equipos/hornos': {
     title: 'Hornos industriales para panadería en Perú | B&P Tech',
     description: 'Hornos Mondial Forni de tubos de vapor, eléctricos de pisos y rotativos de carro, con control MFTouch. Ocho modelos con representación y servicio técnico en Perú.',
+  },
+  '/equipos/cafeteras': {
+    title: 'Cafeteras automáticas profesionales en Perú | B&P Tech',
+    description: 'Cafeteras automáticas JURA para oficina, hotel y restaurante, de 50 a 100 tazas al día. Técnico en 24 horas y repuestos garantizados por 10 años en Perú.',
   },
   '/equipos/licuadoras': {
     title: 'Licuadoras profesionales en Perú | B&P Tech',
@@ -130,6 +134,10 @@ const PAGINAS = {
   '/marcas': {
     title: 'Marcas que representamos en Perú | B&P Tech',
     description: 'RONDO, DIOSNA, WINTERHALTER, TRUE, Pietroberto, Vitamix, Cainco, Pomati, American Pan y JBT Marel, con representación y respaldo técnico en Perú.',
+  },
+  '/marcas/jura': {
+    title: 'JURA Perú: cafeteras automáticas suizas | B&P Tech',
+    description: 'Cafeteras automáticas JURA E8, W8 y X10 para oficinas, hoteles y restaurantes. Codistribuidor autorizado, técnico en 24 h y repuestos por 10 años.',
   },
   '/marcas/mondialforni': {
     title: 'Mondial Forni en Perú: hornos de panificación | B&P Tech',

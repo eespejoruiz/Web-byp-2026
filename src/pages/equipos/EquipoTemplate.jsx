@@ -43,7 +43,7 @@ const EquipoTemplate = ({ slug }) => {
             items={[{ label: "Equipos", to: "/equipos" }, { label: familia.name }]}
           />
           <p className="byp-code">// EQUIPOS · {familia.name.toUpperCase()}</p>
-          <h1 className="byp-h1">{familia.name}</h1>
+          <h1 className="byp-h1">{familia.h1 || familia.name}</h1>
           <p className="byp-lead">{familia.tagline}</p>
         </div>
       </section>

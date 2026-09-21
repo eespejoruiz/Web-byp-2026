@@ -31,8 +31,10 @@ import Winterhalter from "./pages/brands/Winterhalter";
 import TrueBrand from "./pages/brands/True";
 import Pietroberto from "./pages/brands/Pietroberto";
 import MondialForni from "./pages/brands/MondialForni";
+import Jura from "./pages/brands/Jura";
 import EquiposIndex from './pages/equipos/EquiposIndex';
 import Hornos from './pages/equipos/Hornos';
+import Cafeteras from './pages/equipos/Cafeteras';
 import Licuadoras from './pages/equipos/Licuadoras';
 import Refrigeracion from './pages/equipos/Refrigeracion';
 import Amasadoras from './pages/equipos/Amasadoras';
@@ -101,6 +103,7 @@ function App() {
 
             <Route path='/equipos' element={<EquiposIndex />} />
             <Route path='/equipos/hornos' element={<Hornos />} />
+            <Route path='/equipos/cafeteras' element={<Cafeteras />} />
             <Route path='/equipos/licuadoras' element={<Licuadoras />} />
             <Route path='/equipos/refrigeracion' element={<Refrigeracion />} />
             <Route path='/equipos/amasadoras' element={<Amasadoras />} />
@@ -118,6 +121,7 @@ function App() {
             <Route path='/marcas/true' element={<TrueBrand />} />
             <Route path='/marcas/pietroberto' element={<Pietroberto />} />
             <Route path='/marcas/mondialforni' element={<MondialForni />} />
+            <Route path='/marcas/jura' element={<Jura />} />
             <Route path='/marcas/vitamix' element={<Vitamix />} />
             <Route path='/marcas/cainco' element={<Cainco />} />
             <Route path='/marcas/pomati' element={<Pomati />} />

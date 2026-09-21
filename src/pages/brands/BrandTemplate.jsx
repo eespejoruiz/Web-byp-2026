@@ -28,6 +28,23 @@ const Check = () => (
 
 const idx = (n) => String(n).padStart(2, "0") + "/";
 
+/* Bloques opcionales que estrenó JURA y que cualquier marca puede usar desde
+   brandsData: promise (barra de compromiso de servicio), selector (tabla para
+   elegir modelo) y faqs (preguntas frecuentes, que schemaData convierte además
+   en FAQPage). Si la marca no los trae, no se pinta nada. */
+const PromiseIcon = () => (
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <circle cx="12" cy="12" r="10.25" stroke="#f04e23" strokeWidth="1.5" />
+    <path d="M7.5 12.4l3 3 6-6.4" stroke="#f04e23" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+const Chevron = () => (
+  <svg className="byp-faq__chev" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
 const renderItem = (item, key) => {
   if (item == null) return null;
   if (typeof item === "string") return <li key={key}>{item}</li>;
@@ -80,7 +97,7 @@ const BrandTemplate = ({ slug }) => {
               // {brand.name} · {(brand.origin || "").toUpperCase()} ·{" "}
               {(brand.productType || "").toUpperCase()}
             </p>
-            <h1 className="byp-h1">{brand.name}</h1>
+            <h1 className="byp-h1">{brand.h1 || brand.name}</h1>
             <p className="byp-lead">{brand.tagline}</p>
             <Link className="byp-btn" to="/contacto">
               Contactar
@@ -104,6 +121,24 @@ const BrandTemplate = ({ slug }) => {
           </div>
         </div>
       </section>
+
+      {Array.isArray(brand.promise) && brand.promise.length > 0 && (
+        <section className="byp-promise" aria-label={`Compromiso de servicio de B&P Tech con ${brand.name}`}>
+          <div className="byp-wrap">
+            <ul className="byp-promise__list">
+              {brand.promise.map((p, i) => (
+                <li className="byp-promise__item" key={`pr-${i}`}>
+                  <PromiseIcon />
+                  <div>
+                    <strong>{p.title}</strong>
+                    <span>{p.text}</span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       {brand.ambientImage ? (
         <div className="byp-band">
@@ -152,6 +187,47 @@ const BrandTemplate = ({ slug }) => {
                   </div>
                 );
               })}
+
+            {/* Selector de modelo: tabla real en escritorio, tarjetas en movil */}
+            {brand.selector && Array.isArray(brand.selector.rows) && (() => {
+              sectionCount += 1;
+              const sel = brand.selector;
+              return (
+                <div className="byp-article__section">
+                  <div className="byp-article__head">
+                    <span className="byp-head__idx">{idx(sectionCount)}</span>
+                    <h2>{sel.title}</h2>
+                  </div>
+                  {sel.intro && <p>{sel.intro}</p>}
+                  <div className="byp-selector">
+                    <table className="byp-selector__table" role="table">
+                      <caption className="byp-sr-only">
+                        Comparativa de modelos {brand.name}: {sel.columns.join(", ")}
+                      </caption>
+                      <thead>
+                        <tr role="row">
+                          <th scope="col" role="columnheader">Modelo</th>
+                          {sel.columns.map((c) => (
+                            <th scope="col" role="columnheader" key={c}>{c}</th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {sel.rows.map((r) => (
+                          <tr role="row" key={r.model}>
+                            <th scope="row" role="rowheader">{brand.name} {r.model}</th>
+                            {r.values.map((v, i) => (
+                              <td role="cell" key={`${r.model}-${i}`} data-label={sel.columns[i]}>{v}</td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                  {sel.note && <p className="byp-selector__note">{sel.note}</p>}
+                </div>
+              );
+            })()}
 
             {/* Productos (marcas multi-producto, ej. Pietroberto) */}
             {Array.isArray(brand.products) &&
@@ -265,6 +341,30 @@ const BrandTemplate = ({ slug }) => {
                 <blockquote className="byp-quote">
                   {brand.closingStatement}
                 </blockquote>
+              </div>
+            )}
+
+            {/* Preguntas frecuentes: <details> nativo, accesible por teclado y
+                con la respuesta dentro del HTML prerenderizado */}
+            {Array.isArray(brand.faqs) && brand.faqs.length > 0 && (
+              <div className="byp-article__section">
+                <div className="byp-article__head">
+                  <span className="byp-head__idx">FAQ/</span>
+                  <h2>Preguntas frecuentes sobre {brand.name}</h2>
+                </div>
+                <div className="byp-faq">
+                  {brand.faqs.map((f, i) => (
+                    <details className="byp-faq__item" key={`faq-${i}`}>
+                      <summary className="byp-faq__q">
+                        <span>{f.q}</span>
+                        <Chevron />
+                      </summary>
+                      <div className="byp-faq__a">
+                        <p>{f.a}</p>
+                      </div>
+                    </details>
+                  ))}
+                </div>
               </div>
             )}
 

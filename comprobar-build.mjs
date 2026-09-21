@@ -19,7 +19,7 @@ const MINIMO_PALABRAS = 80;
 const RUTAS_OBLIGATORIAS = [
   '/', '/nosotros', '/contacto', '/blog', '/casos-de-exito', '/industrias', '/marcas',
   '/industrias/cocinas-industriales', '/industrias/panaderia', '/industrias/restaurantes',
-  '/marcas/rondo', '/marcas/winterhalter',
+  '/marcas/rondo', '/marcas/winterhalter', '/marcas/jura', '/equipos/cafeteras',
 ];
 
 const archivoDe = (ruta) =>

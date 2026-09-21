@@ -856,3 +856,54 @@ a.byp-chip:hover { border-color: var(--byp-navy); color: var(--byp-navy); }
 .byp-precta__btns{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px}
 .byp-contact-photo{width:100%;margin-top:24px;border-radius:6px;display:block}
 @media (max-width:900px){.byp-svcwrap{grid-template-columns:1fr}.byp-svcwrap__img{position:static}}
+
+/* ============================================================
+   Bloques opcionales de ficha de marca (estrenados con JURA, sep 2026)
+   promise · selector · faq. Contrastes medidos: #fff sobre navy-2 11,4:1;
+   #c9d3de sobre navy-2 7,6:1; dim sobre blanco 5,8:1. El naranja solo va en
+   iconos (3,2:1 sobre navy-2, por encima del 3:1 que piden los graficos).
+   ============================================================ */
+.byp-sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Barra de compromiso de servicio */
+.byp-promise{background:var(--byp-navy-2);color:#fff;border-top:1px solid rgba(255,255,255,.08)}
+.byp-promise__list{list-style:none;margin:0;padding:28px 0;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.byp-promise__item{display:flex;gap:12px;align-items:flex-start}
+.byp-promise__item svg{flex:0 0 auto;margin-top:1px}
+.byp-promise__item strong{display:block;font-size:15px;font-weight:600;line-height:1.3;color:#fff}
+.byp-promise__item span{display:block;margin-top:4px;font-size:13.5px;line-height:1.45;color:#c9d3de}
+@media (max-width:991px){.byp-promise__list{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.byp-promise__list{grid-template-columns:1fr;gap:16px;padding:20px 0}}
+
+/* Selector de modelo */
+.byp-selector{margin-top:18px;border:1px solid var(--byp-line);background:var(--byp-card)}
+.byp-selector__table{width:100%;border-collapse:collapse;font-size:14px}
+.byp-selector__table thead th{font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--byp-dim);text-align:left;padding:12px 14px;background:var(--byp-bg);border-bottom:1px solid var(--byp-line)}
+.byp-selector__table tbody th,.byp-selector__table tbody td{padding:14px;border-top:1px solid var(--byp-line);vertical-align:top;color:var(--byp-txt);text-align:left}
+.byp-selector__table tbody tr:first-child th,.byp-selector__table tbody tr:first-child td{border-top:0}
+.byp-selector__table tbody th{font-weight:600;color:var(--byp-navy);white-space:nowrap}
+.byp-selector__table tbody td:nth-of-type(1){font-weight:600;font-variant-numeric:tabular-nums}
+.byp-selector__note{margin-top:10px!important;font-size:13px!important;color:var(--byp-dim)!important}
+@media (max-width:760px){
+  .byp-selector{border:0;background:transparent}
+  .byp-selector__table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+  .byp-selector__table,.byp-selector__table tbody,.byp-selector__table tr,.byp-selector__table tbody th,.byp-selector__table tbody td{display:block;width:100%}
+  .byp-selector__table tr{background:var(--byp-card);border:1px solid var(--byp-line);margin-bottom:12px}
+  .byp-selector__table tbody th{background:var(--byp-navy);color:#fff;padding:12px 14px;border:0}
+  .byp-selector__table tbody td,.byp-selector__table tbody tr:first-child td{display:flex;justify-content:space-between;gap:16px;padding:10px 14px;border-top:1px solid var(--byp-line);text-align:right}
+  .byp-selector__table tbody td::before{content:attr(data-label);flex:0 0 44%;text-align:left;font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--byp-dim)}
+}
+
+/* Preguntas frecuentes */
+.byp-faq{margin-top:10px;border-top:1px solid var(--byp-line)}
+.byp-faq__item{border-bottom:1px solid var(--byp-line)}
+.byp-faq__q{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:48px;padding:14px 2px;font-size:16px;font-weight:600;line-height:1.4;color:var(--byp-txt)}
+.byp-faq__q::-webkit-details-marker{display:none}
+.byp-faq__q::marker{content:""}
+.byp-faq__q:hover{color:var(--byp-navy)}
+.byp-faq__q:focus-visible{outline:2px solid var(--byp-navy);outline-offset:2px}
+.byp-faq__chev{flex:0 0 auto;color:var(--byp-dim);transition:transform .2s ease-out}
+.byp-faq__item[open] .byp-faq__chev{transform:rotate(180deg)}
+.byp-faq__a{padding:0 2px 18px}
+.byp-faq__a p{margin:0!important;font-size:15.5px;line-height:1.6;color:var(--byp-txt)}
+@media (prefers-reduced-motion:reduce){.byp-faq__chev{transition:none}}

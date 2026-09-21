@@ -42,8 +42,12 @@ function imagenAbsoluta(x) {
   return encodeURI(url);
 }
 
-/** Dominio oficial del fabricante, deducido de las fichas de producto. */
+/** Dominio oficial del fabricante, deducido de las fichas de producto.
+ *  Si la marca declara officialSite, manda ese: las fichas de JURA se verificaron
+ *  en pe.jura.com, que es la web del pais, y el fabricante es jura.com. */
 function webDeMarca(slug) {
+  const m = brandsData.find((b) => b.slug === slug);
+  if (m && m.officialSite) return m.officialSite;
   const p = productsData.find((x) => x.brand === slug && x.source);
   if (!p) return null;
   try {
@@ -234,6 +238,19 @@ export function schemaDeRuta(pathname) {
       const suyos = productsData.filter((p) => p.brand === slug);
       const lista = listaDeProductos(suyos, `Equipos ${marca.name} disponibles en Perú`, ruta);
       if (lista) nodos.push(lista);
+
+      // Las preguntas frecuentes que se pintan en la ficha, tal cual, como FAQPage.
+      if (Array.isArray(marca.faqs) && marca.faqs.length) {
+        nodos.push({
+          '@type': 'FAQPage',
+          '@id': abs(ruta) + '#preguntas',
+          mainEntity: marca.faqs.map((f) => ({
+            '@type': 'Question',
+            name: f.q,
+            acceptedAnswer: { '@type': 'Answer', text: f.a },
+          })),
+        });
+      }
     }
     return nodos;
   }

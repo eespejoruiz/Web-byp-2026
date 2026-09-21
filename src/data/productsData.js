@@ -41,6 +41,10 @@ import americanpanRack from "../assets/images/products/americanpan-rack.webp";
 
 import pomatiT35 from "../assets/images/products/pomati-t35.webp";
 
+import juraX10 from "../assets/images/products/jura-x10.webp";
+import juraW8 from "../assets/images/products/jura-w8.webp";
+import juraE8 from "../assets/images/products/jura-e8.webp";
+
 export const productBrandNames = {
   rondo: "RONDO",
   diosna: "DIOSNA",
@@ -53,9 +57,92 @@ export const productBrandNames = {
   jbtmarel: "JBT MAREL · TREIF",
   americanpan: "AMERICAN PAN",
   pomati: "POMATI",
+  jura: "JURA",
 };
 
 export const productsData = [
+  // --- JURA · cafeteras automaticas -------------------------------------------
+  // Son los tres modelos que JURA comercializa hoy en el Peru, y los tres los vende
+  // B&P Tech como codistribuidor autorizado. Cada cifra sale de la pestana "Datos
+  // tecnicos" de su ficha en pe.jura.com, leida el 21 de septiembre de 2026; la URL
+  // de cada ficha va en source. El rendimiento diario es el "maximo recomendado"
+  // que publica JURA. La E8 es de uso domestico y JURA no le publica ninguno, asi
+  // que aqui tampoco se le inventa.
+  {
+    id: "jura-x10",
+    brand: "jura",
+    name: "JURA X10",
+    category: "Cafetera automática profesional",
+    description:
+      "La profesional de mayor capacidad que JURA vende en el Perú: hasta 100 tazas al día y 35 especialidades, incluidas las de Cold Brew, que extrae en frío café recién molido con solo pulsar un botón. Pensada para oficinas grandes, comedores, zonas de autoservicio y centros de salud.",
+    specs: {
+      "Rendimiento diario recomendado": "Hasta 100 tazas",
+      "Tazas por hora (DIN 18873-2)": "92 espressos · 68 cafés · 72 cappuccinos",
+      "Especialidades": "35, con Cold Brew",
+      "Depósito de agua": "5 l",
+      "Café en grano": "500 g, ampliable a 1 kg",
+      "Molino": "P.A.G.2+",
+      "Pago y telemetría": "MDB 2.0 y JURA Pocket Pilot (opcionales)",
+      "Alimentación": "230 V · 1.450 W",
+      "Dimensiones (an × al × p)": "37,3 × 47 × 46,1 cm",
+      "Peso": "13,2 kg",
+      "Fabricación": "Suiza",
+    },
+    image: juraX10,
+    industries: ["hoteles-catering", "restaurantes", "cocinas-industriales", "otros"],
+    source: "https://pe.jura.com/es/productos-professional/cafeteras-automaticas/x10-dark-inox-custa-15708",
+    featured: true,
+  },
+  {
+    id: "jura-w8",
+    brand: "jura",
+    name: "JURA W8",
+    category: "Cafetera automática profesional",
+    description:
+      "Profesional compacta para hasta 50 tazas al día: 17 especialidades en 29,5 cm de ancho, depósito de agua y de café con cierre, y bloqueo de funciones para controlar quién usa qué. Para oficinas, tiendas, estudios y locales comerciales.",
+    specs: {
+      "Rendimiento diario recomendado": "Hasta 50 tazas",
+      "Tazas por hora (DIN 18873-2)": "83 espressos · 74 cafés · 50 cappuccinos",
+      "Especialidades": "17",
+      "Depósito de agua": "3 l",
+      "Café en grano": "500 g",
+      "Molino": "P.A.G.2",
+      "Pago y telemetría": "MDB 2.0 y JURA Pocket Pilot (opcionales)",
+      "Alimentación": "230 V · 1.450 W",
+      "Dimensiones (an × al × p)": "29,5 × 44,3 × 44,6 cm",
+      "Peso": "12,7 kg",
+      "Fabricación": "Portugal",
+    },
+    image: juraW8,
+    industries: ["restaurantes", "hoteles-catering", "otros"],
+    source: "https://pe.jura.com/es/productos-professional/cafeteras-automaticas/W8-Dark-Inox-CUSTA-15709",
+    featured: true,
+  },
+  {
+    id: "jura-e8",
+    brand: "jura",
+    name: "JURA E8",
+    category: "Cafetera automática",
+    description:
+      "La automática de la línea doméstica de JURA: 17 especialidades con café recién molido, molino P.A.G.2 y limpieza del sistema de leche con un botón. Para la gerencia, una sala de reuniones o una oficina pequeña. Disponible en Piano Black y Piano White.",
+    specs: {
+      "Uso": "Doméstico y oficina pequeña",
+      "Especialidades": "17",
+      "Depósito de agua": "1,9 l",
+      "Café en grano": "280 g",
+      "Molino": "P.A.G.2",
+      "Acabados": "Piano Black · Piano White",
+      "Alimentación": "230 V · 1.450 W",
+      "Dimensiones (an × al × p)": "28 × 35,1 × 44,6 cm",
+      "Peso": "10 kg",
+      "Fabricación": "Portugal",
+    },
+    image: juraE8,
+    industries: ["otros"],
+    source: "https://pe.jura.com/es/productos-uso-domestico/cafeteras-automaticas/e8-piano-black-custc-15688",
+    featured: false,
+  },
+
   // --- Mondial Forni · hornos --------------------------------------------
   // Catalogo verificado en mondialforni.com el 15 de septiembre de 2026.
   // Todas las cifras son las que publica el fabricante; nada esta redondeado

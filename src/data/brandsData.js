@@ -29,9 +29,108 @@ import americanpanLogo from "../assets/images/brands/americanpan-logo.png";
 import americanpanHero from "../assets/images/products/americanpan-bread-tins.webp";
 import jbtmarelLogo from "../assets/images/brands/jbtmarel-logo.svg";
 import jbtmarelHero from "../assets/images/products/jbtmarel-treif-divider-660.webp";
+// JURA: material grafico oficial de la marca, con autorizacion de uso para B&P
+// Tech como codistribuidor. Salen de api.jura.com, las mismas fichas del Peru.
+import juraLogo from "../assets/images/brands/jura-logo.png";
+import juraHero from "../assets/images/brands/jura-x10-hero.webp";
+import juraAmbient from "../assets/images/gen/brand-jura.webp";
 
 
 export const brandsData = [
+  {
+    slug: "jura",
+    route: "/marcas/jura",
+    name: "JURA",
+    // El H1 por defecto es el nombre de la marca. Aqui se dice lo que se busca:
+    // "cafetera jura" y "jura peru" son las dos consultas de marca con volumen.
+    h1: "Cafeteras JURA en Perú",
+    logo: juraLogo,
+    heroImage: juraHero,
+    ambientImage: juraAmbient,
+    origin: "Suiza",
+    productType: "Cafeteras automáticas",
+    // B&P Tech es CODISTRIBUIDOR autorizado; el distribuidor oficial en el Peru es
+    // otra empresa. Ningun texto de esta ficha debe decir "oficial" ni "representante".
+    tagline: "Cafeteras automáticas suizas para oficinas, hoteles y restaurantes",
+    shortDescription:
+      "Cafeteras automáticas suizas que muelen el grano para cada taza: E8, W8 y X10, de hasta 100 tazas al día, con técnico en 24 horas y repuestos garantizados por 10 años.",
+    officialSite: "https://www.jura.com",
+    industries: ["hoteles-catering", "restaurantes", "cocinas-industriales", "otros"],
+    promise: [
+      { title: "Técnico en 24 horas", text: "Ese es nuestro tiempo de respuesta cuando una máquina necesita atención." },
+      { title: "Repuestos por 10 años", text: "Garantizados para todos los modelos que vendemos." },
+      { title: "Codistribuidor autorizado", text: "JURA nos eligió para vender sus cafeteras en el Perú." },
+      { title: "Café en grano, sin cápsulas", text: "Cada taza se muele en el momento de prepararla." },
+    ],
+    sections: [
+      {
+        title: "Café de barista, sin barista",
+        paragraphs: [
+          "Una cafetera automática JURA muele el grano, dosifica, extrae y espuma la leche con un solo botón. En un negocio eso significa algo muy concreto: el café sale igual de bueno lo prepare quien lo prepare, en el primer turno y en el último.",
+          "Detrás hay dos tecnologías propias de la marca. El molino P.A.G.2 muele cada taza en el momento y entra en reposo entre preparación y preparación, que es lo que alarga su vida útil. Y el Proceso de Extracción por Pulsos (P.E.P.) hace pasar el agua a intervalos cortos, que es de donde sale el espresso intenso de las JURA.",
+        ],
+      },
+      {
+        title: "Lo que añade comprarla con B&P Tech",
+        paragraphs: [
+          "Una cafetera automática vale lo que vale su servicio. Por eso nos comprometemos a responder en 24 horas cuando una máquina necesita atención, y garantizamos repuestos para todos los modelos durante diez años.",
+          "Y si tu negocio ya trabaja con nosotros por el lavavajillas Winterhalter, la refrigeración True o la línea de panadería, la cafetera entra en la misma relación: un solo proveedor, un solo interlocutor técnico, una sola factura.",
+        ],
+      },
+    ],
+    selector: {
+      title: "Elige por tazas al día, no por modelo",
+      intro:
+        "La pregunta que decide la compra no es qué modelo es más nuevo, sino cuántos cafés se sirven en un día normal. JURA publica para sus profesionales un rendimiento diario máximo recomendado, y esa es la cifra con la que conviene elegir: pasarse de él exige de más a la máquina, y quedarse muy por debajo es pagar capacidad que no se usa.",
+      note: "Rendimiento diario máximo recomendado y tazas por hora según JURA (norma DIN 18873-2). La E8 es de la línea doméstica y JURA no le publica rendimiento profesional.",
+      columns: ["Tazas al día", "Espressos por hora", "Especialidades", "Depósito de agua", "Café en grano", "Pensada para"],
+      rows: [
+        { model: "E8", to: null, values: ["Uso doméstico", "—", "17", "1,9 l", "280 g", "Gerencia, sala de reuniones, oficina pequeña"] },
+        { model: "W8", to: null, values: ["Hasta 50", "83", "17", "3 l", "500 g", "Oficinas, tiendas, estudios y locales comerciales"] },
+        { model: "X10", to: null, values: ["Hasta 100", "92", "35, con Cold Brew", "5 l", "500 g a 1 kg", "Oficinas grandes, comedores, autoservicio y centros de salud"] },
+      ],
+    },
+    advantages: [
+      "Café en grano recién molido para cada taza, sin cápsulas.",
+      "Limpieza del sistema de leche automática, con un botón, en los tres modelos.",
+      "Higiene con certificación TÜV y filtro de agua CLARIS integrado.",
+      "W8 y X10 compatibles con sistemas de pago y telemetría (MDB 2.0 y JURA Pocket Pilot, opcionales), para cobrar el café en zonas de autoservicio.",
+      "La X10 prepara Cold Brew en el momento, extraído en frío a partir de grano recién molido.",
+    ],
+    faqs: [
+      {
+        q: "¿Qué cafetera JURA necesito para mi negocio?",
+        a: "Depende de cuántas tazas sirves al día. Hasta 50, la W8. Hasta 100, la X10, que además prepara Cold Brew. Para la gerencia, una sala de reuniones o una oficina pequeña, la E8. Son los rendimientos máximos que recomienda JURA para cada modelo.",
+      },
+      {
+        q: "¿Qué pasa si la cafetera falla?",
+        a: "Nuestro tiempo de respuesta es de 24 horas. Una cafetera parada en una oficina o en un hotel se nota enseguida, y por eso es el compromiso que ponemos por delante.",
+      },
+      {
+        q: "¿Hay repuestos en el Perú?",
+        a: "Sí. Garantizamos repuestos para todos los modelos JURA que vendemos durante diez años.",
+      },
+      {
+        q: "¿Usa cápsulas?",
+        a: "No. Las JURA trabajan con café en grano, que muelen en el momento de preparar cada taza. Eso permite trabajar con el café que elijas, sin depender de las cápsulas de una marca.",
+      },
+      {
+        q: "¿Se puede cobrar el café en una zona de autoservicio?",
+        a: "Sí, con la W8 y la X10. Las dos admiten la conexión MDB 2.0, que las enlaza con los sistemas de pago habituales, y el software gratuito JURA Pocket Pilot para pago sin contacto y gestión. Ambos son opcionales.",
+      },
+      {
+        q: "¿Sirve para una cafetería de especialidad?",
+        a: "Para una barra con barista y más de cien tazas al día conviene una máquina de espresso tradicional. Una JURA brilla justo donde no hay barista: oficinas, hoteles, comedores y restaurantes que sirven café sin dedicarle una persona.",
+      },
+      {
+        q: "¿Se pueden alquilar?",
+        a: "No: trabajamos solo con venta. La máquina es de tu empresa, con su garantía y con repuestos asegurados por diez años.",
+      },
+    ],
+    closingStatement:
+      "Una cafetera automática vale lo que vale su servicio. La nuestra viene con técnico en 24 horas y repuestos asegurados por diez años.",
+  },
+
   {
     slug: "mondialforni",
     route: "/marcas/mondialforni",

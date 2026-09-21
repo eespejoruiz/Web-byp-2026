@@ -10,6 +10,7 @@ import lavavajillasHero from "../assets/images/brands/winterhalter-u50.webp";
 import moldesHero from "../assets/images/products/americanpan-bread-tins.webp";
 import cortadorasHero from "../assets/images/products/jbtmarel-treif-divider-660.webp";
 import chocolateHero from "../assets/images/products/pomati-t35.webp";
+import cafeterasHero from "../assets/images/brands/jura-w8-latte.webp";
 
 /**
  * Catálogo por TIPO DE MÁQUINA.
@@ -37,6 +38,22 @@ export const equiposData = [
     parrafos: [
       "Es la familia con más demanda de todo el sector en el Perú: entre «horno industrial», «horno convector», «horno para pan», «hornos para panadería», «horno eléctrico industrial» y «horno rotativo» suman del orden de 3.320 búsquedas al mes. Y es también la inversión que más condiciona qué se puede producir.",
       "Mondial Forni fabrica en Italia las tres familias. Los de tubos de vapor cuecen por inercia térmica, con el calor entrando desde la solera, que es lo que pide el pan de gran formato. Los eléctricos de pisos dan control independiente piso a piso, así que se hornea a la vez a temperaturas distintas. Y los rotativos de carro son los de mayor rotación por hora. Los ocho modelos llevan el mismo control MFTouch, que guarda la curva de cada producto en la máquina y no en la cabeza de quien esté ese turno.",
+    ],
+  },
+  {
+    slug: "cafeteras",
+    route: "/equipos/cafeteras",
+    name: "Cafeteras",
+    // "cafetera profesional" (390/mes) y "cafetera automatica" (480/mes) son las
+    // consultas de la categoria; el nombre corto se queda para menus y migas.
+    h1: "Cafeteras automáticas profesionales",
+    tagline: "Automáticas profesionales para oficina, hotel y restaurante",
+    heroImage: cafeterasHero,
+    categorias: ["Cafetera automática profesional", "Cafetera automática"],
+    industries: ["hoteles-catering", "restaurantes", "cocinas-industriales", "otros"],
+    parrafos: [
+      "Una cafetera automática profesional resuelve el café de un negocio sin dedicarle una persona: muele el grano, extrae y espuma la leche con un botón, y el resultado no depende de quién la use. Es la solución de las oficinas, hoteles, comedores y restaurantes que sirven café todo el día.",
+      "Trabajamos con JURA, el fabricante suizo especializado en cafeteras automáticas, del que somos codistribuidores autorizados en el Perú. Su gama cubre tres volúmenes: la E8 para la gerencia o una oficina pequeña, la W8 para hasta 50 tazas al día y la X10 para hasta 100. Con técnico en 24 horas y repuestos garantizados por diez años.",
     ],
   },
   {

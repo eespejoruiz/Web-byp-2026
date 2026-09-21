@@ -5,6 +5,13 @@ import { getBrandBySlug } from "../../data/brandsData";
 import BypBreadcrumbs from "../../components/byp/BypBreadcrumbs";
 import { waQuotePage } from "../../utils/whatsapp";
 
+// Decia "Diez familias" escrito a mano y ya eran once cuando entraron los
+// hornos. La cuenta sale ahora de equiposData.
+const PALABRAS = ["Cero", "Una", "Dos", "Tres", "Cuatro", "Cinco", "Seis", "Siete", "Ocho",
+  "Nueve", "Diez", "Once", "Doce", "Trece", "Catorce", "Quince", "Dieciséis", "Diecisiete",
+  "Dieciocho", "Diecinueve", "Veinte"];
+const familiasEnPalabras = (n) => PALABRAS[n] || String(n);
+
 /**
  * Indice del catalogo por tipo de maquina. Es el tercer eje del sitio, junto a
  * /industrias/ (quien eres) y /marcas/ (que marca compras): que maquina necesitas.
@@ -18,7 +25,7 @@ const EquiposIndex = () => (
         <p className="byp-code">// EQUIPOS</p>
         <h1 className="byp-h1">Equipos por tipo de máquina</h1>
         <p className="byp-lead">
-          Diez familias de equipo, con las marcas que representamos en cada una y
+          {familiasEnPalabras(equiposData.length)} familias de equipo, con las marcas que representamos en cada una y
           respaldo técnico en el Perú.
         </p>
       </div>
