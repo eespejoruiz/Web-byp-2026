@@ -825,6 +825,8 @@ a.byp-chip:hover { border-color: var(--byp-navy); color: var(--byp-navy); }
 .byp-menu__subcol p{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--byp-orange);margin:0 0 6px;border-bottom:1px solid rgba(255,255,255,.14);padding-bottom:6px}
 .byp-menu__sub--brands{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
 .byp-menu__sub--brands a{font-weight:600}
+/* Desplegables cerrados: estan en el HTML (para los enlaces) pero no se ven. */
+.byp-menu__sub[hidden]{display:none}
 .byp-menu__aside{border-left:1px solid rgba(255,255,255,.14);padding-left:36px;position:sticky;top:110px}
 .byp-menu__tag{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.18em;color:#8fa6c2;margin-bottom:26px}
 .byp-menu__contact{display:block;color:#fff;font-family:"Archivo",sans-serif;font-weight:600;font-size:19px;padding:8px 0}

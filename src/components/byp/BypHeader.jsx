@@ -140,8 +140,13 @@ const BypHeader = () => {
                       </button>
                     )}
                   </div>
-                  {l.sub === "ind" && expand === "ind" && (
-                    <div className="byp-menu__sub">
+                  {/* Los tres desplegables van siempre en el HTML y se ocultan con
+                      `hidden` mientras estan cerrados. Antes solo existian al pulsar
+                      el "+", asi que el HTML que lee Google no tenia ningun enlace a
+                      las familias de /equipos/ ni a buena parte de industrias y marcas:
+                      cada familia recibia un solo enlace interno en todo el sitio. */}
+                  {l.sub === "ind" && (
+                    <div className="byp-menu__sub" hidden={expand !== "ind"}>
                       {MEGA_COLUMNS.map((col) => (
                         <div key={col.title} className="byp-menu__subcol">
                           <p>{col.title}</p>
@@ -152,15 +157,15 @@ const BypHeader = () => {
                       ))}
                     </div>
                   )}
-                  {l.sub === "equipos" && expand === "equipos" && (
-                    <div className="byp-menu__sub byp-menu__sub--brands">
+                  {l.sub === "equipos" && (
+                    <div className="byp-menu__sub byp-menu__sub--brands" hidden={expand !== "equipos"}>
                       {equiposData.map((f) => (
                         <Link key={f.slug} to={f.route} onClick={closeAll}>{f.name}</Link>
                       ))}
                     </div>
                   )}
-                  {l.sub === "marcas" && expand === "marcas" && (
-                    <div className="byp-menu__sub byp-menu__sub--brands">
+                  {l.sub === "marcas" && (
+                    <div className="byp-menu__sub byp-menu__sub--brands" hidden={expand !== "marcas"}>
                       {brandsData.map((b) => (
                         <Link key={b.slug} to={b.route} onClick={closeAll}>{b.name}</Link>
                       ))}
