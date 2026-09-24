@@ -28,6 +28,11 @@ const WEB_ID = `${SITIO}/#sitio`;
 const TELEFONO = '+51985362946';
 const EMAIL = 'contacto@byptech.com';
 
+// Ficha de Google Business. Va por su CID, que no cambia: el enlace corto del
+// botón «Compartir» (maps.app.goo.gl) es solo una redirección. En la ficha el
+// nombre figura como «ByP Tech», y alternateName ata esa forma con B&P Tech.
+const FICHA_GOOGLE = 'https://maps.google.com/?cid=16611350200792533192';
+
 const abs = (ruta) => SITIO + (ruta === '/' ? '/' : ruta);
 
 /**
@@ -63,11 +68,13 @@ function organizacion() {
     '@type': 'Organization',
     '@id': ORG_ID,
     name: 'B&P Tech',
+    alternateName: 'ByP Tech',
     url: SITIO + '/',
     ...(logo ? { logo } : {}),
     description: 'Distribuidor en Perú de maquinaria y equipamiento para la industria alimentaria.',
     telephone: TELEFONO,
     email: EMAIL,
+    sameAs: [FICHA_GOOGLE],
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Lima',
