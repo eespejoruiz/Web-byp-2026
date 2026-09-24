@@ -92,7 +92,7 @@ const ourService = [
       </svg>
     ),
     text: "Stock Real en Perú",
-    desc: "Disponibilidad inmediata de equipos clave para que tu proyecto no sufra demoras.",
+    desc: "Equipos TRUE, Winterhalter, Vitamix y JURA en almacén en Lima, para que tu proyecto no espere.",
   },
   {
     icon: (
@@ -101,7 +101,7 @@ const ourService = [
       </svg>
     ),
     text: "Repuestos Originales",
-    desc: "Inventario permanente de piezas y consumibles para asegurar la vida útil de tu inversión.",
+    desc: "En stock en Lima para TRUE, Winterhalter, Vitamix y JURA. En panificación, la pieza exacta pedida a fábrica con tu número de serie.",
   },
   {
     icon: (
@@ -109,8 +109,8 @@ const ourService = [
         <path d="M12 8a4 4 0 1 1-4 4 4 4 0 0 1 4-4zm0-6a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2z" />
       </svg>
     ),
-    text: "Soporte 24/7",
-    desc: "Servicio técnico preventivo y correctivo de respuesta rápida para operaciones críticas.",
+    text: "Soporte Técnico",
+    desc: "Emergencias 24/7 en TRUE, Winterhalter, Vitamix y JURA. En Rondo, Diosna, Pietroberto y Mondial Forni, diagnóstico el mismo día, de lunes a sábado.",
   },
 ];
 

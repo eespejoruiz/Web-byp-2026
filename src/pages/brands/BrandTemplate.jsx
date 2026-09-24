@@ -6,6 +6,7 @@ import { getProductsByBrand } from "../../data/productsData";
 import BypProductGrid from "../../components/byp/BypProductGrid";
 import BypBreadcrumbs from "../../components/byp/BypBreadcrumbs";
 import { industryData } from "../../data/industryData";
+import { equiposData, getBrandsByEquipo } from "../../data/equiposData";
 
 const Check = () => (
   <svg
@@ -79,6 +80,8 @@ const BrandTemplate = ({ slug }) => {
   }
 
   const brandProducts = getProductsByBrand(slug);
+
+  const familiasDeMarca = brand ? equiposData.filter((f) => getBrandsByEquipo(f.slug).includes(brand.slug)) : [];
 
   const relatedIndustries = (brand.industries || [])
     .map((s) => industryData.find((i) => i.slug === s))
@@ -404,6 +407,23 @@ const BrandTemplate = ({ slug }) => {
                         <p>{f.a}</p>
                       </div>
                     </details>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Familias de equipo en las que esta la marca */}
+            {familiasDeMarca.length > 0 && (
+              <div className="byp-article__section">
+                <div className="byp-article__head">
+                  <span className="byp-head__idx">TE/</span>
+                  <h2>Equipos {brand.name} por tipo de máquina</h2>
+                </div>
+                <div className="byp-chips">
+                  {familiasDeMarca.map((f) => (
+                    <Link className="byp-chip" to={f.route} key={f.slug}>
+                      {f.name.toUpperCase()}
+                    </Link>
                   ))}
                 </div>
               </div>

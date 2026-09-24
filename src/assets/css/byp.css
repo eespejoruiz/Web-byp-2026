@@ -947,3 +947,16 @@ a.byp-chip:hover { border-color: var(--byp-navy); color: var(--byp-navy); }
 .byp-cons__meta{display:block;margin-top:3px;font-size:13px;line-height:1.45;color:var(--byp-dim)}
 .byp-cons__code{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--byp-navy);margin-right:8px;font-variant-numeric:tabular-nums}
 @media (max-width:991px){.byp-cons{grid-template-columns:1fr}}
+
+/* En móvil la barra inferior ocupa el pie de la pantalla: el botón de subir
+   va encima de ella en vez de tapar la pestaña «Menú». */
+@media (max-width:991.98px){
+  .scroltop{bottom:calc(80px + env(safe-area-inset-bottom))}
+}
+
+/* Familias de /equipos/: en celular el texto y las marcas van uno debajo del
+   otro. El estilo en línea de EquipoTemplate fijaba dos columnas en todas las
+   pantallas y el texto quedaba en media pantalla (de ahí el !important). */
+@media (max-width:767.98px){
+  .byp-eqgrid{grid-template-columns:1fr !important;gap:28px !important}
+}

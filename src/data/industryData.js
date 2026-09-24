@@ -564,6 +564,7 @@ export const industryData = [
     slug: "cocinas-industriales",
     route: "/industria/cocinas-industriales",
     title: "Cocinas Industriales",
+    h1: "Equipamiento para cocinas industriales",
     description:
       "Producción masiva con enfoque de ingeniería: cocción a gran escala, seguridad y repetibilidad.",
     heroImage: indCocinas,

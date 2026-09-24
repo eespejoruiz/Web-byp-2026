@@ -6,6 +6,7 @@ import { getIndustryBySlug, industryData } from "../../data/industryData";
 import { getBrandsByIndustry } from "../../data/brandsData";
 import { getProductsByIndustry } from "../../data/productsData";
 import BypProductGrid from "../../components/byp/BypProductGrid";
+import { equiposData } from "../../data/equiposData";
 
 const idx = (n) => String(n).padStart(2, "0") + "/";
 
@@ -23,6 +24,7 @@ const IndustryTemplate = ({ slug }) => {
   const industry = getIndustryBySlug(slug);
   const relatedBrands = getBrandsByIndustry(slug);
   const industryProducts = getProductsByIndustry(slug);
+  const familiasDeIndustria = equiposData.filter((f) => (f.industries || []).includes(slug));
   const indNumber = industryData.findIndex((i) => i.slug === slug) + 1;
   const ref = `IND-${String(indNumber > 0 ? indNumber : 0).padStart(3, "0")}`;
 
@@ -53,7 +55,7 @@ const IndustryTemplate = ({ slug }) => {
         <div className="byp-wrap">
           <p className="byp-code">// {ref} · SOLUCIONES POR INDUSTRIA</p>
           <BypBreadcrumbs variant="dark" items={[{ label: "Industrias", to: "/industrias" }, { label: industry.title }]} />
-          <h1 className="byp-h1">{industry.title}</h1>
+          <h1 className="byp-h1">{industry.h1 || industry.title}</h1>
           <p className="byp-lead">{industry.description}</p>
           {Array.isArray(industry.keyStations) &&
             industry.keyStations.length > 0 && (
@@ -110,6 +112,23 @@ const IndustryTemplate = ({ slug }) => {
                     ))}
                 </div>
               ))}
+
+            {/* Equipos por tipo de maquina que se usan en esta industria */}
+            {familiasDeIndustria.length > 0 && (
+              <div className="byp-article__section">
+                <div className="byp-article__head">
+                  <span className="byp-head__idx">TE/</span>
+                  <h2>Equipos por tipo de máquina</h2>
+                </div>
+                <div className="byp-chips">
+                  {familiasDeIndustria.map((f) => (
+                    <Link className="byp-chip" to={f.route} key={f.slug}>
+                      {f.name.toUpperCase()}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Marcas para esta industria */}
             {relatedBrands.length > 0 && (

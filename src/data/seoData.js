@@ -33,9 +33,13 @@ const PAGINAS = {
     title: 'Soluciones por industria | B&P Tech Perú',
     description: 'Equipamiento por vertical: restaurantes, panadería, cocinas industriales, supermercados, hoteles, comida rápida, laboratorios, carnicerías y estadios.',
   },
+  // «cocinas industriales» (5.400/mes) es, en Google, gente que compra cocinas
+  // a gas de hornillas (SERP de Ilumi, Cimmsa, Promart, Sodimac, 23-sep-2026),
+  // y B&P no las vende. La pagina apunta a quien equipa una cocina entera:
+  // «equipamiento de cocinas industriales» (CPC US$1,41, el mas alto del sector).
   '/industrias/cocinas-industriales': {
-    title: 'Cocinas industriales: equipamiento y proyectos | B&P Tech',
-    description: 'Cocción a gran escala con criterio de ingeniería: equipos, distribución y seguridad para cocinas industriales de alto volumen en Perú.',
+    title: 'Equipamiento para cocinas industriales en Perú | B&P Tech',
+    description: 'Diseño y equipamiento de cocinas industriales y comedores de alto volumen: frío, cocción, panificación y lavado con marcas líderes y soporte en Perú.',
   },
   '/industrias/panaderia': {
     title: 'Equipos para panadería y pastelería industrial | B&P Tech',
