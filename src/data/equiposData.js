@@ -74,6 +74,72 @@ export const equiposData = [
       "Una cafetera automática profesional resuelve el café de un negocio sin dedicarle una persona: muele el grano, extrae y espuma la leche con un botón, y el resultado no depende de quién la use. Es la solución de las oficinas, hoteles, comedores y restaurantes que sirven café todo el día.",
       "Trabajamos con JURA, el fabricante suizo especializado en cafeteras automáticas, del que somos codistribuidores autorizados en el Perú. Su gama cubre tres volúmenes: la E8 para la gerencia o una oficina pequeña, la W8 para hasta 50 tazas al día y la X10 para hasta 100. Con instalación y capacitación incluidas, técnico en 24 horas y repuestos garantizados por diez años.",
     ],
+    // Guía para elegir, aprobada por Enrique el 2-oct-2026 como sección de esta
+    // página (no como artículo aparte: mientras Google indexe poco, se amplían las
+    // páginas que ya existen). Cifras de JURA, las mismas del selector de
+    // /marcas/jura; B&P es codistribuidor autorizado, nunca "oficial". Apunta a
+    // "cafetera automática" (480/mes), "cafetera profesional" (390), "cafetera para
+    // oficina" (110) y "cafetera superautomática" (70). Sin precios.
+    guia: {
+      titulo: "Cómo elegir una cafetera automática para tu oficina o negocio",
+      secciones: [
+        {
+          titulo: "Empieza por las tazas al día",
+          parrafos: [
+            "La pregunta que decide la compra no es qué modelo es más nuevo, sino cuántos cafés se sirven en un día normal. JURA publica para sus cafeteras profesionales un rendimiento diario máximo recomendado, y con esa cifra conviene elegir: pasarse exige de más a la máquina, y quedarse muy por debajo es pagar capacidad que no se usa.",
+          ],
+          lista: [
+            { lead: "Hasta 50 tazas al día: JURA W8.", text: "Hasta 83 espressos por hora, 17 especialidades, depósito de agua de 3 litros y 500 g de café en grano. Para oficinas, tiendas, estudios y locales comerciales." },
+            { lead: "Hasta 100 tazas al día: JURA X10.", text: "Hasta 92 espressos por hora y 35 especialidades, incluidas las de Cold Brew, con depósito de 5 litros y de 500 g a 1 kg de café en grano. Para oficinas grandes, comedores, zonas de autoservicio y centros de salud." },
+            { lead: "Para la gerencia o una oficina pequeña: JURA E8.", text: "Es de la línea doméstica de JURA, que no le publica un rendimiento profesional: está pensada para la gerencia, una sala de reuniones o una oficina pequeña." },
+          ],
+          cierre: [
+            "Una forma rápida de calcularlo: cuenta cuántas personas toman café y cuántas veces al día. Veinte personas que toman dos cafés suman unas 40 tazas, el terreno de la W8.",
+          ],
+        },
+        {
+          titulo: "Automática, de cápsulas o de barra",
+          lista: [
+            { lead: "La automática", text: "muele el grano en el momento, dosifica, extrae y espuma la leche con un botón. El café sale igual lo prepare quien lo prepare, y por eso es la solución de las oficinas, hoteles, comedores y restaurantes que sirven café todo el día sin dedicarle una persona. En el mercado también se la llama superautomática." },
+            { lead: "La de cápsulas", text: "usa café molido y envasado de antemano en porciones. Es sencilla de usar, pero el café no se muele en el momento y cada taza requiere comprar una cápsula." },
+            { lead: "La máquina de barra", text: ", con portafiltro y molino aparte, da el mayor control sobre la extracción, pero el resultado depende de la mano del barista. Tiene sentido donde el café es el producto, como una cafetería." },
+          ],
+        },
+        {
+          titulo: "Qué mantenimiento necesita",
+          parrafos: [
+            "Una JURA se limpia sola con un botón, pero necesita sus consumibles originales para mantener la higiene y el sabor: pastillas de limpieza, limpiador del sistema de leche y filtro de agua CLARIS. Además, las piezas del circuito de leche se cambian cada pocos meses; el juego de accesorios HP3, por ejemplo, cada tres meses, según JURA. En nuestra página de JURA están los consumibles de cada modelo con su número de artículo.",
+          ],
+          enlace: { texto: "nuestra página de JURA", to: "/marcas/jura" },
+        },
+        {
+          titulo: "Lo que incluye comprarla con B&P Tech",
+          parrafos: [
+            "Somos codistribuidores autorizados de JURA en el Perú. La instalación y la capacitación de tu personal van incluidas: la dejamos funcionando y enseñamos a quienes la van a usar a preparar, limpiar y cuidar la máquina. Después, respondemos en 24 horas cuando necesite atención y garantizamos repuestos para todos los modelos durante diez años.",
+          ],
+        },
+      ],
+    },
+    // Preguntas frecuentes de la guía: se pintan en la página y schemaData las
+    // declara tal cual como FAQPage.
+    faqs: [
+      {
+        q: "¿Qué cafetera conviene para una oficina de 20 personas?",
+        a: "Depende de cuántos cafés se tomen. Si cada persona toma dos al día, son unas 40 tazas: la W8, pensada para hasta 50 al día, cubre ese volumen con margen. Si la oficina crece o el café también se sirve a visitas, la X10 llega hasta 100.",
+      },
+      {
+        q: "¿Una cafetera automática y una superautomática son lo mismo?",
+        a: "En el mercado se usan los dos nombres. Lo que importa es si la máquina muele el grano y prepara la bebida completa con un botón: las JURA lo hacen, y por eso también se las llama superautomáticas.",
+      },
+      {
+        q: "¿Qué mantenimiento necesita una cafetera automática?",
+        a: "La limpieza la hace la propia máquina con un botón. Lo que hay que reponer son los consumibles: pastillas de limpieza, limpiador del sistema de leche y filtro de agua, y cada pocos meses las piezas del circuito de leche.",
+      },
+      {
+        q: "¿La instalación está incluida?",
+        a: "Sí. La instalación y la capacitación del personal van incluidas, con técnico en 24 horas y repuestos garantizados por diez años.",
+      },
+    ],
   },
   {
     slug: "licuadoras",

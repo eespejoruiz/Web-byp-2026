@@ -269,6 +269,18 @@ export function schemaDeRuta(pathname) {
     if (f) {
       const lista = listaDeProductos(getProductsByEquipo(slug), f.name + ' disponibles en Perú', ruta);
       if (lista) nodos.push(lista);
+      // Las preguntas frecuentes que se pintan en la página, tal cual, como FAQPage.
+      if (Array.isArray(f.faqs) && f.faqs.length) {
+        nodos.push({
+          '@type': 'FAQPage',
+          '@id': abs(ruta) + '#preguntas',
+          mainEntity: f.faqs.map((x) => ({
+            '@type': 'Question',
+            name: x.q,
+            acceptedAnswer: { '@type': 'Answer', text: x.a },
+          })),
+        });
+      }
     }
     return nodos;
   }
