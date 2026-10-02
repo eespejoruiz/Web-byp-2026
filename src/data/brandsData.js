@@ -38,6 +38,71 @@ import juraAmbient from "../assets/images/gen/brand-jura.webp";
 
 export const brandsData = [
   {
+    slug: "irinox",
+    route: "/marcas/irinox",
+    name: "IRINOX",
+    // B&P representa IRINOX (lo confirmó Enrique el 24-09-2026). Falta que Jaime
+    // confirme cómo presentar la relación y qué modelos vende: hasta entonces
+    // ningún texto dice "oficial" ni "exclusivo" ni promete servicio técnico.
+    // Todas las cifras son de irinoxprofessional.com (02-10-2026). Sin fotos hasta
+    // tener permiso de la marca.
+    h1: "Abatidores IRINOX en Perú",
+    origin: "Italia",
+    productType: "Abatidores de temperatura",
+    tagline: "Abatidores de temperatura italianos para enfriar y congelar rápido",
+    shortDescription:
+      "Abatidores de temperatura de la marca italiana IRINOX: SimplyFresh, EasyFresh Next y MultiFresh Next, de 10 a 95 kg por ciclo, para enfriar a +3 °C y congelar a −18 °C en el corazón del producto.",
+    officialSite: "https://www.irinoxprofessional.com",
+    industries: ["panaderia", "restaurantes", "hoteles-catering", "cocinas-industriales", "supermercados", "carnicerias", "comida-rapida"],
+    sections: [
+      {
+        title: "Abatir no es enfriar: es enfriar a tiempo",
+        paragraphs: [
+          "Una cámara o un congelador mantienen la temperatura; un abatidor la baja. Lleva una preparación recién horneada o cocinada a +3 °C en el corazón del producto, o a −18 °C si se va a congelar, en un tiempo que una cámara no alcanza.",
+          "IRINOX explica por qué eso importa: el enfriamiento rápido frena el deterioro, detiene la oxidación y reduce la proliferación de bacterias, y la congelación ultrarrápida forma microcristales que no dañan la estructura del alimento. Para una pastelería, la cocina de un hotel o un comedor, eso permite producir con anticipación sin perder calidad.",
+        ],
+      },
+      {
+        title: "Tres líneas, según los kilos por ciclo",
+        paragraphs: [
+          "SimplyFresh es el compacto: 5 bandejas y 20 kg por ciclo, con lo esencial para enfriar, congelar, trabajar en ciclo continuo y desescarchar.",
+          "EasyFresh Next va de 10 a 70 kg por ciclo en siete modelos, con 7 funciones, pantalla de 4,3 pulgadas, puerto USB para la gestión HACCP y conexión FreshCloud.",
+          "MultiFresh Next es la línea más completa: seis modelos de 25 a 95 kg por ciclo y hasta 12 funciones según la versión, entre ellas descongelación, fermentación, cocción a baja temperatura, pasteurización y fundido de chocolate. La versión Pro suma la conservación en frío y en caliente.",
+        ],
+      },
+    ],
+    selector: {
+      title: "Elige por kilos por ciclo",
+      intro:
+        "La cifra que decide qué abatidor comprar es cuántos kilos sale de tu producción en cada tanda. IRINOX publica el rendimiento por ciclo de cada modelo: con ese dato se elige la línea, y después cuentan las funciones que necesites además de enfriar y congelar.",
+      note: "Rendimiento por ciclo, funciones y medidas según irinoxprofessional.com (2 de octubre de 2026).",
+      columns: ["Rendimiento por ciclo", "Modelos", "Funciones", "Medidas (an × p × al)"],
+      rows: [
+        { model: "SimplyFresh", to: null, values: ["20 kg", "1, de 5 bandejas", "4: enfriar, congelar, ciclo continuo y desescarche", "67 × 70 × 83,2 cm"] },
+        { model: "EasyFresh Next", to: null, values: ["10 a 70 kg", "7: XS, S, SL, M, ML, L y LL", "7 funciones y 13 ciclos", "53,5 × 65,5 × 74 cm a 87 × 114,5 × 196,5 cm"] },
+        { model: "MultiFresh Next", to: null, values: ["25 a 95 kg", "6: S, SL, M, ML, L y LL", "Hasta 12 funciones y 150 ciclos, según la versión", "79 × 84 × 87 cm a 87 × 114,5 × 196,5 cm"] },
+      ],
+    },
+    faqs: [
+      {
+        q: "¿Qué es un abatidor de temperatura?",
+        a: "Un equipo que baja muy rápido la temperatura de un alimento recién horneado o cocinado: a +3 °C en el corazón del producto para conservarlo en frío, o a −18 °C para congelarlo. Según IRINOX, el enfriamiento rápido frena el deterioro y reduce la proliferación de bacterias, y la congelación ultrarrápida forma microcristales que no dañan la estructura del alimento.",
+      },
+      {
+        q: "¿En qué se diferencia de un congelador o de una cámara?",
+        a: "La cámara y el congelador están hechos para mantener la temperatura, no para bajarla. Una preparación caliente se enfría despacio en una cámara y además calienta lo que hay alrededor. El abatidor la lleva a la temperatura de conservación y recién entonces pasa a la cámara.",
+      },
+      {
+        q: "¿Qué abatidor IRINOX necesito?",
+        a: "Depende de cuántos kilos tienes que enfriar o congelar en cada ciclo y de qué más quieres que haga el equipo. SimplyFresh rinde 20 kg por ciclo; EasyFresh Next, de 10 a 70 kg; MultiFresh Next, de 25 a 95 kg, con funciones como descongelación, fermentación o cocción a baja temperatura según la versión. Cuéntanos tu producción y te decimos qué modelo encaja.",
+      },
+      {
+        q: "¿Para qué negocios sirve?",
+        a: "IRINOX los recomienda para pastelería, panadería, heladería, pizzería, restaurantes, hoteles, catering y comedores, supermercados, carnicerías, comida rápida e industria alimentaria.",
+      },
+    ],
+  },
+  {
     slug: "jura",
     route: "/marcas/jura",
     name: "JURA",

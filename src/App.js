@@ -45,11 +45,13 @@ import MoldesYBandejas from './pages/equipos/MoldesYBandejas';
 import Lavavajillas from './pages/equipos/Lavavajillas';
 import Cortadoras from './pages/equipos/Cortadoras';
 import Chocolate from './pages/equipos/Chocolate';
+import Abatidores from './pages/equipos/Abatidores';
 import Vitamix from './pages/brands/Vitamix';
 import Cainco from './pages/brands/Cainco';
 import Pomati from './pages/brands/Pomati';
 import AmericanPan from './pages/brands/AmericanPan';
 import JbtMarel from './pages/brands/JbtMarel';
+import Irinox from './pages/brands/Irinox';
 import Restaurantes from "./pages/industries/Restaurantes";
 import Estadios from "./pages/industries/Estadios";
 import Panaderia from "./pages/industries/Panaderia";
@@ -114,6 +116,7 @@ function App() {
             <Route path='/equipos/lavavajillas' element={<Lavavajillas />} />
             <Route path='/equipos/cortadoras' element={<Cortadoras />} />
             <Route path='/equipos/chocolate' element={<Chocolate />} />
+            <Route path='/equipos/abatidores' element={<Abatidores />} />
             <Route path='/marcas' element={<BrandsIndex />} />
             <Route path='/marcas/rondo' element={<Rondo />} />
             <Route path='/marcas/diosna' element={<Diosna />} />
@@ -127,6 +130,7 @@ function App() {
             <Route path='/marcas/pomati' element={<Pomati />} />
             <Route path='/marcas/americanpan' element={<AmericanPan />} />
             <Route path='/marcas/jbtmarel' element={<JbtMarel />} />
+            <Route path='/marcas/irinox' element={<Irinox />} />
 
             <Route path='*' element={<Error404 />} />
           </Route>

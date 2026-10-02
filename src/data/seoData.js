@@ -84,7 +84,7 @@ const PAGINAS = {
 
   '/equipos': {
     title: 'Equipos por tipo de máquina | B&P Tech Perú',
-    description: 'Amasadoras, laminadoras, batidoras, refrigeración, lavavajillas, licuadoras y más: doce familias de equipo con las marcas que representamos en Perú.',
+    description: 'Amasadoras, laminadoras, batidoras, refrigeración, lavavajillas, licuadoras y más: trece familias de equipo con las marcas que representamos en Perú.',
   },
   '/equipos/hornos': {
     title: 'Hornos industriales para panadería en Perú | B&P Tech',
@@ -130,6 +130,10 @@ const PAGINAS = {
     title: 'Cortadoras y porcionadoras en Perú | B&P Tech',
     description: 'Porcionadoras TREIF del grupo JBT Marel: control de grosor desde medio milímetro y ECO SLICING para cortar a mayor temperatura y gastar menos en frío.',
   },
+  '/equipos/abatidores': {
+    title: 'Abatidores de temperatura IRINOX en Perú | B&P Tech',
+    description: 'Abatidores IRINOX SimplyFresh, EasyFresh Next y MultiFresh Next: de 10 a 95 kg por ciclo para enfriar a +3 °C y congelar a −18 °C. Te ayudamos a elegir.',
+  },
   '/equipos/chocolate': {
     title: 'Temperadoras de chocolate en Perú | B&P Tech',
     description: 'Temperadoras Pomati de fabricación italiana: la curva sostenida turno tras turno, que es lo que decide el brillo y el chasquido del producto terminado.',
@@ -139,7 +143,11 @@ const PAGINAS = {
     title: 'Marcas que representamos en Perú | B&P Tech',
     // La lista anterior dejaba fuera a Mondial Forni desde que entro. Ahora nombra
     // las principales y da la cuenta total.
-    description: 'JURA, RONDO, DIOSNA, WINTERHALTER, TRUE, Mondial Forni, Pietroberto, Vitamix y más: doce marcas de equipamiento alimentario con respaldo técnico en Perú.',
+    description: 'JURA, RONDO, DIOSNA, WINTERHALTER, TRUE, Mondial Forni, Pietroberto, Vitamix y más: trece marcas de equipamiento alimentario con respaldo técnico en Perú.',
+  },
+  '/marcas/irinox': {
+    title: 'IRINOX en Perú: abatidores de temperatura | B&P Tech',
+    description: 'Abatidores de temperatura de la marca italiana IRINOX: tres líneas de 10 a 95 kg por ciclo para pastelería, panadería, restaurantes, hoteles y catering.',
   },
   '/marcas/jura': {
     title: 'JURA Perú: cafeteras automáticas suizas | B&P Tech',

@@ -58,9 +58,83 @@ export const productBrandNames = {
   americanpan: "AMERICAN PAN",
   pomati: "POMATI",
   jura: "JURA",
+  irinox: "IRINOX",
 };
 
 export const productsData = [
+  // --- IRINOX · abatidores de temperatura --------------------------------------
+  // Las tres lineas de abatidores que publica irinoxprofessional.com, leidas el 2 de
+  // octubre de 2026 en la version en_ww de cada ficha (URL en source). Cada cifra es
+  // la del fabricante: rendimiento por ciclo y medidas por modelo, funciones y
+  // ciclos tal como los da IRINOX. En MultiFresh Next las funciones dependen de la
+  // version (Essential o Pro), por eso se dice "hasta" y "segun la version".
+  // Sin fotos: falta el permiso de uso de imagenes de la marca.
+  {
+    id: "irinox-multifresh-next",
+    brand: "irinox",
+    name: "IRINOX MultiFresh Next",
+    category: "Abatidor de temperatura",
+    description:
+      "La línea más completa de IRINOX: seis modelos de 25 a 95 kg por ciclo que, además de enfriar a +3 °C y congelar a −18 °C, suman según la versión descongelación, fermentación, cocción a baja temperatura, pasteurización, fundido de chocolate y conservación en frío o en caliente. Sonda Multisensor de 5 puntos e higienización Sanigen.",
+    specs: {
+      "Modelos": "S, SL, M, ML, L y LL",
+      "Rendimiento por ciclo": "25 a 95 kg según modelo",
+      "Funciones": "Hasta 12 funciones y 150 ciclos, según la versión",
+      "Versiones": "Essential y Pro (con conservación en frío y en caliente)",
+      "Temperaturas": "+3 °C al enfriar y −18 °C al congelar",
+      "Sonda": "Multisensor de 5 puntos",
+      "Higienización": "Sanigen",
+      "Refrigerante": "R290 (propano natural)",
+      "Dimensiones (an × p × al)": "79 × 84 × 87 cm (S) a 87 × 114,5 × 196,5 cm (LL)",
+      "Fabricante": "IRINOX, Italia",
+    },
+    industries: ["panaderia", "restaurantes", "hoteles-catering", "cocinas-industriales", "supermercados", "carnicerias", "comida-rapida"],
+    source: "https://www.irinoxprofessional.com/en_ww/products/blast-chillers/multifresh-next",
+    featured: true,
+  },
+  {
+    id: "irinox-easyfresh-next",
+    brand: "irinox",
+    name: "IRINOX EasyFresh Next",
+    category: "Abatidor de temperatura",
+    description:
+      "Siete modelos de 10 a 70 kg por ciclo, con 7 funciones y 13 ciclos para enfriar a +3 °C y congelar a −18 °C. Pantalla de 4,3 pulgadas, puerto USB para la gestión HACCP, conexión FreshCloud e higienización Sanigen.",
+    specs: {
+      "Modelos": "XS, S, SL, M, ML, L y LL",
+      "Rendimiento por ciclo": "10 a 70 kg según modelo",
+      "Funciones": "7 funciones y 13 ciclos",
+      "Temperaturas": "+3 °C al enfriar y −18 °C al congelar",
+      "Pantalla": "4,3 pulgadas",
+      "Registros": "USB para la gestión HACCP y conexión FreshCloud",
+      "Higienización": "Sanigen",
+      "Refrigerante": "R290 (propano natural)",
+      "Dimensiones (an × p × al)": "53,5 × 65,5 × 74 cm (XS) a 87 × 114,5 × 196,5 cm (LL)",
+      "Fabricante": "IRINOX, Italia",
+    },
+    industries: ["panaderia", "restaurantes", "hoteles-catering", "cocinas-industriales", "supermercados", "carnicerias", "comida-rapida"],
+    source: "https://www.irinoxprofessional.com/en_ww/products/blast-chillers/easyfresh-next",
+    featured: true,
+  },
+  {
+    id: "irinox-simplyfresh",
+    brand: "irinox",
+    name: "IRINOX SimplyFresh",
+    category: "Abatidor de temperatura",
+    description:
+      "El abatidor compacto de IRINOX: 5 bandejas y 20 kg por ciclo en 67 cm de ancho, con cuatro funciones: enfriamiento rápido, congelación hasta −18 °C en el corazón del producto, ciclo continuo para cargar sin parar y desescarche.",
+    specs: {
+      "Capacidad": "5 bandejas",
+      "Rendimiento por ciclo": "20 kg",
+      "Funciones": "Enfriamiento, congelación, ciclo continuo y desescarche",
+      "Congelación": "Hasta −18 °C en el corazón del producto",
+      "Dimensiones (an × p × al)": "67 × 70 × 83,2 cm",
+      "Fabricante": "IRINOX, Italia",
+    },
+    industries: ["panaderia", "restaurantes", "hoteles-catering", "cocinas-industriales"],
+    source: "https://www.irinoxprofessional.com/en_ww/products/blast-chillers/simplyfresh",
+    featured: false,
+  },
+
   // --- JURA · cafeteras automaticas -------------------------------------------
   // Son los tres modelos que JURA comercializa hoy en el Peru, y los tres los vende
   // B&P Tech como codistribuidor autorizado. Cada cifra sale de la pestana "Datos
