@@ -3,8 +3,10 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" type="image/webp" href="%PUBLIC_URL%/favicon.webp" />
-  <link rel="icon" href="/favicon.ico" />
+  <!-- Favicon: la estrella de B&P, cuadrada. Google descarta los iconos que no
+       son cuadrados; con el anterior (163x160) usaba el logo de React. -->
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" sizes="16x16 32x32 48x48" />
+  <link rel="icon" type="image/png" sizes="192x192" href="%PUBLIC_URL%/icon-192.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#003366" />
   
@@ -28,7 +30,7 @@
   <meta property="twitter:image" content="%PUBLIC_URL%/social-image.webp">
 
   <meta name="format-detection" content="telephone=no">
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
   <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
