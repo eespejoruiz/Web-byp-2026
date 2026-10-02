@@ -91,7 +91,7 @@ const PAGINAS = {
     description: 'Hornos Mondial Forni de tubos de vapor, eléctricos de pisos y rotativos de carro, con control MFTouch. Ocho modelos con representación y servicio técnico en Perú.',
   },
   '/equipos/cafeteras': {
-    title: 'Cafeteras automáticas profesionales en Perú | B&P Tech',
+    title: 'Cafeteras automáticas profesionales para oficina | B&P Tech',
     description: 'Cafeteras automáticas JURA para oficina, hotel y restaurante, de 50 a 100 tazas al día. Técnico en 24 horas y repuestos garantizados por 10 años en Perú.',
   },
   '/equipos/licuadoras': {
@@ -150,7 +150,7 @@ const PAGINAS = {
     description: 'Abatidores de temperatura de la marca italiana IRINOX: tres líneas de 10 a 95 kg por ciclo para pastelería, panadería, restaurantes, hoteles y catering.',
   },
   '/marcas/jura': {
-    title: 'JURA Perú: cafeteras automáticas suizas | B&P Tech',
+    title: 'Cafeteras JURA en Perú: X10, W8 y E8 | B&P Tech',
     description: 'Cafeteras automáticas JURA E8, W8 y X10 para oficinas, hoteles y restaurantes. Codistribuidor autorizado, técnico en 24 h y repuestos por 10 años.',
   },
   '/marcas/mondialforni': {

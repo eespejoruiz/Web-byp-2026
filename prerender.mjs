@@ -45,11 +45,25 @@ const MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.
   '.woff': 'font/woff', '.woff2': 'font/woff2', '.ttf': 'font/ttf', '.eot': 'application/vnd.ms-fontobject',
   '.mp4': 'video/mp4', '.xml': 'application/xml', '.txt': 'text/plain' };
 
+// El cascarón vacío de CRA se guarda en memoria antes de empezar. La portada
+// se prerenderiza primero y sobrescribe build/index.html; sin esto, todas las
+// rutas siguientes arrancarían sobre el HTML de la portada (ya marcado con
+// data-prerendered) y React intentaría engancharse a una página que no es.
+const CASCARON = fs.readFileSync(path.join(BUILD, 'index.html'));
+if (CASCARON.includes('data-prerendered')) {
+  console.error('build/index.html ya está prerenderizado: corre antes "react-scripts build".');
+  process.exit(1);
+}
+
 const servidor = http.createServer((req, res) => {
   const url = decodeURIComponent(req.url.split('?')[0]);
   let archivo = path.join(BUILD, url);
   if (!archivo.startsWith(BUILD)) { res.writeHead(403).end(); return; }
-  if (!fs.existsSync(archivo) || fs.statSync(archivo).isDirectory()) archivo = path.join(BUILD, 'index.html');
+  if (!fs.existsSync(archivo) || fs.statSync(archivo).isDirectory() || archivo === path.join(BUILD, 'index.html')) {
+    res.writeHead(200, { 'Content-Type': MIME['.html'] });
+    res.end(CASCARON);
+    return;
+  }
   const cuerpo = fs.readFileSync(archivo);
   res.writeHead(200, { 'Content-Type': MIME[path.extname(archivo)] || 'application/octet-stream' });
   res.end(cuerpo);
@@ -90,6 +104,21 @@ for (const ruta of RUTAS) {
       () => document.getElementById('root') && document.getElementById('root').children.length > 0,
       null, { timeout: 30000 });
     await pagina.waitForTimeout(600);
+
+    // Dos textos seguidos de React (p. ej. «© {año} B&P TECH») son dos nodos en
+    // el navegador, pero al guardarlos como HTML se funden en uno. Al hidratar,
+    // React esperaría dos y, al no encontrarlos, borraría la página para volver
+    // a pintarla. Un comentario vacío entre ellos los mantiene separados: es lo
+    // mismo que hace React cuando renderiza en servidor (a<!-- -->b).
+    await pagina.evaluate(() => {
+      const raiz = document.getElementById('root');
+      const recorrido = document.createTreeWalker(raiz, NodeFilter.SHOW_TEXT);
+      const pegados = [];
+      for (let n = recorrido.nextNode(); n; n = recorrido.nextNode()) {
+        if (n.nextSibling && n.nextSibling.nodeType === Node.TEXT_NODE) pegados.push(n);
+      }
+      for (const n of pegados) n.after(document.createComment(' '));
+    });
 
     let html = await pagina.content();
 

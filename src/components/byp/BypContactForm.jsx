@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { medirFormularioEnviado, origenDeLaVisita } from "../../utils/medicion";
 
 const SLUG = "website";
@@ -25,9 +25,13 @@ const BypContactForm = () => {
   // Los UTM de la visita viajan al formulario: el CRM los guarda junto con la
   // solicitud y asi se sabe que campaña trajo cada contacto. Antes el iframe
   // se cargaba siempre con la URL pelada y todo llegaba sin origen.
-  const src = useMemo(() => {
+  // Se agregan despues de montar, no al pintar: la pagina llega prerenderizada
+  // con la URL pelada y, al hidratar, React no corrige atributos que difieran
+  // del HTML; calculados al pintar, los UTM se perderian sin avisar.
+  const [src, setSrc] = useState(FORM_URL);
+  useEffect(() => {
     const origen = origenDeLaVisita();
-    return origen ? `${FORM_URL}?${origen}` : FORM_URL;
+    if (origen) setSrc(`${FORM_URL}?${origen}`);
   }, []);
 
   useEffect(() => {
