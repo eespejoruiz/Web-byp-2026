@@ -763,6 +763,15 @@ export const productsData = [
   },
 
   /* ---------------- VITAMIX ---------------- */
+  // Los seis modelos que vende B&P (21-oct-2026). The Quiet One, Vita-Prep 3 y
+  // Touch & Go Advance, de la respuesta de B&P: 220 V / 60 Hz monofásicas, medidas
+  // y pesos. Drink Machine, Drink Machine Advance, Vita-Prep 3 y XL, del catálogo
+  // impreso de B&P («Distribuidor nacional de Vitamix»), con su garantía: 3 años en
+  // el motor por defectos de fábrica y 1 año en el vaso, sin cubrir mal uso ni
+  // manipulación de personal ajeno a B&P (la misma que publica Vitamix para The
+  // Quiet One y Touch & Go Advance). Programas y vaso de The Quiet One y Touch & Go
+  // Advance, de vitamix.com. Peso de la Vita-Prep 3: 5,7 kg en la respuesta de B&P,
+  // 5,4 kg en el catálogo; se usa la respuesta. Sin fotos para los cuatro nuevos.
   {
     id: "vitamix-quiet-one",
     brand: "vitamix",
@@ -771,11 +780,14 @@ export const productsData = [
     description:
       "Licuadora comercial de bebidas con reducción de sonido patentada, pensada para barras de alto tránsito. Ofrece mezclas consistentes y mayor velocidad de servicio, con jarra Advance diseñada para reducir el ruido y prolongar su vida útil.",
     specs: {
+      "Modelo": "VM149",
       "Motor": "Hasta 3 HP de potencia de salida máxima",
-      "Eléctrico": "120 V · 50/60 Hz · 15 A",
+      "Eléctrico": "220 V · 60 Hz · monofásico",
+      "Programas": "34 programas optimizados en 6 botones",
       "Dimensiones (Al × An × Pr)": "45,7 × 21,6 × 27,2 cm",
       "Peso": "9,1 kg",
       "Jarra": "Vaso Advance con Advance Blade",
+      "Garantía": "3 años en el motor por defectos de fábrica y 1 año en el vaso",
     },
     image: vitamixQuietOne,
     industries: ["bares-cafeterias", "restaurantes", "comida-rapida", "hoteles-catering"],
@@ -791,16 +803,104 @@ export const productsData = [
     description:
       "Licuadora comercial de preparación de alimentos para cocinas profesionales exigentes: motor de hasta 3 HP, control de velocidad variable y tamper para mezclas espesas o congeladas, con vaso de alto impacto libre de BPA.",
     specs: {
+      "Modelo": "VM0105E",
       "Motor": "Hasta 3 HP de potencia de salida máxima",
-      "Eléctrico": "120 V · 50/60 Hz · 13 A",
+      "Eléctrico": "220 V · 60 Hz · monofásico",
+      "Velocidades": "10, con control variable",
       "Dimensiones (Al × An × Pr)": "50,8 × 19,1 × 22,2 cm",
-      "Peso": "5,5 kg",
-      "Jarra": "2,0 L de alto impacto, sin BPA, con tapón extraíble",
+      "Peso": "5,7 kg",
+      "Jarra": "Tritan™ de 2 L (64 oz), sin BPA, con tamper",
+      "Garantía": "3 años en el motor por defectos de fábrica y 1 año en el vaso",
     },
     image: vitamixVitaPrep,
     industries: ["restaurantes", "cocinas-industriales", "hoteles-catering"],
     source:
       "https://www.vitamix.com/mx/es_mx/commercial/products/vita-prep-3",
+    featured: false,
+  },
+  {
+    id: "vitamix-touch-go-advance",
+    brand: "vitamix",
+    name: "Touch & Go Advance",
+    category: "Licuadora comercial",
+    description:
+      "Licuadora de bebidas para la barra o la trastienda: 6 botones con 20 programas de recetas para que cada bebida salga igual, cubierta de reducción de sonido que se quita sin herramientas para limpiarla y vaso Advance de 0,9 litros.",
+    specs: {
+      "Motor": "≈2,3 HP de potencia de salida máxima",
+      "Programas": "20 programas de recetas en 6 botones",
+      "Vaso": "Advance de 0,9 L (32 oz)",
+      "Dimensiones (Al × An × Pr)": "45,7 × 21,6 × 27,3 cm",
+      "Peso": "8,6 kg",
+      "Garantía": "3 años en el motor por defectos de fábrica y 1 año en el vaso",
+    },
+    industries: ["bares-cafeterias", "restaurantes", "comida-rapida", "hoteles-catering"],
+    source:
+      "https://www.vitamix.com/vr/en_us/commercial/products/touch-go-advance",
+    featured: false,
+  },
+  {
+    id: "vitamix-drink-machine-advance",
+    brand: "vitamix",
+    name: "Drink Machine Advance",
+    category: "Licuadora comercial",
+    description:
+      "Para ampliar el menú de bebidas, desde smoothies hasta cócteles congelados: 6 programas optimizados con apagado automático, función Pulse y vaso de Tritan™ de 1,4 litros.",
+    specs: {
+      "Modelo": "VM0127",
+      "Motor": "2,3 HP",
+      "Eléctrico": "220-240 V · 50/60 Hz",
+      "Programas": "6 optimizados, con apagado automático y función Pulse",
+      "Vaso": "Tritan™ de 1,4 L (47 oz)",
+      "Dimensiones (Al × An × Pr)": "45,1 × 19,1 × 22,2 cm",
+      "Peso": "5,3 kg",
+      "Garantía": "3 años en el motor por defectos de fábrica y 1 año en el vaso",
+    },
+    industries: ["bares-cafeterias", "restaurantes", "comida-rapida", "hoteles-catering"],
+    source:
+      "https://www.vitamix.com/vr/en_us/commercial/products/drink-machine-advance",
+    featured: false,
+  },
+  {
+    id: "vitamix-drink-machine",
+    brand: "vitamix",
+    name: "Drink Machine",
+    category: "Licuadora comercial",
+    description:
+      "Una licuadora confiable para mezclas potentes, pensada para bebidas de café, jugos de fruta, granizados y batidos: dos velocidades, alta y baja, y vaso de Tritan™ de 2 litros con tamper.",
+    specs: {
+      "Modelo": "00768",
+      "Motor": "2,3 HP",
+      "Eléctrico": "220-240 V · 50/60 Hz",
+      "Velocidades": "2 (alta y baja)",
+      "Vaso": "Tritan™ de 2 L (64 oz), con tamper",
+      "Dimensiones (Al × An × Pr)": "50,8 × 19,1 × 22,2 cm",
+      "Peso": "4,9 kg",
+      "Garantía": "3 años en el motor por defectos de fábrica y 1 año en el vaso",
+    },
+    industries: ["bares-cafeterias", "restaurantes", "comida-rapida", "hoteles-catering"],
+    source:
+      "https://www.vitamix.com/mx/en_us/commercial/products/drink-machine-two-speed",
+    featured: false,
+  },
+  {
+    id: "vitamix-xl",
+    brand: "vitamix",
+    name: "XL",
+    category: "Licuadora de cocina profesional",
+    description:
+      "Para grandes volúmenes: vaso de Tritan™ de 5,7 litros para licuados fríos o calientes, con capacidad para 24 porciones de 8 onzas a la vez, motor de 4,2 HP, control de velocidad variable y un vaso adicional de 2 litros.",
+    specs: {
+      "Modelo": "VM XL",
+      "Motor": "4,2 HP",
+      "Eléctrico": "220-240 V · 50/60 Hz",
+      "Velocidades": "Control variable",
+      "Vaso": "Tritan™ de 5,7 L (1,5 galones) y vaso adicional de 2 L",
+      "Dimensiones (Al × An × Pr)": "45,97 × 21,59 × 48,26 cm",
+      "Peso": "15,6 kg",
+      "Garantía": "3 años en el motor por defectos de fábrica y 1 año en el vaso",
+    },
+    industries: ["restaurantes", "cocinas-industriales", "hoteles-catering"],
+    source: "https://www.vitamix.com/vr/en_us/shop/vitamix-xl",
     featured: false,
   },
 

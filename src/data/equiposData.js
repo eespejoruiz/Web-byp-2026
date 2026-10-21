@@ -151,7 +151,62 @@ export const equiposData = [
     industries: ["bares-cafeterias", "restaurantes", "comida-rapida", "hoteles-catering"],
     parrafos: [
       "La diferencia entre una licuadora doméstica y una profesional no está en la potencia que declara la etiqueta, sino en cuántos ciclos al día aguanta antes de que el motor o el vaso empiecen a fallar. En una barra de alto tránsito, el equipo de mezclado es de los que más veces se encienden en la jornada.",
-      "Las de Vitamix son equipos de barra y de cocina profesional, con motores de hasta 3 HP de salida máxima y jarras de alto impacto. Conviene decirlo con claridad: quien en el Perú busca «licuadora industrial» a veces busca algo bastante más grande, de proceso. Si ese es el caso, mejor escríbenos y lo vemos.",
+      "Las de Vitamix son equipos de barra y de cocina profesional, con motores de hasta 4,2 HP y jarras de alto impacto. Conviene decirlo con claridad: quien en el Perú busca «licuadora industrial» a veces busca algo bastante más grande, de proceso. Si ese es el caso, mejor escríbenos y lo vemos.",
+    ],
+    // Semana 10 (20/21-oct-2026, con OK de Enrique). «Licuadora industrial» son
+    // 1.900 búsquedas al mes en el Perú, pero en la SERP conviven licuadoras
+    // comerciales de vaso y equipos de acero de 20 litros: la guía lo dice tal cual.
+    // «Licuadora profesional» 320, «licuadora comercial» 40. Los seis modelos y sus
+    // cifras son los que vende B&P (respuesta y catálogo del 21-oct, ver productsData).
+    guia: {
+      titulo: "Cómo elegir una licuadora profesional para tu negocio",
+      secciones: [
+        {
+          titulo: "Bebidas, cocina o grandes volúmenes",
+          parrafos: [
+            "En un negocio, una licuadora hace uno de tres trabajos, y conviene elegirla por el que va a hacer todos los días.",
+          ],
+          lista: [
+            { lead: "Para la barra: The Quiet One y Touch & Go Advance.", text: "The Quiet One trae reducción de sonido patentada y 34 programas en 6 botones; la Touch & Go Advance, cubierta de reducción de sonido y 20 programas de recetas en 6 botones. Las dos permiten licuar frente al cliente y que cada bebida salga igual." },
+            { lead: "También para bebidas: Drink Machine Advance y Drink Machine.", text: "La Advance tiene 6 programas optimizados con apagado automático, función Pulse y vaso de 1,4 litros; la Drink Machine, dos velocidades y vaso de 2 litros con tamper, para bebidas de café, jugos, granizados y batidos." },
+            { lead: "Para la cocina: Vita-Prep 3.", text: "Diez velocidades con control variable para ir de un picado grueso a un puré fino, y un tamper para mover mezclas espesas o congeladas sin detener la máquina. Es la de salsas, aderezos, cremas y sopas." },
+            { lead: "Para grandes volúmenes: XL.", text: "Vaso de 5,7 litros para licuados fríos o calientes, con capacidad para 24 porciones de 8 onzas a la vez, motor de 4,2 HP y un vaso adicional de 2 litros." },
+          ],
+          cierre: [
+            "Los motores van de 2,3 HP en las de bebidas a 4,2 HP en la XL. Más potencia no siempre es mejor: lo que cuenta es el trabajo para el que está pensada cada una.",
+          ],
+        },
+        {
+          titulo: "«Licuadora industrial»: qué se busca con ese nombre",
+          parrafos: [
+            "En el Perú ese nombre se usa para dos máquinas distintas: licuadoras comerciales de vaso para barras y cocinas, y equipos de acero inoxidable de 10 litros o más para juguerías y producción. Las Vitamix son del primer grupo, con vasos de 0,9 a 5,7 litros, y la XL es la que más se acerca al volumen de una licuadora industrial. Si necesitas más capacidad, escríbenos y vemos qué equipo encaja.",
+          ],
+        },
+        {
+          titulo: "Lo que hay que mirar además de la potencia",
+          parrafos: [
+            "Que el vaso esté pensado para el uso diario con hielo y fruta congelada, que se limpie rápido entre una preparación y otra —el vaso y la tapa de The Quiet One van al lavavajillas— y que el resultado no dependa de quién la use. Para eso están los programas: con ellos, la bebida sale igual en el primer turno y en el último.",
+          ],
+        },
+      ],
+    },
+    faqs: [
+      {
+        q: "¿Qué diferencia hay entre una licuadora industrial y una profesional?",
+        a: "Con «industrial» en el Perú se buscan dos cosas: licuadoras comerciales de vaso para barras y cocinas, y equipos de acero inoxidable de 10 litros o más para juguerías y producción. Las Vitamix son licuadoras profesionales del primer grupo, con vasos de 0,9 a 5,7 litros.",
+      },
+      {
+        q: "¿Qué licuadora conviene para un bar o una cafetería?",
+        a: "Si se licúa frente al cliente, The Quiet One o la Touch & Go Advance, por su reducción de sonido y sus programas. Si el ruido no es un problema, la Drink Machine Advance, con 6 programas, o la Drink Machine, con dos velocidades.",
+      },
+      {
+        q: "¿Y para la cocina de un restaurante?",
+        a: "La Vita-Prep 3, con diez velocidades y tamper, para salsas, aderezos, cremas y sopas. Si las preparaciones son grandes, la XL licúa hasta 5,7 litros, fríos o calientes, de una vez.",
+      },
+      {
+        q: "¿Qué garantía tienen las licuadoras Vitamix?",
+        a: "Tres años en el motor por defectos de fábrica y un año en el vaso. No cubre las fallas por mal uso ni por manipulación de personal ajeno a B&P Tech.",
+      },
     ],
   },
   {
@@ -279,6 +334,51 @@ export const equiposData = [
     parrafos: [
       "Un chocolate mal temperado se reconoce a simple vista: pierde brillo, se marca de blanco y no rompe con el chasquido que el cliente asocia con calidad. Todo eso depende de una curva de temperatura que hay que sostener con precisión y repetir igual cada turno.",
       "Pomati fabrica en Italia equipos dedicados exactamente a ese control. No es un accesorio de la cocina: es el equipo que decide si el producto terminado se puede vender al precio que se quiere vender.",
+    ],
+    // Semana 10 (borrador del 20-oct-2026, espera OK de Enrique). Página corta:
+    // «templadora de chocolate» 40 búsquedas al mes, «temperadora» 30, «temperado»
+    // 20. Datos de la ficha de la T35 en pomati.it. La capacidad del tanque no se
+    // repite aquí: la ficha de Pomati dice 50 kg en un lugar y 42 kg en otro.
+    guia: {
+      titulo: "Cómo elegir una temperadora de chocolate",
+      secciones: [
+        {
+          titulo: "Qué hace una temperadora",
+          parrafos: [
+            "Temperar es llevar el chocolate por una curva de temperatura —fundirlo, enfriarlo y volver a subirlo un poco— para que cristalice de forma estable. Cada chocolate tiene la suya, la que indica su fabricante. A mano se puede hacer, pero cuesta repetirla igual durante horas. Una temperadora, también llamada templadora, la sostiene sola mientras se trabaja.",
+          ],
+        },
+        {
+          titulo: "Lo que trae la T35 de Pomati",
+          lista: [
+            { lead: "Tanque calefaccionado y termosellado", text: ", de acero inoxidable AISI 304." },
+            { lead: "Sinfín desmontable", text: "que gira al revés para descargar el chocolate." },
+            { lead: "Mesa vibradora calefaccionada", text: "para sacar el aire del chocolate en los moldes." },
+            { lead: "Dosificador programable", text: "que se acciona con un pedal." },
+            { lead: "Enfriamiento por aire forzado,", text: "etapa de temperatura intermedia y modo noche, con panel táctil y termostatos de precisión." },
+          ],
+        },
+        {
+          titulo: "Accesorios según lo que produces",
+          parrafos: [
+            "Con una cinta de bañado se cubren bombones, galletas o barras; la mesa giratoria sirve para trufas, y hay además cinta de salida, decorador, lámpara calefactora y tapa de plexiglás. Se eligen según el producto que vas a hacer. Pomati fabrica temperadoras de varios tamaños: si la T35 te queda grande o chica, escríbenos y vemos cuál corresponde a tu producción.",
+          ],
+        },
+      ],
+    },
+    faqs: [
+      {
+        q: "¿Qué es temperar chocolate?",
+        a: "Llevarlo por una curva de temperatura —fundirlo, enfriarlo y volver a subirlo un poco— para que cristalice de forma estable. Un chocolate bien temperado tiene brillo, no se marca de blanco y rompe con chasquido.",
+      },
+      {
+        q: "¿Temperadora o templadora?",
+        a: "Son dos nombres para el mismo equipo: la máquina que sostiene la curva de temperatura del chocolate mientras se trabaja.",
+      },
+      {
+        q: "¿Para qué sirve la mesa vibradora?",
+        a: "Para sacar el aire del chocolate en los moldes, de modo que la pieza salga sin burbujas. En la T35 la mesa viene calefaccionada.",
+      },
     ],
   },
 ];

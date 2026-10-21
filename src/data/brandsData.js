@@ -295,27 +295,39 @@ export const brandsData = [
     slug: "vitamix",
     route: "/marcas/vitamix",
     name: "VITAMIX",
+    // H1 con lo que se busca: «licuadora vitamix» 480 al mes en el Perú y
+    // «vitamix» 590 (DataForSEO, 20-oct-2026). Semana 10, con OK de Enrique; los
+    // seis modelos y sus cifras salen de la respuesta y del catálogo de B&P (21-oct).
+    h1: "Licuadoras Vitamix en Perú",
     origin: "Estados Unidos",
     tagline: "Licuadoras comerciales para barras y cocinas de alto tránsito",
     logo: vitamixLogo,
     heroImage: vitamixHero,
     shortDescription:
-      "Licuadoras comerciales de uso intensivo, con motores de hasta 3 HP y jarras diseñadas para resistir el ritmo de una barra profesional.",
+      "Licuadoras comerciales de uso intensivo, con motores de hasta 4,2 HP y jarras diseñadas para resistir el ritmo de una barra profesional.",
     industries: ["bares-cafeterias", "restaurantes", "comida-rapida", "hoteles-catering"],
     productType: "Licuadoras comerciales",
     sections: [
       {
         title: "Potencia pensada para el servicio, no para la vitrina",
         paragraphs: [
-          "Vitamix fabrica en Estados Unidos equipos de mezclado para uso comercial continuo. La diferencia frente a una licuadora doméstica no está en la potencia nominal sino en para cuántos ciclos al día está construida: motores de hasta 3 HP de salida máxima, control de velocidad variable y jarras de alto impacto pensadas para que el vaso no sea la pieza que se rompe primero.",
+          "Vitamix fabrica en Estados Unidos equipos de mezclado para uso comercial continuo. La diferencia frente a una licuadora doméstica no está en la potencia nominal sino en para cuántos ciclos al día está construida: motores de hasta 4,2 HP, control de velocidad variable y jarras de alto impacto pensadas para que el vaso no sea la pieza que se rompe primero.",
           "En una barra de café o en una cocina de alto tránsito, el equipo de mezclado es de los que más veces se enciende en el día. Ahí la fiabilidad deja de ser una ficha técnica y se vuelve una cuestión de servicio.",
         ],
       },
       {
-        title: "Dos equipos para dos problemas distintos",
+        title: "Un equipo para cada trabajo",
         paragraphs: [
           "The Quiet One está diseñada específicamente para barras donde el ruido es parte de la experiencia del cliente: incorpora reducción de sonido y una jarra Advance que además alarga la vida útil del vaso.",
           "Vita-Prep 3 está pensada para la cocina, no para la barra: mezclas espesas, purés y preparaciones congeladas, con tamper para empujar el producto y jarra de 2 litros libre de BPA.",
+          "Para bebidas hay además otras tres: la Touch & Go Advance, con cubierta de reducción de sonido y 20 programas de recetas en 6 botones; la Drink Machine Advance, con 6 programas optimizados con apagado automático y función Pulse, y la Drink Machine, con dos velocidades y vaso de 2 litros con tamper.",
+          "Y para grandes volúmenes, la XL: vaso de 5,7 litros para licuados fríos o calientes, con capacidad para 24 porciones de 8 onzas a la vez, motor de 4,2 HP y un vaso adicional de 2 litros.",
+        ],
+      },
+      {
+        title: "Garantía",
+        paragraphs: [
+          "Las licuadoras Vitamix que vendemos tienen tres años de garantía en el motor por defectos de fábrica y un año en el vaso. La garantía no cubre las fallas por mal uso ni por manipulación de personal ajeno a B&P Tech.",
         ],
       },
     ],

@@ -96,7 +96,7 @@ const PAGINAS = {
   },
   '/equipos/licuadoras': {
     title: 'Licuadoras profesionales en Perú | B&P Tech',
-    description: 'Licuadoras comerciales Vitamix para barra y cocina profesional: motores de hasta 3 HP y jarras de alto impacto, con representación y servicio técnico en Perú.',
+    description: 'Licuadoras comerciales Vitamix para barra y cocina: seis modelos, motores de hasta 4,2 HP y vasos de 0,9 a 5,7 litros, con servicio técnico en Perú.',
   },
   '/equipos/refrigeracion': {
     title: 'Refrigeración comercial en Perú | B&P Tech',
@@ -179,8 +179,8 @@ const PAGINAS = {
   },
 
   '/marcas/vitamix': {
-    title: 'Vitamix en Perú: licuadoras comerciales | B&P Tech',
-    description: 'Licuadoras comerciales Vitamix para barras y cocinas de alto tránsito: The Quiet One y Vita-Prep 3, con representación y soporte técnico en Perú.',
+    title: 'Licuadoras Vitamix en Perú para barra y cocina | B&P Tech',
+    description: 'Licuadoras Vitamix para barra y cocina: The Quiet One, Touch & Go Advance, Drink Machine, Vita-Prep 3 y XL, con garantía y soporte técnico en Perú.',
   },
   '/marcas/cainco': {
     title: 'Cainco en Perú: bandejas, estufas y carros | B&P Tech',
