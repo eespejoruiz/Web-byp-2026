@@ -65,7 +65,10 @@ export const equiposData = [
     name: "Cafeteras",
     // "cafetera profesional" (390/mes) y "cafetera automatica" (480/mes) son las
     // consultas de la categoria; el nombre corto se queda para menus y migas.
-    h1: "Cafeteras automáticas profesionales",
+    // 21-oct-2026 (OK de Enrique): se suma «para oficina y negocio» —«cafetera para
+    // negocio» 210/mes, «máquinas de café para negocio perú» 170, «cafetera para
+    // oficina» 110, CPC US$0,78— (Transaccionales_SC_byptech_2026-10-21.md).
+    h1: "Cafeteras automáticas profesionales para oficina y negocio",
     tagline: "Automáticas profesionales para oficina, hotel y restaurante",
     heroImage: cafeterasHero,
     categorias: ["Cafetera automática profesional", "Cafetera automática"],
@@ -97,6 +100,24 @@ export const equiposData = [
             "Una forma rápida de calcularlo: cuenta cuántas personas toman café y cuántas veces al día. Veinte personas que toman dos cafés suman unas 40 tazas, el terreno de la W8.",
           ],
         },
+        // 21-oct-2026: el mismo orden con el que Google arma su respuesta de IA para
+        // «cafetera para oficina» (por tamaño de oficina). Cifras de JURA.
+        {
+          titulo: "¿Qué cafetera necesita tu oficina?",
+          parrafos: [
+            "Con la cuenta de dos cafés por persona al día, el tamaño de la oficina dice qué modelo conviene:",
+          ],
+          tabla: {
+            columnas: ["En la oficina", "Tazas al día", "Cafetera"],
+            filas: [
+              { cabecera: "Gerencia, sala de reuniones u oficina pequeña", celdas: ["Pocas", "JURA E8"], to: "/marcas/jura/e8" },
+              { cabecera: "Hasta 25 personas", celdas: ["Hasta 50", "JURA W8"], to: "/marcas/jura/w8" },
+              { cabecera: "De 25 a 50 personas", celdas: ["Hasta 100", "JURA X10"], to: "/marcas/jura/x10" },
+              { cabecera: "Más de 50 personas, o café también para visitas y comedor", celdas: ["Más de 100", "Dos equipos: lo calculamos contigo"] },
+            ],
+            nota: "Rendimiento diario máximo recomendado por JURA. Los dos cafés por persona son una referencia: la cuenta cambia si también se sirve café a las visitas o en un comedor. La E8 es de la línea doméstica y JURA no le publica rendimiento profesional.",
+          },
+        },
         {
           titulo: "Automática, de cápsulas o de barra",
           lista: [
@@ -105,12 +126,34 @@ export const equiposData = [
             { lead: "La máquina de barra", text: ", con portafiltro y molino aparte, da el mayor control sobre la extracción, pero el resultado depende de la mano del barista. Tiene sentido donde el café es el producto, como una cafetería." },
           ],
         },
+        // 21-oct-2026: «cafetera profesional» 390 + «máquina de café profesional» 320 al
+        // mes, con SERP de máquinas espresso de barra: se aclara, como en licuadoras.
+        {
+          titulo: "«Cafetera profesional»: qué se busca con ese nombre",
+          parrafos: [
+            "En el Perú, «cafetera profesional» y «máquina de café profesional» suman unas 700 búsquedas al mes, y casi todo lo que aparece son máquinas espresso de barra, con portafiltro y molino aparte: las de una cafetería con barista. Una JURA es otra cosa: una automática profesional que muele, extrae y espuma la leche con un botón, pensada para oficinas, hoteles, comedores y restaurantes que sirven café sin dedicarle una persona. Si tu negocio es una cafetería de especialidad, con barista y más de cien tazas al día, conviene una máquina de barra; si es una oficina o un hotel, una automática.",
+          ],
+        },
         {
           titulo: "Qué mantenimiento necesita",
           parrafos: [
             "Una JURA se limpia sola con un botón, pero necesita sus consumibles originales para mantener la higiene y el sabor: pastillas de limpieza, limpiador del sistema de leche y filtro de agua CLARIS. Además, las piezas del circuito de leche se cambian cada pocos meses; el juego de accesorios HP3, por ejemplo, cada tres meses, según JURA. En nuestra página de JURA están los consumibles de cada modelo con su número de artículo.",
           ],
           enlace: { texto: "nuestra página de JURA", to: "/marcas/jura" },
+        },
+        // 21-oct-2026: B&P solo vende (lo dice /marcas/jura); se explica la diferencia
+        // con el comodato y el alquiler, que son las otras ofertas que ve el comprador.
+        {
+          titulo: "Comprar, alquilar o comodato",
+          parrafos: [
+            "Hay tres maneras de tener una cafetera en la oficina. En comodato, el proveedor presta la máquina y, por lo general, a cambio le compras el café o los insumos: no pagas el equipo, pero quedas atado a su café. En alquiler pagas una cuota por el equipo. Comprándola, la máquina es de tu empresa y eliges el café que quieras, porque una JURA trabaja con café en grano y no con cápsulas de una marca. Nosotros trabajamos solo con venta, con instalación y capacitación incluidas y repuestos asegurados por diez años.",
+          ],
+        },
+        {
+          titulo: "¿Y una máquina expendedora?",
+          parrafos: [
+            "La mayoría de las máquinas expendedoras que se ven en pasillos y fábricas preparan café soluble y cobran con monedas o tarjeta. Una JURA muele café en grano para cada taza. Si lo que buscas es cobrar el café en una zona de autoservicio, la W8 y la X10 se conectan a los sistemas de pago habituales con MDB 2.0, y al JURA Pocket Pilot para pago sin contacto; los dos son opcionales.",
+          ],
         },
         {
           titulo: "Lo que incluye comprarla con B&P Tech",
@@ -138,6 +181,23 @@ export const equiposData = [
       {
         q: "¿La instalación está incluida?",
         a: "Sí. La instalación y la capacitación del personal van incluidas, con técnico en 24 horas y repuestos garantizados por diez años.",
+      },
+      // 21-oct-2026. Precios: decisión de Enrique, por ahora no se publican.
+      {
+        q: "¿Cuál es la mejor cafetera para una oficina?",
+        a: "La que cubre las tazas de un día normal sin quedarse corta. Con la cuenta de dos cafés por persona: hasta 25 personas, la W8 (hasta 50 tazas); de 25 a 50, la X10 (hasta 100); para la gerencia o una sala de reuniones, la E8.",
+      },
+      {
+        q: "¿Cuánto cuesta una cafetera automática para oficina?",
+        a: "Por ahora no publicamos precios: cada cotización incluye la instalación, la capacitación de tu equipo y el servicio posventa. Pídenos la tuya y compárala, en precio y en servicio posventa.",
+      },
+      {
+        q: "¿Se puede alquilar o pedir en comodato?",
+        a: "No: trabajamos solo con venta. La máquina es de tu empresa, eliges el café que quieras y la instalación y la capacitación van incluidas.",
+      },
+      {
+        q: "¿Una JURA sirve como máquina expendedora?",
+        a: "La W8 y la X10 se pueden conectar a sistemas de pago con MDB 2.0 y al JURA Pocket Pilot para cobrar el café en una zona de autoservicio. Ambas conexiones son opcionales.",
       },
     ],
   },

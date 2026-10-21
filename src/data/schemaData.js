@@ -15,6 +15,7 @@
 import { equiposData, getProductsByEquipo } from './equiposData';
 import { brandsData } from './brandsData';
 import { productsData } from './productsData';
+import { getModeloByRoute } from './modelosData';
 import { blogPosts } from './blogPostsData';
 import { caseStudiesData } from './caseStudiesData';
 import { seoDeRuta, SITIO } from './seoData';
@@ -124,6 +125,13 @@ function nombreCorto(ruta) {
     if (f) return f.name;
   }
 
+  // Páginas por modelo (/marcas/jura/x10…): la miga dice «JURA X10».
+  const mo = getModeloByRoute(ruta);
+  if (mo) {
+    const marca = brandsData.find((b) => b.slug === mo.brand);
+    return `${marca ? marca.name : ''} ${mo.modelo}`.trim();
+  }
+
   if (ruta.startsWith('/marcas/')) {
     const m = brandsData.find((b) => b.slug === ruta.slice('/marcas/'.length));
     if (m) return m.name;
@@ -227,6 +235,25 @@ export function schemaDeRuta(pathname) {
         '@type': 'ListItem', position: i + 1, name: b.name, url: abs(b.route),
       })),
     });
+    return nodos;
+  }
+
+  // --- páginas por modelo (desde el 21-oct-2026) ---------------------------
+  // Sin Product: sin precio, reseñas ni valoración Google lo marca como no válido.
+  // Solo las preguntas frecuentes que se pintan en la página, como FAQPage.
+  const modelo = getModeloByRoute(ruta);
+  if (modelo) {
+    if (Array.isArray(modelo.faqs) && modelo.faqs.length) {
+      nodos.push({
+        '@type': 'FAQPage',
+        '@id': abs(ruta) + '#preguntas',
+        mainEntity: modelo.faqs.map((f) => ({
+          '@type': 'Question',
+          name: f.q,
+          acceptedAnswer: { '@type': 'Answer', text: f.a },
+        })),
+      });
+    }
     return nodos;
   }
 

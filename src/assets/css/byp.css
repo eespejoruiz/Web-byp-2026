@@ -911,6 +911,8 @@ a.byp-chip:hover { border-color: var(--byp-navy); color: var(--byp-navy); }
 .byp-selector__table tbody th,.byp-selector__table tbody td{padding:14px;border-top:1px solid var(--byp-line);vertical-align:top;color:var(--byp-txt);text-align:left}
 .byp-selector__table tbody tr:first-child th,.byp-selector__table tbody tr:first-child td{border-top:0}
 .byp-selector__table tbody th{font-weight:600;color:var(--byp-navy);white-space:nowrap}
+/* Tablas de las guías de /equipos (cabecera de fila larga): que corte la línea */
+.byp-selector__table--wrap tbody th{white-space:normal;max-width:340px}
 .byp-selector__table tbody td:nth-of-type(1){font-weight:600;font-variant-numeric:tabular-nums}
 .byp-selector__note{margin-top:10px!important;font-size:13px!important;color:var(--byp-dim)!important}
 @media (max-width:760px){

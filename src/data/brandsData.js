@@ -142,6 +142,19 @@ export const brandsData = [
           "Y si tu negocio ya trabaja con nosotros por el lavavajillas Winterhalter, la refrigeración True o la línea de panadería, la cafetera entra en la misma relación: un solo proveedor, un solo interlocutor técnico, una sola factura.",
         ],
       },
+      // 21-oct-2026 (OK de Enrique): comparativa de los tres modelos, con las cifras de
+      // productsData (pe.jura.com, 21-sep). Cada modelo tiene ahora su página.
+      {
+        title: "E8, W8 y X10: en qué se diferencian",
+        paragraphs: [
+          "Las tres muelen el grano para cada taza y limpian solas el sistema de leche con un botón. Lo que cambia es el volumen que aguantan y lo que trae cada una:",
+        ],
+        bullets: [
+          { title: "E8", text: "línea doméstica, 17 especialidades, depósito de agua de 1,9 l y 280 g de café en grano, en 28 cm de ancho. En Piano Black o Piano White, para la gerencia, una sala de reuniones o una oficina pequeña." },
+          { title: "W8", text: "hasta 50 tazas al día, 17 especialidades, 3 l de agua y 500 g de café, en 29,5 cm de ancho. Depósitos con cierre, bloqueo de funciones para controlar quién usa qué y conexión opcional a sistemas de pago." },
+          { title: "X10", text: "hasta 100 tazas al día y 35 especialidades con Cold Brew, 5 l de agua y de 500 g a 1 kg de café, con molino P.A.G.2+ y conexión opcional a sistemas de pago." },
+        ],
+      },
     ],
     selector: {
       title: "Elige por tazas al día, no por modelo",
@@ -150,9 +163,9 @@ export const brandsData = [
       note: "Rendimiento diario máximo recomendado y tazas por hora según JURA (norma DIN 18873-2). La E8 es de la línea doméstica y JURA no le publica rendimiento profesional.",
       columns: ["Tazas al día", "Espressos por hora", "Especialidades", "Depósito de agua", "Café en grano", "Pensada para"],
       rows: [
-        { model: "E8", to: null, values: ["Uso doméstico", "—", "17", "1,9 l", "280 g", "Gerencia, sala de reuniones, oficina pequeña"] },
-        { model: "W8", to: null, values: ["Hasta 50", "83", "17", "3 l", "500 g", "Oficinas, tiendas, estudios y locales comerciales"] },
-        { model: "X10", to: null, values: ["Hasta 100", "92", "35, con Cold Brew", "5 l", "500 g a 1 kg", "Oficinas grandes, comedores, autoservicio y centros de salud"] },
+        { model: "E8", to: "/marcas/jura/e8", values: ["Uso doméstico", "—", "17", "1,9 l", "280 g", "Gerencia, sala de reuniones, oficina pequeña"] },
+        { model: "W8", to: "/marcas/jura/w8", values: ["Hasta 50", "83", "17", "3 l", "500 g", "Oficinas, tiendas, estudios y locales comerciales"] },
+        { model: "X10", to: "/marcas/jura/x10", values: ["Hasta 100", "92", "35, con Cold Brew", "5 l", "500 g a 1 kg", "Oficinas grandes, comedores, autoservicio y centros de salud"] },
       ],
     },
     // Consumibles y accesorios por modelo. Solo lo que JURA lista para cada cafetera
@@ -257,6 +270,15 @@ export const brandsData = [
       {
         q: "¿Se pueden alquilar?",
         a: "No: trabajamos solo con venta. La máquina es de tu empresa, con instalación y capacitación incluidas y con repuestos asegurados por diez años.",
+      },
+      // 21-oct-2026. Precios: decisión de Enrique, por ahora no se publican.
+      {
+        q: "¿Cuánto cuesta una cafetera JURA en el Perú?",
+        a: "Por ahora no publicamos precios: cada cotización incluye la instalación, la capacitación de tu equipo, el técnico en 24 horas y los repuestos asegurados por diez años. Pídenos la tuya y compárala, en precio y en servicio posventa.",
+      },
+      {
+        q: "¿Dónde comprar una cafetera JURA en Lima?",
+        a: "Con nosotros, codistribuidores autorizados de JURA en el Perú: la instalamos, capacitamos a tu equipo y respondemos en 24 horas cuando necesita atención.",
       },
     ],
     closingStatement:

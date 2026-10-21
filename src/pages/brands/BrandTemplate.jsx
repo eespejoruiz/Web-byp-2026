@@ -218,7 +218,9 @@ const BrandTemplate = ({ slug }) => {
                       <tbody>
                         {sel.rows.map((r) => (
                           <tr role="row" key={r.model}>
-                            <th scope="row" role="rowheader">{brand.name} {r.model}</th>
+                            <th scope="row" role="rowheader">
+                              {r.to ? <Link className="byp-inlink" to={r.to}>{brand.name} {r.model}</Link> : <>{brand.name} {r.model}</>}
+                            </th>
                             {r.values.map((v, i) => (
                               <td role="cell" key={`${r.model}-${i}`} data-label={sel.columns[i]}>{v}</td>
                             ))}

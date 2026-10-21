@@ -91,8 +91,8 @@ const PAGINAS = {
     description: 'Hornos Mondial Forni de tubos de vapor, eléctricos de pisos y rotativos de carro, con control MFTouch. Ocho modelos con representación y servicio técnico en Perú.',
   },
   '/equipos/cafeteras': {
-    title: 'Cafeteras automáticas profesionales para oficina | B&P Tech',
-    description: 'Cafeteras automáticas JURA para oficina, hotel y restaurante, de 50 a 100 tazas al día. Técnico en 24 horas y repuestos garantizados por 10 años en Perú.',
+    title: 'Cafeteras automáticas para oficina y negocio | B&P Tech',
+    description: 'Cafeteras automáticas JURA para oficina y negocio: cuántas tazas al día cubre cada modelo, de 50 a 100, con instalación y técnico en 24 horas en Perú.',
   },
   '/equipos/licuadoras': {
     title: 'Licuadoras profesionales en Perú | B&P Tech',
@@ -156,6 +156,20 @@ const PAGINAS = {
   '/marcas/jura': {
     title: 'Cafeteras JURA en Perú: X10, W8 y E8 | B&P Tech',
     description: 'Cafeteras automáticas JURA E8, W8 y X10 para oficinas, hoteles y restaurantes. Codistribuidor autorizado, técnico en 24 h y repuestos por 10 años.',
+  },
+  // Páginas por modelo (21-oct-2026, OK de Enrique): las fichas de pe.jura.com
+  // llevan un título genérico y no salen para «jura e8»; aquí el modelo va primero.
+  '/marcas/jura/x10': {
+    title: 'JURA X10 en Perú: cafetera profesional de 100 tazas | B&P Tech',
+    description: 'La JURA X10 prepara hasta 100 tazas al día y 35 especialidades, incluido Cold Brew. Con instalación, capacitación y técnico en 24 horas de B&P Tech en Perú.',
+  },
+  '/marcas/jura/w8': {
+    title: 'JURA W8 en Perú: cafetera profesional de 50 tazas | B&P Tech',
+    description: 'La JURA W8 prepara hasta 50 tazas al día y 17 especialidades en 29,5 cm de ancho. Con instalación, capacitación y técnico en 24 horas de B&P Tech en Perú.',
+  },
+  '/marcas/jura/e8': {
+    title: 'JURA E8 en Perú: cafetera automática para oficina | B&P Tech',
+    description: 'La JURA E8 muele el grano para cada taza y prepara 17 especialidades: la cafetera para la gerencia, una sala de reuniones o una oficina pequeña en Perú.',
   },
   '/marcas/mondialforni': {
     title: 'Mondial Forni en Perú: hornos de panificación | B&P Tech',

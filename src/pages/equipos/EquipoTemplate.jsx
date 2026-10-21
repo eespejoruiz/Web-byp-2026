@@ -158,6 +158,41 @@ const EquipoTemplate = ({ slug }) => {
                       </ul>
                     </div>
                   )}
+                  {/* Tabla opcional (misma pieza que el selector de las marcas: tabla en
+                      escritorio, tarjetas en móvil). Si la fila trae `to`, la última
+                      celda enlaza a esa página. */}
+                  {sec.tabla && Array.isArray(sec.tabla.filas) && (
+                    <>
+                      <div className="byp-selector">
+                        <table className="byp-selector__table byp-selector__table--wrap" role="table">
+                          <caption className="byp-sr-only">{sec.titulo}</caption>
+                          <thead>
+                            <tr role="row">
+                              {sec.tabla.columnas.map((c) => (
+                                <th scope="col" role="columnheader" key={c}>{c}</th>
+                              ))}
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {sec.tabla.filas.map((f, fIdx) => (
+                              <tr role="row" key={`gt-${sIdx}-${fIdx}`}>
+                                <th scope="row" role="rowheader">{f.cabecera}</th>
+                                {f.celdas.map((v, cIdx) => {
+                                  const ultima = cIdx === f.celdas.length - 1;
+                                  return (
+                                    <td role="cell" key={`gt-${sIdx}-${fIdx}-${cIdx}`} data-label={sec.tabla.columnas[cIdx + 1]}>
+                                      {ultima && f.to ? <Link className="byp-inlink" to={f.to}>{v}</Link> : v}
+                                    </td>
+                                  );
+                                })}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                      {sec.tabla.nota && <p className="byp-selector__note">{sec.tabla.nota}</p>}
+                    </>
+                  )}
                   {(sec.cierre || []).map((t, i) => (
                     <p key={`gc-${sIdx}-${i}`} style={{ marginTop: 18 }}>{t}</p>
                   ))}

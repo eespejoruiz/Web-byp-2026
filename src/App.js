@@ -32,6 +32,7 @@ import TrueBrand from "./pages/brands/True";
 import Pietroberto from "./pages/brands/Pietroberto";
 import MondialForni from "./pages/brands/MondialForni";
 import Jura from "./pages/brands/Jura";
+import ModeloTemplate from "./pages/brands/ModeloTemplate";
 import EquiposIndex from './pages/equipos/EquiposIndex';
 import Hornos from './pages/equipos/Hornos';
 import Cafeteras from './pages/equipos/Cafeteras';
@@ -127,6 +128,9 @@ function App() {
             <Route path='/marcas/pietroberto' element={<Pietroberto />} />
             <Route path='/marcas/mondialforni' element={<MondialForni />} />
             <Route path='/marcas/jura' element={<Jura />} />
+            <Route path='/marcas/jura/x10' element={<ModeloTemplate ruta='/marcas/jura/x10' />} />
+            <Route path='/marcas/jura/w8' element={<ModeloTemplate ruta='/marcas/jura/w8' />} />
+            <Route path='/marcas/jura/e8' element={<ModeloTemplate ruta='/marcas/jura/e8' />} />
             <Route path='/marcas/vitamix' element={<Vitamix />} />
             <Route path='/marcas/cainco' element={<Cainco />} />
             <Route path='/marcas/pomati' element={<Pomati />} />
