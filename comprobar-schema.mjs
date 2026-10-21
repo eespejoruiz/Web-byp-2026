@@ -83,6 +83,13 @@ for (const ruta of rutas()) {
     }
   }
 
+  // 5. Ningún Product: sin precio, reseñas ni valoración Google lo da por «no válido»
+  // (Search Console, 21-oct-2026), y además solo lo admite en páginas de un solo
+  // producto. Las listas de equipos van como ListItem simple (ver schemaData.js).
+  if (/"@type"\s*:\s*"Product"/.test(crudo)) {
+    fallos.push(`${ruta}: declara un Product, que Google marca como no válido sin precio, reseñas ni valoración`);
+  }
+
   resumen.push({ ruta, tipos: [...new Set(tipos)].join(', '),
     productos: listas.reduce((a, l) => a + (l.itemListElement || []).length, 0) });
 }

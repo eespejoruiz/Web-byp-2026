@@ -9,12 +9,12 @@
  * Qué resuelve, en corto: a un distribuidor lo que más le cuesta es que Google
  * entienda que es el canal de unas marcas concretas en un país concreto. Eso se
  * dice con la organización, con las marcas enlazadas a su fabricante y con los
- * productos atados a su marca.
+ * equipos de cada marca listados en su página.
  */
 
 import { equiposData, getProductsByEquipo } from './equiposData';
 import { brandsData } from './brandsData';
-import { productsData, productBrandNames } from './productsData';
+import { productsData } from './productsData';
 import { blogPosts } from './blogPostsData';
 import { caseStudiesData } from './caseStudiesData';
 import { seoDeRuta, SITIO } from './seoData';
@@ -155,14 +155,21 @@ function migas(ruta) {
   return { '@type': 'BreadcrumbList', '@id': abs(ruta) + '#migas', itemListElement: items };
 }
 
-/** Un producto tal y como está en la ficha: sin precio y sin disponibilidad. */
-function producto(p) {
-  const nodo = {
-    '@type': 'Product',
-    name: p.name,
-    category: p.category,
-    brand: { '@type': 'Brand', name: productBrandNames[p.brand] || p.brand },
-  };
+/**
+ * Un equipo de la lista tal y como está en la página: modelo, descripción y foto,
+ * sin precio ni disponibilidad.
+ *
+ * Va como ListItem simple, no como Product. Google solo admite Product para sus
+ * resultados de producto si lleva precio (offers), reseñas (review) o valoración
+ * (aggregateRating), y solo en páginas de un solo producto: «product rich results
+ * only support pages that focus on a single product» (developers.google.com,
+ * product-snippet). B&P vende a cotización y estas páginas listan varios equipos,
+ * así que cada Product salía «no válido» en Search Console (prueba de
+ * /equipos/refrigeracion del 21-oct-2026) sin aportar nada. Inventar un precio
+ * para quitar el error es justo lo que este archivo prohíbe.
+ */
+function elementoDeLista(p, i) {
+  const nodo = { '@type': 'ListItem', position: i + 1, name: p.name };
   if (p.description) nodo.description = p.description;
   const img = imagenAbsoluta(p.image);
   if (img) nodo.image = img;
@@ -176,11 +183,7 @@ function listaDeProductos(items, nombre, ruta) {
     '@id': abs(ruta) + '#productos',
     name: nombre,
     numberOfItems: items.length,
-    itemListElement: items.map((p, i) => ({
-      '@type': 'ListItem',
-      position: i + 1,
-      item: producto(p),
-    })),
+    itemListElement: items.map(elementoDeLista),
   };
 }
 
