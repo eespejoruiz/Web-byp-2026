@@ -37,6 +37,7 @@ import Hornos from './pages/equipos/Hornos';
 import Cafeteras from './pages/equipos/Cafeteras';
 import Licuadoras from './pages/equipos/Licuadoras';
 import Refrigeracion from './pages/equipos/Refrigeracion';
+import Congelacion from './pages/equipos/Congelacion';
 import Amasadoras from './pages/equipos/Amasadoras';
 import Laminadoras from './pages/equipos/Laminadoras';
 import Batidoras from './pages/equipos/Batidoras';
@@ -108,6 +109,7 @@ function App() {
             <Route path='/equipos/cafeteras' element={<Cafeteras />} />
             <Route path='/equipos/licuadoras' element={<Licuadoras />} />
             <Route path='/equipos/refrigeracion' element={<Refrigeracion />} />
+            <Route path='/equipos/congelacion' element={<Congelacion />} />
             <Route path='/equipos/amasadoras' element={<Amasadoras />} />
             <Route path='/equipos/laminadoras' element={<Laminadoras />} />
             <Route path='/equipos/batidoras' element={<Batidoras />} />

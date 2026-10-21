@@ -84,7 +84,7 @@ const PAGINAS = {
 
   '/equipos': {
     title: 'Equipos por tipo de máquina | B&P Tech Perú',
-    description: 'Amasadoras, laminadoras, batidoras, refrigeración, lavavajillas, licuadoras y más: trece familias de equipo con las marcas que representamos en Perú.',
+    description: 'Amasadoras, laminadoras, batidoras, refrigeración, lavavajillas, licuadoras y más: catorce familias de equipo con las marcas que representamos en Perú.',
   },
   '/equipos/hornos': {
     title: 'Hornos industriales para panadería en Perú | B&P Tech',
@@ -99,8 +99,12 @@ const PAGINAS = {
     description: 'Licuadoras comerciales Vitamix para barra y cocina: seis modelos, motores de hasta 4,2 HP y vasos de 0,9 a 5,7 litros, con servicio técnico en Perú.',
   },
   '/equipos/refrigeracion': {
-    title: 'Refrigeración comercial en Perú | B&P Tech',
-    description: 'Exhibidores, refrigeradores verticales y bajo mesada TRUE para cocinas y retail: conservación y cadena de frío con respaldo técnico en Perú.',
+    title: 'Refrigeradores industriales y exhibidores en Perú | B&P Tech',
+    description: 'Refrigeradores TRUE verticales, bajo mesada y exhibidores de puertas de vidrio tipo visicooler, de 0,6 a 3,3 °C, para cocinas y retail, con soporte en Perú.',
+  },
+  '/equipos/congelacion': {
+    title: 'Congeladoras industriales y congelación rápida | B&P Tech',
+    description: 'Congeladoras verticales y bajo mesada TRUE para conservar a −18 °C y abatidores IRINOX para congelar rápido: te ayudamos a elegir el equipo para tu negocio.',
   },
   '/equipos/amasadoras': {
     title: 'Amasadoras industriales en Perú | B&P Tech',

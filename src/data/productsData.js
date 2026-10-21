@@ -596,6 +596,10 @@ export const productsData = [
   },
 
   /* ---------------- TRUE ---------------- */
+  // Temperatura y parrillas: fichas de truemfg.com/es (la URL de cada una va en
+  // source), leídas el 21-oct-2026. Las tres dicen «33 °F a 38 °F»; el °C que
+  // ponen al lado («5 °C a 3.3 °C») está mal y aquí va convertido: 0,6 a 3,3 °C.
+  // Voltaje y garantía de los equipos que vende B&P: pendientes de confirmar.
   {
     id: "true-gdm-49",
     brand: "true",
@@ -606,6 +610,7 @@ export const productsData = [
     specs: {
       "Puertas": "2 batientes de vidrio, doble hoja con aislamiento térmico",
       "Parrillas": "8 ajustables, revestidas de PVC",
+      "Temperatura": "0,6 a 3,3 °C (33 a 38 °F)",
       "Dimensiones (An × F × Al)": "1374 × 754 × 1994 mm",
       "Peso": "173 kg",
       "Refrigerante": "R290 (ODP 0 · GWP 0,02)",
@@ -626,6 +631,7 @@ export const productsData = [
     specs: {
       "Puertas": "2 sólidas",
       "Parrillas": "6 ajustables, revestidas de PVC",
+      "Temperatura": "0,6 a 3,3 °C (33 a 38 °F)",
       "Dimensiones (An × F × Al)": "1375 × 750 × 1991 mm",
       "Peso": "177 kg",
       "Refrigerante": "R290 (ODP 0 · GWP 0,02)",
@@ -650,7 +656,8 @@ export const productsData = [
       "Refrigerador bajo mostrador de dos puertas sólidas de acero inoxidable, con refrigerante R290 y aislamiento de poliuretano de alta densidad. Su flujo de aire guiado ofrece temperaturas uniformes en cocinas comerciales con espacio reducido.",
     specs: {
       "Puertas": "2 sólidas",
-      "Parrillas": "4",
+      "Parrillas": "4 ajustables, revestidas de PVC",
+      "Temperatura": "0,6 a 3,3 °C (33 a 38 °F)",
       "Dimensiones (An × F × Al)": "1229 × 766 × 756 mm",
       "Peso": "118 kg",
       "Refrigerante": "R290 (ODP 0 · GWP 0,02)",

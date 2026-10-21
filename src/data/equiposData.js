@@ -213,6 +213,7 @@ export const equiposData = [
     slug: "refrigeracion",
     route: "/equipos/refrigeracion",
     name: "Refrigeración comercial",
+    h1: "Refrigeradores industriales y exhibidores",
     tagline: "Conservación, exhibición y cadena de frío",
     heroImage: refrigeracionHero,
     categorias: [
@@ -224,6 +225,145 @@ export const equiposData = [
     parrafos: [
       "El frío es el único equipo de una cocina que no puede pararse nunca. Cuando falla no se pierde una preparación: se pierde el inventario, y en un local de volumen eso es más dinero que la propia máquina.",
       "TRUE fabrica en Estados Unidos equipos pensados para trabajar dentro del calor de una cocina profesional, que es donde la mayoría de los equipos de frío sufren. Hay tres formatos según dónde vaya: exhibidor de puertas de vidrio para la sala, vertical de puerta sólida para almacén y bajo mesada para la línea de producción.",
+    ],
+    // Semana 11 (21-oct-2026, con OK de Enrique: «Publica ya con lo que hay»).
+    // Búsquedas al mes en el Perú (DataForSEO): «visicooler» 5.400, «vitrina
+    // refrigerada» 320, «refrigerador/refrigeradora industrial» 260, «exhibidora
+    // refrigerada» 110, «visicooler 2 puertas» 110. En Google, «visicooler» es sobre
+    // todo el exhibidor económico de tienda (Sodimac, Efe, Curacao) y «vitrina
+    // refrigerada», la vitrina de mostrador: la guía lo dice tal cual. TRUE no hace
+    // cámaras de obra (confirmado por Enrique): las 880 búsquedas de «cámara
+    // frigorífica» no se persiguen y la página lo aclara. Temperaturas de las fichas
+    // de truemfg.com/es: 33 a 38 °F en los tres modelos (la ficha trae mal el °C).
+    guia: {
+      titulo: "Cómo elegir un refrigerador industrial para tu negocio",
+      secciones: [
+        {
+          titulo: "Exhibir, guardar o tener a la mano",
+          parrafos: [
+            "La primera pregunta no es la capacidad, sino dónde va a trabajar el equipo. Hay tres lugares, y TRUE tiene un formato para cada uno.",
+          ],
+          lista: [
+            { lead: "Para exhibir en la sala o la tienda: GDM-49.", text: "Dos puertas batientes de vidrio de doble hoja con aislamiento térmico, ocho parrillas ajustables e iluminación LED interior, para mostrar bebidas y alimentos envasados." },
+            { lead: "Para guardar en el almacén o la cocina: T-49.", text: "Vertical de dos puertas sólidas de acero inoxidable y seis parrillas ajustables, con motores ECM y el compresor abajo, que según TRUE es la zona más fresca y libre de grasa de la cocina." },
+            { lead: "Para la línea de producción: TUC-48.", text: "Bajo mesada de dos puertas sólidas y cuatro parrillas, para tener los insumos a la mano de quien cocina; el gabinete mide 76 cm de alto, sin las patas. Su flujo de aire guiado mantiene una temperatura uniforme en cocinas con poco espacio." },
+          ],
+          cierre: [
+            "Los tres mantienen el gabinete entre 0,6 y 3,3 °C (de 33 a 38 °F) y usan refrigerante R290, un hidrocarburo que no daña la capa de ozono. Los dos verticales miden 1,37 m de ancho y casi 2 m de alto según la ficha de TRUE: conviene medir puertas y pasillos antes de pedirlos.",
+          ],
+        },
+        {
+          titulo: "«Visicooler» y «vitrina refrigerada»: qué se busca con cada nombre",
+          parrafos: [
+            "En el Perú, a un refrigerador de puertas de vidrio como el GDM-49 se le dice visicooler. Conviene decirlo con claridad: con ese nombre se busca sobre todo el exhibidor de bebidas de bodegas y tiendas, un equipo más sencillo y económico. El GDM-49 es un exhibidor profesional de 1,37 m de ancho y 173 kg, para el trabajo diario de restaurantes, cafeterías y supermercados.",
+            "«Vitrina refrigerada», en cambio, suele ser la vitrina de mostrador donde se exhiben tortas, postres o embutidos. Los equipos de TRUE de esta página son verticales y bajo mesada; no incluyen vitrinas de mostrador.",
+          ],
+        },
+        {
+          titulo: "Lo que TRUE no hace: cámaras frigoríficas",
+          parrafos: [
+            "TRUE fabrica equipos verticales y bajo mesada, no cámaras frigoríficas de obra, que son los cuartos fríos donde se entra caminando. Lo decimos para que no pierdas tiempo: si lo que necesitas es una cámara, los equipos de esta página no son la respuesta.",
+          ],
+        },
+        {
+          titulo: "Refrigerar no es congelar",
+          parrafos: [
+            "Un refrigerador conserva en frío, sin congelar. Para guardar producto congelado, a −18 °C o menos, hace falta una congeladora; y para congelar rápido lo que sale del horno o de la cocina, un abatidor. Lo explicamos en nuestra página de congelación comercial.",
+          ],
+          enlace: { texto: "congelación comercial", to: "/equipos/congelacion" },
+        },
+      ],
+    },
+    faqs: [
+      {
+        q: "¿Qué es un visicooler?",
+        a: "Es el nombre con que en el Perú se conoce al refrigerador de puertas de vidrio para exhibir bebidas. Con esa palabra se busca sobre todo el equipo de bodega o tienda, más sencillo y económico. Un exhibidor profesional como el TRUE GDM-49 tiene dos puertas de vidrio de doble hoja, ocho parrillas ajustables e iluminación LED, y está pensado para el trabajo diario de restaurantes, cafeterías y supermercados.",
+      },
+      {
+        q: "¿Qué refrigerador conviene para la cocina de un restaurante?",
+        a: "Para guardar el inventario, un vertical de puertas sólidas como el T-49, con seis parrillas ajustables. Para tener los insumos a la mano en la línea de producción, uno bajo mesada como el TUC-48. Muchas cocinas usan los dos.",
+      },
+      {
+        q: "¿TRUE fabrica cámaras frigoríficas?",
+        a: "No. TRUE fabrica equipos verticales y bajo mesada, no cámaras frigoríficas de obra, que son los cuartos fríos donde se entra caminando.",
+      },
+      {
+        q: "¿A qué temperatura trabajan estos refrigeradores?",
+        a: "Según TRUE, los tres modelos de esta página mantienen el gabinete entre 0,6 y 3,3 °C (de 33 a 38 °F). Usan refrigerante R290, un hidrocarburo que no daña la capa de ozono.",
+      },
+    ],
+  },
+  // Congelación: semana 11 (21-oct-2026), página aparte por decisión de Enrique.
+  // «congeladora industrial» 260 búsquedas al mes, «congelador industrial» 210,
+  // «congeladora horizontal» 480 (casi todo doméstico). Entra con lo que B&P ya
+  // tiene confirmado para congelar, los abatidores IRINOX (la misma categoría que
+  // /equipos/abatidores). Los congeladores TRUE (verticales, bajo mesada y de
+  // puertas de vidrio: TRUE los fabrica, ver truemfg.com/es) se suman como
+  // fichas cuando B&P confirme modelos, voltaje y garantía; mientras tanto, la
+  // página no nombra ningún modelo TRUE de congelación.
+  {
+    slug: "congelacion",
+    route: "/equipos/congelacion",
+    name: "Congelación comercial",
+    h1: "Congeladoras industriales",
+    tagline: "Conservar a −18 °C o congelar rápido: dos trabajos, dos equipos",
+    categorias: [
+      "Congelador vertical de puerta sólida",
+      "Congelador bajo mesada (undercounter)",
+      "Abatidor de temperatura",
+    ],
+    industries: ["restaurantes", "hoteles-catering", "cocinas-industriales", "supermercados", "carnicerias", "panaderia", "comida-rapida"],
+    parrafos: [
+      "En un negocio de alimentos, congelar son dos trabajos distintos. Uno es conservar: guardar el producto a −18 °C o menos durante semanas o meses, y para eso está la congeladora. El otro es congelar rápido lo que sale del horno o de la cocina para que no pierda calidad, y para eso está el abatidor.",
+      "Para conservar, TRUE fabrica congeladoras verticales, bajo mesada y exhibidoras de puertas de vidrio: cuéntanos cuánto producto guardas y dónde va el equipo, y te decimos qué modelo encaja. Para congelar rápido trabajamos con los abatidores IRINOX, que llevan el producto a −18 °C en el corazón y son los que ves en esta página.",
+    ],
+    guia: {
+      titulo: "Cómo elegir una congeladora industrial",
+      secciones: [
+        {
+          titulo: "Conservar o congelar rápido",
+          parrafos: [
+            "La congeladora está hecha para mantener el frío, no para bajarlo. Si se le mete una preparación caliente, la congela despacio y además calienta lo que ya estaba guardado.",
+            "El abatidor hace el trabajo contrario: baja la temperatura rápido, hasta −18 °C en el corazón del producto, y recién entonces el producto pasa a la congeladora. Según IRINOX, la congelación ultrarrápida forma microcristales que no dañan la estructura del alimento. Por eso, en una cocina de volumen, los dos equipos no compiten: trabajan juntos.",
+          ],
+          enlace: { texto: "abatidor", to: "/equipos/abatidores" },
+        },
+        {
+          titulo: "Vertical, bajo mesada u horizontal",
+          parrafos: [
+            "Las congeladoras se diferencian sobre todo por cómo se carga y se saca el producto.",
+          ],
+          lista: [
+            { lead: "Vertical.", text: "Ocupa poco suelo, ordena el producto en parrillas y deja ver todo al abrir la puerta. Es la de almacén y cocina, y la más práctica donde se entra y se saca producto todo el día." },
+            { lead: "Bajo mesada.", text: "Va debajo de la superficie de trabajo, a la mano de quien cocina, con lo que se usa en el servicio: porciones, masas o postres." },
+            { lead: "Horizontal.", text: "La de tapa, tipo baúl, es la más común y guarda mucho por su precio, pero para llegar a lo de abajo hay que sacar lo de arriba. Funciona bien como reserva; para el trabajo diario cuesta mantenerla en orden." },
+          ],
+        },
+        {
+          titulo: "Lo que hay que mirar además del tamaño",
+          parrafos: [
+            "Lo primero es que mantenga −18 °C o menos con la puerta abriéndose durante el servicio, que es lo que más le exige a una congeladora en una cocina. Lo segundo, el servicio técnico: una congeladora parada no echa a perder una preparación, echa a perder el inventario.",
+          ],
+        },
+      ],
+    },
+    faqs: [
+      {
+        q: "¿Qué diferencia hay entre una congeladora y un abatidor?",
+        a: "La congeladora conserva a −18 °C o menos lo que ya está congelado; no está hecha para bajar la temperatura rápido. El abatidor congela rápido, hasta −18 °C en el corazón del producto, lo que sale del horno o de la cocina. Lo normal es usar los dos: el abatidor congela y la congeladora guarda.",
+      },
+      {
+        q: "¿Congeladora vertical u horizontal para un negocio?",
+        a: "La horizontal es la más común y guarda mucho por su precio, pero para llegar a lo de abajo hay que sacar lo de arriba. La vertical ocupa menos suelo y ordena el producto en parrillas, así que es más práctica donde se entra y se saca producto todo el día.",
+      },
+      {
+        q: "¿A qué temperatura debe estar una congeladora industrial?",
+        a: "A −18 °C o menos, que es la temperatura de referencia para conservar alimentos congelados.",
+      },
+      {
+        q: "¿TRUE fabrica cámaras de congelación?",
+        a: "No. TRUE fabrica congeladoras verticales, bajo mesada y exhibidoras de puertas de vidrio, no cámaras de obra, que son los cuartos fríos donde se entra caminando.",
+      },
     ],
   },
   {
