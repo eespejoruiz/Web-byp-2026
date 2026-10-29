@@ -35,7 +35,7 @@ const Contect = () => (
             </div>
             <div className="byp-contact-item">
               <span className="byp-mono">EMAIL</span>
-              <a href="mailto:contacto@byptech.com">contacto@byptech.com</a>
+              <a href="mailto:jbejarano@byptech.com">jbejarano@byptech.com</a>
             </div>
             <div className="byp-contact-item">
               <span className="byp-mono">WHATSAPP</span>

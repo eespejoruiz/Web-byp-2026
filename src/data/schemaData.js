@@ -27,7 +27,7 @@ const WEB_ID = `${SITIO}/#sitio`;
 // Datos de contacto: los mismos que están escritos en la cabecera, el pie y la
 // página de contacto. Si cambian ahí, hay que cambiarlos aquí.
 const TELEFONO = '+51985362946';
-const EMAIL = 'contacto@byptech.com';
+const EMAIL = 'jbejarano@byptech.com';
 
 // Ficha de Google Business. Va por su CID, que no cambia: el enlace corto del
 // botón «Compartir» (maps.app.goo.gl) es solo una redirección. En la ficha el

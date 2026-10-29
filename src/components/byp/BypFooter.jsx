@@ -48,7 +48,7 @@ const BypFooter = () => {
           </li>
           <li>
             <span className="byp-mono">MAIL</span>
-            <a href="mailto:contacto@byptech.com">contacto@byptech.com</a>
+            <a href="mailto:jbejarano@byptech.com">jbejarano@byptech.com</a>
           </li>
           <li>
             <span className="byp-mono">WSP</span>
