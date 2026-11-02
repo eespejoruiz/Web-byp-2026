@@ -58,6 +58,169 @@ export const equiposData = [
       "El horno es la inversión que más condiciona qué puede producir una panadería: el tipo de pan, el volumen por turno y cuánto se parece cada horneada a la anterior.",
       "Mondial Forni fabrica en Italia las tres familias. Los de tubos de vapor cuecen por inercia térmica, con el calor entrando desde la solera, que es lo que pide el pan de gran formato. Los eléctricos de pisos dan control independiente piso a piso, así que se hornea a la vez a temperaturas distintas. Y los rotativos de carro son los de mayor rotación por hora. Los ocho modelos llevan el mismo control MFTouch, que guarda la curva de cada producto en la máquina y no en la cabeza de quien esté ese turno.",
     ],
+    resumen: [
+      "Rotativos de 8 a 20 bandejas, a gas o eléctricos",
+      "De pisos: eléctricos o de tubos de vapor, desde 0,5 m²",
+      "Mondial Forni, fabricados en Italia, con servicio técnico en Perú",
+    ],
+    cta: {
+      texto: "Pide el precio por WhatsApp",
+      mensaje: "Hola B&P TECH, quiero el precio de un horno para panadería: unas ___ bandejas, a gas o eléctrico.",
+      ancla: "Ver qué horno necesitas",
+    },
+    selector: {
+      titulo: "¿Qué horno necesitas?",
+      columnas: [
+        "Modelo",
+        "Tipo",
+        "Energía",
+        "Capacidad",
+        "Cotización",
+      ],
+      filas: [
+        {
+          cabecera: "Slim",
+          celdas: [
+            "Rotativo compacto, para hornear en tienda",
+            "Eléctrico",
+            "8 a 10 bandejas de 40×60 cm",
+            "Pedir precio",
+          ],
+          wa: "Hola B&P TECH, quiero el precio del horno rotativo Slim de Mondial Forni.",
+        },
+        {
+          cabecera: "Basic",
+          celdas: [
+            "Rotativo de carro",
+            "Gas o eléctrico",
+            "15 bandejas (seis medidas de bandeja)",
+            "Pedir precio",
+          ],
+          wa: "Hola B&P TECH, quiero el precio del horno rotativo Basic de Mondial Forni, a gas o eléctrico.",
+        },
+        {
+          cabecera: "Techno",
+          celdas: [
+            "Rotativo de carro",
+            "Gas o eléctrico",
+            "10 a 20 bandejas según el carro",
+            "Pedir precio",
+          ],
+          wa: "Hola B&P TECH, quiero el precio del horno rotativo Techno de Mondial Forni: unas ___ bandejas.",
+        },
+        {
+          cabecera: "Domino",
+          celdas: [
+            "Eléctrico de pisos, modular",
+            "Eléctrico",
+            "2 a 8 pisos · 0,5 a 2 m²",
+            "Pedir precio",
+          ],
+          wa: "Hola B&P TECH, quiero el precio del horno eléctrico de pisos Domino de Mondial Forni.",
+        },
+        {
+          cabecera: "Dekomondial",
+          celdas: [
+            "Eléctrico de pisos",
+            "Eléctrico",
+            "3 a 5 pisos · 4 a 22,8 m²",
+            "Pedir precio",
+          ],
+          wa: "Hola B&P TECH, quiero el precio del horno eléctrico de pisos Dekomondial de Mondial Forni.",
+        },
+        {
+          cabecera: "LEM",
+          celdas: [
+            "Tubos de vapor, compacto",
+            "Consúltanos el combustible",
+            "4 pisos · 4 o 6 m²",
+            "Pedir precio",
+          ],
+          wa: "Hola B&P TECH, quiero el precio del horno de tubos de vapor LEM de Mondial Forni.",
+        },
+        {
+          cabecera: "Ecomondial",
+          celdas: [
+            "Tubos de vapor",
+            "Con quemador; consúltanos el combustible",
+            "3 a 5 pisos · 6,1 a 20,3 m²",
+            "Pedir precio",
+          ],
+          wa: "Hola B&P TECH, quiero el precio del horno de tubos de vapor Ecomondial de Mondial Forni.",
+        },
+        {
+          cabecera: "Mondial",
+          celdas: [
+            "Tubos de vapor",
+            "Gas natural, GLP, diésel o leña",
+            "3 o 4 pisos · 5,1 a 26,8 m²",
+            "Pedir precio",
+          ],
+          wa: "Hola B&P TECH, quiero el precio del horno de tubos de vapor Mondial de Mondial Forni.",
+        },
+      ],
+      nota: "¿Buscas un horno de 6 o 12 bandejas? Los rotativos van de 8 a 20. Para menos volumen, el Domino es modular: de 2 a 8 pisos según tu espacio.",
+    },
+    guia: {
+      titulo: "Cómo elegir un horno para tu panadería",
+      secciones: [
+        {
+          titulo: "¿Rotativo, de pisos o de tubos de vapor?",
+          lista: [
+            {
+              lead: "Tubos de vapor:",
+              text: "cuecen por inercia térmica, con el calor entrando desde la solera, que es lo que pide el pan de gran formato.",
+            },
+            {
+              lead: "Eléctricos de pisos:",
+              text: "dan control independiente piso a piso, así que se hornea a la vez a temperaturas distintas.",
+            },
+            {
+              lead: "Rotativos de carro:",
+              text: "son los de mayor rotación por hora, porque entra un carro entero y el producto gira dentro.",
+            },
+          ],
+        },
+        {
+          titulo: "¿A gas o eléctrico?",
+          parrafos: [
+            "Depende sobre todo de la instalación que tengas. Los rotativos Techno y Basic vienen en las dos versiones; el Slim, el Domino y el Dekomondial son eléctricos, y el Mondial trabaja con gas natural, GLP, diésel o leña.",
+            "Un horno eléctrico necesita potencia disponible en el local: de 2,9 kW el Domino más chico a 79,8 kW el Techno más grande. Uno a gas necesita la conexión de gas. Cuéntanos qué tienes y te decimos qué versión conviene.",
+          ],
+        },
+        {
+          titulo: "¿Cuántas bandejas?",
+          parrafos: [
+            "En los rotativos, la capacidad se mide en bandejas: el Slim lleva de 8 a 10 de 40×60 cm, el Basic 15 y el Techno de 10 a 20 según el carro. En los de pisos se mide en superficie de horneo: del Domino (0,5 a 2 m²) al Mondial (hasta 26,8 m²).",
+          ],
+        },
+        {
+          titulo: "Lo barato sale caro",
+          parrafos: [
+            "Un horno que se para en plena producción te cuesta más de lo que ahorraste en precio.",
+            "Antes de decidir solo por precio, compara lo que viene con el horno: instalación y puesta en marcha, repuestos originales, servicio técnico en Perú y el control MFTouch, que guarda la curva de cada producto en la máquina y no en la cabeza de quien esté ese turno.",
+          ],
+        },
+      ],
+    },
+    faqs: [
+      {
+        q: "¿Cuánto cuesta un horno para panadería?",
+        a: "Depende del tipo (rotativo, de pisos o de tubos de vapor), del tamaño y de si es a gas o eléctrico, por eso cotizamos cada horno según tu producción. Escríbenos por WhatsApp cuántas bandejas necesitas y qué instalación tienes, y te enviamos la cotización.",
+      },
+      {
+        q: "¿Qué horno conviene para una panadería pequeña o una tienda?",
+        a: "Los más compactos son el Slim, rotativo eléctrico para hornear en la tienda; el Domino, eléctrico de pisos y modular, de 2 a 8 pisos; y el LEM, de tubos de vapor, para obradores con poco espacio.",
+      },
+      {
+        q: "¿Tienen hornos a gas?",
+        a: "Sí: los rotativos Techno y Basic tienen versión a gas, y el Mondial trabaja con gas natural, GLP, diésel o leña.",
+      },
+      {
+        q: "¿Cuántas bandejas entran en un horno rotativo?",
+        a: "El Slim lleva 8, 9 o 10 bandejas de 40×60 cm; el Basic, 15; y el Techno, de 10 a 20, según el carro y la separación entre pisos.",
+      },
+    ],
   },
   {
     slug: "cafeteras",
@@ -430,7 +593,7 @@ export const equiposData = [
     slug: "amasadoras",
     route: "/equipos/amasadoras",
     name: "Amasadoras",
-    h1: "Amasadoras industriales",
+    h1: "Amasadoras de pan industriales",
     tagline: "Espiral, Wendel y brazos, según la masa que trabajes",
     heroImage: amasadorasHero,
     categorias: ["Amasadora de espiral", "Amasadora Wendel", "Amasadora de brazos"],
@@ -438,6 +601,132 @@ export const equiposData = [
     parrafos: [
       "La amasadora decide la estructura de la masa, y la estructura decide el producto final. No es un equipo que se elija por litros: se elige por el tipo de masa que se va a trabajar todos los días.",
       "El espiral es el estándar de la panadería de barra. El sistema WENDEL de DIOSNA amasa sin calentar la masa, que es lo que permite fermentaciones largas y controladas. Y la amasadora de brazos de Pietroberto reproduce el amasado manual, que sigue siendo lo que pide cierta panadería tradicional.",
+    ],
+    resumen: [
+      "Desde la SP 12 de sobremesa (hasta 12 kg) hasta sistemas de 600 kg por amasada",
+      "Espiral y WENDEL de DIOSNA, de brazos de Pietroberto",
+      "Instalación, repuestos originales y servicio posventa en Perú",
+    ],
+    cta: {
+      texto: "Pide el precio por WhatsApp",
+      mensaje: "Hola B&P TECH, quiero el precio de una amasadora. Trabajo unos ___ kg de masa por amasada.",
+      ancla: "Ver qué capacidad necesitas",
+    },
+    selector: {
+      titulo: "¿Cuánta masa haces por amasada?",
+      columnas: [
+        "Masa por amasada",
+        "Equipo",
+        "Detalle",
+        "Cotización",
+      ],
+      filas: [
+        {
+          cabecera: "Hasta 12 kg (desde 250 g)",
+          celdas: [
+            "DIOSNA SP 12",
+            "De sobremesa, artesa de 22 L",
+            "Pedir precio",
+          ],
+          wa: "Hola B&P TECH, quiero el precio de la amasadora DIOSNA SP 12 (hasta 12 kg de masa).",
+        },
+        {
+          cabecera: "24, 40, 80 o 120 kg",
+          celdas: [
+            "DIOSNA SP 24 a SP 120",
+            "Espiral, artesa fija",
+            "Pedir precio",
+          ],
+          wa: "Hola B&P TECH, quiero el precio de una amasadora espiral DIOSNA SP. Trabajo unos ___ kg de masa por amasada.",
+        },
+        {
+          cabecera: "120 a 300 kg",
+          celdas: [
+            "DIOSNA SPV y PSPV",
+            "Espiral con artesa móvil o fija; la PSPV, en acero inoxidable",
+            "Pedir precio",
+          ],
+          wa: "Hola B&P TECH, quiero el precio de una amasadora DIOSNA SPV o PSPV. Trabajo unos ___ kg de masa por amasada.",
+        },
+        {
+          cabecera: "160 a 600 kg",
+          celdas: [
+            "DIOSNA WENDEL",
+            "Amasa sin calentar la masa, para fermentaciones largas; hasta 4 amasadoras por sistema",
+            "Pedir precio",
+          ],
+          wa: "Hola B&P TECH, quiero el precio de una amasadora DIOSNA WENDEL. Trabajo unos ___ kg de masa por amasada.",
+        },
+        {
+          cabecera: "160 a 400 kg",
+          celdas: [
+            "Pietroberto FENICE",
+            "De brazos: reproduce el amasado manual",
+            "Pedir precio",
+          ],
+          wa: "Hola B&P TECH, quiero el precio de la amasadora de brazos Pietroberto FENICE. Trabajo unos ___ kg por amasada.",
+        },
+      ],
+      nota: "¿Buscas una de 5, 10, 15 o 25 kg? La SP 12 amasa de 250 g a 12 kg, y la serie SP sigue con 24, 40, 80 y 120 kg. Dinos cuánta masa haces por tanda y te decimos cuál conviene.",
+    },
+    orden: [
+      "diosna-sp",
+      "diosna-pspv-premium",
+      "diosna-wendel",
+      "pietroberto-fenice",
+    ],
+    guia: {
+      titulo: "Cómo elegir una amasadora para tu panadería",
+      secciones: [
+        {
+          titulo: "Por capacidad: la masa de cada tanda",
+          parrafos: [
+            "Calcula la masa que haces en cada tanda, no la del día: si haces 72 kg de masa en tres tandas, buscas una amasadora de 24 kg, no de 72.",
+          ],
+        },
+        {
+          titulo: "Espiral, WENDEL o brazos",
+          lista: [
+            {
+              lead: "Espiral:",
+              text: "el estándar de la panadería de barra, de 12 kg (SP 12) a 300 kg (PSPV).",
+            },
+            {
+              lead: "WENDEL:",
+              text: "amasa sin calentar la masa, lo que permite fermentaciones largas y controladas; de 160 a 600 kg.",
+            },
+            {
+              lead: "De brazos:",
+              text: "reproduce el amasado manual que pide cierta panadería tradicional; de 160 a 400 kg.",
+            },
+          ],
+        },
+        {
+          titulo: "Lo barato sale caro",
+          parrafos: [
+            "Una amasadora que falla a media producción te cuesta más de lo que ahorraste en precio: masa que se pierde y pedidos que no salen.",
+            "Antes de decidir solo por precio, compara lo que viene con el equipo: instalación, repuestos originales, servicio posventa en Perú y asesoría para elegir el tamaño correcto. Si quieres verla trabajar, pide una demostración.",
+          ],
+        },
+      ],
+    },
+    faqs: [
+      {
+        q: "¿Cuánto cuesta una amasadora industrial?",
+        a: "Depende de la capacidad, del tipo de amasado y de la configuración (artesa fija o móvil, control y voltaje), por eso cotizamos cada equipo según tu producción. Escríbenos por WhatsApp cuánta masa haces por amasada y te enviamos la cotización.",
+      },
+      {
+        q: "¿Tienen amasadoras de 5, 10, 15 o 25 kg?",
+        a: "Sí. La DIOSNA SP 12 es de sobremesa y amasa de 250 g a 12 kg; la serie SP sigue con artesas de 24, 40, 80 y 120 kg. Para más de 120 kg están la SPV, la PSPV, la WENDEL y la FENICE de brazos.",
+      },
+      {
+        q: "¿Qué diferencia hay entre una amasadora de espiral, una WENDEL y una de brazos?",
+        a: "El espiral es el estándar de la panadería de barra. La WENDEL de DIOSNA amasa sin calentar la masa, lo que permite fermentaciones largas y controladas. La de brazos de Pietroberto reproduce el amasado manual que pide cierta panadería tradicional.",
+      },
+      {
+        q: "¿Puedo ver la amasadora funcionando antes de comprar?",
+        a: "Sí: pide una demostración por WhatsApp y coordinamos cómo hacerla.",
+      },
     ],
   },
   {
@@ -458,7 +747,7 @@ export const equiposData = [
     slug: "batidoras",
     route: "/equipos/batidoras",
     name: "Batidoras planetarias",
-    h1: "Batidoras planetarias industriales",
+    h1: "Batidoras industriales planetarias",
     tagline: "Cremas, merengues y masas blandas en volumen",
     heroImage: batidorasHero,
     categorias: ["Batidora planetaria"],
@@ -466,6 +755,96 @@ export const equiposData = [
     parrafos: [
       "La batidora planetaria es el equipo más versátil de una pastelería: con el accesorio adecuado bate, mezcla y amasa. Por eso suele ser el que más horas trabaja y el primero que se queda corto cuando la producción crece.",
       "Pietroberto lleva más de cien años fabricando en Italia maquinaria de panificación. Su serie MIX está construida para uso industrial continuo, no para picos.",
+    ],
+    resumen: [
+      "Cubas de 20, 40 y 60 litros",
+      "Elevación eléctrica y variador de velocidad",
+      "Pietroberto: más de cien años fabricando en Italia",
+    ],
+    cta: {
+      texto: "Pide el precio por WhatsApp",
+      mensaje: "Hola B&P TECH, quiero el precio de una batidora planetaria de ___ litros.",
+      ancla: "Ver tamaños",
+    },
+    selector: {
+      titulo: "¿20, 40 o 60 litros?",
+      columnas: [
+        "Cuba",
+        "Equipo",
+        "Cotización",
+      ],
+      filas: [
+        {
+          cabecera: "20 litros",
+          celdas: [
+            "Pietroberto Serie MIX",
+            "Pedir precio",
+          ],
+          wa: "Hola B&P TECH, quiero el precio de la batidora planetaria Pietroberto MIX de 20 litros.",
+        },
+        {
+          cabecera: "40 litros",
+          celdas: [
+            "Pietroberto Serie MIX",
+            "Pedir precio",
+          ],
+          wa: "Hola B&P TECH, quiero el precio de la batidora planetaria Pietroberto MIX de 40 litros.",
+        },
+        {
+          cabecera: "60 litros",
+          celdas: [
+            "Pietroberto Serie MIX",
+            "Pedir precio",
+          ],
+          wa: "Hola B&P TECH, quiero el precio de la batidora planetaria Pietroberto MIX de 60 litros.",
+        },
+      ],
+    },
+    guia: {
+      titulo: "Cómo elegir una batidora planetaria",
+      secciones: [
+        {
+          titulo: "Por capacidad",
+          parrafos: [
+            "La cuba se elige por lo que bates en cada tanda. La serie MIX viene en 20, 40 y 60 litros; si dudas entre dos tamaños, cuéntanos tu producción diaria y te decimos cuál.",
+          ],
+        },
+        {
+          titulo: "¿Batidora o amasadora?",
+          parrafos: [
+            "La planetaria bate, mezcla y amasa masas blandas con el accesorio adecuado. Para masa de pan en volumen conviene una amasadora de espiral.",
+          ],
+          enlace: {
+            texto: "amasadora de espiral",
+            to: "/equipos/amasadoras",
+          },
+        },
+        {
+          titulo: "Lo barato sale caro",
+          parrafos: [
+            "Una batidora que falla a media producción te cuesta más de lo que ahorraste en precio.",
+            "Antes de decidir solo por precio, compara lo que viene con el equipo: instalación, repuestos originales y servicio posventa en Perú.",
+          ],
+        },
+      ],
+    },
+    faqs: [
+      {
+        q: "¿Cuánto cuesta una batidora industrial?",
+        a: "Depende del tamaño de la cuba y de la configuración, por eso cotizamos cada equipo. Escríbenos por WhatsApp qué capacidad necesitas y te enviamos la cotización.",
+      },
+      {
+        q: "¿Tienen batidoras de 10 litros o semi industriales?",
+        a: "La serie MIX de Pietroberto empieza en 20 litros y está construida para uso industrial continuo. Si hoy bates menos, cuéntanos tu producción y te decimos si la de 20 litros te conviene.",
+      },
+      {
+        q: "¿La cuba se puede calentar?",
+        a: "Sí: es de acero inoxidable y tiene opción calefactable.",
+      },
+      {
+        q: "¿Sirve para amasar pan?",
+        a: "Masas blandas, sí, con el accesorio de amasar. Para masa de pan en volumen conviene una amasadora de espiral.",
+      },
     ],
   },
   {
@@ -590,7 +969,14 @@ export function getEquipoBySlug(slug) {
 export function getProductsByEquipo(slug) {
   const familia = getEquipoBySlug(slug);
   if (!familia) return [];
-  return productsData.filter((p) => familia.categorias.includes(p.category));
+  const suyos = productsData.filter((p) => familia.categorias.includes(p.category));
+  // `orden` (opcional): ids de productos en el orden en que se muestran.
+  if (!Array.isArray(familia.orden)) return suyos;
+  const pos = (id) => {
+    const i = familia.orden.indexOf(id);
+    return i < 0 ? familia.orden.length : i;
+  };
+  return [...suyos].sort((a, b) => pos(a.id) - pos(b.id));
 }
 
 export function getBrandsByEquipo(slug) {

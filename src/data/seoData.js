@@ -88,7 +88,7 @@ const PAGINAS = {
   },
   '/equipos/hornos': {
     title: 'Hornos industriales para panadería en Perú | B&P Tech',
-    description: 'Hornos Mondial Forni de tubos de vapor, eléctricos de pisos y rotativos de carro, con control MFTouch. Ocho modelos con representación y servicio técnico en Perú.',
+    description: 'Hornos Mondial Forni para panadería: rotativos de 8 a 20 bandejas a gas o eléctricos, eléctricos de pisos y de tubos de vapor. Te ayudamos a elegir.',
   },
   '/equipos/cafeteras': {
     title: 'Cafeteras automáticas para oficina y negocio | B&P Tech',
@@ -107,16 +107,16 @@ const PAGINAS = {
     description: 'Congeladoras verticales y bajo mesada TRUE para conservar a −18 °C y abatidores IRINOX para congelar rápido: te ayudamos a elegir el equipo para tu negocio.',
   },
   '/equipos/amasadoras': {
-    title: 'Amasadoras industriales en Perú | B&P Tech',
-    description: 'Amasadoras de espiral, sistema WENDEL de DIOSNA y de brazos Pietroberto. Cada masa pide un amasado distinto: te decimos cuál encaja con tu producción.',
+    title: 'Amasadoras de pan industriales, de 12 a 600 kg | B&P Tech',
+    description: 'Amasadoras de espiral DIOSNA, desde la SP 12 de sobremesa hasta sistemas WENDEL de 600 kg, y de brazos Pietroberto. Te ayudamos a elegir la tuya.',
   },
   '/equipos/laminadoras': {
     title: 'Laminadoras de masa en Perú | B&P Tech',
     description: 'Laminadoras RONDO mecánicas, electrónicas y líneas automáticas de croissant: espesor constante de la primera bandeja a la última, con soporte en Perú.',
   },
   '/equipos/batidoras': {
-    title: 'Batidoras industriales en Perú | B&P Tech',
-    description: 'Batidoras planetarias Pietroberto para pastelería y panificación: el equipo más versátil del obrador, construido para uso industrial continuo.',
+    title: 'Batidoras industriales de 20, 40 y 60 litros | B&P Tech',
+    description: 'Batidoras planetarias Pietroberto Serie MIX de 20, 40 y 60 litros, con elevación eléctrica y variador de velocidad, para pastelería y panadería.',
   },
   '/equipos/divisoras': {
     title: 'Divisoras y formadoras de masa en Perú | B&P Tech',

@@ -966,3 +966,19 @@ a.byp-chip:hover { border-color: var(--byp-navy); color: var(--byp-navy); }
 @media (max-width:767.98px){
   .byp-eqgrid{grid-template-columns:1fr !important;gap:28px !important}
 }
+
+/* Hero de familia con datos cortos y botón de WhatsApp (equipos con `resumen` / `cta`, 2-nov-2026) */
+.byp-phero__datos{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:8px;max-width:62ch}
+.byp-phero__datos li{position:relative;padding-left:20px;color:#e3ebf4;font-size:16px;line-height:1.45}
+.byp-phero__datos li::before{content:"";position:absolute;left:1px;top:.6em;width:7px;height:7px;border-radius:50%;background:var(--byp-orange)}
+.byp-phero__acciones{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;margin-top:26px}
+.byp-page a.byp-phero__ancla{color:#c9d6e5;font-size:15px;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.byp-page a.byp-phero__ancla:hover{color:#fff}
+.byp-cual{scroll-margin-top:calc(var(--byp-header-h) + 12px)}
+/* En celular, que los datos y el botón entren en la primera pantalla, encima de la barra fija de abajo */
+@media (max-width:560px){
+  .byp-phero--cta{padding-top:calc(var(--byp-header-h) + 2px);padding-bottom:44px}
+  .byp-phero--cta .byp-phero__datos{margin-top:14px}
+  .byp-phero--cta .byp-phero__acciones{margin-top:18px}
+  .byp-phero__datos li{font-size:15px}
+}

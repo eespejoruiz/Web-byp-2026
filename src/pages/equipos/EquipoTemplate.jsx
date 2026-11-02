@@ -5,7 +5,7 @@ import { getBrandBySlug } from "../../data/brandsData";
 import { industryData } from "../../data/industryData";
 import BypProductGrid from "../../components/byp/BypProductGrid";
 import BypBreadcrumbs from "../../components/byp/BypBreadcrumbs";
-import { waQuotePage } from "../../utils/whatsapp";
+import { waQuotePage, waLink } from "../../utils/whatsapp";
 
 const Chevron = () => (
   <svg className="byp-faq__chev" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -31,7 +31,11 @@ const conEnlace = (texto, enlace, key) => {
 
 /** Página de una familia de equipos. Todo sale de equiposData + productsData.
     Bloques opcionales: guia (secciones para elegir, como en cafeteras) y faqs
-    (preguntas frecuentes, que schemaData declara además como FAQPage). */
+    (preguntas frecuentes, que schemaData declara además como FAQPage).
+    Desde el 2-nov-2026, también opcionales: resumen (datos cortos en el hero),
+    cta (botón de WhatsApp con mensaje prellenado en el hero) y selector (tabla
+    «¿Cuál necesitas?» antes del contenido; si la fila trae `wa`, la última celda
+    abre WhatsApp con ese mensaje). Las familias que no los llenan no cambian. */
 const EquipoTemplate = ({ slug }) => {
   const familia = getEquipoBySlug(slug);
 
@@ -61,7 +65,7 @@ const EquipoTemplate = ({ slug }) => {
 
   return (
     <div className="byp-page">
-      <section className="byp-phero">
+      <section className={familia.cta ? "byp-phero byp-phero--cta" : "byp-phero"}>
         <div className="byp-wrap">
           <BypBreadcrumbs
             items={[{ label: "Equipos", to: "/equipos" }, { label: familia.name }]}
@@ -69,8 +73,68 @@ const EquipoTemplate = ({ slug }) => {
           <p className="byp-code">// EQUIPOS · {familia.name.toUpperCase()}</p>
           <h1 className="byp-h1">{familia.h1 || familia.name}</h1>
           <p className="byp-lead">{familia.tagline}</p>
+          {Array.isArray(familia.resumen) && familia.resumen.length > 0 && (
+            <ul className="byp-phero__datos">
+              {familia.resumen.map((t, i) => (
+                <li key={`res-${i}`}>{t}</li>
+              ))}
+            </ul>
+          )}
+          {familia.cta && (
+            <div className="byp-phero__acciones">
+              <a className="byp-btn" href={waLink(familia.cta.mensaje)} target="_blank" rel="noreferrer">
+                {familia.cta.texto}
+              </a>
+              {familia.selector && familia.cta.ancla && (
+                <a className="byp-phero__ancla" href="#cual-necesitas">{familia.cta.ancla}</a>
+              )}
+            </div>
+          )}
         </div>
       </section>
+
+      {familia.selector && Array.isArray(familia.selector.filas) && (
+        <section className="byp-section byp-cual" id="cual-necesitas">
+          <div className="byp-wrap">
+            <div className="byp-head">
+              <span className="byp-head__idx">ELIGE/</span>
+              <h2 className="byp-h2">{familia.selector.titulo}</h2>
+            </div>
+            <div className="byp-selector">
+              <table className="byp-selector__table byp-selector__table--wrap" role="table">
+                <caption className="byp-sr-only">{familia.selector.titulo}</caption>
+                <thead>
+                  <tr role="row">
+                    {familia.selector.columnas.map((c) => (
+                      <th scope="col" role="columnheader" key={c}>{c}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {familia.selector.filas.map((f, fIdx) => (
+                    <tr role="row" key={`sel-${fIdx}`}>
+                      <th scope="row" role="rowheader">{f.cabecera}</th>
+                      {f.celdas.map((v, cIdx) => {
+                        const ultima = cIdx === f.celdas.length - 1;
+                        return (
+                          <td role="cell" key={`sel-${fIdx}-${cIdx}`} data-label={familia.selector.columnas[cIdx + 1]}>
+                            {ultima && f.wa ? (
+                              <a className="byp-inlink" href={waLink(f.wa)} target="_blank" rel="noreferrer">{v}</a>
+                            ) : (
+                              v
+                            )}
+                          </td>
+                        );
+                      })}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            {familia.selector.nota && <p className="byp-selector__note">{familia.selector.nota}</p>}
+          </div>
+        </section>
+      )}
 
       <section className="byp-section byp-section--flush-top">
         <div className="byp-wrap">
