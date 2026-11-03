@@ -982,3 +982,44 @@ a.byp-chip:hover { border-color: var(--byp-navy); color: var(--byp-navy); }
   .byp-phero--cta .byp-phero__acciones{margin-top:18px}
   .byp-phero__datos li{font-size:15px}
 }
+
+/* Formulario previo a WhatsApp (3-nov-2026): datos del cliente antes de abrir el chat */
+body.byp-wa-abierto{overflow:hidden}
+.byp-wa{position:fixed;inset:0;z-index:1200;background:rgba(13,30,54,.62);display:flex;align-items:center;justify-content:center;padding:24px}
+.byp-wa__panel{position:relative;width:100%;max-width:520px;max-height:calc(100vh - 48px);overflow:auto;background:var(--byp-card);color:var(--byp-txt);border-radius:8px;box-shadow:0 24px 60px rgba(10,22,40,.35);padding:26px 26px 22px;font-family:"IBM Plex Sans",sans-serif}
+.byp-wa__cab{display:flex;gap:16px;align-items:flex-start;justify-content:space-between}
+.byp-wa__code{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.08em;color:var(--byp-orange);margin:0 0 8px}
+.byp-wa__titulo{font-size:21px;line-height:1.25;font-weight:800;margin:0;color:var(--byp-navy)}
+.byp-wa__x{flex:0 0 auto;width:40px;height:40px;border-radius:50%;border:1px solid var(--byp-line);background:#fff;color:var(--byp-txt);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+.byp-wa__x:hover{border-color:var(--byp-navy)}
+.byp-wa__msg{margin:18px 0 4px;padding:12px 14px;background:var(--byp-bg);border-left:3px solid var(--byp-orange);border-radius:3px}
+.byp-wa__msglbl{display:block;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--byp-dim);margin-bottom:4px}
+.byp-wa__msg p{margin:0;font-size:14.5px;line-height:1.45;color:var(--byp-txt)}
+.byp-wa__form{margin:4px 0 0}
+.byp-wa__fila{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+.byp-wa__campo{margin-top:12px}
+.byp-wa__campo label{display:block;font-size:13.5px;font-weight:600;margin:0 0 6px;color:var(--byp-txt)}
+.byp-wa__campo input{display:block;width:100%;height:auto;font-family:inherit;font-size:16px;line-height:1.3;padding:11px 12px;border:1px solid #b9c3cd;border-radius:4px;background:#fff;color:var(--byp-txt);outline:none;box-shadow:none}
+.byp-wa__campo input:focus{border-color:var(--byp-navy);box-shadow:0 0 0 3px rgba(16,41,74,.15)}
+.byp-wa__campo--error input{border-color:#b42318}
+.byp-wa__error{margin:6px 0 0;font-size:13px;line-height:1.35;color:#b42318}
+.byp-wa__acepta{display:flex;gap:10px;align-items:flex-start;margin-top:16px}
+.byp-wa__acepta input{flex:0 0 auto;width:20px;height:20px;margin:1px 0 0;accent-color:var(--byp-navy)}
+.byp-wa__acepta label{font-size:13.5px;line-height:1.45;color:var(--byp-txt);margin:0}
+.byp-wa a.byp-inlink{color:var(--byp-navy);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.byp-wa__hp{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0}
+.byp-wa__ir{display:block;width:100%;margin-top:18px;text-align:center}
+.byp-wa__nota{margin:10px 0 0;font-size:12.5px;line-height:1.4;color:var(--byp-dim);text-align:center}
+@media (max-width:560px){
+  .byp-wa{align-items:flex-end;padding:0}
+  .byp-wa__panel{max-width:none;max-height:92vh;border-radius:14px 14px 0 0;padding:20px 18px calc(18px + env(safe-area-inset-bottom))}
+  .byp-wa__titulo{font-size:18px}
+  .byp-wa__fila{grid-template-columns:1fr}
+}
+
+/* Página de privacidad (3-nov-2026) */
+.byp-legal__lista{margin:0 0 16px;padding-left:20px}
+.byp-legal__lista li{margin-bottom:10px;font-size:15.5px;line-height:1.6;color:var(--byp-txt)}
+.byp-legal__borrar{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin:4px 0 18px}
+.byp-legal__estado{margin:0!important;font-size:14px!important;color:var(--byp-dim)!important}
+.byp-legal__fecha{color:var(--byp-dim)!important;font-size:14px!important}

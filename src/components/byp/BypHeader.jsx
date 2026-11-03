@@ -33,6 +33,7 @@ const MAIN_LINKS = [
 const hasNavyHero = (pathname) =>
   pathname === "/" ||
   pathname === "/contacto" ||
+  pathname === "/privacidad" ||
   pathname.startsWith("/equipos") ||
   pathname.startsWith("/marcas") ||
   pathname.startsWith("/industrias") ||

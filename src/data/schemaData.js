@@ -115,6 +115,7 @@ const RAICES = {
   '/casos-de-exito': 'Casos de éxito',
   '/nosotros': 'Nosotros',
   '/contacto': 'Contacto',
+  '/privacidad': 'Privacidad',
 };
 
 function nombreCorto(ruta) {

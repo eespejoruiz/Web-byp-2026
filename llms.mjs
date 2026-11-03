@@ -101,7 +101,7 @@ ${de('/blog/').map(enlace).join('\n')}
 
 ## Empresa
 
-${['/nosotros', '/contacto'].map(una).filter(Boolean).map(enlace).join('\n')}
+${['/nosotros', '/contacto', '/privacidad'].map(una).filter(Boolean).map(enlace).join('\n')}
 `;
 
 fs.writeFileSync(path.join(BUILD, 'llms.txt'), texto);

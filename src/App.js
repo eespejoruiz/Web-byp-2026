@@ -11,10 +11,12 @@ import "./assets/css/byp-overrides.css";
 // import components >>
 import BypHeader from "./components/byp/BypHeader";
 import BypFooter from "./components/byp/BypFooter";
+import BypWhatsappGate from "./components/byp/BypWhatsappGate";
 // import pages >>>
 import Home4 from "./pages/Home4";
 import About from "./pages/About";
 import Contect from "./pages/Contect";
+import Privacidad from "./pages/Privacidad";
 import BlogGrid from "./pages/BlogGrid";
 import BlogArticle from "./pages/blog/BlogArticle";
 import Error404 from './pages/Error404'
@@ -77,6 +79,7 @@ function App() {
             <Route path='/blog' element={<BlogGrid />} />
             <Route path='/blog/:slug' element={<BlogArticle />} />
             <Route path='/contacto' element={<Contect />} />
+            <Route path='/privacidad' element={<Privacidad />} />
             <Route path='/casos-de-exito' element={<CasosDeExito />} />
             <Route path='/casos-de-exito/:slug' element={<CaseStudyTemplate />} />
 
@@ -154,7 +157,7 @@ const Layout = () => {
       <BypHeader />
       <Outlet />
       <BypFooter />
-
+      <BypWhatsappGate />
     </>
   )
 }

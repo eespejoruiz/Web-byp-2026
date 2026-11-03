@@ -15,6 +15,11 @@
  * No se envia ningun dato de la persona: solo que hubo un contacto y desde
  * donde. Antes de esto el bundle no disparaba ni un evento, asi que ni el SEO
  * ni la pauta podian demostrar que contactos traian.
+ *
+ * Desde el 3-nov-2026, WhatsApp pasa antes por un formulario (BypWhatsappGate):
+ * el clic ya no cuenta como contacto. El generate_lead de WhatsApp lo dispara el
+ * formulario con medirWhatsapp() cuando el cliente deja sus datos y se abre
+ * WhatsApp (o directamente, si sus datos ya estaban guardados en el navegador).
  */
 
 const CANALES = [
@@ -30,6 +35,39 @@ function enviar(parametros) {
   if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
     window.gtag('event', 'generate_lead', parametros);
   }
+}
+
+/** Cualquier otro evento de GA4 (sin datos de la persona). */
+export function eventoGA(nombre, parametros) {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('event', nombre, parametros || {});
+  }
+}
+
+function parametrosDeEnlace(href, texto, canal) {
+  const parametros = {
+    lead_source: canal,
+    link_url: href.split('?')[0],
+    link_text: (texto || '').replace(/\s+/g, ' ').trim().slice(0, 100),
+  };
+  if (canal === 'whatsapp') {
+    try {
+      const mensaje = new URL(href).searchParams.get('text');
+      if (mensaje) parametros.wa_mensaje = mensaje.slice(0, 100);
+    } catch (_) {
+      // Enlace mal formado: se mide igual, sin el mensaje.
+    }
+  }
+  return parametros;
+}
+
+/**
+ * El contacto por WhatsApp, cuando de verdad se abre WhatsApp. `href` es el
+ * enlace ORIGINAL de la página (su mensaje dice desde dónde escribe el cliente):
+ * nunca el que ya lleva el nombre o el DNI, que no pueden llegar a GA4.
+ */
+export function medirWhatsapp(href, texto, extra) {
+  enviar({ ...parametrosDeEnlace(href, texto, 'whatsapp'), ...(extra || {}) });
 }
 
 /**
@@ -87,21 +125,10 @@ export function iniciarMedicion() {
     const href = a.getAttribute('href') || '';
     const canal = (CANALES.find(([re]) => re.test(href)) || [])[1];
     if (!canal) return;
+    // WhatsApp lo mide el formulario previo (medirWhatsapp), no el clic.
+    if (canal === 'whatsapp') return;
 
-    const parametros = {
-      lead_source: canal,
-      link_url: href.split('?')[0],
-      link_text: (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 100),
-    };
-    if (canal === 'whatsapp') {
-      try {
-        const texto = new URL(href).searchParams.get('text');
-        if (texto) parametros.wa_mensaje = texto.slice(0, 100);
-      } catch (_) {
-        // Enlace mal formado: se mide igual, sin el mensaje.
-      }
-    }
-    enviar(parametros);
+    enviar(parametrosDeEnlace(href, a.textContent, canal));
   }, true);
 }
 

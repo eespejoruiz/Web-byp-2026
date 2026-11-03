@@ -28,6 +28,10 @@ const PAGINAS = {
     title: 'Contacto | B&P Tech Perú',
     description: 'Cuéntanos tu industria, volumen y restricciones de espacio, energía y flujo. Respondemos con una propuesta clara en menos de 24 horas.',
   },
+  '/privacidad': {
+    title: 'Política de privacidad | B&P Tech',
+    description: 'Cómo B&P TECH S.A.C. usa los datos que dejas al escribirnos: para qué, dónde se guardan, cuánto tiempo y cómo ejercer tus derechos.',
+  },
 
   '/industrias': {
     title: 'Soluciones por industria | B&P Tech Perú',

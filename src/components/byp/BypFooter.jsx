@@ -60,7 +60,7 @@ const BypFooter = () => {
       </div>
     </div>
     <div className="byp-wrap byp-footer__bottom">
-      <span>© {new Date().getFullYear()} B&amp;P TECH S.A.C.</span>
+      <span>© {new Date().getFullYear()} B&amp;P TECH S.A.C. · <Link to="/privacidad">Privacidad</Link></span>
       <span>BYPTECH.COM · LIMA, PERÚ</span>
     </div>
   </footer>
