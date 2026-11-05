@@ -6,6 +6,8 @@ import { borrarDatosGuardados } from "../utils/datosWhatsapp";
  * Política de privacidad (3-nov-2026). Nace con el formulario previo a WhatsApp,
  * que pide DNI o RUC: la casilla de aceptación enlaza aquí. Contenido según el
  * deber de información de la Ley 29733 y su reglamento (D. S. 016-2024-JUS).
+ * 5-nov-2026: el formulario suma el correo (obligatorio); si cambia este texto,
+ * subir VERSION_PRIVACIDAD en utils/datosWhatsapp.js.
  */
 
 const idx = (n) => String(n).padStart(2, "0") + "/";
@@ -50,10 +52,10 @@ const Privacidad = () => {
 
             <Seccion n={2} titulo="Qué datos te pedimos">
               <ul className="byp-legal__lista">
-                <li><strong>Antes de pasar a WhatsApp:</strong> nombre y apellido, celular, DNI o RUC, empresa (opcional) y ciudad. También guardamos la página desde la que escribes y el mensaje de tu consulta.</li>
+                <li><strong>Antes de pasar a WhatsApp:</strong> nombre y apellido, celular, DNI o RUC, correo, empresa (opcional) y ciudad. También guardamos la página desde la que escribes y el mensaje de tu consulta.</li>
                 <li><strong>En el formulario de contacto:</strong> nombre, apellido, correo, empresa y tu mensaje.</li>
               </ul>
-              <p>Son obligatorios el nombre, el celular, el DNI o RUC y la ciudad, y en el formulario de contacto, el nombre y el correo. Sin ellos no podemos registrar tu consulta por ese medio. Si prefieres no darlos, puedes llamarnos al <a className="byp-inlink" href="tel:+51985362946">+51 985 362 946</a> o escribirnos a <a className="byp-inlink" href="mailto:jbejarano@byptech.com">jbejarano@byptech.com</a>.</p>
+              <p>Son obligatorios el nombre, el celular, el DNI o RUC, el correo y la ciudad, y en el formulario de contacto, el nombre y el correo. Sin ellos no podemos registrar tu consulta por ese medio. Si prefieres no darlos, puedes llamarnos al <a className="byp-inlink" href="tel:+51985362946">+51 985 362 946</a> o escribirnos a <a className="byp-inlink" href="mailto:jbejarano@byptech.com">jbejarano@byptech.com</a>.</p>
             </Seccion>
 
             <Seccion n={3} titulo="Para qué los usamos">
@@ -76,7 +78,7 @@ const Privacidad = () => {
                 <button type="button" className="byp-btn" onClick={borrar}>Borrar mis datos de este navegador</button>
                 <p className="byp-legal__estado" role="status">{borrado}</p>
               </div>
-              <p>Además usamos Google Analytics para medir, en conjunto, cuántas personas visitan cada página y cuántas nos contactan. A Google no le enviamos tu nombre, tu DNI ni tu celular.</p>
+              <p>Además usamos Google Analytics para medir, en conjunto, cuántas personas visitan cada página y cuántas nos contactan. A Google no le enviamos tu nombre, tu correo, tu DNI ni tu celular.</p>
             </Seccion>
 
             <Seccion n={7} titulo="Tus derechos">
@@ -86,7 +88,7 @@ const Privacidad = () => {
 
             <Seccion n={8} titulo="Otras precisiones">
               <p>No tomamos decisiones automatizadas ni elaboramos perfiles con tus datos. Los tratamos conforme a la Ley N.° 29733, Ley de Protección de Datos Personales, y a su reglamento, aprobado por el Decreto Supremo N.° 016-2024-JUS.</p>
-              <p className="byp-legal__fecha">Última actualización: 3 de noviembre de 2026.</p>
+              <p className="byp-legal__fecha">Última actualización: 5 de noviembre de 2026.</p>
             </Seccion>
           </div>
         </div>

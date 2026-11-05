@@ -2,14 +2,16 @@
  * Datos que el cliente deja antes de pasar a WhatsApp (3-nov-2026, pedido de B&P).
  *
  * B&P quiere que cada mensaje de WhatsApp llegue con nombre, DNI o RUC, empresa y
- * ciudad. Aquí viven las piezas que comparten el formulario (BypWhatsappGate) y la
- * página de privacidad: validación, el mensaje que se arma y el recuerdo de 30 días
- * en este navegador (localStorage), para no volver a pedir los datos.
+ * ciudad; desde el 5-nov-2026 también con celular y correo (el correo es obligatorio).
+ * Aquí viven las piezas que comparten el formulario (BypWhatsappGate) y la página de
+ * privacidad: validación, el mensaje que se arma y el recuerdo de 30 días en este
+ * navegador (localStorage), para no volver a pedir los datos. Los datos guardados
+ * antes del 5-nov no traen correo: no pasan la validación y se vuelven a pedir.
  */
 
 export const CLAVE_DATOS = 'byp_wa_datos';
 export const VIGENCIA_MS = 30 * 24 * 60 * 60 * 1000;
-export const VERSION_PRIVACIDAD = '2026-11-03';
+export const VERSION_PRIVACIDAD = '2026-11-05';
 export const WA_RE = /^https?:\/\/(wa\.me|api\.whatsapp\.com|web\.whatsapp\.com)\//i;
 export const WA_NUMERO = '51985362946';
 
@@ -85,6 +87,19 @@ export function normalizarCelular(v) {
   return /^9\d{8}$/.test(d) ? d : null;
 }
 
+/** El celular como se lee en el mensaje: 987654321 → 987 654 321. */
+export function formatoCelular(celular) {
+  const d = soloDigitos(celular);
+  return d.length === 9 ? `${d.slice(0, 3)} ${d.slice(3, 6)} ${d.slice(6)}` : d;
+}
+
+/** Correo con forma nombre@dominio.ext, en minúsculas. Devuelve el correo o null. */
+export function normalizarCorreo(v) {
+  const c = String(v || '').trim().toLowerCase();
+  if (!c || c.length > 120) return null;
+  return /^[^\s@,;<>()]+@[^\s@,;<>()]+\.[a-z0-9-]{2,}$/.test(c) ? c : null;
+}
+
 const limpio = (v, max) => String(v || '').replace(/\s+/g, ' ').trim().slice(0, max);
 
 /** Valida y limpia. Devuelve { ok, datos, errores }. */
@@ -92,11 +107,17 @@ export function validarDatos(entrada) {
   const errores = {};
   const nombre = limpio(entrada.nombre, 80);
   const celular = normalizarCelular(entrada.celular);
+  const correo = normalizarCorreo(entrada.correo);
   const documento = normalizarDocumento(entrada.documento);
   const empresa = limpio(entrada.empresa, 120);
   const ciudad = limpio(entrada.ciudad, 60);
   if (nombre.length < 3 || !/[a-záéíóúñü]{2,}/i.test(nombre)) errores.nombre = 'Escribe tu nombre y apellido.';
   if (!celular) errores.celular = 'Escribe tu celular de 9 dígitos (empieza con 9).';
+  if (!correo) {
+    errores.correo = String(entrada.correo || '').trim()
+      ? 'Revisa tu correo: debe ser como nombre@empresa.pe.'
+      : 'Escribe tu correo.';
+  }
   if (!documento) {
     const d = soloDigitos(entrada.documento);
     errores.documento = d.length === 11
@@ -106,7 +127,7 @@ export function validarDatos(entrada) {
   if (ciudad.length < 2) errores.ciudad = 'Escribe tu ciudad.';
   return {
     ok: Object.keys(errores).length === 0,
-    datos: { nombre, celular: celular || '', documento: documento || '', empresa, ciudad },
+    datos: { nombre, celular: celular || '', correo: correo || '', documento: documento || '', empresa, ciudad },
     errores,
   };
 }
@@ -138,6 +159,8 @@ export function armarMensaje(texto, datos, pagina) {
     '',
     'Mis datos:',
     `• Nombre: ${datos.nombre}`,
+    `• Celular: ${formatoCelular(datos.celular)}`,
+    `• Correo: ${datos.correo}`,
     `• DNI/RUC: ${datos.documento}`,
   ];
   if (datos.empresa) lineas.push(`• Empresa: ${datos.empresa}`);

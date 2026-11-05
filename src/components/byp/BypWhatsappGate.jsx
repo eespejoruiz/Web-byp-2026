@@ -10,9 +10,11 @@ import {
  * Formulario previo a WhatsApp (3-nov-2026, pedido de B&P).
  *
  * Cualquier enlace a WhatsApp del sitio abre primero este formulario: nombre,
- * celular, DNI o RUC, empresa (opcional) y ciudad. Al continuar:
+ * celular, DNI o RUC, correo (obligatorio desde el 5-nov-2026), empresa (opcional)
+ * y ciudad. Al continuar:
  *  - se abre WhatsApp con el mensaje propio de esa página (el producto o la
- *    página desde la que escribe el cliente) y, debajo, sus datos;
+ *    página desde la que escribe el cliente) y, debajo, sus datos, celular y
+ *    correo incluidos;
  *  - los datos van a Selva Boost, formulario «byp-tech-antes-de-whatsapp», por
  *    /api/whatsapp-lead (nginx lo pasa a la API de Boost, que no admite llamadas
  *    directas desde otro dominio);
@@ -24,7 +26,7 @@ import {
  */
 
 const ENDPOINT = "/api/whatsapp-lead";
-const VACIO = { nombre: "", celular: "", documento: "", empresa: "", ciudad: "", acepta: false, web: "" };
+const VACIO = { nombre: "", celular: "", documento: "", correo: "", empresa: "", ciudad: "", acepta: false, web: "" };
 
 const tituloDePagina = () =>
   (typeof document !== "undefined" ? document.title : "")
@@ -63,6 +65,7 @@ function enviarABoost(datos, enlace, honeypot) {
     data: {
       nombre: datos.nombre,
       celular: `+51${datos.celular}`,
+      correo: datos.correo,
       dni_ruc: datos.documento,
       empresa: datos.empresa,
       ciudad: datos.ciudad,
@@ -158,7 +161,7 @@ const BypWhatsappGate = () => {
     if (!valores.acepta) errs.acepta = "Marca la casilla para continuar.";
     if (!ok || errs.acepta) {
       setErrores(errs);
-      const primero = ["nombre", "celular", "documento", "ciudad", "acepta"].find((k) => errs[k]);
+      const primero = ["nombre", "celular", "documento", "correo", "ciudad", "acepta"].find((k) => errs[k]);
       const el = primero && document.getElementById(`byp-wa-${primero}`);
       if (el) el.focus();
       return;
@@ -214,6 +217,7 @@ const BypWhatsappGate = () => {
             {campo("celular", "Celular", { type: "tel", inputMode: "tel", autoComplete: "tel-national", placeholder: "9XX XXX XXX", maxLength: 16 })}
             {campo("documento", "DNI o RUC", { type: "text", inputMode: "numeric", autoComplete: "off", maxLength: 14 })}
           </div>
+          {campo("correo", "Correo", { type: "email", inputMode: "email", autoComplete: "email", autoCapitalize: "none", spellCheck: false, placeholder: "nombre@empresa.pe", maxLength: 120 })}
           {campo("empresa", "Empresa (opcional)", { type: "text", autoComplete: "organization", maxLength: 120 })}
           {campo("ciudad", "Ciudad", { type: "text", autoComplete: "address-level2", list: "byp-wa-ciudades", maxLength: 60 })}
           <datalist id="byp-wa-ciudades">
