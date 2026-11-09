@@ -117,6 +117,19 @@ export const brandsData = [
     // B&P Tech es CODISTRIBUIDOR autorizado; el distribuidor oficial en el Peru es
     // otra empresa. Ningun texto de esta ficha debe decir "oficial" ni "representante".
     tagline: "Cafeteras automáticas suizas para oficinas, hoteles y restaurantes",
+    // 9-nov-2026 (OK de Enrique: «si y publicas»): datos y botón de WhatsApp en la primera
+    // pantalla del celular, como en panadería. Quien buscaba «cafetera jura precio» llegaba
+    // a una primera pantalla con solo la foto y el título. Sin precios: todo a cotizar.
+    resumen: [
+      "E8, W8 y X10: de la oficina pequeña a 100 tazas al día",
+      "Instalación y capacitación incluidas, técnico en 24 horas",
+      "Repuestos garantizados por 10 años",
+    ],
+    cta: {
+      texto: "Pide el precio por WhatsApp",
+      mensaje: "Hola B&P TECH, quiero el precio de una cafetera JURA para unas ___ tazas al día.",
+      ancla: "Ver los 3 modelos",
+    },
     shortDescription:
       "Cafeteras automáticas suizas que muelen el grano para cada taza: E8, W8 y X10, de hasta 100 tazas al día, con técnico en 24 horas y repuestos garantizados por 10 años.",
     officialSite: "https://www.jura.com",

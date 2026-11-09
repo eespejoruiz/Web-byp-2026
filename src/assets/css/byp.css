@@ -983,6 +983,20 @@ a.byp-chip:hover { border-color: var(--byp-navy); color: var(--byp-navy); }
   .byp-phero__datos li{font-size:15px}
 }
 
+/* Hero de marca con datos cortos y botón de WhatsApp (marcas con `resumen` / `cta`, 9-nov-2026: JURA).
+   En celular y tablet la foto pasa debajo del texto para que el botón entre en la primera pantalla. */
+.byp-bhero--cta p.byp-lead{margin-bottom:0}
+.byp-bhero--cta .byp-phero__datos{margin-top:18px}
+@media (max-width:991px){
+  .byp-bhero--cta .byp-blueframe{order:0}
+}
+@media (max-width:560px){
+  .byp-bhero--cta{padding-top:calc(var(--byp-header-h) + 2px)}
+  .byp-bhero--cta p.byp-lead{margin-top:14px;font-size:16px}
+  .byp-bhero--cta .byp-phero__datos{margin-top:14px}
+  .byp-bhero--cta .byp-phero__acciones{margin-top:18px}
+}
+
 /* Formulario previo a WhatsApp (3-nov-2026): datos del cliente antes de abrir el chat */
 body.byp-wa-abierto{overflow:hidden}
 .byp-wa{position:fixed;inset:0;z-index:1200;background:rgba(13,30,54,.62);display:flex;align-items:center;justify-content:center;padding:24px}

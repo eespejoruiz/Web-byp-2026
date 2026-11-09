@@ -1,4 +1,4 @@
-import { waQuoteBrand } from "../../utils/whatsapp";
+import { waQuoteBrand, waLink } from "../../utils/whatsapp";
 import React from "react";
 import { Link } from "react-router-dom";
 import { getBrandBySlug } from "../../data/brandsData";
@@ -32,7 +32,11 @@ const idx = (n) => String(n).padStart(2, "0") + "/";
 /* Bloques opcionales que estrenó JURA y que cualquier marca puede usar desde
    brandsData: promise (barra de compromiso de servicio), selector (tabla para
    elegir modelo) y faqs (preguntas frecuentes, que schemaData convierte además
-   en FAQPage). Si la marca no los trae, no se pinta nada. */
+   en FAQPage). Si la marca no los trae, no se pinta nada.
+   9-nov-2026: resumen (datos cortos) y cta (botón de WhatsApp con el mensaje de
+   la página) en el hero, para que en el celular entren en la primera pantalla,
+   como en las páginas de panadería. Con cta, el botón «Contactar» del hero se
+   cambia por el de WhatsApp y la foto pasa debajo del texto en celular. */
 const PromiseIcon = () => (
   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
     <circle cx="12" cy="12" r="10.25" stroke="#f04e23" strokeWidth="1.5" />
@@ -92,7 +96,7 @@ const BrandTemplate = ({ slug }) => {
   return (
     <div className="byp-page">
       {/* Hero navy con blue-frame */}
-      <section className="byp-bhero">
+      <section className={brand.cta ? "byp-bhero byp-bhero--cta" : "byp-bhero"}>
         <div className="byp-wrap byp-bhero__grid">
           <div>
             <BypBreadcrumbs variant="dark" items={[{ label: "Marcas", to: "/marcas" }, { label: brand.name }]} />
@@ -102,9 +106,27 @@ const BrandTemplate = ({ slug }) => {
             </p>
             <h1 className="byp-h1">{brand.h1 || brand.name}</h1>
             <p className="byp-lead">{brand.tagline}</p>
-            <Link className="byp-btn" to="/contacto">
-              Contactar
-            </Link>
+            {Array.isArray(brand.resumen) && brand.resumen.length > 0 && (
+              <ul className="byp-phero__datos">
+                {brand.resumen.map((t, i) => (
+                  <li key={`r-${i}`}>{t}</li>
+                ))}
+              </ul>
+            )}
+            {brand.cta ? (
+              <div className="byp-phero__acciones">
+                <a className="byp-btn" href={waLink(brand.cta.mensaje)} target="_blank" rel="noreferrer">
+                  {brand.cta.texto}
+                </a>
+                {brand.selector && brand.cta.ancla && (
+                  <a className="byp-phero__ancla" href="#elige-modelo">{brand.cta.ancla}</a>
+                )}
+              </div>
+            ) : (
+              <Link className="byp-btn" to="/contacto">
+                Contactar
+              </Link>
+            )}
           </div>
           <div className="byp-blueframe">
             <span className="byp-blueframe__dim byp-blueframe__dim--t">
@@ -196,7 +218,10 @@ const BrandTemplate = ({ slug }) => {
               sectionCount += 1;
               const sel = brand.selector;
               return (
-                <div className="byp-article__section">
+                <div
+                  className={brand.cta ? "byp-article__section byp-cual" : "byp-article__section"}
+                  id={brand.cta ? "elige-modelo" : undefined}
+                >
                   <div className="byp-article__head">
                     <span className="byp-head__idx">{idx(sectionCount)}</span>
                     <h2>{sel.title}</h2>
