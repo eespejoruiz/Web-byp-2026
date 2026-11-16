@@ -449,6 +449,63 @@ export const equiposData = [
       "El frío es el único equipo de una cocina que no puede pararse nunca. Cuando falla no se pierde una preparación: se pierde el inventario, y en un local de volumen eso es más dinero que la propia máquina.",
       "TRUE fabrica en Estados Unidos equipos pensados para trabajar dentro del calor de una cocina profesional, que es donde la mayoría de los equipos de frío sufren. Hay tres formatos según dónde vaya: exhibidor de puertas de vidrio para la sala, vertical de puerta sólida para almacén y bajo mesada para la línea de producción.",
     ],
+    // 16-nov-2026 (revisión SEM 4, OK de Enrique «2. si ok»): la receta de JURA y panadería
+    // antes de activar en Ads el grupo de prueba «visicooler»: datos cortos y botón de WhatsApp
+    // en la primera pantalla del celular, y la tabla «¿Qué refrigerador necesitas?». Todo sale de
+    // la guía de esta página (fichas de TRUE) y de la portada (repuestos en stock en Lima).
+    resumen: [
+      "Exhibidor GDM-49, vertical T-49 y bajo mesada TUC-48",
+      "De 0,6 a 3,3 °C, con refrigerante R290",
+      "TRUE, de Estados Unidos, con repuestos en stock en Lima",
+    ],
+    cta: {
+      texto: "Pide el precio por WhatsApp",
+      mensaje: "Hola B&P TECH, quiero el precio de un refrigerador TRUE para ___ (exhibir, guardar o bajo mesada).",
+      ancla: "Ver qué refrigerador necesitas",
+    },
+    selector: {
+      titulo: "¿Qué refrigerador necesitas?",
+      columnas: [
+        "Modelo",
+        "Para qué",
+        "Puertas",
+        "Parrillas",
+        "Cotización",
+      ],
+      filas: [
+        {
+          cabecera: "GDM-49",
+          celdas: [
+            "Exhibir bebidas y alimentos envasados en la sala o la tienda",
+            "2 de vidrio, de doble hoja",
+            "8 ajustables",
+            "Pedir precio",
+          ],
+          wa: "Hola B&P TECH, quiero el precio del exhibidor TRUE GDM-49.",
+        },
+        {
+          cabecera: "T-49",
+          celdas: [
+            "Guardar el inventario en el almacén o la cocina",
+            "2 sólidas, de acero inoxidable",
+            "6 ajustables",
+            "Pedir precio",
+          ],
+          wa: "Hola B&P TECH, quiero el precio del refrigerador vertical TRUE T-49.",
+        },
+        {
+          cabecera: "TUC-48",
+          celdas: [
+            "Tener los insumos a la mano en la línea de producción",
+            "2 sólidas, bajo mesada",
+            "4 ajustables",
+            "Pedir precio",
+          ],
+          wa: "Hola B&P TECH, quiero el precio del refrigerador bajo mesada TRUE TUC-48.",
+        },
+      ],
+      nota: "Los tres trabajan entre 0,6 y 3,3 °C. Los dos verticales miden 1,37 m de ancho y casi 2 m de alto: conviene medir puertas y pasillos antes de pedirlos.",
+    },
     // Semana 11 (21-oct-2026, con OK de Enrique: «Publica ya con lo que hay»).
     // Búsquedas al mes en el Perú (DataForSEO): «visicooler» 5.400, «vitrina
     // refrigerada» 320, «refrigerador/refrigeradora industrial» 260, «exhibidora

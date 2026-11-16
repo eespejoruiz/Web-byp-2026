@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { equiposData, getProductsByEquipo, getBrandsByEquipo } from "../../data/equiposData";
 import { getBrandBySlug } from "../../data/brandsData";
 import BypBreadcrumbs from "../../components/byp/BypBreadcrumbs";
-import { waQuotePage } from "../../utils/whatsapp";
+import { waQuotePage, waLink } from "../../utils/whatsapp";
 
 // Decia "Diez familias" escrito a mano y ya eran once cuando entraron los
 // hornos. La cuenta sale ahora de equiposData.
@@ -12,6 +12,17 @@ const PALABRAS = ["Cero", "Una", "Dos", "Tres", "Cuatro", "Cinco", "Seis", "Siet
   "Dieciocho", "Diecinueve", "Veinte"];
 const familiasEnPalabras = (n) => PALABRAS[n] || String(n);
 
+// 16-nov-2026 (revisión SEM 4, OK de Enrique «2. si ok»): la receta de JURA y panadería antes de
+// activar en Ads el grupo «equipamiento gastronómico», que llega a esta página: datos cortos y
+// botón de WhatsApp en la primera pantalla del celular. Los datos salen del catálogo y de la
+// portada (repuestos en stock en Lima para TRUE, Winterhalter, Vitamix y JURA).
+const RESUMEN = [
+  "Hornos, amasadoras, refrigeración, lavavajillas, cafeteras y licuadoras",
+  "JURA, Vitamix, TRUE, Irinox, Mondial Forni, Winterhalter y más",
+  "Repuestos en stock en Lima para TRUE, Winterhalter, Vitamix y JURA",
+];
+const MENSAJE = "Hola B&P TECH, quiero cotizar equipos para mi negocio: ___.";
+
 /**
  * Indice del catalogo por tipo de maquina. Es el tercer eje del sitio, junto a
  * /industrias/ (quien eres) y /marcas/ (que marca compras): que maquina necesitas.
@@ -19,7 +30,7 @@ const familiasEnPalabras = (n) => PALABRAS[n] || String(n);
  */
 const EquiposIndex = () => (
   <div className="byp-page">
-    <section className="byp-phero">
+    <section className="byp-phero byp-phero--cta">
       <div className="byp-wrap">
         <BypBreadcrumbs items={[{ label: "Equipos" }]} />
         <p className="byp-code">// EQUIPOS</p>
@@ -28,10 +39,21 @@ const EquiposIndex = () => (
           {familiasEnPalabras(equiposData.length)} familias de equipo, con las marcas que representamos en cada una y
           respaldo técnico en el Perú.
         </p>
+        <ul className="byp-phero__datos">
+          {RESUMEN.map((t, i) => (
+            <li key={`res-${i}`}>{t}</li>
+          ))}
+        </ul>
+        <div className="byp-phero__acciones">
+          <a className="byp-btn" href={waLink(MENSAJE)} target="_blank" rel="noreferrer">
+            Cotiza tus equipos por WhatsApp
+          </a>
+          <a className="byp-phero__ancla" href="#familias">Ver las familias de equipo</a>
+        </div>
       </div>
     </section>
 
-    <section className="byp-section">
+    <section className="byp-section" id="familias">
       <div className="byp-wrap">
         <div className="byp-sheet">
           {equiposData.map((f) => {
