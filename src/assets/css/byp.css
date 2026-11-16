@@ -1021,7 +1021,7 @@ body.byp-wa-abierto{overflow:hidden}
 .byp-wa__acepta input{flex:0 0 auto;width:20px;height:20px;margin:1px 0 0;accent-color:var(--byp-navy)}
 .byp-wa__acepta label{font-size:13.5px;line-height:1.45;color:var(--byp-txt);margin:0}
 .byp-wa a.byp-inlink{color:var(--byp-navy);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
-.byp-wa__hp{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0}
+.byp-wa__hp{display:none!important}
 .byp-wa__ir{display:block;width:100%;margin-top:18px;text-align:center}
 .byp-wa__nota{margin:10px 0 0;font-size:12.5px;line-height:1.4;color:var(--byp-dim);text-align:center}
 @media (max-width:560px){

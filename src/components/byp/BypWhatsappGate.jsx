@@ -23,6 +23,14 @@ import {
  * Si Boost no responde, WhatsApp se abre igual: el cliente nunca se queda trabado.
  * Al prerenderizar no pinta nada (cerrado devuelve null), así que no toca la
  * hidratación de ninguna página.
+ *
+ * Campo trampa (16-nov-2026): hasta esta fecha su valor viajaba como
+ * data._hp_check y Boost rechazaba el envío (422) si llegaba lleno. El
+ * autocompletado del navegador lo llenaba a personas reales (5 de 12 envíos del
+ * 10 al 15-nov no quedaron en Boost, aunque WhatsApp se abrió). Ahora el campo va
+ * con display:none (el autocompletado no llena campos que no se muestran) y, si
+ * aun así llega lleno, el envío se guarda igual con la marca
+ * metadata.campo_trampa = "lleno" para revisarlo en Boost.
  */
 
 const ENDPOINT = "/api/whatsapp-lead";
@@ -73,11 +81,12 @@ function enviarABoost(datos, enlace, honeypot) {
       pagina: `https://${paginaActual()}`,
       consentimiento: `Sí: acepta la Política de privacidad (versión ${VERSION_PRIVACIDAD}) el ${new Date().toISOString()}`,
       envio_id: idEnvio(),
-      _hp_check: honeypot || "",
     },
     source: "web",
     metadata: { referrer: document.referrer || "", page_url: window.location.href.split("#")[0], ...origen },
   };
+  // Nunca como data._hp_check: Boost rechaza el envío entero si ese campo llega lleno.
+  if (honeypot) cuerpo.metadata.campo_trampa = "lleno";
   try {
     fetch(ENDPOINT, {
       method: "POST",
