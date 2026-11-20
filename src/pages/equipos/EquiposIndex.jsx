@@ -18,7 +18,7 @@ const familiasEnPalabras = (n) => PALABRAS[n] || String(n);
 // portada (repuestos en stock en Lima para TRUE, Winterhalter, Vitamix y JURA).
 const RESUMEN = [
   "Hornos, amasadoras, refrigeración, lavavajillas, cafeteras y licuadoras",
-  "JURA, Vitamix, TRUE, Irinox, Mondial Forni, Winterhalter y más",
+  "JURA, Vitamix, TRUE, Mondial Forni, Winterhalter y más",
   "Repuestos en stock en Lima para TRUE, Winterhalter, Vitamix y JURA",
 ];
 const MENSAJE = "Hola B&P TECH, quiero cotizar equipos para mi negocio: ___.";
@@ -71,7 +71,10 @@ const EquiposIndex = () => (
                 ) : null}
                 <div className="byp-fcard__meta">
                   <span className="byp-fcard__ref">
-                    {n} {n === 1 ? "EQUIPO" : "EQUIPOS"} · {marcas.join(" · ").toUpperCase()}
+                    {/* 20-nov-2026: abatidores y congelación quedaron sin fichas al salir IRINOX; sin fichas no se muestra «0 equipos». */}
+                    {n > 0
+                      ? `${n} ${n === 1 ? "EQUIPO" : "EQUIPOS"}${marcas.length ? " · " + marcas.join(" · ").toUpperCase() : ""}`
+                      : "A PEDIDO · COTIZA EL TUYO"}
                   </span>
                   <h3>{f.name}</h3>
                   <p>{f.tagline}</p>
@@ -88,7 +91,7 @@ const EquiposIndex = () => (
         <div>
           <h2 className="byp-h2">¿No encuentras la máquina que buscas?</h2>
           <p>
-            Representamos catorce marcas y el catálogo de cada una es más amplio que
+            Representamos trece marcas y el catálogo de cada una es más amplio que
             lo que aquí se muestra. Dinos qué necesitas.
           </p>
         </div>

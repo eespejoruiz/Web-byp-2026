@@ -108,7 +108,7 @@ const PAGINAS = {
   },
   '/equipos/congelacion': {
     title: 'Congeladoras industriales y congelación rápida | B&P Tech',
-    description: 'Congeladoras verticales y bajo mesada TRUE para conservar a −18 °C y abatidores IRINOX para congelar rápido: te ayudamos a elegir el equipo para tu negocio.',
+    description: 'Congeladoras verticales y bajo mesada TRUE para conservar a −18 °C y abatidores para congelar rápido: te ayudamos a elegir el equipo para tu negocio.',
   },
   '/equipos/amasadoras': {
     title: 'Amasadoras de pan industriales, de 12 a 600 kg | B&P Tech',
@@ -139,8 +139,8 @@ const PAGINAS = {
     description: 'Porcionadoras TREIF del grupo JBT Marel: control de grosor desde medio milímetro y ECO SLICING para cortar a mayor temperatura y gastar menos en frío.',
   },
   '/equipos/abatidores': {
-    title: 'Abatidores de temperatura IRINOX en Perú | B&P Tech',
-    description: 'Abatidores IRINOX SimplyFresh, EasyFresh Next y MultiFresh Next: de 10 a 95 kg por ciclo para enfriar a +3 °C y congelar a −18 °C. Te ayudamos a elegir.',
+    title: 'Abatidores de temperatura en Perú | B&P Tech',
+    description: 'Abatidores de temperatura para enfriar a +3 °C y congelar a −18 °C en el corazón del producto. Cuéntanos qué produces y te ayudamos a elegir el tuyo.',
   },
   '/equipos/chocolate': {
     title: 'Temperadoras de chocolate en Perú | B&P Tech',
@@ -151,11 +151,7 @@ const PAGINAS = {
     title: 'Marcas que representamos en Perú | B&P Tech',
     // La lista anterior dejaba fuera a Mondial Forni desde que entro. Ahora nombra
     // las principales y da la cuenta total.
-    description: 'JURA, RONDO, DIOSNA, WINTERHALTER, TRUE, Mondial Forni, Pietroberto, Vitamix y más: trece marcas de equipamiento alimentario con respaldo técnico en Perú.',
-  },
-  '/marcas/irinox': {
-    title: 'IRINOX en Perú: abatidores de temperatura | B&P Tech',
-    description: 'Abatidores de temperatura de la marca italiana IRINOX: tres líneas de 10 a 95 kg por ciclo para pastelería, panadería, restaurantes, hoteles y catering.',
+    description: 'JURA, RONDO, DIOSNA, WINTERHALTER, TRUE, Mondial Forni, Pietroberto, Vitamix y más: doce marcas de equipamiento alimentario con respaldo técnico en Perú.',
   },
   '/marcas/jura': {
     title: 'Cafeteras JURA en Perú: X10, W8 y E8 | B&P Tech',

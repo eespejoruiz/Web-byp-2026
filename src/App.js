@@ -55,7 +55,6 @@ import Cainco from './pages/brands/Cainco';
 import Pomati from './pages/brands/Pomati';
 import AmericanPan from './pages/brands/AmericanPan';
 import JbtMarel from './pages/brands/JbtMarel';
-import Irinox from './pages/brands/Irinox';
 import Restaurantes from "./pages/industries/Restaurantes";
 import Estadios from "./pages/industries/Estadios";
 import Panaderia from "./pages/industries/Panaderia";
@@ -139,7 +138,6 @@ function App() {
             <Route path='/marcas/pomati' element={<Pomati />} />
             <Route path='/marcas/americanpan' element={<AmericanPan />} />
             <Route path='/marcas/jbtmarel' element={<JbtMarel />} />
-            <Route path='/marcas/irinox' element={<Irinox />} />
 
             <Route path='*' element={<Error404 />} />
           </Route>

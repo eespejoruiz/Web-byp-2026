@@ -24,9 +24,10 @@ import cafeterasHero from "../assets/images/brands/jura-w8-latte.webp";
  * catálogo de Mondial Forni, que es la marca que los surte.
  */
 export const equiposData = [
-  // Abatidores: entran el 2 de octubre de 2026 con IRINOX, marca que B&P confirmó
-  // que representa. «abatidor» son 720 búsquedas al mes en el Perú y «abatidor de
-  // temperatura», 260. Sin foto de portada hasta tener permiso de la marca.
+  // Abatidores: entraron el 2 de octubre de 2026 con IRINOX. El 20 de noviembre de 2026
+  // IRINOX salió de la web porque B&P aún no tiene su representación; la familia se queda
+  // sin marca porque B&P vende abatidores de otra marca (Enrique, 20-nov). «abatidor» son
+  // 720 búsquedas al mes en el Perú y «abatidor de temperatura», 260.
   {
     slug: "abatidores",
     route: "/equipos/abatidores",
@@ -37,9 +38,9 @@ export const equiposData = [
     industries: ["panaderia", "restaurantes", "hoteles-catering", "cocinas-industriales", "supermercados", "carnicerias", "comida-rapida"],
     parrafos: [
       "Un abatidor de temperatura hace en poco tiempo lo que una cámara no puede: lleva un producto recién horneado o cocinado a +3 °C en el corazón para conservarlo, o a −18 °C para congelarlo.",
-      "La rapidez es lo que importa. Según IRINOX, el enfriamiento rápido frena el deterioro de los alimentos, detiene la oxidación y reduce la proliferación de bacterias, y la congelación ultrarrápida forma microcristales que no dañan la estructura del alimento.",
+      "La rapidez es lo que importa: el enfriamiento rápido frena el deterioro de los alimentos y reduce el tiempo en que las bacterias se multiplican, y la congelación rápida forma cristales de hielo pequeños que dañan menos la estructura del alimento.",
       "En la práctica, permite producir con anticipación: se hornea o se cocina en las horas tranquilas, se abate y se termina o se sirve cuando hace falta, sin perder calidad entre un momento y otro.",
-      "Trabajamos con IRINOX, la marca italiana especializada en abatidores, en tres líneas: SimplyFresh, compacto, de 5 bandejas y 20 kg por ciclo; EasyFresh Next, de 10 a 70 kg con 7 funciones; y MultiFresh Next, de 25 a 95 kg con hasta 12 funciones según la versión, entre ellas descongelación, fermentación y cocción a baja temperatura. La elección depende de cuántos kilos sale de tu producción en cada ciclo.",
+      "Hay abatidores compactos, de pocas bandejas, para pastelerías y cafeterías, y equipos de mayor capacidad para cocinas de volumen. La elección depende de cuántos kilos sale de tu producción en cada ciclo: cuéntanos qué produces y te ayudamos a elegir.",
     ],
   },
   {
@@ -576,8 +577,8 @@ export const equiposData = [
   // Congelación: semana 11 (21-oct-2026), página aparte por decisión de Enrique.
   // «congeladora industrial» 260 búsquedas al mes, «congelador industrial» 210,
   // «congeladora horizontal» 480 (casi todo doméstico). Entra con lo que B&P ya
-  // tiene confirmado para congelar, los abatidores IRINOX (la misma categoría que
-  // /equipos/abatidores). Los congeladores TRUE (verticales, bajo mesada y de
+  // tiene confirmado para congelar, los abatidores (la misma categoría que
+  // /equipos/abatidores; desde el 20-nov-2026 sin marca y sin fichas, ver arriba). Los congeladores TRUE (verticales, bajo mesada y de
   // puertas de vidrio: TRUE los fabrica, ver truemfg.com/es) se suman como
   // fichas cuando B&P confirme modelos, voltaje y garantía; mientras tanto, la
   // página no nombra ningún modelo TRUE de congelación.
@@ -595,7 +596,7 @@ export const equiposData = [
     industries: ["restaurantes", "hoteles-catering", "cocinas-industriales", "supermercados", "carnicerias", "panaderia", "comida-rapida"],
     parrafos: [
       "En un negocio de alimentos, congelar son dos trabajos distintos. Uno es conservar: guardar el producto a −18 °C o menos durante semanas o meses, y para eso está la congeladora. El otro es congelar rápido lo que sale del horno o de la cocina para que no pierda calidad, y para eso está el abatidor.",
-      "Para conservar, TRUE fabrica congeladoras verticales, bajo mesada y exhibidoras de puertas de vidrio: cuéntanos cuánto producto guardas y dónde va el equipo, y te decimos qué modelo encaja. Para congelar rápido trabajamos con los abatidores IRINOX, que llevan el producto a −18 °C en el corazón y son los que ves en esta página.",
+      "Para conservar, TRUE fabrica congeladoras verticales, bajo mesada y exhibidoras de puertas de vidrio: cuéntanos cuánto producto guardas y dónde va el equipo, y te decimos qué modelo encaja. Para congelar rápido está el abatidor, que lleva el producto a −18 °C en el corazón: también te ayudamos a elegirlo.",
     ],
     guia: {
       titulo: "Cómo elegir una congeladora industrial",
@@ -604,7 +605,7 @@ export const equiposData = [
           titulo: "Conservar o congelar rápido",
           parrafos: [
             "La congeladora está hecha para mantener el frío, no para bajarlo. Si se le mete una preparación caliente, la congela despacio y además calienta lo que ya estaba guardado.",
-            "El abatidor hace el trabajo contrario: baja la temperatura rápido, hasta −18 °C en el corazón del producto, y recién entonces el producto pasa a la congeladora. Según IRINOX, la congelación ultrarrápida forma microcristales que no dañan la estructura del alimento. Por eso, en una cocina de volumen, los dos equipos no compiten: trabajan juntos.",
+            "El abatidor hace el trabajo contrario: baja la temperatura rápido, hasta −18 °C en el corazón del producto, y recién entonces el producto pasa a la congeladora. La congelación rápida forma cristales de hielo pequeños, que dañan menos la estructura del alimento. Por eso, en una cocina de volumen, los dos equipos no compiten: trabajan juntos.",
           ],
           enlace: { texto: "abatidor", to: "/equipos/abatidores" },
         },
