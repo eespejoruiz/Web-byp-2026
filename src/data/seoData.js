@@ -270,8 +270,12 @@ export function seoDeRuta(pathname) {
     if (post) {
       // El excerpt solo da 60-90 caracteres. Se completa con el primer bloque del
       // articulo para que la descripcion llegue a la longitud que Google muestra.
+      // 23-nov-2026: los artículos nuevos traen su propio título y descripción (seo).
       const primero = (post.sections || [])[0];
-      meta = {
+      meta = post.seo ? {
+        title: conMarca(post.seo.title),
+        description: recorta(post.seo.description),
+      } : {
         title: conMarca(post.title),
         description: recorta([post.excerpt, primero && primero.p].filter(Boolean).join(' ')
           || PAGINAS['/blog'].description),

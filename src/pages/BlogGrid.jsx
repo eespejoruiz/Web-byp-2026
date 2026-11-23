@@ -105,7 +105,7 @@ const BlogGrid = () => {
                                         </div>
                                     </div>
                                 </li>
-                                {blogPosts.slice(6, 9).map((p) => (
+                                {blogPosts.slice(6).map((p) => (
                                     <BlogDridCard
                                         key={p.slug}
                                         date={p.date}

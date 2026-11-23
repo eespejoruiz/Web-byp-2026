@@ -345,6 +345,18 @@ export function schemaDeRuta(pathname) {
       const img = imagenAbsoluta(post.img);
       if (img) art.image = img;
       nodos.push(art);
+      // Las preguntas frecuentes que se pintan en el artículo, tal cual, como FAQPage.
+      if (Array.isArray(post.faqs) && post.faqs.length) {
+        nodos.push({
+          '@type': 'FAQPage',
+          '@id': abs(ruta) + '#preguntas',
+          mainEntity: post.faqs.map((f) => ({
+            '@type': 'Question',
+            name: f.q,
+            acceptedAnswer: { '@type': 'Answer', text: f.a },
+          })),
+        });
+      }
     }
     return nodos;
   }
