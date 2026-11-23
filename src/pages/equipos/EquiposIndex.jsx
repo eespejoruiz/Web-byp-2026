@@ -91,7 +91,7 @@ const EquiposIndex = () => (
         <div>
           <h2 className="byp-h2">¿No encuentras la máquina que buscas?</h2>
           <p>
-            Representamos trece marcas y el catálogo de cada una es más amplio que
+            Representamos catorce marcas y el catálogo de cada una es más amplio que
             lo que aquí se muestra. Dinos qué necesitas.
           </p>
         </div>

@@ -88,7 +88,7 @@ const PAGINAS = {
 
   '/equipos': {
     title: 'Equipos por tipo de máquina | B&P Tech Perú',
-    description: 'Amasadoras, laminadoras, batidoras, refrigeración, lavavajillas, licuadoras y más: catorce familias de equipo con las marcas que representamos en Perú.',
+    description: 'Amasadoras, laminadoras, batidoras, refrigeración, lavavajillas, licuadoras y más: dieciséis familias de equipo con las marcas que representamos en Perú.',
   },
   '/equipos/hornos': {
     title: 'Hornos industriales para panadería en Perú | B&P Tech',
@@ -142,6 +142,14 @@ const PAGINAS = {
     title: 'Abatidores de temperatura en Perú | B&P Tech',
     description: 'Abatidores de temperatura para enfriar a +3 °C y congelar a −18 °C en el corazón del producto. Cuéntanos qué produces y te ayudamos a elegir el tuyo.',
   },
+  '/equipos/cadena-de-frio': {
+    title: 'Refrigeradores para vacunas y laboratorio en Perú | B&P Tech',
+    description: 'Refrigeradores TRUE Scientific para la cadena de frío: de farmacia y vacunas de 2 a 8 °C y de laboratorio de 2 a 10 °C, con alarmas y batería de respaldo.',
+  },
+  '/equipos/maquinas-de-hielo': {
+    title: 'Máquinas de hielo industriales en Perú | B&P Tech',
+    description: 'Máquinas de hielo Ice-O-Matic en cubos, nugget, escamas y gourmet, de unos 23 a más de 1.200 kg al día. Te ayudamos a elegir la tuya y a cotizarla.',
+  },
   '/equipos/chocolate': {
     title: 'Temperadoras de chocolate en Perú | B&P Tech',
     description: 'Temperadoras Pomati de fabricación italiana: la curva sostenida turno tras turno, que es lo que decide el brillo y el chasquido del producto terminado.',
@@ -151,7 +159,7 @@ const PAGINAS = {
     title: 'Marcas que representamos en Perú | B&P Tech',
     // La lista anterior dejaba fuera a Mondial Forni desde que entro. Ahora nombra
     // las principales y da la cuenta total.
-    description: 'JURA, RONDO, DIOSNA, WINTERHALTER, TRUE, Mondial Forni, Pietroberto, Vitamix y más: doce marcas de equipamiento alimentario con respaldo técnico en Perú.',
+    description: 'JURA, RONDO, DIOSNA, WINTERHALTER, TRUE, Mondial Forni, Pietroberto, Vitamix y más: trece marcas de equipamiento alimentario con respaldo técnico en Perú.',
   },
   '/marcas/jura': {
     title: 'Cafeteras JURA en Perú: X10, W8 y E8 | B&P Tech',
@@ -211,6 +219,10 @@ const PAGINAS = {
   '/marcas/americanpan': {
     title: 'American Pan en Perú: moldes y bandejas | B&P Tech',
     description: 'Moldes de pan, bandejas para baguette y racks con recubrimiento antiadherente de grado industrial para panificación, disponibles en Perú.',
+  },
+  '/marcas/iceomatic': {
+    title: 'Ice-O-Matic en Perú: máquinas de hielo industriales | B&P Tech',
+    description: 'Máquinas de hielo Ice-O-Matic, fabricante de Denver dedicado solo al hielo desde 1952: cubos, nugget, escamas y gourmet, con representación en Perú.',
   },
   '/marcas/jbtmarel': {
     title: 'JBT Marel en Perú: cortadoras TREIF | B&P Tech',

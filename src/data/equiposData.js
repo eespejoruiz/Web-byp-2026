@@ -11,6 +11,9 @@ import moldesHero from "../assets/images/products/americanpan-bread-tins.webp";
 import cortadorasHero from "../assets/images/products/jbtmarel-treif-divider-660.webp";
 import chocolateHero from "../assets/images/products/pomati-t35.webp";
 import cafeterasHero from "../assets/images/brands/jura-w8-latte.webp";
+// Dibujos técnicos genéricos, sin marca (20-nov-2026).
+import hieloHero from "../assets/images/gen/hielo-maquina.svg";
+import frioHero from "../assets/images/gen/frio-farmacia.svg";
 
 /**
  * Catálogo por TIPO DE MÁQUINA.
@@ -644,6 +647,256 @@ export const equiposData = [
       {
         q: "¿TRUE fabrica cámaras de congelación?",
         a: "No. TRUE fabrica congeladoras verticales, bajo mesada y exhibidoras de puertas de vidrio, no cámaras de obra, que son los cuartos fríos donde se entra caminando.",
+      },
+    ],
+  },
+  // Cadena de frío (20-nov-2026, Enrique: «3. si, y tambien cadena de frios, true tiene equipos
+  // para laboratorios» y «4. todas»). TRUE Scientific: rangos por línea de truemfg.com/scientific/,
+  // capacidades de la cabecera de cada ficha y equipamiento de la hoja «Corporate Capabilities»
+  // de TSCI. «cadena de frío» son 2.400 búsquedas al mes en el Perú y Google la entiende como
+  // vacunas: la página va a farmacia, vacunas y laboratorio. Sin voltaje ni fotos.
+  {
+    slug: "cadena-de-frio",
+    route: "/equipos/cadena-de-frio",
+    name: "Cadena de frío",
+    h1: "Refrigeradores para vacunas, farmacia y laboratorio",
+    heroImage: frioHero,
+    tagline: "TRUE Scientific, para vacunas, medicamentos y reactivos",
+    categorias: [
+      "Refrigerador de farmacia y vacunas",
+      "Refrigerador de laboratorio",
+      "Refrigerador de cromatografía",
+    ],
+    orden: ["true-tsci-150pr", "true-tsci-600pr", "true-tsci-850pr", "true-tsci-150lr", "true-tsci-450lr", "true-tsci-550cr"],
+    industries: ["laboratorios"],
+    parrafos: [
+      "Una vacuna o un reactivo que pasó unas horas fuera de su rango no se ve distinto, pero puede perder su eficacia, y muchas veces nadie se entera a tiempo. Por eso un refrigerador para la cadena de frío no se elige como uno de cocina: tiene que mantener un rango estrecho y avisar apenas algo falla.",
+      "TRUE Scientific es la línea de TRUE para farmacia, laboratorio y uso clínico, fabricada en Estados Unidos. Tiene tres familias: de farmacia, para vacunas y medicamentos, entre 2 y 8 °C; de laboratorio, para reactivos y productos biológicos, entre 2 y 10 °C; y de cromatografía, para insumos, reactivos y buffers, también entre 2 y 10 °C.",
+    ],
+    resumen: [
+      "Farmacia de 2 a 8 °C; laboratorio de 2 a 10 °C",
+      "Alarmas de temperatura, puerta y falla de energía",
+      "De 134 a 835 litros, fabricados en EE. UU.",
+    ],
+    cta: {
+      texto: "Pide el precio por WhatsApp",
+      mensaje: "Hola B&P TECH, quiero el precio de un refrigerador TRUE Scientific para ___ (vacunas, farmacia o laboratorio).",
+      ancla: "Ver qué refrigerador necesitas",
+    },
+    selector: {
+      titulo: "¿Qué refrigerador TRUE Scientific necesitas?",
+      columnas: ["Modelo", "Para qué", "Capacidad", "Puertas", "Temperatura", "Cotización"],
+      filas: [
+        {
+          cabecera: "TSCI-150PR",
+          celdas: ["Vacunas y medicamentos (farmacia)", "134 L", "1 de vidrio", "2 a 8 °C", "Pedir precio"],
+          wa: "Hola B&P TECH, quiero el precio del refrigerador de farmacia TRUE Scientific TSCI-150PR.",
+        },
+        {
+          cabecera: "TSCI-600PR",
+          celdas: ["Vacunas y medicamentos (farmacia)", "626,6 L", "1 de vidrio", "2 a 8 °C", "Pedir precio"],
+          wa: "Hola B&P TECH, quiero el precio del refrigerador de farmacia TRUE Scientific TSCI-600PR.",
+        },
+        {
+          cabecera: "TSCI-850PR",
+          celdas: ["Vacunas y medicamentos (farmacia)", "835 L", "2 de vidrio, corredizas", "2 a 8 °C", "Pedir precio"],
+          wa: "Hola B&P TECH, quiero el precio del refrigerador de farmacia TRUE Scientific TSCI-850PR.",
+        },
+        {
+          cabecera: "TSCI-150LR",
+          celdas: ["Reactivos y productos biológicos (laboratorio)", "134 L", "1 sólida", "2 a 10 °C", "Pedir precio"],
+          wa: "Hola B&P TECH, quiero el precio del refrigerador de laboratorio TRUE Scientific TSCI-150LR.",
+        },
+        {
+          cabecera: "TSCI-450LR",
+          celdas: ["Reactivos y productos biológicos (laboratorio)", "437,8 L", "1 de vidrio", "2 a 10 °C", "Pedir precio"],
+          wa: "Hola B&P TECH, quiero el precio del refrigerador de laboratorio TRUE Scientific TSCI-450LR.",
+        },
+        {
+          cabecera: "TSCI-550CR",
+          celdas: ["Insumos, reactivos y buffers de cromatografía", "550,4 L", "1 de vidrio", "2 a 10 °C", "Pedir precio"],
+          wa: "Hola B&P TECH, quiero el precio del refrigerador de cromatografía TRUE Scientific TSCI-550CR.",
+        },
+      ],
+      nota: "Capacidades según las fichas de TRUE (truemfg.com). La línea tiene más modelos, como el TSCI-600LR de laboratorio, el TSCI-600CR de cromatografía y el TSCI-1000R para farmacia y vacunas: cuéntanos qué necesitas guardar y te ayudamos a elegir.",
+    },
+    guia: {
+      titulo: "Cómo elegir un refrigerador para la cadena de frío",
+      secciones: [
+        {
+          titulo: "Farmacia, laboratorio o cromatografía",
+          parrafos: [
+            "La primera pregunta es qué vas a guardar, porque de eso depende el rango de temperatura:",
+          ],
+          lista: [
+            { lead: "Vacunas y medicamentos:", text: "refrigerador de farmacia, que trabaja entre 2 y 8 °C." },
+            { lead: "Reactivos y productos biológicos:", text: "refrigerador de laboratorio, entre 2 y 10 °C." },
+            { lead: "Insumos, reactivos y buffers de cromatografía:", text: "refrigerador de cromatografía, entre 2 y 10 °C." },
+          ],
+          cierre: [
+            "Después viene el tamaño: hay modelos compactos de 134 litros y verticales de 437,8 a 835 litros, con puerta sólida, de vidrio o puertas corredizas.",
+          ],
+        },
+        {
+          titulo: "Lo que lo distingue de un refrigerador de cocina",
+          parrafos: ["Según las fichas de TRUE, los modelos de esta página traen:"],
+          lista: [
+            { lead: "Control con batería de respaldo,", text: "con el ajuste bloqueado de fábrica." },
+            { lead: "Alarmas", text: "de alta y baja temperatura, puerta abierta, falla de energía y falla del sensor, con un contacto para conectar una alarma remota." },
+            { lead: "Sensor dentro de una botella con glicol,", text: "que mide la temperatura como la vive el producto y no la del aire, que cambia cada vez que se abre la puerta. Atrás tiene un puerto para una sonda." },
+            { lead: "Temperatura pareja:", text: "TRUE indica una uniformidad de ±1 °C en el gabinete." },
+            { lead: "Cerradura,", text: "para que solo abra el personal autorizado." },
+            { lead: "Puertos de acceso y tomacorrientes dobles", text: "en los modelos de laboratorio y cromatografía." },
+            { lead: "Condensador que se limpia solo:", text: "el ventilador invierte el giro 20 segundos en cada arranque." },
+            { lead: "Refrigerante R290,", text: "un hidrocarburo natural." },
+          ],
+        },
+        {
+          titulo: "El refrigerador es una parte de la cadena de frío",
+          parrafos: [
+            "Un buen refrigerador mantiene el rango, pero la cadena de frío también depende de cómo se trabaja: revisar la temperatura todos los días, no abrir la puerta sin necesidad y saber qué hacer si suena la alarma. En nuestra página de laboratorios resumimos cómo se organiza el monitoreo.",
+          ],
+          enlace: { texto: "página de laboratorios", to: "/industrias/laboratorios" },
+        },
+      ],
+    },
+    faqs: [
+      {
+        q: "¿Qué es la cadena de frío?",
+        a: "Es mantener un producto sensible, como una vacuna, un medicamento o un reactivo, dentro de su rango de temperatura desde que llega hasta que se usa. Para vacunas y medicamentos refrigerados, el rango habitual es de 2 a 8 °C, que es el que mantienen los refrigeradores de farmacia de TRUE Scientific.",
+      },
+      {
+        q: "¿Se pueden guardar vacunas en un refrigerador común?",
+        a: "Lo recomendable es un refrigerador de propósito farmacéutico. Uno doméstico o de cocina no está hecho para mantener un rango estrecho ni avisa cuando se sale de él; los de farmacia de TRUE Scientific trabajan entre 2 y 8 °C y tienen alarmas de temperatura, puerta abierta y falla de energía.",
+      },
+      {
+        q: "¿Qué diferencia hay entre un refrigerador de farmacia y uno de laboratorio?",
+        a: "El rango y el equipamiento. Los de farmacia de TRUE Scientific trabajan entre 2 y 8 °C, para vacunas y medicamentos; los de laboratorio, entre 2 y 10 °C, para reactivos y productos biológicos, y traen además puertos de acceso y tomacorrientes dobles.",
+      },
+      {
+        q: "¿Qué pasa si se corta la luz?",
+        a: "Los refrigeradores TRUE Scientific tienen alarma de falla de energía y su control trae batería de respaldo. Además tienen un contacto para conectar una alarma remota, para que alguien se entere aunque no esté en el lugar.",
+      },
+    ],
+  },
+  // Máquinas de hielo (20-nov-2026): Ice-O-Matic, con representación de B&P (Enrique, «5. si es
+  // esa, si tiene la represencacion»). Búsquedas al mes en el Perú (Planificador de Google Ads,
+  // 20-nov-2026): «máquina de hielo» 1.600, «máquina para hacer hielo» 880, «máquina de hielo en
+  // cubos» 480, «hielo industrial» 170, «máquina de hielo industrial» 140 (CPC alto: compra de
+  // negocio). Rangos de iceomatic.com, de libras a kilos.
+  {
+    slug: "maquinas-de-hielo",
+    route: "/equipos/maquinas-de-hielo",
+    name: "Máquinas de hielo",
+    h1: "Máquinas de hielo industriales",
+    heroImage: hieloHero,
+    tagline: "Cubos, nugget, escamas y gourmet, según lo que sirve tu negocio",
+    categorias: [
+      "Máquina de hielo en cubos",
+      "Máquina de hielo nugget",
+      "Máquina de hielo en escamas",
+      "Máquina de hielo gourmet",
+      "Depósito y dispensador de hielo",
+    ],
+    orden: ["iceomatic-cubos", "iceomatic-nugget", "iceomatic-escamas", "iceomatic-gourmet", "iceomatic-depositos"],
+    industries: ["bares-cafeterias", "restaurantes", "hoteles-catering", "comida-rapida", "supermercados", "estadios"],
+    parrafos: [
+      "En un negocio que vende bebidas, el hielo se acaba justo cuando más se vende: en los días de calor. Si la máquina se queda corta, toca comprar hielo en bolsa o dejar de servir bebidas frías.",
+      "Trabajamos las máquinas de Ice-O-Matic, un fabricante de Denver (Estados Unidos) que solo hace máquinas de hielo desde 1952. Su catálogo cubre los cuatro tipos de hielo de un negocio: cubos para bebidas, nugget masticable, escamas para exhibir pescados y verduras, y cubo gourmet para coctelería, además de los depósitos y dispensadores donde se guarda.",
+    ],
+    resumen: [
+      "Modulares y bajo mostrador; condensador por aire, agua o remoto",
+      "De unos 23 kg a más de 1.200 kg de hielo al día",
+      "Ice-O-Matic, de Estados Unidos, a pedido",
+    ],
+    cta: {
+      texto: "Pide el precio por WhatsApp",
+      mensaje: "Hola B&P TECH, quiero el precio de una máquina de hielo para ___ (bar, restaurante, hotel, pescados…). Uso unos ___ kg al día.",
+      ancla: "Ver qué máquina necesitas",
+    },
+    selector: {
+      titulo: "¿Qué máquina de hielo necesitas?",
+      columnas: ["Hielo", "Para qué", "Producción al día", "Cotización"],
+      filas: [
+        {
+          cabecera: "Cubos",
+          celdas: ["Bebidas en restaurantes, bares y hoteles", "De unos 90 a 635 kg", "Pedir precio"],
+          wa: "Hola B&P TECH, quiero el precio de una máquina de hielo en cubos Ice-O-Matic. Uso unos ___ kg al día.",
+        },
+        {
+          cabecera: "Nugget",
+          celdas: ["Hielo masticable para bebidas, smoothies y autoservicio", "Hasta unos 590 kg", "Pedir precio"],
+          wa: "Hola B&P TECH, quiero el precio de una máquina de hielo nugget Ice-O-Matic. Uso unos ___ kg al día.",
+        },
+        {
+          cabecera: "Escamas",
+          celdas: ["Exhibir pescados, mariscos, frutas y verduras", "De unos 180 a 1.225 kg", "Pedir precio"],
+          wa: "Hola B&P TECH, quiero el precio de una máquina de hielo en escamas Ice-O-Matic. Uso unos ___ kg al día.",
+        },
+        {
+          cabecera: "Gourmet",
+          celdas: ["Coctelería y presentación, bajo la barra", "De unos 23 a 73 kg", "Pedir precio"],
+          wa: "Hola B&P TECH, quiero el precio de una máquina de hielo gourmet Ice-O-Matic.",
+        },
+        {
+          cabecera: "Depósito o dispensador",
+          celdas: ["Guardar el hielo y servirlo sin tocarlo", "Guardan de unos 54 a 603 kg", "Pedir precio"],
+          wa: "Hola B&P TECH, quiero el precio de un depósito o dispensador de hielo Ice-O-Matic.",
+        },
+      ],
+      nota: "Rangos de producción en 24 horas y de almacenamiento según iceomatic.com, pasados de libras a kilos y redondeados.",
+    },
+    guia: {
+      titulo: "Cómo elegir una máquina de hielo para tu negocio",
+      secciones: [
+        {
+          titulo: "Primero, el tipo de hielo",
+          parrafos: ["No hay un solo hielo, y cada negocio usa el suyo. Ice-O-Matic los separa así:"],
+          lista: [
+            { lead: "Cubos.", text: "El hielo de las bebidas en restaurantes, bares y hoteles, en tres tamaños: completo, medio cubo y grande." },
+            { lead: "Nugget.", text: "Blando y masticable. Ice-O-Matic hace dos: Pearl Ice, para bebidas y smoothies, y Quartz Ice, fácil de dispensar, para salud, hotelería y autoservicio." },
+            { lead: "Escamas.", text: "Blando y moldeable, para exhibir pescados, mariscos, frutas y verduras, y para presentar alimentos." },
+            { lead: "Gourmet.", text: "Un cubo transparente que se derrite lento, para coctelería y bebidas de autor." },
+          ],
+        },
+        {
+          titulo: "Después, cuántos kilos al día",
+          parrafos: [
+            "La cuenta se hace con el día de más venta, no con el promedio: es el día en que una máquina corta te deja sin hielo. Anota cuántos kilos usas ese día, o cuántas bolsas compras, y súmale un margen.",
+            "Ese margen importa más en verano: la producción de una máquina de hielo cambia con la temperatura del ambiente y del agua, y con más calor rinde menos.",
+          ],
+        },
+        {
+          titulo: "Modular o bajo mostrador",
+          parrafos: [
+            "Una máquina modular produce el hielo y lo deja caer en un depósito o un dispensador, que se elige aparte según cuánto hielo necesitas tener guardado para la hora de más venta. Es la opción para volúmenes grandes.",
+            "Una máquina bajo mostrador va debajo de la barra o de la mesa de trabajo, para quien necesita el hielo a la mano y tiene poco espacio.",
+          ],
+        },
+        {
+          titulo: "Cómo saca el calor: aire, agua o remoto",
+          parrafos: [
+            "Toda máquina de hielo saca calor mientras produce. Con condensador por aire, ese calor queda en el local; con condensador por agua, se lo lleva el agua; con condensador remoto, la parte que saca el calor se instala fuera, lo que según Ice-O-Matic aleja el calor y el ruido de la máquina. En una cocina o una barra calurosa, conviene decidirlo antes de comprar.",
+          ],
+        },
+      ],
+    },
+    faqs: [
+      {
+        q: "¿Qué máquina de hielo conviene para un bar o un restaurante?",
+        a: "Para bebidas, una de cubos: bajo mostrador si el espacio es poco, o modular sobre un depósito si el volumen es grande. Para coctelería, una de hielo gourmet, que hace un cubo transparente que se derrite lento.",
+      },
+      {
+        q: "¿Qué hielo se usa para exhibir pescados y mariscos?",
+        a: "El hielo en escamas: es blando y se moldea alrededor del producto. Ice-O-Matic lo indica para exhibir pescados, mariscos, frutas y verduras, y para presentar alimentos.",
+      },
+      {
+        q: "¿Cuánto hielo produce una máquina de hielo industrial?",
+        a: "Depende de la línea. En Ice-O-Matic, las de cubos van de unos 90 a 635 kg al día; las de escamas, hasta unos 1.225 kg; y las gourmet bajo mostrador, de unos 23 a 73 kg. Con más calor rinden menos, porque la producción cambia con la temperatura del ambiente y del agua.",
+      },
+      {
+        q: "¿Qué es el hielo nugget?",
+        a: "Es un hielo blando y masticable, en trozos pequeños. Ice-O-Matic hace dos: Pearl Ice, para bebidas y smoothies, y Quartz Ice, más fácil de dispensar, para salud, hotelería y autoservicio.",
       },
     ],
   },

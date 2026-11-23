@@ -58,6 +58,7 @@ export const productBrandNames = {
   americanpan: "AMERICAN PAN",
   pomati: "POMATI",
   jura: "JURA",
+  iceomatic: "ICE-O-MATIC",
 };
 
 export const productsData = [
@@ -1011,6 +1012,145 @@ export const productsData = [
     source:
       "https://www.pomati.it/en/tempering-and-melting-machines/t35-tempering-machine/",
     featured: true,
+  },
+  // Ice-O-Matic (20-nov-2026): una tarjeta por línea, con los rangos de los filtros de
+  // iceomatic.com por categoría (producción en 24 h y almacenamiento, de libras a kilos).
+  {
+    id: "iceomatic-cubos",
+    brand: "iceomatic",
+    name: "Máquinas de hielo en cubos",
+    category: "Máquina de hielo en cubos",
+    description:
+      "Cubo completo, medio cubo y cubo grande para bebidas en restaurantes, bares y hoteles. Modulares, que van sobre un depósito o un dispensador, y bajo mostrador.",
+    specs: {
+      "Producción": "De unos 90 a 635 kg al día",
+      "Ancho": "56, 61, 76 o 122 cm",
+      "Condensador": "Por aire, por agua o remoto",
+    },
+    industries: ["bares-cafeterias", "restaurantes", "hoteles-catering", "comida-rapida", "estadios"],
+    source: "https://iceomatic.com/cubers/",
+  },
+  {
+    id: "iceomatic-nugget",
+    brand: "iceomatic",
+    name: "Máquinas de hielo nugget",
+    category: "Máquina de hielo nugget",
+    description:
+      "Hielo blando y masticable. Pearl Ice, para bebidas y smoothies; Quartz Ice, fácil de dispensar, para salud, hotelería y autoservicio.",
+    specs: {
+      "Producción": "Hasta unos 590 kg al día",
+      "Ancho": "38, 53 o 76 cm",
+      "Condensador": "Por aire, por agua o remoto",
+    },
+    industries: ["bares-cafeterias", "comida-rapida", "hoteles-catering", "estadios"],
+    source: "https://iceomatic.com/nugget/",
+  },
+  {
+    id: "iceomatic-escamas",
+    brand: "iceomatic",
+    name: "Máquinas de hielo en escamas",
+    category: "Máquina de hielo en escamas",
+    description:
+      "Hielo blando y moldeable para exhibir pescados, mariscos, frutas y verduras, y para presentar alimentos.",
+    specs: {
+      "Producción": "De unos 180 a 1.225 kg al día",
+      "Ancho": "53 o 76 cm",
+      "Condensador": "Por aire, por agua o remoto",
+    },
+    industries: ["supermercados", "restaurantes", "hoteles-catering"],
+    source: "https://iceomatic.com/flake/",
+  },
+  {
+    id: "iceomatic-gourmet",
+    brand: "iceomatic",
+    name: "Máquinas de hielo gourmet",
+    category: "Máquina de hielo gourmet",
+    description:
+      "Cubo transparente que se derrite lento, para coctelería y presentación. Equipos bajo mostrador, para la barra.",
+    specs: {
+      "Producción": "De unos 23 a 73 kg al día",
+      "Ancho": "38, 46 o 53 cm",
+    },
+    industries: ["bares-cafeterias", "restaurantes", "hoteles-catering"],
+    source: "https://iceomatic.com/gourmet/",
+  },
+  {
+    id: "iceomatic-depositos",
+    brand: "iceomatic",
+    name: "Depósitos y dispensadores de hielo",
+    category: "Depósito y dispensador de hielo",
+    description:
+      "Para guardar el hielo que produce la máquina y servirlo sin tocarlo, en autoservicio, salud y hoteles.",
+    specs: {
+      "Almacenamiento": "De unos 54 a 603 kg",
+      "Ancho": "56, 76, 122 o 152 cm",
+    },
+    industries: ["hoteles-catering", "restaurantes", "comida-rapida", "estadios"],
+    source: "https://iceomatic.com/bins-dispensers/",
+  },
+  // TRUE Scientific (20-nov-2026, Enrique: «3. si, y tambien cadena de frios» y «4. todas»).
+  // Capacidad, tipo de unidad y puerta: texto de la cabecera de cada ficha de truemfg.com;
+  // rango de temperatura por línea según truemfg.com/scientific/. Sin fotos ni voltaje (las
+  // fichas de EE. UU. son de 115/60/1: falta confirmar qué versión trae B&P).
+  {
+    id: "true-tsci-150pr",
+    brand: "true",
+    name: "TSCI-150PR",
+    category: "Refrigerador de farmacia y vacunas",
+    description: "Refrigerador compacto de farmacia de TRUE Scientific, para vacunas y medicamentos, con puerta de vidrio.",
+    specs: { "Capacidad": "134 litros", "Puertas": "1 de vidrio, batiente", "Temperatura": "2 a 8 °C" },
+    industries: ["laboratorios"],
+    source: "https://www.truemfg.com/product/tsci-150pr-swg-r-ww-1a/",
+  },
+  {
+    id: "true-tsci-600pr",
+    brand: "true",
+    name: "TSCI-600PR",
+    category: "Refrigerador de farmacia y vacunas",
+    description: "Refrigerador vertical de farmacia de TRUE Scientific, para vacunas y medicamentos, con puerta de vidrio.",
+    specs: { "Capacidad": "626,6 litros", "Puertas": "1 de vidrio, batiente", "Temperatura": "2 a 8 °C" },
+    industries: ["laboratorios"],
+    source: "https://www.truemfg.com/product/tsci-600pr-swg-r-ww-1a/",
+  },
+  {
+    id: "true-tsci-850pr",
+    brand: "true",
+    name: "TSCI-850PR",
+    category: "Refrigerador de farmacia y vacunas",
+    description: "Refrigerador de farmacia de TRUE Scientific con dos puertas corredizas de vidrio, para vacunas y medicamentos en volumen.",
+    specs: { "Capacidad": "835 litros", "Puertas": "2 de vidrio, corredizas", "Temperatura": "2 a 8 °C" },
+    industries: ["laboratorios"],
+    source: "https://www.truemfg.com/product/tsci-850pr-slg-m-ww-1a/",
+  },
+  {
+    id: "true-tsci-150lr",
+    brand: "true",
+    name: "TSCI-150LR",
+    category: "Refrigerador de laboratorio",
+    description: "Refrigerador compacto de laboratorio de TRUE Scientific, para reactivos y productos biológicos, con puerta sólida.",
+    specs: { "Capacidad": "134 litros", "Puertas": "1 sólida, batiente", "Temperatura": "2 a 10 °C" },
+    industries: ["laboratorios"],
+    source: "https://www.truemfg.com/product/tsci-150lr-sws-r-ww-1a/",
+  },
+  {
+    id: "true-tsci-450lr",
+    brand: "true",
+    name: "TSCI-450LR",
+    category: "Refrigerador de laboratorio",
+    description: "Refrigerador vertical de laboratorio de TRUE Scientific, para reactivos y productos biológicos, con puerta de vidrio.",
+    specs: { "Capacidad": "437,8 litros", "Puertas": "1 de vidrio, batiente", "Temperatura": "2 a 10 °C" },
+    industries: ["laboratorios"],
+    source: "https://www.truemfg.com/product/tsci-450lr-swg-r-ww-1a/",
+  },
+  {
+    id: "true-tsci-550cr",
+    brand: "true",
+    name: "TSCI-550CR",
+    category: "Refrigerador de cromatografía",
+    description: "Refrigerador de cromatografía de TRUE Scientific, para insumos, reactivos y buffers, con puerta de vidrio.",
+    specs: { "Capacidad": "550,4 litros", "Puertas": "1 de vidrio, batiente", "Temperatura": "2 a 10 °C" },
+    industries: ["laboratorios"],
+    source: "https://www.truemfg.com/product/tsci-550cr-swg-r-ww-1a/",
   },
 ];
 

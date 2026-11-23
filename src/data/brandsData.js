@@ -34,6 +34,8 @@ import jbtmarelHero from "../assets/images/products/jbtmarel-treif-divider-660.w
 import juraLogo from "../assets/images/brands/jura-logo.png";
 import juraHero from "../assets/images/brands/jura-x10-hero.webp";
 import juraAmbient from "../assets/images/gen/brand-jura.webp";
+// Ice-O-Matic: dibujo técnico genérico, sin marca, hasta tener material de la marca.
+import iceomaticHero from "../assets/images/gen/hielo-maquina.svg";
 
 
 export const brandsData = [
@@ -607,6 +609,7 @@ export const brandsData = [
       "comida-rapida",
       "carnicerias",
       "bares-cafeterias",
+      "laboratorios",
     ],
     productType: "Refrigeración comercial",
     sections: [
@@ -634,6 +637,88 @@ export const brandsData = [
     ],
     closingStatement:
       "TRUE no solo enfría, preserva la calidad, protege la inversión y potencia la operación. Es la elección de los profesionales que entienden que la refrigeración es el corazón de su negocio.",
+  },
+
+  {
+    slug: "iceomatic",
+    route: "/marcas/iceomatic",
+    name: "ICE-O-MATIC",
+    // 20-nov-2026: Enrique confirmó que B&P tiene la representación de Ice-O-Matic («5. si es esa,
+    // si tiene la represencacion») y pidió la página con las líneas que publica el fabricante y
+    // «a pedido» («3. si armala asi»). Todo sale de iceomatic.com (20-nov-2026): /about/, /products/
+    // y los filtros de cada categoría; libras al día pasadas a kilos y redondeadas. Sin logo ni
+    // fotos hasta tener material de la marca. Sin voltaje: las fichas de Ice-O-Matic son de
+    // EE. UU. (115/60/1, 208-230/60/1) y falta confirmar qué versión trae B&P.
+    h1: "Máquinas de hielo Ice-O-Matic en Perú",
+    origin: "Estados Unidos",
+    productType: "Máquinas de hielo",
+    officialSite: "https://iceomatic.com",
+    heroImage: iceomaticHero,
+    tagline: "Un fabricante de Denver que solo hace máquinas de hielo, desde 1952",
+    shortDescription:
+      "Máquinas de hielo de Ice-O-Matic, fabricante de Denver (Estados Unidos) dedicado solo al hielo desde 1952: cubos, hielo nugget, escamas y hielo gourmet.",
+    resumen: [
+      "Cubos, hielo nugget, escamas y hielo gourmet",
+      "De unos 23 kg a más de 1.200 kg de hielo al día, según la línea",
+      "Condensador por aire, por agua o remoto",
+    ],
+    cta: {
+      texto: "Pide el precio por WhatsApp",
+      mensaje: "Hola B&P TECH, quiero el precio de una máquina de hielo Ice-O-Matic para ___ (bar, restaurante, hotel, pescados…).",
+      ancla: "Ver qué hielo necesitas",
+    },
+    industries: ["bares-cafeterias", "restaurantes", "hoteles-catering", "comida-rapida", "supermercados", "estadios"],
+    sections: [
+      {
+        title: "Una marca que solo hace hielo",
+        paragraphs: [
+          "Ice-O-Matic fabrica máquinas de hielo comerciales desde 1952, cuando nació en Denver (Colorado, Estados Unidos) como Mile High Equipment Company. Es lo único que hace, y ventas, servicio, diseño y fabricación siguen en Denver, bajo el mismo techo.",
+          "Para un negocio, el hielo es un insumo como cualquier otro: si la máquina se queda corta en un día de calor, toca comprar hielo en bolsa o dejar de servir bebidas frías. Por eso la elección empieza por dos preguntas: qué tipo de hielo necesitas y cuántos kilos usas en tu día de más venta.",
+        ],
+      },
+      {
+        title: "Lo que cuida Ice-O-Matic en sus máquinas",
+        bullets: [
+          { title: "Evaporadores niquelados", text: "resisten la corrosión y mantienen una cosecha de hielo pareja." },
+          { title: "Acceso por el frente", text: "los componentes se revisan por delante, lo que acorta el servicio técnico." },
+          { title: "Controles sencillos", text: "pensados para reducir errores de operación y tiempo de capacitación." },
+          { title: "Limpieza más corta", text: "superficies interiores lisas y piezas a la mano." },
+          { title: "Menos tiempo parada", text: "piezas que se cambian en el mismo lugar." },
+          { title: "Refrigerantes de menor impacto", text: "la marca está pasando sus equipos a R-290 y R-449A, y tiene modelos que cumplen ENERGY STAR." },
+        ],
+      },
+    ],
+    selector: {
+      title: "¿Qué hielo necesitas?",
+      primera: "Tipo de hielo",
+      sinMarca: true,
+      intro:
+        "Ice-O-Matic ordena sus máquinas por el tipo de hielo que hacen. La tabla resume cada línea con lo que publica la marca; la producción va en kilos de hielo al día.",
+      columns: ["Para qué sirve", "Producción al día", "Formatos"],
+      rows: [
+        { model: "Cubos", to: null, values: ["Bebidas en restaurantes, bares, hoteles y servicio de alto volumen", "De unos 90 a 635 kg", "Cubo completo, medio cubo y cubo grande; modulares y bajo mostrador"] },
+        { model: "Nugget", to: null, values: ["Hielo blando y masticable: Pearl Ice para bebidas y smoothies; Quartz Ice, fácil de dispensar, para salud, hotelería y autoservicio", "Hasta unos 590 kg", "Equipos de 38 a 76 cm de ancho"] },
+        { model: "Escamas", to: null, values: ["Hielo blando y moldeable para exhibir pescados, mariscos, frutas y verduras, y para presentar alimentos", "De unos 180 a 1.225 kg", "Equipos de 53 y 76 cm de ancho"] },
+        { model: "Gourmet", to: null, values: ["Cubo transparente que se derrite lento, para coctelería y presentación", "De unos 23 a 73 kg", "Bajo mostrador, de 38 a 53 cm de ancho"] },
+        { model: "Depósitos y dispensadores", to: null, values: ["Guardar el hielo y servirlo sin tocarlo, en autoservicio, salud y hoteles", "Guardan de unos 54 a 603 kg", "De 56 a 152 cm de ancho"] },
+      ],
+      note:
+        "Rangos según iceomatic.com (20 de noviembre de 2026): producción en 24 horas y capacidad de almacenamiento, pasadas de libras a kilos y redondeadas. La producción cambia con la temperatura del ambiente y del agua: en verano conviene elegir con margen.",
+    },
+    faqs: [
+      {
+        q: "¿B&P Tech trabaja Ice-O-Matic en el Perú?",
+        a: "Sí. B&P Tech tiene la representación de Ice-O-Matic en el Perú. Las máquinas se cotizan a pedido: cuéntanos qué hielo necesitas y cuántos kilos usas al día, y te preparamos la propuesta.",
+      },
+      {
+        q: "¿La máquina de hielo viene con depósito?",
+        a: "Las máquinas modulares, como la serie CIM de cubos, se instalan sobre un depósito o un dispensador, que se elige aparte según cuánto hielo necesitas tener guardado para la hora de más venta. Los depósitos de Ice-O-Matic guardan de unos 54 a 603 kg.",
+      },
+      {
+        q: "¿Qué es un condensador remoto?",
+        a: "Es la parte que saca el calor de la máquina, instalada fuera del lugar donde está la máquina. Según Ice-O-Matic, así se alejan de la máquina el calor y el ruido. Las otras opciones son el condensador por aire, que deja ese calor en el local, y el condensador por agua.",
+      },
+    ],
   },
 
   {
